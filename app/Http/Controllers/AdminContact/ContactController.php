@@ -123,7 +123,16 @@ class ContactController extends Controller
 			'email' => 'required',
 			'work_hour' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('side_image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('side_image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['side_image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('side_image');
+        }
 
         $contact = Contact::findOrFail($id);
         $contact->update($requestData);

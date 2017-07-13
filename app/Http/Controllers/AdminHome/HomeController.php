@@ -112,11 +112,21 @@ class HomeController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
 			'welcome_text' => 'required',
 			'company_description' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image');
+        }
+
+
 
         $home = Home::findOrFail($id);
         $home->update($requestData);

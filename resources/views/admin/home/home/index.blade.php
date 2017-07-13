@@ -9,11 +9,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Home</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/home/create') }}" class="btn btn-success btn-sm" title="Add New Home">
+                        {{-- <a href="{{ url('/admin/home/create') }}" class="btn btn-success btn-sm" title="Add New Home">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
-                        </a>
+                        </a> --}}
 
-                        {!! Form::open(['method' => 'GET', 'url' => '/admin/home', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
+                        {{-- {!! Form::open(['method' => 'GET', 'url' => '/admin/home', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search...">
                             <span class="input-group-btn">
@@ -22,26 +22,25 @@
                                 </button>
                             </span>
                         </div>
-                        {!! Form::close() !!}
+                        {!! Form::close() !!} --}}
 
-                        <br/>
-                        <br/>
+                        {{-- <br/>
+                        <br/> --}}
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Welcome Text</th><th>Company Description</th><th>Actions</th>
+                                        <th>Welcome Text</th><th>Company Description</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($home as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->welcome_text }}</td><td>{{ $item->company_description }}</td>
                                         <td>
                                             <a href="{{ url('/admin/home/' . $item->id) }}" title="View Home"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/home/' . $item->id . '/edit') }}" title="Edit Home"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
-                                            {!! Form::open([
+                                            {{-- {!! Form::open([
                                                 'method'=>'DELETE',
                                                 'url' => ['/admin/home', $item->id],
                                                 'style' => 'display:inline'
@@ -52,7 +51,7 @@
                                                         'title' => 'Delete Home',
                                                         'onclick'=>'return confirm("Confirm delete?")'
                                                 )) !!}
-                                            {!! Form::close() !!}
+                                            {!! Form::close() !!} --}}
                                         </td>
                                     </tr>
                                 @endforeach

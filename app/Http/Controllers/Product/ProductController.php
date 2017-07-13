@@ -114,11 +114,19 @@ class ProductController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
 			'name' => 'required',
 			'description' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image');
+        }
 
         $product = Product::findOrFail($id);
         $product->update($requestData);

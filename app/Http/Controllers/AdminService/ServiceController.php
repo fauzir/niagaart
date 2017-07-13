@@ -9,6 +9,7 @@ use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Session;
+use Image;
 
 class ServiceController extends Controller
 {
@@ -62,6 +63,9 @@ class ServiceController extends Controller
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
+          // Image::make($file)
+          //   ->resize(100,100)
+          //   ->save('uploads/'.$file->getClientOriginalName().'');
           $file->move('uploads', $file->getClientOriginalName());
           $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
         }
@@ -112,11 +116,19 @@ class ServiceController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
 			'name' => 'required',
 			'description' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image');
+        }
 
         $service = Service::findOrFail($id);
         $service->update($requestData);

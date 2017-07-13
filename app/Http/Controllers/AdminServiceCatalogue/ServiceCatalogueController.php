@@ -112,11 +112,19 @@ class ServiceCatalogueController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image_header' => 'required',
 			'opening_title' => 'required',
 			'opening_text' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('image_header')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image_header');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image_header'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image_header');
+        }
 
         $servicecatalogue = ServiceCatalogue::findOrFail($id);
         $servicecatalogue->update($requestData);

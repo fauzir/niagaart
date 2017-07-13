@@ -120,12 +120,29 @@ class AboutController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image_header' => 'required',
-			'opening_image' => 'required',
 			'opening_title' => 'required',
 			'opening_text' => 'required'
 		]);
-        $requestData = $request->all();
+
+        if (Input::hasFile('image_header')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image_header');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image_header'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image_header');
+        }
+
+        if (Input::hasFile('opening_image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('opening_image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['opening_image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('opening_image');
+        }
 
         $about = About::findOrFail($id);
         $about->update($requestData);
