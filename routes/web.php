@@ -16,6 +16,16 @@ Route::get('/',[
    'as'    => 'home'
 ]);
 
+Route::get('/service/{name}',[
+   'uses' => 'ServiceController@index',
+   'as'    => 'service'
+]);
+
+Route::get('/projects',[
+   'uses' => 'ProjectsController@index',
+   'as'    => 'projects'
+]);
+
 Route::get('/about',[
    'uses' => 'AboutController@index',
    'as'    => 'about'
@@ -24,6 +34,11 @@ Route::get('/about',[
 Route::get('/contact',[
    'uses' => 'ContactController@index',
    'as'    => 'contact'
+]);
+
+Route::get('/blog',[
+   'uses' => 'BlogController@index',
+   'as'    => 'blog'
 ]);
 
 Auth::routes();
@@ -40,6 +55,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('home', 'AdminHome\\HomeController');
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
+    Route::resource('projects', 'AdminProjects\\ProjectsController');
     Route::resource('about', 'AdminAbout\\AboutController');
     Route::resource('contact', 'AdminContact\\ContactController');
     Route::resource('product', 'Product\\ProductController');

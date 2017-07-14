@@ -8,8 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -32,11 +32,25 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li><a href="{{ route('home') }}">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Projects</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ route('service', ['name' => 'home-living']) }}">Home Living</a></li>
+            <li><a href="{{ route('service', ['name' => 'apartment']) }}">Apartment</a></li>
+            <li><a href="{{ route('service', ['name' => 'cafe-foodcourt']) }}">Cafe & FoodCourt</a></li>
+            <li><a href="{{ route('service', ['name' => 'shop-office']) }}">Shop / Office</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ route('service', ['name' => 'flooring']) }}">Flooring</a></li>
+            <li><a href="{{ route('service', ['name' => 'blind']) }}">Blind</a></li>
+            <li><a href="{{ route('service', ['name' => 'wall-paper']) }}">Wall Paper</a></li>
+            <li><a href="{{ route('service', ['name' => 'wall-clading']) }}">Wall Clading</a></li>
+            <li><a href="{{ route('service', ['name' => 'chair']) }}">Chair</a></li>
+          </ul>
+        </li>
+          <li><a href="{{ route('projects') }}">Projects</a></li>
           <li><a href="{{ route('about') }}">About</a></li>
           <li><a href="{{ route('contact') }}">Contact</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="{{ route('blog') }}">Blog</a></li>
         </ul>
         <h3 class="muted"><img src="{{ URL::to('img/NiagaArt.png') }}" height="70" width="70" alt=""></h3>
       </div>
@@ -52,20 +66,19 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-transition.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-alert.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-modal.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-scrollspy.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-tab.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-tooltip.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-popover.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-button.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-collapse.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-carousel.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-typeahead.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-dropdown.js') }}"></script>
 
   </body>
 </html>

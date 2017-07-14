@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Home;
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,6 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $homes = Home::all();
-        return view('welcome', compact('homes'));
+        $products = Product::all();
+        return view('welcome', compact('homes', 'products'));
     }
 }

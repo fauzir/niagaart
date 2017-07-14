@@ -1,60 +1,41 @@
 @extends('layouts.app')
 
 @section('title')
-  Homepage
+Homepage
 @endsection
 
 @section('content')
-@foreach($homes as $home)
   <hr>
-  <img src="{{ $home->image }}" alt="">
+  @foreach($homes as $home)
+  <img src="{{ $home->image }}" width="100%" alt="">
   <div class="jumbotron">
     <h1>Welcome</h1>
     <h2>Niaga Art Official Site</h2>
     <p class="lead">{{ $home->welcome_text }}</p>
   </div>
+  @endforeach
 
   <hr>
 
   <h2 align="center">Our Services</h2><br>
 
   <div class="row">
+    @foreach($products as $product)
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img src="{{ URL::to('img/static-services.jpg') }}" alt="...">
+        <img src="{{ $product->image }}" alt="...">
         <div class="caption">
-          <h5 align="center"><strong>SERVICE TITLE HERE</strong></h5>
-          <p align="center">Service description here</p>
-          <p align="center"><strong>Price here</strong></p>
+          <h5 align="center"><strong>{{ $product->name }}</strong></h5>
+          <p align="center">{{ $product->description }}</p>
+          <p align="center"><strong>$ {{ $product->price }}</strong></p>
         </div>
       </div>
     </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{{ URL::to('img/static-services.jpg') }}" alt="...">
-        <div class="caption">
-          <h5 align="center"><strong>SERVICE TITLE HERE</strong></h5>
-          <p align="center">Service description here</p>
-          <p align="center"><strong>Price here</strong></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <img src="{{ URL::to('img/static-services.jpg') }}" alt="...">
-        <div class="caption">
-          <h5 align="center"><strong>SERVICE TITLE HERE</strong></h5>
-          <p align="center">Service description here</p>
-          <p align="center"><strong>Price here</strong></p>
-        </div>
-      </div>
-    </div>
+    @endforeach
 
   </div>
 
-  <p align="center">{{ $home->welcome_text }}</p>
+  <p align="center">{{ $home->company_description }}</p>
 
   <hr>
 
@@ -83,5 +64,4 @@
   </div>
 
   <hr>
-@endforeach
 @endsection
