@@ -16,7 +16,8 @@
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
-
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7lscpg0p7m2fqvhf6i5hiua3ha4nd3d9xyd7hf2qffaazouh"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
@@ -79,6 +80,8 @@
     <script src="{{ asset('js/bootstrap-carousel.js') }}"></script>
     <script src="{{ asset('js/bootstrap-typeahead.js') }}"></script>
     <script src="{{ asset('js/bootstrap-dropdown.js') }}"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script id="dsq-count-scr" src="//niagaart.disqus.com/count.js" async></script>
 
   </body>
 </html>

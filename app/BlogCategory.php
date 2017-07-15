@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class BlogCategory extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'blogs';
+    protected $table = 'blog_categories';
 
     /**
     * The database primary key value.
@@ -25,7 +25,7 @@ class Blog extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'category', 'image', 'content', 'author'];
+    protected $fillable = ['category'];
 
-
+    
 }

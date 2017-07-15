@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Home;
 use App\Product;
+use App\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +13,7 @@ class HomeController extends Controller
     {
         $homes = Home::all();
         $products = Product::all();
-        return view('welcome', compact('homes', 'products'));
+        $blogs = Blog::all();
+        return view('welcome', compact('homes', 'products', 'blogs'));
     }
 }

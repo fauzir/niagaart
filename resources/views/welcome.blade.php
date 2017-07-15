@@ -41,25 +41,22 @@ Homepage
 
   <div class="row-fluid marketing">
     <div class="span6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+      <h1>Blog Post</h1>
 
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+      <hr>
 
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      @foreach ($blogs as $blog)
+      <h3><a href="{{ route('blog.content', ['id' => $blog->id]) }}">{{ $blog->title }}</a></h3>
+      <p>{{ $blog->author }}</p>
+      @endforeach
     </div>
 
     <div class="span6">
-      <h4>Subheading</h4>
-      <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+      <h1>What's Going on</h1>
 
-      <h4>Subheading</h4>
-      <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+      <hr>
 
-      <h4>Subheading</h4>
-      <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <a class="twitter-timeline" data-width="500" data-height="500" data-theme="light" href="https://twitter.com/41studio">Tweets by 41studio</a>
     </div>
   </div>
 

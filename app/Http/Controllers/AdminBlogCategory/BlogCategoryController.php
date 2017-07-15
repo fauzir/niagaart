@@ -1,17 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\AdminBlog;
+namespace App\Http\Controllers\AdminBlogCategory;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Blog;
 use App\BlogCategory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use Session;
 
-class BlogController extends Controller
+class BlogCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,16 +22,13 @@ class BlogController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $blog = Blog::where('title', 'LIKE', "%$keyword%")
-				->orWhere('category', 'LIKE', "%$keyword%")
-				->orWhere('image', 'LIKE', "%$keyword%")
-				->orWhere('content', 'LIKE', "%$keyword%")
+            $blogcategory = BlogCategory::where('category', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
-            $blog = Blog::paginate($perPage);
+            $blogcategory = BlogCategory::paginate($perPage);
         }
 
-        return view('admin/blog.blog.index', compact('blog'));
+        return view('admin/blog-category.blog-category.index', compact('blogcategory'));
     }
 
     /**
@@ -43,8 +38,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $categories = BlogCategory::all();
-        return view('admin/blog.blog.create', compact('categories'));
+        return view('admin/blog-category.blog-category.create');
     }
 
     /**
@@ -57,23 +51,15 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'title' => 'required',
-			'category' => 'required',
-			'image' => 'required'
+			'category' => 'required'
 		]);
         $requestData = $request->all();
+        
+        BlogCategory::create($requestData);
 
-        if(Input::hasFile('image')){
-          $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
-        }
+        Session::flash('flash_message', 'BlogCategory added!');
 
-        Blog::create($requestData);
-
-        Session::flash('flash_message', 'Blog added!');
-
-        return redirect('admin/blog');
+        return redirect('admin/blog-category');
     }
 
     /**
@@ -85,9 +71,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        $blog = Blog::findOrFail($id);
+        $blogcategory = BlogCategory::findOrFail($id);
 
-        return view('admin/blog.blog.show', compact('blog'));
+        return view('admin/blog-category.blog-category.show', compact('blogcategory'));
     }
 
     /**
@@ -99,9 +85,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        $blog = Blog::findOrFail($id);
+        $blogcategory = BlogCategory::findOrFail($id);
 
-        return view('admin/blog.blog.edit', compact('blog'));
+        return view('admin/blog-category.blog-category.edit', compact('blogcategory'));
     }
 
     /**
@@ -115,18 +101,16 @@ class BlogController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'title' => 'required',
-			'category' => 'required',
-			'image' => 'required'
+			'category' => 'required'
 		]);
         $requestData = $request->all();
+        
+        $blogcategory = BlogCategory::findOrFail($id);
+        $blogcategory->update($requestData);
 
-        $blog = Blog::findOrFail($id);
-        $blog->update($requestData);
+        Session::flash('flash_message', 'BlogCategory updated!');
 
-        Session::flash('flash_message', 'Blog updated!');
-
-        return redirect('admin/blog');
+        return redirect('admin/blog-category');
     }
 
     /**
@@ -138,10 +122,10 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        Blog::destroy($id);
+        BlogCategory::destroy($id);
 
-        Session::flash('flash_message', 'Blog deleted!');
+        Session::flash('flash_message', 'BlogCategory deleted!');
 
-        return redirect('admin/blog');
+        return redirect('admin/blog-category');
     }
 }

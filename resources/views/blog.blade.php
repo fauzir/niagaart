@@ -7,7 +7,7 @@ All Post
 @section('content')
   <!-- Page Header -->
   <!-- Set your background image for this header on the line below. -->
-  <header class="intro-header" style="background-image: url('img/bootstrap-mdo-sfmoma-02.jpg')">
+  <header class="intro-header" style="background-image: url({{ asset('img/bootstrap-mdo-sfmoma-02.jpg') }})">
       <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -28,7 +28,7 @@ Tutorial, People, Culture and many more...</span>
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
               @foreach ($blogs as $blog)
               <div class="post-preview">
-                  <a href="post.html">
+                  <a href="{{ route('blog.content', ['id' => $blog->id]) }}">
                       <h2 class="post-title">
                           {{ $blog->title }}
                       </h2>
@@ -36,7 +36,7 @@ Tutorial, People, Culture and many more...</span>
                           Blog preview text
                       </h3>
                   </a>
-                  <p class="post-meta">Posted by <a href="#">Author</a> on July 14, 2017</p>
+                  <p class="post-meta">Posted by <a href="#">{{ $blog->author }}</a> on {{ $blog->created_at }}</p>
               </div>
               @endforeach
               <hr>

@@ -12,4 +12,10 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('blog', compact('blogs'));
     }
+
+    public function getContent(Request $request, $id)
+    {
+        $content = Blog::find($id);
+        return view('blog-content', compact('content'));
+    }
 }

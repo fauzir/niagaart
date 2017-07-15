@@ -7,7 +7,11 @@
 </div><div class="form-group {{ $errors->has('category') ? 'has-error' : ''}}">
     {!! Form::label('category', 'Category', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('category', null, ['class' => 'form-control', 'required' => 'required']) !!}
+      <select class="form-control" name="category">
+        @foreach ($categories as $category)
+          <option value="{{ $category->category }}">{{ $category->category }}</option>
+        @endforeach
+      </select>
         {!! $errors->first('category', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('image') ? 'has-error' : ''}}">
@@ -19,10 +23,12 @@
 </div><div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
     {!! Form::label('content', 'Content', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::textarea('content', null, ['class' => 'form-control']) !!}
         {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
+        <textarea name="content" rows="8" cols="80"></textarea>
     </div>
 </div>
+<input type="hidden" name="author" value="Author">
+
 
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">
