@@ -12,7 +12,7 @@ Projects
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    @foreach($projects as $index => $project)
+    @foreach($projects as $project)
       <div class="item @if($index == 0) {{ 'active' }} @endif">
           <img src="{{ $project->image }}" alt="">
       </div>
@@ -51,12 +51,12 @@ Projects
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">{{ $project->name }}</h4>
+        <h4 class="modal-title">Name</h4>
       </div>
         <div class="modal-body">
-          <img src="{{ $project->image }}" width="275" height="275" alt="...">
+          <img src="..." width="275" height="275" alt="...">
           <input type="text" name="projectId" id="projectId" value=""/>
-          <p>{{ $project->description }}</p>
+          <p>Description</p>
 
           <div class="row">
             @foreach($items as $item)
