@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Project extends Model
+class ProjectItem extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'projects';
+    protected $table = 'project_items';
 
     /**
     * The database primary key value.
@@ -25,11 +25,11 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['image', 'name', 'description', 'status'];
+    protected $fillable = ['project_id', 'image', 'name', 'price'];
 
-    public function item()
+    public function project()
     {
-      return $this->hasMany('App\ProjectItem');
+      return $this->belongsTo('App\Project');
     }
 
 

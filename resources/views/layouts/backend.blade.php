@@ -20,8 +20,9 @@
                 'csrfToken' => csrf_token(),
             ]); ?>
         </script>
-        <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7lscpg0p7m2fqvhf6i5hiua3ha4nd3d9xyd7hf2qffaazouh"></script>
-        <script>tinymce.init({ selector:'textarea' });</script>
+
+        @yield('head-script')
+
     </head>
     <style>
     /* The side navigation menu */
@@ -78,39 +79,34 @@
       <div id="main">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div class="panel-group">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <a href="#">Dashboard</a>
-                <a data-toggle="collapse" href="#collapseContent">Contents</a>
-                <div id="collapseContent" class="panel-collapse collapse">
-                  <a href="{{ route('home.index') }}">Home</a>
-                  <a href="{{ route('service-catalogue.index') }}">Service Catalogue</a>
-                  <a href="{{ route('service.index') }}">Service</a>
-                  <a href="{{ route('projects.index') }}">Projects</a>
-                  <a href="{{ route('about.index') }}">About</a>
-                  <a href="{{ route('contact.index') }}">Contact</a>
-                  <a href="{{ route('product.index') }}">Product</a>
-                  <a href="{{ route('promotion.index') }}">Promotions</a>
-                </div>
-                <a data-toggle="collapse" href="#collapseBlog">Blog</a>
-                <div id="collapseBlog" class="panel-collapse collapse">
-                  <a href="#">Blog Post</a>
-                  <a href="#">Blog Category</a>
-                </div>
-                <a data-toggle="collapse" href="#collapseUser">Users</a>
-                <div id="collapseUser" class="panel-collapse collapse">
-                  <a href="#">Users</a>
-                  <a href="#">Roles</a>
-                  <a href="#">Permissions</a>
-                </div>
-                <a href="#">Logout</a>
-              </div>
-            </div>
+          <a href="{{ url('/admin') }}">Dashboard</a>
+          <a data-toggle="collapse" href="#collapseContent">Contents</a>
+          <div id="collapseContent" class="panel-collapse collapse">
+            <a href="{{ route('home.index') }}">Home</a>
+            <a href="{{ route('service-catalogue.index') }}">Service Catalogue</a>
+            <a href="{{ route('service.index') }}">Service</a>
+            <a href="{{ route('projects.index') }}">Projects</a>
+            <a href="{{ route('project-item.index') }}">Project Items</a>
+            <a href="{{ route('about.index') }}">About</a>
+            <a href="{{ route('contact.index') }}">Contact</a>
+            <a href="{{ route('product.index') }}">Product</a>
+            <a href="{{ route('promotion.index') }}">Promotions</a>
           </div>
+          <a data-toggle="collapse" href="#collapseBlog">Blog</a>
+          <div id="collapseBlog" class="panel-collapse collapse">
+            <a href="{{ route('blog.index') }}">Blog Post</a>
+            <a href="{{ route('blog-category.index') }}">Blog Category</a>
+          </div>
+          <a data-toggle="collapse" href="#collapseUser">Users</a>
+          <div id="collapseUser" class="panel-collapse collapse">
+            <a href="{{ route('users.index') }}">Users</a>
+            <a href="{{ route('roles.index') }}">Roles</a>
+            <a href="{{ route('permissions.index') }}">Permissions</a>
+          </div>
+          <a href="#">Logout</a>
         </div>
         <nav class="navbar navbar-default navbar-static-top">
-          <button class="btn-default navbar-brand"type="button" name="button" onclick="openNav()">-</button>
+          <button class="btn-default navbar-brand"type="button" name="button" onclick="openNav()"><strong>-</strong></button>
             <div class="container">
                 <div class="navbar-header">
 
@@ -129,17 +125,12 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/admin') }}">Dashboard <span class="sr-only">(current)</span></a></li>
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Logout</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -180,7 +171,7 @@
         <hr/>
 
         <div class="container">
-            &copy; {{ date('Y') }}. Created by <a href="http://www.appzcoder.com">AppzCoder</a>
+            &copy; {{ date('Y') }}. Created by <a href="http://www.41studio.com">41studio</a>
             <br/>
         </div>
 

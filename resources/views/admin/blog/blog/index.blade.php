@@ -3,9 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Blog</div>
                     <div class="panel-body">
@@ -30,14 +29,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Title</th><th>Category</th><th>Image</th><th>Actions</th>
+                                        <th>ID</th><th>Title</th><th>Category</th><th>Created</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($blog as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->category }}</td><td>{{ $item->image }}</td>
+                                        <td>{{ $item->title }}</td><td>{{ $item->category }}</td><td>{{ $item->created_at }}</td>
                                         <td>
                                             <a href="{{ url('/admin/blog/' . $item->id) }}" title="View Blog"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/blog/' . $item->id . '/edit') }}" title="Edit Blog"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

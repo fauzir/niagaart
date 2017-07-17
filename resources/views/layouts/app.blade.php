@@ -67,6 +67,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/bootstrap-transition.js') }}"></script>
     <script src="{{ asset('js/bootstrap-alert.js') }}"></script>
@@ -82,6 +83,8 @@
     <script src="{{ asset('js/bootstrap-dropdown.js') }}"></script>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script id="dsq-count-scr" src="//niagaart.disqus.com/count.js" async></script>
+
+    @yield('script')
 
   </body>
 </html>

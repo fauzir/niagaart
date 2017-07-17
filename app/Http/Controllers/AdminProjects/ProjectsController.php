@@ -60,7 +60,7 @@ class ProjectsController extends Controller
 			'status' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         Project::create($requestData);
 
         Session::flash('flash_message', 'Project added!');
@@ -113,7 +113,7 @@ class ProjectsController extends Controller
 			'status' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         $project = Project::findOrFail($id);
         $project->update($requestData);
 

@@ -1,11 +1,15 @@
 @extends('layouts.backend')
 
+@section('head-script')
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7lscpg0p7m2fqvhf6i5hiua3ha4nd3d9xyd7hf2qffaazouh"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Create New Blog</div>
                     <div class="panel-body">
