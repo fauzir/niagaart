@@ -25,6 +25,10 @@
 
     </head>
     <style>
+    .navbar-open {
+      background-color: #c73434;
+    }
+
     /* The side navigation menu */
     .sidenav {
       height: 100%; /* 100% Full-height */
@@ -33,10 +37,14 @@
       z-index: 1; /* Stay on top */
       top: 0;
       left: 0;
-      background-color: #ffffff; /* Black*/
+      background-color: #c73434; /* Black*/
       overflow-x: hidden; /* Disable horizontal scroll */
       padding-top: 60px; /* Place content 60px from the top */
       transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    .panel-collapse {
+      background-color: #8f2323; /* Black*/
     }
 
     /* The navigation menu links */
@@ -44,14 +52,14 @@
       padding: 8px 8px 8px 32px;
       text-decoration: none;
       font-size: 15px;
-      color: #000000;
+      color: #ffffff;
       display: block;
       transition: 0.3s
     }
 
     /* When you mouse over the navigation links, change their color */
     .sidenav a:hover, .offcanvas a:focus{
-      color: #cb3838;
+      color: #4e4e4e;
     }
 
     /* Position and style the close button (top right corner) */
@@ -106,7 +114,7 @@
           <a href="#">Logout</a>
         </div>
         <nav class="navbar navbar-default navbar-static-top">
-          <button class="btn-default navbar-brand"type="button" name="button" onclick="openNav()"><strong>-</strong></button>
+          <button class="btn-default navbar-brand navbar-open"type="button" name="button" onclick="openNav()"><strong>-</strong></button>
             <div class="container">
                 <div class="navbar-header">
 
