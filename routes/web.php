@@ -26,7 +26,7 @@ Route::get('/projects',[
    'as'    => 'projects'
 ]);
 
-Route::get('/projects/{id}',[
+Route::get('/projects/item/{id}',[
    'uses' => 'ProjectsController@getItem',
    'as'    => 'project.item'
 ]);

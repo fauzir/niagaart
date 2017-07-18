@@ -12,7 +12,7 @@ Projects
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    @foreach($projects as $project)
+    @foreach($projects as $index => $project)
       <div class="item @if($index == 0) {{ 'active' }} @endif">
           <img src="{{ $project->image }}" alt="">
       </div>
@@ -54,24 +54,7 @@ Projects
         <h4 class="modal-title">Name</h4>
       </div>
         <div class="modal-body">
-          <img src="..." width="275" height="275" alt="...">
-          <input type="text" name="projectId" id="projectId" value=""/>
-          <p>Description</p>
 
-          <div class="row">
-            @foreach($items as $item)
-            <div class="col-sm-6 col-md-4">
-              <div class="thumbnail">
-                <img src="{{ $item->image }}" alt="">
-                <div class="caption">
-                  <h3>{{ $item->name }}</h3>
-                  <p>Lorem ipsumLorem ipsum dolosit amet, consectetur adipisicing eli dolor sit amet, consectetur adipisicing elit. </p>
-
-                </div>
-              </div>
-            </div><!--/.item  -->
-            @endforeach
-          </div>
         </div>
     </div>
 
@@ -91,10 +74,17 @@ Projects
     // });
     $(document).on("click", ".project", function () {
      var projectId = $(this).data('id');
-           $(".modal-body #projectId").val( projectId );
-           // As pointed out in comments,
-           // it is superfluous to have to manually call the modal.
-           $('#myModal').modal('show');
+           $.ajax({
+              url: '/projects/item/' + projectId + '',
+              type: "get",
+              success: function(response){
+                $('.modal-body').html(response)
+                $('#myModal').modal('show');
+              },
+              error: function(response){
+                console.log('Error '+response);
+              }
+            });
       });
   </script>
 @endsection

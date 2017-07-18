@@ -49,5 +49,10 @@ About
   </div>
 
   <hr>
+
+  <h2>Instagram</h2>
+  <iframe allowtransparency="true" scrolling="no" src="//lightwidget.com/widgets/cb160f5e90ea56f6bdcf4fc1ed39df81.html" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
+  <hr>
 @endforeach
 @endsection
