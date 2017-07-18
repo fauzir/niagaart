@@ -54,7 +54,7 @@ Projects
         <h4 class="modal-title">Name</h4>
       </div>
         <div class="modal-body">
-
+            <img id="loading-image" src="img/ajax-loader.gif" style="display:none;"/>
         </div>
     </div>
 
@@ -77,9 +77,13 @@ Projects
            $.ajax({
               url: '/projects/item/' + projectId + '',
               type: "get",
+              beforeSend: function() {
+                $("#loading-image").show();
+              },
               success: function(response){
                 $('.modal-body').html(response)
                 $('#myModal').modal('show');
+                $("#loading-image").hide();
               },
               error: function(response){
                 console.log('Error '+response);
