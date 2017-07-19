@@ -72,5 +72,6 @@ Route::prefix('admin')->group(function () {
     Route::resource('product', 'Product\\ProductController');
     Route::resource('blog', 'AdminBlog\\BlogController');
     Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
+    Route::resource('blog-tag', 'BlogTag\\BlogTagController');
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
 });

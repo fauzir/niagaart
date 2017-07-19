@@ -7,10 +7,17 @@ use App\Http\Controllers\Controller;
 
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use Session;
 
 class ProjectsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -61,6 +68,12 @@ class ProjectsController extends Controller
 		]);
         $requestData = $request->all();
 
+        if(Input::hasFile('image')){
+          $file = Input::file('image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        }
+
         Project::create($requestData);
 
         Session::flash('flash_message', 'Project added!');
@@ -107,12 +120,21 @@ class ProjectsController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
 			'name' => 'required',
 			'description' => 'required',
 			'status' => 'required'
 		]);
         $requestData = $request->all();
+
+        if (Input::hasFile('image')) {
+          $requestData = $request->all();
+
+          $file = Input::file('image');
+          $file->move('uploads', $file->getClientOriginalName());
+          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        } else {
+          $requestData = $request->except('image');
+        }
 
         $project = Project::findOrFail($id);
         $project->update($requestData);

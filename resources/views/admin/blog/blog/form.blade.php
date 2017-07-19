@@ -27,6 +27,13 @@
         <textarea name="content" rows="8" cols="80"></textarea>
     </div>
 </div>
+<div class="form-group">
+    {!! Form::label('tag', 'Tag', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+      <input type="text" name="tag" value="{{ $rel }}" id="taginput" class="form-control">
+    </div>
+</div>
+
 <input type="hidden" name="author" value="Author">
 
 

@@ -16,12 +16,6 @@
                             'url' => ['admin/home', $home->id],
                             'style' => 'display:inline'
                         ]) !!}
-                            {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
-                                    'type' => 'submit',
-                                    'class' => 'btn btn-danger btn-xs',
-                                    'title' => 'Delete Home',
-                                    'onclick'=>'return confirm("Confirm delete?")'
-                            ))!!}
                         {!! Form::close() !!}
                         <br/>
                         <br/>

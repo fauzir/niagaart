@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Service {{ $service->id }}</div>
+                    <div class="panel-heading">Service - {{ $service->name }}</div>
                     <div class="panel-body">
 
                         <a href="{{ url('/admin/service') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -29,10 +29,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $service->id }}</td>
-                                    </tr>
-                                    <tr><th> Image </th><td> {{ $service->image }} </td></tr><tr><th> Name </th><td> {{ $service->name }} </td></tr><tr><th> Description </th><td> {{ $service->description }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ $service->image }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Name </th><td> {{ $service->name }} </td></tr><tr><th> Description </th><td> {{ $service->description }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

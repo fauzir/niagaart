@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Blog {{ $blog->id }}</div>
+                    <div class="panel-heading">Blog - {{ $blog->title }}</div>
                     <div class="panel-body">
 
                         <a href="{{ url('/admin/blog') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -29,10 +29,8 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $blog->id }}</td>
-                                    </tr>
-                                    <tr><th> Title </th><td> {{ $blog->title }} </td></tr><tr><th> Category </th><td> {{ $blog->category }} </td></tr><tr><th> Image </th><td> {{ $blog->image }} </td></tr>
+                                    <tr><th> Title </th><td> {{ $blog->title }} </td></tr><tr><th> Category </th><td> {{ $blog->category }} </td></tr><tr><th> Image </th><td> <img src="{{ $blog->image }}" width="20%" height="20%" alt=""> </td></tr>
+                                    <tr><th> Content </th><td> {!! $blog->content !!} </td></tr><tr><th> Tag </th><td> {{ $rel }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

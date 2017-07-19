@@ -5,8 +5,6 @@ All Post
 @endsection
 
 @section('content')
-  <!-- Page Header -->
-  <!-- Set your background image for this header on the line below. -->
   <header class="intro-header" style="background-image: url({{ asset('img/bootstrap-mdo-sfmoma-02.jpg') }})">
       <div class="container">
           <div class="row">
@@ -40,10 +38,11 @@ Tutorial, People, Culture and many more...</span>
               </div>
               @endforeach
               <hr>
+
               <!-- Pager -->
               <ul class="pager">
                   <li class="next">
-                      <a href="#">Older Posts &rarr;</a>
+                      {{ $blogs->links() }}
                   </li>
               </ul>
           </div>

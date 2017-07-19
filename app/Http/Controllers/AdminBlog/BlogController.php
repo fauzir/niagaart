@@ -7,12 +7,20 @@ use App\Http\Controllers\Controller;
 
 use App\Blog;
 use App\BlogCategory;
+use App\BlogTag;
+use App\BlogTagRel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Session;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -44,7 +52,10 @@ class BlogController extends Controller
     public function create()
     {
         $categories = BlogCategory::all();
-        return view('admin/blog.blog.create', compact('categories'));
+        $array = array();
+        $array[] = "";
+        $rel = implode (",", $array);
+        return view('admin/blog.blog.create', compact('categories', 'rel'));
     }
 
     /**
@@ -61,7 +72,8 @@ class BlogController extends Controller
 			'category' => 'required',
 			'image' => 'required'
 		]);
-        $requestData = $request->all();
+        $requestData = $request->except('tag');
+        $tagData = $request->input('tag');
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
@@ -69,7 +81,37 @@ class BlogController extends Controller
           $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
         }
 
-        Blog::create($requestData);
+        $blog = new Blog();
+        $blog->title = $requestData['title'];
+        $blog->category = $requestData['category'];
+        $blog->image = $requestData['image'];
+        $blog->content = $requestData['content'];
+        $blog->author = $requestData['author'];
+
+        $blog->save();
+
+        $tags = explode(',', $tagData);
+        foreach ($tags as $tag)
+        {
+          if (BlogTag::where('tag', $tag)->exists()) {
+            $inputtags = BlogTag::where('tag', $tag)->get();
+            $blogtagrel = new BlogTagRel();
+            $blogtagrel->blog_id = $blog->id;
+            foreach ($inputtags as $inputtag) {
+              $blogtagrel->tag_id = $inputtag->id;
+            }
+            $blogtagrel->save();
+          } else {
+            $blogtag = new BlogTag();
+            $blogtag->tag = $tag;
+            $blogtag->save();
+
+            $blogtagrel = new BlogTagRel();
+            $blogtagrel->blog_id = $blog->id;
+            $blogtagrel->tag_id = $blogtag->id;
+            $blogtagrel->save();
+          }
+        }
 
         Session::flash('flash_message', 'Blog added!');
 
@@ -86,8 +128,14 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::findOrFail($id);
-
-        return view('admin/blog.blog.show', compact('blog'));
+        $categories = BlogCategory::all();
+        $blogtagrels = Blog::find($id)->tag_blog;
+        $array = array();
+        foreach ($blogtagrels as $blogtagrel) {
+          $array[] = $blogtagrel->tag;
+        }
+        $rel = implode (",", $array);
+        return view('admin/blog.blog.show', compact('blog', 'categories', 'rel'));
     }
 
     /**
@@ -100,8 +148,14 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::findOrFail($id);
-
-        return view('admin/blog.blog.edit', compact('blog'));
+        $categories = BlogCategory::all();
+        $blogtagrels = Blog::find($id)->tag_blog;
+        $array = array();
+        foreach ($blogtagrels as $blogtagrel) {
+          $array[] = $blogtagrel->tag;
+        }
+        $rel = implode (",", $array);
+        return view('admin/blog.blog.edit', compact('blog', 'categories', 'rel'));
     }
 
     /**

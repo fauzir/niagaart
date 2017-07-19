@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class BlogTag extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'blogs';
+    protected $table = 'blog_tags';
 
     /**
     * The database primary key value.
@@ -25,16 +25,16 @@ class Blog extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'category', 'image', 'content', 'author'];
+    protected $fillable = ['tag'];
 
     public function blog_tag()
     {
-       return $this->belongsToMany('App\BlogTag', 'blog_tag', 'tag_id', 'blog_id');
+       return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'blog_id');
     }
 
     public function tag_blog()
     {
-       return $this->belongsToMany('App\BlogTag', 'blog_tag', 'blog_id', 'tag_id');
+       return $this->belongsToMany('App\Blog', 'blog_tag', 'blog_id', 'tag_id');
     }
 
 

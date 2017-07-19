@@ -1,23 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\AdminPromotion;
+namespace App\Http\Controllers\BlogTag;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Promotion;
+use App\BlogTag;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use Session;
 
-class PromotionController extends Controller
+class BlogTagController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    
     /**
      * Display a listing of the resource.
      *
@@ -29,15 +22,13 @@ class PromotionController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $promotion = Promotion::where('name', 'LIKE', "%$keyword%")
-				->orWhere('image', 'LIKE', "%$keyword%")
-				->orWhere('status', 'LIKE', "%$keyword%")
+            $blogtag = BlogTag::where('tag', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
-            $promotion = Promotion::paginate($perPage);
+            $blogtag = BlogTag::paginate($perPage);
         }
 
-        return view('admin/promotions.promotion.index', compact('promotion'));
+        return view('admin/blog-tag.blog-tag.index', compact('blogtag'));
     }
 
     /**
@@ -47,7 +38,7 @@ class PromotionController extends Controller
      */
     public function create()
     {
-        return view('admin/promotions.promotion.create');
+        return view('admin/blog-tag.blog-tag.create');
     }
 
     /**
@@ -60,22 +51,15 @@ class PromotionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'name' => 'required',
-			'status' => 'required'
+			'tag' => 'required'
 		]);
         $requestData = $request->all();
+        
+        BlogTag::create($requestData);
 
-        if(Input::hasFile('image')){
-          $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
-        }
+        Session::flash('flash_message', 'BlogTag added!');
 
-        Promotion::create($requestData);
-
-        Session::flash('flash_message', 'Promotion added!');
-
-        return redirect('admin/promotion');
+        return redirect('admin/blog-tag');
     }
 
     /**
@@ -87,9 +71,9 @@ class PromotionController extends Controller
      */
     public function show($id)
     {
-        $promotion = Promotion::findOrFail($id);
+        $blogtag = BlogTag::findOrFail($id);
 
-        return view('admin/promotions.promotion.show', compact('promotion'));
+        return view('admin/blog-tag.blog-tag.show', compact('blogtag'));
     }
 
     /**
@@ -101,9 +85,9 @@ class PromotionController extends Controller
      */
     public function edit($id)
     {
-        $promotion = Promotion::findOrFail($id);
+        $blogtag = BlogTag::findOrFail($id);
 
-        return view('admin/promotions.promotion.edit', compact('promotion'));
+        return view('admin/blog-tag.blog-tag.edit', compact('blogtag'));
     }
 
     /**
@@ -117,17 +101,16 @@ class PromotionController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'name' => 'required',
-			'status' => 'required'
+			'tag' => 'required'
 		]);
         $requestData = $request->all();
+        
+        $blogtag = BlogTag::findOrFail($id);
+        $blogtag->update($requestData);
 
-        $promotion = Promotion::findOrFail($id);
-        $promotion->update($requestData);
+        Session::flash('flash_message', 'BlogTag updated!');
 
-        Session::flash('flash_message', 'Promotion updated!');
-
-        return redirect('admin/promotion');
+        return redirect('admin/blog-tag');
     }
 
     /**
@@ -139,10 +122,10 @@ class PromotionController extends Controller
      */
     public function destroy($id)
     {
-        Promotion::destroy($id);
+        BlogTag::destroy($id);
 
-        Session::flash('flash_message', 'Promotion deleted!');
+        Session::flash('flash_message', 'BlogTag deleted!');
 
-        return redirect('admin/promotion');
+        return redirect('admin/blog-tag');
     }
 }

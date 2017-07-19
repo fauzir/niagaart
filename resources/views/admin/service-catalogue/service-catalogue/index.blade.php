@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Servicecatalogue</div>
+                    <div class="panel-heading">Service Catalogue</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/service-catalogue/create') }}" class="btn btn-success btn-sm" title="Add New ServiceCatalogue">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

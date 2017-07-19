@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Project {{ $project->id }}</div>
+                    <div class="panel-heading">Project - {{ $project->name }}</div>
                     <div class="panel-body">
 
                         <a href="{{ url('/admin/projects') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
@@ -29,10 +29,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $project->id }}</td>
-                                    </tr>
-                                    <tr><th> Image </th><td> {{ $project->image }} </td></tr><tr><th> Name </th><td> {{ $project->name }} </td></tr><tr><th> Description </th><td> {{ $project->description }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ $project->image }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Name </th><td> {{ $project->name }} </td></tr><tr><th> Description </th><td> {{ $project->description }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -64,14 +64,6 @@ Projects
 
 @section('script')
   <script type="text/javascript">
-    // $(document).ready(function(){
-    //   $("#button").click(function(){
-    //      var id = $(this).data('id');
-    //      $("#myModal").modal({
-    //        show: true
-    //      });
-    //   });
-    // });
     $(document).on("click", ".project", function () {
      var projectId = $(this).data('id');
            $.ajax({

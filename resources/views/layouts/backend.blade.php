@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NiagaArt | Admin Page</title>
+
+        <meta name="description" content="lorem ipsum dolor set amet" /> <!--Max 160 characters-->
+        <meta name="keywords" content="keyword1, keyword2, keyword3" />
+        <meta charset="utf-8" />
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
         <link href="/css/app.css" rel="stylesheet">
@@ -24,69 +24,11 @@
         @yield('head-script')
 
     </head>
-    <style>
-    .navbar-open {
-      background-color: #c73434;
-    }
-
-    /* The side navigation menu */
-    .sidenav {
-      height: 100%; /* 100% Full-height */
-      width: 0; /* 0 width - change this with JavaScript */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Stay on top */
-      top: 0;
-      left: 0;
-      background-color: #c73434; /* Black*/
-      overflow-x: hidden; /* Disable horizontal scroll */
-      padding-top: 60px; /* Place content 60px from the top */
-      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    }
-
-    .panel-collapse {
-      background-color: #8f2323; /* Black*/
-    }
-
-    /* The navigation menu links */
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 15px;
-      color: #ffffff;
-      display: block;
-      transition: 0.3s
-    }
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover, .offcanvas a:focus{
-      color: #4e4e4e;
-    }
-
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-    }
-
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-      transition: margin-left .5s;
-      padding: 20px;
-    }
-
-    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
-    }
-    </style>
     <body>
-      <div id="main">
+      <div id="main" style="margin-left: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px;">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          {{-- <img src="{{ asset('img/NiagaArt.png') }}" width="150px" height="150px" alt=""> --}}
           <a href="{{ url('/admin') }}">Dashboard</a>
           <a data-toggle="collapse" href="#collapseContent">Contents</a>
           <div id="collapseContent" class="panel-collapse collapse">
@@ -102,8 +44,9 @@
           </div>
           <a data-toggle="collapse" href="#collapseBlog">Blog</a>
           <div id="collapseBlog" class="panel-collapse collapse">
-            <a href="{{ route('blog.index') }}">Blog Post</a>
-            <a href="{{ route('blog-category.index') }}">Blog Category</a>
+            <a href="{{ route('blog.index') }}">Post</a>
+            <a href="{{ route('blog-category.index') }}">Category</a>
+            <a href="{{ route('blog-tag.index') }}">Tag</a>
           </div>
           <a data-toggle="collapse" href="#collapseUser">Users</a>
           <div id="collapseUser" class="panel-collapse collapse">
@@ -114,7 +57,7 @@
           <a href="#">Logout</a>
         </div>
         <nav class="navbar navbar-default navbar-static-top">
-          <button class="btn-default navbar-brand navbar-open"type="button" name="button" onclick="openNav()"><strong>-</strong></button>
+          <a href="javascript:void(0)" class="navbar-brand navbar-open" name="nav-button" onclick="openNav()"><strong>-</strong></a>
             <div class="container">
                 <div class="navbar-header">
 
@@ -137,29 +80,17 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Logout</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                        <li>
+                            <a href="{{ url('/logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -187,6 +118,164 @@
         <script src="/js/app.js"></script>
 
         <script type="text/javascript">
+        /*
+        Copywrite Square Bracket LLC - Sean Clark 2012-3012
+        http://square-bracket.com
+        http://connect.ai
+        http://youtube.com/optikalefxx
+        */
+        (function($) {
+        $.fn.tags = function(opts) {
+                var selector = this.selector;
+                //console.log("selector",selector);
+                // updates the original input
+                function update($original) {
+                        var all = [];
+                        var list = $original.closest(".tags-wrapper").find("li.tag span").each(function() {
+                                all.push($(this).text());
+                        });
+                        all = all.join(",");
+                        $original.val(all);
+                }
+
+                return this.each(function() {
+                        var self = this,
+                                $self = $(this),
+                                $wrapper = $("<div class='tags-wrapper'><ul></ul></div");
+                                tags = $self.val(),
+                                tagsArray = tags.split(","),
+                                $ul = $wrapper.find("ul");
+
+
+
+                        // make sure have opts
+                        if(!opts) opts = {};
+                        opts.maxSize = 50;
+
+                        // add tags to start
+                        tagsArray.forEach(function(tag) {
+                                if(tag) {
+                                        $ul.append("<li class='tag'><span>"+tag+"</span><a href='#' class='glyphicon glyphicon-remove'></a></li>");
+                                }
+                        });
+
+
+                        // get classes on this element
+                        if(opts.classList) $wrapper.addClass(opts.classList);
+
+                        // add input
+                        $ul.append("<li class='tags-input'><input type='text' class='tags-secret'/></li>");
+                        // set to dom
+                        $self.after($wrapper);
+                        // add the old element
+                        $wrapper.append($self);
+
+                        // size the text
+                        var $input = $ul.find("input"),
+                                size = parseInt($input.css("font-size"))-4;
+
+                        // delete a tag
+                        $wrapper.on("click","li.tag a",function(e) {
+                                e.preventDefault();
+                                $(this).closest("li").remove();
+                                $self.trigger("tagRemove",$(this).closest("li").find("span").text());
+                                update($self);
+                        });
+
+                        // backspace needs to check before keyup
+                        $wrapper.on("keydown","li input",function(e) {
+                                // backspace
+                                if(e.keyCode == 8 && !$input.val()) {
+                                        var $li = $ul.find("li.tag:last").remove();
+                                        update($self);
+                                        $self.trigger("tagRemove",$li.find("span").text());
+                                }
+                                // prevent for tab
+                                if(e.keyCode == 9) {
+                                        e.preventDefault();
+                                }
+
+                        });
+
+                        // as we type
+                        $wrapper.on("keyup","li input",function(e) {
+                                e.preventDefault();
+                                $ul = $wrapper.find("ul");
+                                var $next = $input.next(),
+                                        usingAutoFill = $next.hasClass("autofill-bg"),
+                                        $inputLi = $ul.find("li.tags-input");
+
+                                // regular size adjust
+                                $input.width($input.val().length * (size) );
+
+                                // if combined with autofill, check the bg for size
+                                if(usingAutoFill) {
+                                        $next.width($next.val().length * (size) );
+                                        $input.width($next.val().length * (size) );
+                                        // make sure autofill doesn't get too big
+                                        if($next.width() < opts.maxSize) $next.width(opts.maxSize);
+                                        var list = $next.data().data;
+                                }
+
+                                // make sure we don't get too high
+                                if($input.width() < opts.maxSize) $input.width(opts.maxSize);
+
+                                // tab, comma, enter
+                                if(!!~[9,188,13].indexOf(e.keyCode)) {
+                                        var val = $input.val().replace(",","");
+                                        var otherCheck = true;
+
+                                        // requring a tag to be in autofill
+                                        if(opts.requireData && usingAutoFill) {
+                                                if(!~list.indexOf(val)) {
+                                                        otherCheck = false;
+                                                        $input.val("");
+                                                }
+                                        }
+
+                                        // unique
+                                        if(opts.unique) {
+                                                // found a match already there
+                                                if(!!~$self.val().split(",").indexOf(val)) {
+                                                        otherCheck = false;
+                                                        $input.val("");
+                                                        $next.val("");
+                                                }
+                                        }
+
+                                        // max tags
+                                        if(opts.maxTags) {
+                                                if($self.val().split(",").length == opts.maxTags) {
+                                                        otherCheck = false;
+                                                        $input.val("");
+                                                        $next.val("");
+                                                }
+                                        }
+
+                                        // if we have a value, and other checks pass, add the tag
+                                        if(val && otherCheck) {
+                                                // place the new tag
+                                                $inputLi.before("<li class='tag'><span>"+val+"</span><a href='#' class='glyphicon glyphicon-remove'></a></li>");
+                                                // clear the values
+                                                $input.val("");
+                                                if(usingAutoFill) $next.val("");
+                                                update($self);
+                                                $self.trigger("tagAdd",val);
+                                        }
+                                }
+
+                        });
+
+                });
+        }
+        })(jQuery);
+        $(function() {
+                                $("#taginput").tags({
+                                        unique: true,
+                                        maxTags: 5
+                                });
+                        });
+
             $(function () {
                 // Navigation active
                 $('ul.navbar-nav a[href="{{ "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]" }}"]').closest('li').addClass('active');

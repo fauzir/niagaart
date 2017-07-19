@@ -6,9 +6,9 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit About Content</div>
+                    <div class="panel-heading">Edit BlogTag #{{ $blogtag->id }}</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/about') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/blog-tag') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -20,14 +20,14 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($about, [
+                        {!! Form::model($blogtag, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/about', $about->id],
+                            'url' => ['/admin/blog-tag', $blogtag->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}
 
-                        @include ('admin/about.about.form', ['submitButtonText' => 'Update'])
+                        @include ('admin/blog-tag.blog-tag.form', ['submitButtonText' => 'Update'])
 
                         {!! Form::close() !!}
 

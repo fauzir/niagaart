@@ -12,6 +12,12 @@ use Session;
 
 class ContactController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,20 +25,7 @@ class ContactController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
-
-        if (!empty($keyword)) {
-            $contact = Contact::where('address', 'LIKE', "%$keyword%")
-				->orWhere('phone', 'LIKE', "%$keyword%")
-				->orWhere('other_phone', 'LIKE', "%$keyword%")
-				->orWhere('email', 'LIKE', "%$keyword%")
-				->orWhere('work_hour', 'LIKE', "%$keyword%")
-				->orWhere('side_image', 'LIKE', "%$keyword%")
-				->paginate($perPage);
-        } else {
-            $contact = Contact::paginate($perPage);
-        }
+        $contact = Contact::findOrFail(1);
 
         return view('admin/contact.contact.index', compact('contact'));
     }

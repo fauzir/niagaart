@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit Product #{{ $product->id }}</div>
+                    <div class="panel-heading">Edit Product #{{ $product->name }}</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/product') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

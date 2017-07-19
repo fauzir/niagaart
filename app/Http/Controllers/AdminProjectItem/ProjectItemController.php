@@ -13,6 +13,12 @@ use Session;
 
 class ProjectItemController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -100,8 +106,8 @@ class ProjectItemController extends Controller
     public function edit($id)
     {
         $projectitem = ProjectItem::findOrFail($id);
-
-        return view('admin/project-item.project-item.edit', compact('projectitem'));
+        $projects = Project::all();
+        return view('admin/project-item.project-item.edit', compact('projectitem', 'projects'));
     }
 
     /**

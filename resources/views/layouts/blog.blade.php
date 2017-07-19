@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>NiagaArt Blog | @yield('title')</title>
+    <meta name="description" content="lorem ipsum dolor set amet" /> <!--Max 160 characters-->
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <meta charset="utf-8" />
+
+    <!--Responsive using bootstrap-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

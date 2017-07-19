@@ -1,93 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <title>NiagaArt | @yield('title')</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="lorem ipsum dolor set amet" /> <!--Max 160 characters-->
+    <meta name="keywords" content="keyword1, keyword2, keyword3" />
+    <meta charset="utf-8" />
 
+    <!--Responsive using bootstrap-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <!-- Le styles -->
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-responsive.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7lscpg0p7m2fqvhf6i5hiua3ha4nd3d9xyd7hf2qffaazouh"></script>
     <script>tinymce.init({ selector:'textarea' });</script>
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+    <!--Google analytic-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-97258xxx-1', 'auto'); ga('send', 'pageview');
+    </script>
   </head>
 
   <body>
-
-    <style>
-        .img-footer{
-        width: 110px;
-        height: 94px;
-        }
-        footer.nb-footer {
-        background: #222;
-        border-top: 4px solid #b78c33; }
-        footer.nb-footer .about {
-        margin: 0 auto;
-        margin-top: 40px;
-        max-width: 1170px;
-        text-align: center; }
-        footer.nb-footer .about p {
-        font-size: 13px;
-        color: #999;
-        margin-top: 30px; }
-        footer.nb-footer .about .social-media {
-        margin-top: 15px; }
-        footer.nb-footer .about .social-media ul li a {
-        display: inline-block;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        border-radius: 50%;
-        font-size: 16px;
-        color: #b78c33;
-        border: 1px solid rgba(255, 255, 255, 0.3); }
-        footer.nb-footer .about .social-media ul li a:hover {
-        background: #b78c33;
-        color: #fff;
-        border-color: #b78c33; }
-        footer.nb-footer .footer-info-single {
-        margin-top: 30px; }
-        footer.nb-footer .footer-info-single .title {
-        color: #aaa;
-        text-transform: uppercase;
-        font-size: 16px;
-        border-left: 4px solid #b78c33;
-        padding-left: 5px; }
-        footer.nb-footer .footer-info-single ul li a {
-        display: block;
-        color: #aaa;
-        padding: 2px 0; }
-        footer.nb-footer .footer-info-single ul li a:hover {
-        color: #b78c33; }
-        footer.nb-footer .footer-info-single p {
-        font-size: 13px;
-        line-height: 20px;
-        color: #aaa; }
-        footer.nb-footer .copyright {
-        margin-top: 15px;
-        background: #111;
-        padding: 7px 0;
-        color: #999; }
-        footer.nb-footer .copyright p {
-        margin: 0;
-        padding: 0; }
-    </style>
-
     <div class="container-narrow">
 
       <div class="masthead">

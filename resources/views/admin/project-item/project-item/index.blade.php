@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Projectitem</div>
+                    <div class="panel-heading">Project Item</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/project-item/create') }}" class="btn btn-success btn-sm" title="Add New ProjectItem">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

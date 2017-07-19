@@ -3,11 +3,10 @@
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit Contact #{{ $contact->id }}</div>
+                    <div class="panel-heading">Edit Contact Page Content</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/contact') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />

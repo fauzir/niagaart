@@ -12,6 +12,12 @@ use Session;
 
 class AboutController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,18 +25,7 @@ class AboutController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
-
-        if (!empty($keyword)) {
-            $about = About::where('image_header', 'LIKE', "%$keyword%")
-				->orWhere('opening_image', 'LIKE', "%$keyword%")
-				->orWhere('opening_title', 'LIKE', "%$keyword%")
-				->orWhere('opening_text', 'LIKE', "%$keyword%")
-				->paginate($perPage);
-        } else {
-            $about = About::paginate($perPage);
-        }
+        $about = About::findOrFail(1);
 
         return view('admin/about.about.index', compact('about'));
     }

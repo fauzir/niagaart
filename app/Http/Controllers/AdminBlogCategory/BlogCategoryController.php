@@ -11,6 +11,12 @@ use Session;
 
 class BlogCategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     /**
      * Display a listing of the resource.
      *
@@ -54,7 +60,7 @@ class BlogCategoryController extends Controller
 			'category' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         BlogCategory::create($requestData);
 
         Session::flash('flash_message', 'BlogCategory added!');
@@ -104,7 +110,7 @@ class BlogCategoryController extends Controller
 			'category' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         $blogcategory = BlogCategory::findOrFail($id);
         $blogcategory->update($requestData);
 

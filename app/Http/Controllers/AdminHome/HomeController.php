@@ -12,6 +12,12 @@ use Session;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -19,17 +25,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
-
-        if (!empty($keyword)) {
-            $home = Home::where('image', 'LIKE', "%$keyword%")
-				->orWhere('welcome_text', 'LIKE', "%$keyword%")
-				->orWhere('company_description', 'LIKE', "%$keyword%")
-				->paginate($perPage);
-        } else {
-            $home = Home::paginate($perPage);
-        }
+        $home = Home::findOrFail(1);
 
         return view('admin/home.home.index', compact('home'));
     }
