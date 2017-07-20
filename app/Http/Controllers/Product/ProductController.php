@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Product;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Session;
@@ -17,7 +18,7 @@ class ProductController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +50,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin/product.product.create');
+        $services = Service::all();
+        return view('admin/product.product.create', compact('services'));
     }
 
     /**
@@ -105,8 +107,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::findOrFail($id);
-
-        return view('admin/product.product.edit', compact('product'));
+        $services = Service::all();
+        return view('admin/product.product.edit', compact('product', 'services'));
     }
 
     /**

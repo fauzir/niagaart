@@ -12,8 +12,12 @@
 
         <!-- Styles -->
         <link href="/css/app.css" rel="stylesheet">
+        {{-- <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+        <script src="http://demo.itsolutionstuff.com/plugin/croppie.js"></script> --}}
+        <script src="{{ asset('jcrop/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('jcrop/js/jquery.Jcrop.js') }}"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        {{-- <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/croppie.css"> --}}
         <!-- Scripts -->
         <script>
             window.Laravel = <?php echo json_encode([

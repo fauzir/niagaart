@@ -5,10 +5,13 @@ namespace App\Http\Controllers\AdminHome;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use DB;
 use App\Home;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Input;
 use Session;
+use Illuminate\Contracts\Validation\Validator;
 
 class HomeController extends Controller
 {
@@ -39,6 +42,21 @@ class HomeController extends Controller
     {
         return view('admin/home.home.create');
     }
+
+    public function postImage() {
+			//echo "HIIIIII";
+
+      $data = $_POST['image'];
+
+			list($type, $data) = explode(';', $data);
+			list(, $data)      = explode(',', $data);
+
+			$data = base64_decode($data);
+			$imageName = time().'.png';
+			file_put_contents('resources/views/upload/'.$imageName, $data);
+
+			echo "Image Uploaded";
+		}
 
     /**
      * Store a newly created resource in storage.

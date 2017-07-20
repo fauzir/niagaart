@@ -51,6 +51,16 @@ Route::get('/blog/{id}',[
    'as'    => 'blog.content'
 ]);
 
+Route::post('postImage', [
+  'uses' => 'AdminHome\\HomeController@postImage',
+  'as' => 'postImage'
+]);
+
+Route::post('upload-original', [
+  'uses' => 'HomeController@uploadOriginal',
+  'as' => 'upload.original'
+]);
+
 Auth::routes();
 
 Route::get('admin', 'Admin\AdminController@index');
@@ -63,6 +73,7 @@ Route::prefix('admin')->group(function () {
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
     Route::resource('home', 'AdminHome\\HomeController');
+
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
     Route::resource('projects', 'AdminProjects\\ProjectsController');
