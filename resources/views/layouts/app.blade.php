@@ -52,7 +52,7 @@
                      <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">SERVICE<b class="caret"></b></a>
                      <ul class="dropdown-menu">
                        <li class="dropdown">
-                         <a href="catalogue.html" class="dropdown-toggle" data-toggle="dropdown">INTERIOR DESIGN<b class="caret"></b></a>
+                         <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">INTERIOR DESIGN<b class="caret"></b></a>
                          <ul class="dropdown-submenu">
                            <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
                            <li><a href="{{ route('service', ['name' => 'apartment']) }}">APARTMENT</a></li>

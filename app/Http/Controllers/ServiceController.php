@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Service;
+use App\ServiceCatalogue;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,13 @@ class ServiceController extends Controller
         } elseif ($name == 'chair') {
             $service = Service::find(9);
         }
-            return view('service', compact('service', 'products'));
-        }
+        return view('service', compact('service', 'products'));
     }
+
+    public function getAll()
+    {
+        $services = Service::all();
+        $servicecatalogues = ServiceCatalogue::find(1);
+        return view('service-list', compact('services', 'servicecatalogues'));
+    }
+}

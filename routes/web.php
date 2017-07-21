@@ -16,6 +16,11 @@ Route::get('/',[
    'as'    => 'home'
 ]);
 
+Route::get('/services',[
+   'uses' => 'ServiceController@getAll',
+   'as'    => 'service.all'
+]);
+
 Route::get('/service/{name}',[
    'uses' => 'ServiceController@index',
    'as'    => 'service'
