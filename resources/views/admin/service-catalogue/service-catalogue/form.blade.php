@@ -1,5 +1,5 @@
 <div class="form-group {{ $errors->has('image_header') ? 'has-error' : ''}}">
-    {!! Form::label('image_header', 'Image Header', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('image_header', 'Banner Image', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::file('image_header', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('image_header', '<p class="help-block">:message</p>') !!}

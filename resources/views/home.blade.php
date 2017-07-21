@@ -50,9 +50,9 @@ Homepage
           <div class="row">
           <div class="container col-md-6"></div>
             <div class="container col-md-6 welcome-message">
-              <h1>{{ $home->welcome_text }}</h1>
+              <h1>Welcome to Niaga Art</h1>
               <hr>
-              <p>{{ $home->company_description }}</p>
+              <p>{{ $home->welcome_text }}</p>
             </div>
           </div>
         </div>

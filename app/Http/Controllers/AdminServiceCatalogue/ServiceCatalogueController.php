@@ -17,7 +17,7 @@ class ServiceCatalogueController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -25,17 +25,7 @@ class ServiceCatalogueController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
-
-        if (!empty($keyword)) {
-            $servicecatalogue = ServiceCatalogue::where('image_header', 'LIKE', "%$keyword%")
-				->orWhere('opening_title', 'LIKE', "%$keyword%")
-				->orWhere('opening_text', 'LIKE', "%$keyword%")
-				->paginate($perPage);
-        } else {
-            $servicecatalogue = ServiceCatalogue::paginate($perPage);
-        }
+        $servicecatalogue = ServiceCatalogue::findOrFail(1);
 
         return view('admin/service-catalogue.service-catalogue.index', compact('servicecatalogue'));
     }

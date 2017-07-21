@@ -50,9 +50,7 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'image_header' => 'required',
 			'opening_image' => 'required',
-			'opening_title' => 'required',
 			'opening_text' => 'required'
 		]);
         $requestData = $request->all();
@@ -115,7 +113,6 @@ class AboutController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'opening_title' => 'required',
 			'opening_text' => 'required'
 		]);
 

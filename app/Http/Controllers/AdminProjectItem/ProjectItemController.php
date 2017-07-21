@@ -39,7 +39,9 @@ class ProjectItemController extends Controller
             $projectitem = ProjectItem::paginate($perPage);
         }
 
-        return view('admin/project-item.project-item.index', compact('projectitem'));
+        $projects = Project::all();
+
+        return view('admin/project-item.project-item.index', compact('projectitem', 'projects'));
     }
 
     /**

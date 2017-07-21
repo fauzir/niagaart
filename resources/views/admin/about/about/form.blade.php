@@ -1,20 +1,8 @@
-<div class="form-group {{ $errors->has('image_header') ? 'has-error' : ''}}">
-    {!! Form::label('image_header', 'Image Header', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::file('image_header', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        {!! $errors->first('image_header', '<p class="help-block">:message</p>') !!}
-    </div>
-</div><div class="form-group {{ $errors->has('opening_image') ? 'has-error' : ''}}">
-    {!! Form::label('opening_image', 'Opening Image', ['class' => 'col-md-4 control-label']) !!}
+<div class="form-group {{ $errors->has('opening_image') ? 'has-error' : ''}}">
+    {!! Form::label('opening_image', 'Image', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::file('opening_image', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('opening_image', '<p class="help-block">:message</p>') !!}
-    </div>
-</div><div class="form-group {{ $errors->has('opening_title') ? 'has-error' : ''}}">
-    {!! Form::label('opening_title', 'Opening Title', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::text('opening_title', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        {!! $errors->first('opening_title', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('opening_text') ? 'has-error' : ''}}">
     {!! Form::label('opening_text', 'Opening Text', ['class' => 'col-md-4 control-label']) !!}

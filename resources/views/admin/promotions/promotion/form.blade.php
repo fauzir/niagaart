@@ -11,9 +11,12 @@
         {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
-    {!! Form::label('status', 'Status', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('status', 'Published', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('status', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        <select class="form-control" name="status">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
         {!! $errors->first('status', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
