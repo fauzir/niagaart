@@ -22,7 +22,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Image </th><td> <img src="{{ $home->image }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Welcome Text </th><td> {{ $home->welcome_text }} </td></tr><tr><th> Company Description </th><td> {{ $home->company_description }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ asset($home->image) }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Welcome Text </th><td> {{ $home->welcome_text }} </td></tr><tr><th> Company Description </th><td> {{ $home->company_description }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

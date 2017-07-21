@@ -22,7 +22,7 @@ About
               <p>{{ $about->opening_text }}</p>
             </div>
             <div class="container col-md-6 opening-img">
-              <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
+              <img src="{{ asset($about->opening_image) }}" alt="Interior Design">
             </div>
             @endforeach
           </div>

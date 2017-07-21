@@ -56,21 +56,14 @@ Homepage
             </div>
           </div>
         </div>
-        @endforeach
+
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             <div class="item active">
-              <img src="{{ asset('niagaart/images/Home-Carousel.jpg') }}" alt="Los Angeles" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="{{ asset('niagaart/images/Home-Carousel1.jpg') }}" alt="Chicago" style="width:100%;">
-            </div>
-
-            <div class="item">
-              <img src="{{ asset('niagaart/images/Home-Carousel.jpg') }}" alt="New york" style="width:100%;">
+              <img src="{{ asset($home->image) }}" alt="Los Angeles" style="width:100%;">
             </div>
           </div>
+        @endforeach
         </div>
       </div>
     </section>
@@ -82,7 +75,7 @@ Homepage
           @foreach($products as $product)
           <div class="col-xs-4">
               <a href="#" class="thumbnail thumbnail-service">
-                  <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
+                  <img src="{{ asset($product->image) }}">
                   <div class="caption">
                     <h3>{{ $product->name }}</h3>
                     <hr>

@@ -13,7 +13,7 @@
     @foreach ($data as $item)
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <img src="{{ $item->image }}" alt="">
+        <img src="{{ asset($item->image) }}" alt="">
         <div class="caption">
           <h3>{{ $item->name }}</h3>
           <p>Lorem ipsumLorem ipsum dolosit amet, consectetur adipisicing eli dolor sit amet, consectetur adipisicing elit. </p>

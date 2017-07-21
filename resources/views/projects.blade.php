@@ -25,7 +25,7 @@ Projects
                                 <p>{{ $project->description }}</p>
                               </div>
                               <div class="container col-md-6 opening-img">
-                                <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
+                                <img src="{{ asset($project->image) }}" alt="Interior Design">
                               </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@ Projects
       @foreach($projects as $project)
       <div class="col-xs-4">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal" href="#myModal">
-              <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
+              <img src="{{ asset($project->image) }}">
               <div class="caption">
                 <h3>{{ $project->name }}</h3>
                 <hr>
@@ -145,7 +145,7 @@ Projects
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">
-         
+
      </div>
      </div>
      </div>
