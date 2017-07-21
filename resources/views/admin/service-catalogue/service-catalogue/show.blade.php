@@ -29,7 +29,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Image Header </th><td> <img src="{{ $servicecatalogue->image_header }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Opening Title </th><td> {{ $servicecatalogue->opening_title }} </td></tr><tr><th> Opening Text </th><td> {{ $servicecatalogue->opening_text }} </td></tr>
+                                    <tr><th> Image Header </th><td> <img src="{{ asset($servicecatalogue->image_header) }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Opening Title </th><td> {{ $servicecatalogue->opening_title }} </td></tr><tr><th> Opening Text </th><td> {{ $servicecatalogue->opening_text }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
