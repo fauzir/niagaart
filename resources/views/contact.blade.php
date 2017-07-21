@@ -47,19 +47,19 @@ Contact
                     <form class="form message-form">
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control" id="nameField" placeholder="Your Name" />
+                         <input type="text" class="form-control" id="nameField" placeholder="Your Name" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control" id="emailField" placeholder="Your Email" />
+                         <input type="email" class="form-control" id="emailField" placeholder="Your Email" required="required" />
                       </div>
                       <div class="form-group">
-                         <label for="phoneField">Subject</label>
-                         <input type="text" class="form-control" id="phoneField" placeholder="Your Phone Number" />
+                         <label for="phoneField">Phone Number</label>
+                         <input type="number" class="form-control" id="phoneField" placeholder="Your Phone Number" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>
-                         <textarea class="form-control" id="descField" placeholder="Your Comments"></textarea>
+                         <textarea class="form-control" id="descField" placeholder="Your Message" required="required"></textarea>
                       </div>
                          <button type="submit" class="btn btn-block btn-primary">Submit</button>
                     </form>

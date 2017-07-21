@@ -33,6 +33,23 @@ class HomeController extends Controller
         return view('admin/home.home.index', compact('home'));
     }
 
+    public function crop(Request $request)
+    {
+        $quality = 90;
+
+        $src  = $request->input('image');
+        $img  = imagecreatefromjpeg($src);
+        $dest = ImageCreateTrueColor($request->input('w'),
+            $request->input('h'));
+
+        imagecopyresampled($dest, $img, 0, 0, $request->input('x'),
+            $request->input('y'), $request->input('w'), $request->input('h'),
+            $request->input('w'), $request->input('h'));
+        imagejpeg($dest, $src, $quality);
+
+        return view('admin/home.home.index', compact('src'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -40,7 +57,8 @@ class HomeController extends Controller
      */
     public function create()
     {
-        return view('admin/home.home.create');
+        $image = "uploads/41.jpg";
+        return view('admin/home.home.create')->with('image');
     }
 
     public function postImage() {

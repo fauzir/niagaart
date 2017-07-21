@@ -83,7 +83,10 @@ Route::prefix('admin')->group(function () {
     Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
     Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
     Route::resource('home', 'AdminHome\\HomeController');
-
+    Route::post('crop',[
+       'uses' => 'HomeController@crop',
+       'as'    => 'crop'
+    ]);
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
     Route::resource('projects', 'AdminProjects\\ProjectsController');

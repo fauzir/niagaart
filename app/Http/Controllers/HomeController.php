@@ -26,4 +26,21 @@ class HomeController extends Controller
 
         return view('img-result');
     }
+
+    public function crop(Request $request)
+    {
+        $quality = 90;
+
+        $src  = $request->input('image');
+        $img  = imagecreatefromjpeg($src);
+        $dest = ImageCreateTrueColor($request->input('w'),
+            $request->input('h'));
+
+        imagecopyresampled($dest, $img, 0, 0, $request->input('x'),
+            $request->input('y'), $request->input('w'), $request->input('h'),
+            $request->input('w'), $request->input('h'));
+        imagejpeg($dest, $src, $quality);
+
+        return "<img src='" . $src . "'>";
+    }
 }

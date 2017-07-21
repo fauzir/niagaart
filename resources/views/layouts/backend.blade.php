@@ -14,8 +14,9 @@
         <link href="/css/app.css" rel="stylesheet">
         {{-- <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
         <script src="http://demo.itsolutionstuff.com/plugin/croppie.js"></script> --}}
-        <script src="{{ asset('jcrop/js/jquery.min.js') }}"></script>
-        <script src="{{ asset('jcrop/js/jquery.Jcrop.js') }}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/2.0.4/css/Jcrop.min.css" type="text/css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-jcrop/2.0.4/js/Jcrop.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         {{-- <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/croppie.css"> --}}
         <!-- Scripts -->
@@ -294,6 +295,7 @@
             function closeNav() {
                 document.getElementById("mySidenav").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
+                $(this).collapse('hide');
             }
         </script>
       </div>
