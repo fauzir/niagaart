@@ -62,12 +62,12 @@ Services
          <div class="row service-label">
            @foreach($products as $product)
             <div class="col-xs-4">
-               <a href="#" class="thumbnail thumbnail-service" data-toggle="modal" data-target="#myModal">
-                  <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
+               <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $product->id }}" data-target="#myModal">
+                  <img src="{{ asset($product->image) }}">
                   <div class="caption">
                      <h3>{{ $product->name }}</h3>
                      <hr>
-                     <p>{{ $product->description }}</p>
+                     <p>{{ substr($product->description, 0, 150) }}</p>
                   </div>
                </a>
             </div>
@@ -194,84 +194,29 @@ Services
          <div class="modal fade" id="myModal">
          <div class="modal-dialog modal-lg">
          <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h2 class="modal-title">ITEM TITLE HERE</h2>
-                <p>Subtitle is also here for sure</p>
-            </div>
-            <!-- Modal Body -->
-            <div class="modal-body">
-              <div class="row">
-                  <img src="{{ asset('niagaart/images/popup-item.jpg') }}">
-                  <br>
-                  <div class="container col-md-8">
-                    <h2>DESCRIPTION ARE HERE</h2>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</p>
-                  </div>
-                  <div class="container col-md-4">
-                    <h2>DETAIL ARE HERE</h2>
-                    <br>
-                    <p>JL. Sangkuriang No 43
-                    Cimahi Utara Jawa Barat
-                    Indonesia</p>
-                    <br>
-                    <p>Phone : (022) 87800639</p>
-                    <br>
-                    <p>Message/Whatsapp : 0878-2454-2982</p>
-                    <br>
-                    <p>email : niagac7@gmail.com</p>
-                    <br>
-                    <p>Mon - Fri : 08:00 - 16:00</p>
-                    <br>
-                    <p>Sat - Sun : 09:00 - 15:00</p>
-                  </div>
-                  <br>
-                  <div class="gal">
 
-  <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-
-    <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-
-      <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-
-      <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-
-
-
-      <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-
-      <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-
-        <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt=""><img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-          <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-
-            <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-        <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-
-  </div>
-              </div>
-            </div>
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-            </div>
         </div>
         </div>
         </div>
          </div>
       </section>
+@endsection
+
+@section('script')
+  <script type="text/javascript">
+    $(document).on("click", ".product", function () {
+     var productId = $(this).data('id');
+           $.ajax({
+              url: '/product/item/' + productId + '',
+              type: "get",
+              success: function(response){
+                $('.modal-content').html(response)
+                $('#myModal').modal('show');
+              },
+              error: function(response){
+                console.log('Error '+response);
+              }
+            });
+      });
+  </script>
 @endsection

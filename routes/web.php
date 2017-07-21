@@ -36,6 +36,11 @@ Route::get('/projects/item/{id}',[
    'as'    => 'project.item'
 ]);
 
+Route::get('/product/item/{id}',[
+   'uses' => 'ServiceController@getProduct',
+   'as'    => 'product.item'
+]);
+
 Route::get('/about',[
    'uses' => 'AboutController@index',
    'as'    => 'about'

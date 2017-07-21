@@ -48,4 +48,11 @@ class ServiceController extends Controller
         $servicecatalogues = ServiceCatalogue::find(1);
         return view('service-list', compact('services', 'servicecatalogues'));
     }
+
+    public function getProduct(Request $request)
+    {
+        $id = $request->id;
+        $product = Product::find($id);
+        return view('product', compact('product'));
+    }
 }

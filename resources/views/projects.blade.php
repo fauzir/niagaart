@@ -106,7 +106,7 @@ Projects
               <div class="caption">
                 <h3>{{ $project->name }}</h3>
                 <hr>
-                <p>{{ $project->description }}</p>
+                <p>{{ substr($project->description, 0, 150) }}</p>
               </div>
           </div>
       </div>
@@ -145,7 +145,7 @@ Projects
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">
-
+        <img id="loading-image" src="img/ajax-loader.gif" style="display:none;"/>
      </div>
      </div>
      </div>
