@@ -29,7 +29,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Service Id </th><td> {{ $product->service_id }} </td></tr><tr><th> Image </th><td> <img src="{{ $product->image }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Name </th><td> {{ $product->name }} </td></tr>
+                                    <tr><th> Service Id </th><td> {{ $product->service_id }} </td></tr><tr><th> Image </th><td> <img src="{{ $product->image }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $product->name }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

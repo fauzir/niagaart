@@ -127,7 +127,7 @@ class ServiceCatalogueController extends Controller
 
         Session::flash('flash_message', 'ServiceCatalogue updated!');
 
-        return redirect('admin/service-catalogue');
+        return redirect('admin/home');
     }
 
     /**

@@ -132,7 +132,7 @@ class ContactController extends Controller
 
         Session::flash('flash_message', 'Contact updated!');
 
-        return redirect('admin/contact');
+        return redirect('admin/home');
     }
 
     /**

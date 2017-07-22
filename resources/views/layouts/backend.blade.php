@@ -37,14 +37,15 @@
           <a href="{{ url('/admin') }}">Dashboard</a>
           <a data-toggle="collapse" href="#collapseContent">Contents</a>
           <div id="collapseContent" class="panel-collapse collapse">
-            <a href="{{ route('home.index') }}">Home</a>
-            <a href="{{ route('service-catalogue.index') }}">Service Catalogue</a>
-            <a href="{{ route('service.index') }}">Service</a>
+            <a href="{{ route('home.index') }}">Pages</a>
+            {{-- <a href="{{ route('home.index') }}">Home</a> --}}
+            {{-- <a href="{{ route('service-catalogue.index') }}">Service Catalogue</a> --}}
+            <a href="{{ route('service.index') }}">Services</a>
+            <a href="{{ route('product.index') }}">Product</a>
             <a href="{{ route('projects.index') }}">Projects</a>
             <a href="{{ route('project-item.index') }}">Project Items</a>
-            <a href="{{ route('about.index') }}">About</a>
-            <a href="{{ route('contact.index') }}">Contact</a>
-            <a href="{{ route('product.index') }}">Product</a>
+            {{-- <a href="{{ route('about.index') }}">About</a>
+            <a href="{{ route('contact.index') }}">Contact</a> --}}
             <a href="{{ route('promotion.index') }}">Promotions</a>
           </div>
           <a data-toggle="collapse" href="#collapseBlog">Blog</a>
@@ -75,8 +76,8 @@
                     </button
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        NiagaArt
+                    <a class="navbar-brand" href="{{ url('/admin') }}">
+                        <img src="{{ asset('img/logo-round.png') }}" height="50px" alt="41logofooter">
                     </a>
                 </div>
 

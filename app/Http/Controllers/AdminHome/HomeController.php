@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 
 use DB;
 use App\Home;
+use App\About;
+use App\Contact;
+use App\ServiceCatalogue;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Input;
@@ -29,8 +32,12 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $home = Home::findOrFail(1);
+        $about = About::findOrFail(1);
+        $contact = Contact::findOrFail(1);
+        $servicecatalogue = ServiceCatalogue::findOrFail(1);
 
-        return view('admin/home.home.index', compact('home'));
+        // return view('admin/home.home.index', compact('home'));
+        return view('admin/page-content', compact('home', 'about', 'contact', 'servicecatalogue'));
     }
 
     public function crop(Request $request)

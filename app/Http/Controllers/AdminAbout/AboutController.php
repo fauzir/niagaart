@@ -141,7 +141,7 @@ class AboutController extends Controller
 
         Session::flash('flash_message', 'About updated!');
 
-        return redirect('admin/about');
+        return redirect('admin/home');
     }
 
     /**

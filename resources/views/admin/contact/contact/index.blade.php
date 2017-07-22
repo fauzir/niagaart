@@ -22,7 +22,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Address </th><td> {{ $contact->address }} </td></tr><tr><th> Phone </th><td> {{ $contact->phone }} </td></tr><tr><th> Other Phone </th><td> {{ $contact->other_phone }} </td></tr><tr><th> Email </th><td> {{ $contact->email }} </td></tr><tr><th> Work Hour </th><td> {{ $contact->work_hour }} </td></tr><tr><th> Side Image </th><td> <img src="{{ $contact->side_image }}" width="20%" height="20%" alt=""> </td></tr>
+                                    <tr><th> Address </th><td> {{ $contact->address }} </td></tr><tr><th> Phone </th><td> {{ $contact->phone }} </td></tr><tr><th> Other Phone </th><td> {{ $contact->other_phone }} </td></tr><tr><th> Email </th><td> {{ $contact->email }} </td></tr><tr><th> Work Hour </th><td> {{ $contact->work_hour }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

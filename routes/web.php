@@ -16,6 +16,11 @@ Route::get('/',[
    'as'    => 'home'
 ]);
 
+Route::post('/send-message',[
+   'uses' => 'ContactController@sendMessage',
+   'as'    => 'send.message'
+]);
+
 Route::get('/services',[
    'uses' => 'ServiceController@getAll',
    'as'    => 'service.all'

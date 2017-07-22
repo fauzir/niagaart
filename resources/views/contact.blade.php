@@ -44,25 +44,26 @@ Contact
           <div class="row">
             <div class="container col-md-6 mail-panel">
               <h3>LEAVE US A MESSAGE</h3>
-                    <form class="form message-form">
+                    {!! Form::open(array('route' => 'send.message', 'class' => 'form message-form')) !!}
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control" id="nameField" placeholder="Your Name" required="required" />
+                         <input type="text" class="form-control" name="name" id="nameField" placeholder="Your Name" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control" id="emailField" placeholder="Your Email" required="required" />
+                         <input type="email" class="form-control" name="email" id="emailField" placeholder="Your Email" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="number" class="form-control" id="phoneField" placeholder="Your Phone Number" required="required" />
+                         <input type="number" class="form-control" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>
-                         <textarea class="form-control" id="descField" placeholder="Your Message" required="required"></textarea>
+                         <textarea class="form-control" name="user_message" id="descField" placeholder="Your Message" required="required"></textarea>
                       </div>
+                          {{ csrf_field() }}
                          <button type="submit" class="btn btn-block btn-primary">Submit</button>
-                    </form>
+                    {!! Form::close() !!}
             </div>
           </div>
         </div>

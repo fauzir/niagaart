@@ -22,7 +22,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Image </th><td> <img src="{{ asset($about->opening_image) }}" width="20%" height="20%" alt=""> </td></tr><tr><th> Opening Text </th><td> {{ $about->opening_text }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ asset($about->opening_image) }}" height="50%" alt=""> </td></tr><tr><th> Opening Text </th><td> {{ $about->opening_text }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
