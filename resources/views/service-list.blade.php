@@ -36,7 +36,7 @@ Services
               <button type="button" class="btn btn-homeliving">LEARN MORE</button>
             </div>
             <div class="container col-md-6 opening-img">
-              <img src="./images/Opening.jpg" alt="Interior Design">
+              <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ Services
       <div class="container opening-sectionright">
           <div class="row">
             <div class="container col-md-6 apartment-img">
-              <img src="./images/apartment.jpg" alt="Interior Design">
+              <img src="{{ asset('niagaart/images/apartment.jpg') }}" alt="Interior Design">
             </div>
             <div class="container col-md-6 apartment-txt">
               <h1>APARTMENT</h1>
@@ -72,7 +72,7 @@ Services
               <button type="button" class="btn btn-cafe">LEARN MORE</button>
             </div>
             <div class="container col-md-6 cafe-img">
-              <img src="./images/cafe.jpg" alt="Interior Design">
+              <img src="{{ asset('niagaart/images/cafe.jpg') }}" alt="Interior Design">
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ Services
       <div class="container opening-sectionright">
           <div class="row">
             <div class="container col-md-6 office-img">
-              <img src="./images/office.jpg" alt="Interior Design">
+              <img src="{{ asset('niagaart/images/office.jpg') }}" alt="Interior Design">
             </div>
             <div class="container col-md-6 apartment-txt">
               <h1>SHOP & OFFICE</h1>

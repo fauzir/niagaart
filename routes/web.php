@@ -26,7 +26,7 @@ Route::get('/services',[
    'as'    => 'service.all'
 ]);
 
-Route::get('/service/{name}',[
+Route::get('/service/{id}',[
    'uses' => 'ServiceController@index',
    'as'    => 'service'
 ]);

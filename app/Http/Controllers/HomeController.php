@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Home;
-use App\Product;
 use App\Blog;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -13,9 +13,11 @@ class HomeController extends Controller
     public function index()
     {
         $homes = Home::all();
-        $products = Product::limit(3)->select('id','image','name','description','price')->get();
-        $blogs = Blog::limit(6)->select('id','title','category','image','content','author')->get();
-        return view('home', compact('homes', 'products', 'blogs'));
+        $services = Service::limit(3)->select('id', 'image', 'name', 'description')->where('type', 'interior')->get();
+        $blogs = Blog::limit(5)->select('id','title','category','image','content','author')->orderBy('created_at', 'desc')->get();
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others'));
     }
 
     public function uploadOriginal(Request $request)

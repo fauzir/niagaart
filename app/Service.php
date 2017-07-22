@@ -25,7 +25,7 @@ class Service extends Model
      *
      * @var array
      */
-    protected $fillable = ['image', 'name', 'description'];
+    protected $fillable = ['image', 'name', 'description', 'type', 'publish'];
 
-    
+
 }

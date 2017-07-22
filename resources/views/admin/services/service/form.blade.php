@@ -14,12 +14,28 @@
     {!! Form::label('description', 'Description*', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::textarea('description', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        <p>* cannot be blank</p>
         {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
     </div>
+</div><div class="form-group {{ $errors->has('type') ? 'has-error' : ''}}">
+    {!! Form::label('type', 'Type*', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+      <select class="form-control" name="type">
+          <option value="interior">Interior Design</option>
+          <option value="other">Other Interior</option>
+      </select>
+        {!! $errors->first('type', '<p class="help-block">:message</p>') !!}
+    </div>
+</div><div class="form-group {{ $errors->has('publish') ? 'has-error' : ''}}">
+    {!! Form::label('publish', 'Publish*', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+      <select class="form-control" name="publish">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+      </select>
+        <p>* cannot be blank</p>
+        {!! $errors->first('publish', '<p class="help-block">:message</p>') !!}
+    </div>
 </div>
-
-
 
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">

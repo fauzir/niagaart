@@ -72,50 +72,18 @@ Homepage
         <h2>OUR SERVICES</h2>
         <hr>
           <div class="row service-label">
-          @foreach($products as $product)
+          @foreach($services as $service)
           <div class="col-xs-4">
-              <a href="#" class="thumbnail thumbnail-service">
-                  <img src="{{ asset($product->image) }}">
+              <a href="{{ route('service', ['id' => $service->id]) }}" class="thumbnail thumbnail-service">
+                  <img src="{{ asset($service->image) }}">
                   <div class="caption">
-                    <h3>{{ $product->name }}</h3>
+                    <h3>{{ $service->name }}</h3>
                     <hr>
-                    <p>{{ substr($product->description, 0, 150) }}</p>
-                    <hr>
-                    <p><b>${{ $product->price }}</b></p>
+                    <p>{{ substr($service->description, 0, 150) }}</p>
                   </div>
               </a>
           </div>
           @endforeach
-          {{-- <div class="col-xs-4">
-              <a href="#" class="thumbnail thumbnail-service">
-                  <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
-                  <div class="caption">
-                    <h3>SERVICE TITLE</h3>
-                    <hr>
-                    <p>This is your service descrption here just put it good here</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-xs-4">
-              <a href="#" class="thumbnail thumbnail-service">
-                  <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
-                  <div class="caption">
-                    <h3>SERVICE TITLE</h3>
-                    <hr>
-                    <p>This is your service descrption here just put it good here</p>
-                  </div>
-              </a>
-          </div>
-          <div class="col-xs-4">
-              <a href="#" class="thumbnail thumbnail-service">
-                  <img class="img-fluid" src="{{ asset('niagaart/images/Service-label.jpg') }}">
-                  <div class="caption">
-                    <h3>SERVICE TITLE</h3>
-                    <hr>
-                    <p>This is your service descrption here just put it good here</p>
-                  </div>
-              </a>
-          </div> --}}
           </div>
           <br>
           <p>{{ $home->company_description }}</p>
@@ -238,7 +206,7 @@ Homepage
           </div>
           <div class="container col-md-6">
           <h1>WHAT'S NEW</h1>
-        <a class="twitter-timeline" data-height="600" data-theme="light" data-link-color="#E81C4F" href="https://twitter.com/niaga_art">Tweets by niaga_art</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-timeline" data-height="600" data-theme="light" data-chrome="nofooter" data-link-color="#E81C4F" href="https://twitter.com/niaga_art">Tweets by niaga_art</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         </div>
         </div>

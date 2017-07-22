@@ -30,8 +30,7 @@ class ProductController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $product = Product::where('service_id', 'LIKE', "%$keyword%")
-				->orWhere('image', 'LIKE', "%$keyword%")
+            $product = Product::where('id', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('description', 'LIKE', "%$keyword%")
 				->orWhere('price', 'LIKE', "%$keyword%")

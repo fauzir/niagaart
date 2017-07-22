@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Service;
 use App\Mail\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,8 +14,10 @@ class ContactController extends Controller
 {
     public function index()
     {
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
         $contacts = Contact::all();
-        return view('contact', compact('contacts'));
+        return view('contact', compact('interiors', 'others', 'contacts'));
     }
 
     public function sendMessage(Request $request)

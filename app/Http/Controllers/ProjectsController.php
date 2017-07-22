@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use App\ProjectItem;
+use App\Service;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
     public function index()
     {
-        $projects = Project::all();
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
+        $featureds = Project::where('status', 'yes')->get();
+        $projects = Project::where('status', 'no')->get();
         $items = ProjectItem::all();
-        return view('projects', compact('projects', 'items'));
+        return view('projects', compact('interiors', 'others', 'featureds', 'projects', 'items'));
     }
 
     public function getItem(Request $request)

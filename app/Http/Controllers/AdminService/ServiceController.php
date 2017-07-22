@@ -18,7 +18,7 @@ class ServiceController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -26,13 +26,13 @@ class ServiceController extends Controller
      */
     public function index(Request $request)
     {
-        $keyword = $request->get('search');
-        $perPage = 25;
+        $keyword = $request->input('search');
+        $perPage = 10;
 
         if (!empty($keyword)) {
-            $service = Service::where('image', 'LIKE', "%$keyword%")
+            $service = Service::where('id', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
-				->orWhere('description', 'LIKE', "%$keyword%")
+        ->orWhere('description', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
             $service = Service::paginate($perPage);

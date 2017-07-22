@@ -14,73 +14,24 @@ Projects
     <div class="row">
         <div class="col-xs-offset-2 col-xs-8">
             <div class="carousel-inner">
-              @foreach($projects as $index => $project)
+              @foreach($featureds as $index => $featured)
                 <div class="item @if($index == 0) {{ 'active' }} @endif">
                     <div class="carousel-content">
                         <div class="container featured-projects">
                             <div class="row">
                               <div class="container col-md-6">
-                                <h3>{{ $project->name }}</h3>
+                                <h3>{{ $featured->name }}</h3>
                                 <br>
-                                <p>{{ $project->description }}</p>
+                                <p>{{ $featured->description }}</p>
                               </div>
                               <div class="container col-md-6 opening-img">
-                                <img src="{{ asset($project->image) }}" alt="Interior Design">
+                                <img src="{{ asset($featured->image) }}" alt="Interior Design">
                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
               @endforeach
-                {{-- <div class="item active">
-                    <div class="carousel-content">
-                            <div class="container featured-projects">
-                                <div class="row">
-                                  <div class="container col-md-6">
-                                    <h3>PROJECT TITLE HERE</h3>
-                                    <br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-                                  </div>
-                                  <div class="container col-md-6 opening-img">
-                                    <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
-                                  </div>
-                                </div>
-                              </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div class="container featured-projects">
-                                <div class="row">
-                                  <div class="container col-md-6">
-                                    <h3>PROJECT TITLE HERE</h3>
-                                    <br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-                                  </div>
-                                  <div class="container col-md-6 opening-img">
-                                    <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
-                                  </div>
-                                </div>
-                              </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="carousel-content">
-                        <div class="container featured-projects">
-                                <div class="row">
-                                  <div class="container col-md-6">
-                                    <h3>PROJECT TITLE HERE</h3>
-                                    <br>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia </p>
-                                  </div>
-                                  <div class="container col-md-6 opening-img">
-                                    <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
-                                  </div>
-                                </div>
-                              </div>
-                    </div>
-                </div> --}}
-
             </div>
         </div>
     </div>
@@ -96,7 +47,7 @@ Projects
 <hr>
 <section>
   <div class="container service-section">
-    <h2>OUR SERVICES</h2>
+    <h2>OUR PROJECTS</h2>
     <hr>
       <div class="row service-label">
       @foreach($projects as $project)

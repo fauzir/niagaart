@@ -54,14 +54,26 @@
                        <li class="dropdown">
                          <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">INTERIOR DESIGN<b class="caret"></b></a>
                          <ul class="dropdown-submenu">
-                           <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
+                           {{-- <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
                            <li><a href="{{ route('service', ['name' => 'apartment']) }}">APARTMENT</a></li>
                            <li><a href="{{ route('service', ['name' => 'cafe-foodcourt']) }}">CAFE & FOODCOURT</a></li>
-                           <li><a href="{{ route('service', ['name' => 'shop-office']) }}">SHOP & OFFICE</a></li>
+                           <li><a href="{{ route('service', ['name' => 'shop-office']) }}">SHOP & OFFICE</a></li> --}}
+                           @foreach ($interiors as $interior)
+                             <li><a href="{{ route('service', ['id' => $interior->id]) }}">{{ $interior->name }}</a></li>
+                           @endforeach
+                         </ul>
+                       <li class="divider"></li>
+                         <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">OTHER INTERIOR DESIGN SERVICES<b class="caret"></b></a>
+                         <ul class="dropdown-submenu">
+                           {{-- <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
+                           <li><a href="{{ route('service', ['name' => 'apartment']) }}">APARTMENT</a></li>
+                           <li><a href="{{ route('service', ['name' => 'cafe-foodcourt']) }}">CAFE & FOODCOURT</a></li>
+                           <li><a href="{{ route('service', ['name' => 'shop-office']) }}">SHOP & OFFICE</a></li> --}}
+                           @foreach ($others as $other)
+                             <li><a href="{{ route('service', ['id' => $other->id]) }}">{{ $other->name }}</a></li>
+                           @endforeach
                          </ul>
                        </li>
-                       <li class="divider"></li>
-                       <li><a href="#">OTHER INTERIOR DESIGN SERVICES</a></li>
                     </ul>
                   </li>
                   <li><a href="{{ route('projects') }}">PROJECTS</a></li>
