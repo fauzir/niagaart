@@ -101,20 +101,21 @@ Homepage
           </ol>
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-            <div class="item active">
+            @foreach ($testimonies as $index => $testimony)
+            <div class="item @if($index == 0) {{ 'active' }} @endif">
               <div class="row">
                 <div class="col-xs-12">
                   <div class="thumbnail adjust1">
                     <div class="col-md-2 col-sm-2 col-xs-12">
-                      <img class="media-object img-rounded img-responsive" src="http://placehold.it/100">
+                      <img class="media-object img-rounded img-responsive" src="{{ asset($testimony->image) }}">
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-12">
                       <div class="caption">
-                        <h2>I can't wait to test this out.</h2>
-                        <p>This is a testimonial window. Feedback of user can be displayed here.</p>
+                        <h2>{{ $testimony->subject }}</h2>
+                        <p>{{ $testimony->testimony }}</p>
                         <blockquote class="adjust2">
-                          <b>Abhijit Goswami</b>
-                            <small><cite title="Source Title">CEO Lorem Ipsum Group</cite></small>
+                          <b>{{ $testimony->name }}</b>
+                            <small><cite title="Source Title">{{ $testimony->occupation }}</cite></small>
                         </blockquote>
                       </div>
                     </div>
@@ -122,48 +123,7 @@ Homepage
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="thumbnail adjust1">
-                    <div class="col-md-2 col-sm-2 col-xs-12">
-                      <img class="media-object img-rounded img-responsive" src="http://placehold.it/100">
-                    </div>
-                    <div class="col-md-10 col-sm-10 col-xs-12">
-                      <div class="caption">
-                        <h2>I can't wait to test this out.</h2>
-                        <p>This is a testimonial window. Feedback of user can be displayed here.</p>
-                        <blockquote class="adjust2">
-                          <b>Abhijit Goswami</b>
-                            <small><cite title="Source Title">CEO Lorem Ipsum Group</cite></small>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="thumbnail adjust1">
-                    <div class="col-md-2 col-sm-2 col-xs-12">
-                      <img class="media-object img-rounded img-responsive" src="http://placehold.it/100">
-                    </div>
-                    <div class="col-md-10 col-sm-10 col-xs-12">
-                      <div class="caption">
-                        <h2>I can't wait to test this out.</h2>
-                        <p>This is a testimonial window. Feedback of user can be displayed here.</p>
-                        <blockquote class="adjust2">
-                          <b>Abhijit Goswami</b>
-                            <small><cite title="Source Title">CEO Lorem Ipsum Group</cite></small>
-                        </blockquote>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
           <!-- Controls -->
           <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">

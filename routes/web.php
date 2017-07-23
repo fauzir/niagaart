@@ -104,3 +104,5 @@ Route::prefix('admin')->group(function () {
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
 });
+
+Route::resource('admin/testimony', 'AdminTestimony\\TestimonyController');

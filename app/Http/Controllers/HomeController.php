@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Home;
 use App\Blog;
 use App\Service;
+use App\Testimony;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -17,7 +18,8 @@ class HomeController extends Controller
         $blogs = Blog::limit(5)->select('id','title','category','image','content','author')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->get();
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others'));
+        $testimonies = Testimony::all();
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'testimonies'));
     }
 
     public function uploadOriginal(Request $request)
