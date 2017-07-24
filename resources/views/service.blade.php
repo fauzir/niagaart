@@ -12,7 +12,7 @@ Services
                   <div class="row">
                      <div class="container col-md-3 fill-in">
                      </div>
-                     <div class="container col-md-8 header-txt">
+                     <div class="container col-md-8 catalogueheader-txt">
                         <h1>{{ $service->name }}</h1>
                         <br>
                         <p>{{ $service->description }}</p>
@@ -56,12 +56,12 @@ Services
          </div>
       </section>
       <section>
-         <div class="container service-section">
+         <div class="container service-sectioncatalogue">
          <h2>OUR CATALOGUE</h2>
          <hr>
          <div class="row service-label">
            @foreach($products as $product)
-            <div class="col-xs-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $product->id }}" data-target="#myModal">
                   <img src="{{ asset($product->image) }}">
                   <div class="caption">

@@ -18,9 +18,15 @@
     <link href="/humans.txt" rel="author" />
     <!-- Bootstrap -->
     <link href="{{ asset('niagaart/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('niagaart/css/bootstrap.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('niagaart/css/font-awesome.min.css') }}">
     <link href="{{ asset('niagaart/css/styles.css') }}" rel="stylesheet" media="all">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
+    <!---Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
     <!--Google analytic-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-97258xxx-1', 'auto'); ga('send', 'pageview');
@@ -34,6 +40,55 @@
   </head>
   <body>
     <section>
+       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/NiagaArt.png') }}" width="75px" height="75px"></a>
+             </div>
+             <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                   <li><a href="{{ route('home') }}">HOME</a></li>
+                   <li><a href="{{ route('about') }}">ABOUT</a></li>
+                   <li class="dropdown">
+                      <a href="{{ route('service.all') }}">SERVICES<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                         <li class="dropdown">
+                            <a href="{{ route('service.all') }}">INTERIOR DESIGN SERVICES</a>
+                            <ul class="dropdown-menu">
+                               @foreach ($interiors as $interior)
+                                 <li><a href="{{ route('service', ['id' => $interior->id]) }}">{{ $interior->name }}</a></li>
+                                 <li class="divider"></li>
+                               @endforeach
+                            </ul>
+                         </li>
+                         <li class="divider"></li>
+                         <li class="dropdown-submenu">
+                            <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">OTHER INTERIOR DESIGN SERVICES</a>
+                            <ul class="dropdown-menu">
+                               @foreach ($others as $other)
+                                 <li><a href="{{ route('service', ['id' => $other->id]) }}">{{ $other->name }}</a></li>
+                                 <li class="divider"></li>
+                               @endforeach
+                            </ul>
+                         </li>
+                      </ul>
+                   </li>
+                   <li><a href="{{ route('projects') }}">PROJECTS</a></li>
+                   <li><a href="{{ route('contact') }}">CONTACT US</a></li>
+                   <li><a href="{{ route('blog') }}">BLOG</a></li>
+                </ul>
+             </div>
+             <!--/.nav-collapse -->
+          </div>
+       </div>
+    </section>
+    {{-- <section>
       <div class="navbar navbar-default">
            <div class="container">
              <div class="navbar-header">
@@ -54,10 +109,6 @@
                        <li class="dropdown">
                          <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">INTERIOR DESIGN<b class="caret"></b></a>
                          <ul class="dropdown-submenu">
-                           {{-- <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
-                           <li><a href="{{ route('service', ['name' => 'apartment']) }}">APARTMENT</a></li>
-                           <li><a href="{{ route('service', ['name' => 'cafe-foodcourt']) }}">CAFE & FOODCOURT</a></li>
-                           <li><a href="{{ route('service', ['name' => 'shop-office']) }}">SHOP & OFFICE</a></li> --}}
                            @foreach ($interiors as $interior)
                              <li><a href="{{ route('service', ['id' => $interior->id]) }}">{{ $interior->name }}</a></li>
                            @endforeach
@@ -65,10 +116,6 @@
                        <li class="divider"></li>
                          <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">OTHER INTERIOR DESIGN SERVICES<b class="caret"></b></a>
                          <ul class="dropdown-submenu">
-                           {{-- <li><a href="{{ route('service', ['name' => 'home-living']) }}">HOME & LIVING</a></li>
-                           <li><a href="{{ route('service', ['name' => 'apartment']) }}">APARTMENT</a></li>
-                           <li><a href="{{ route('service', ['name' => 'cafe-foodcourt']) }}">CAFE & FOODCOURT</a></li>
-                           <li><a href="{{ route('service', ['name' => 'shop-office']) }}">SHOP & OFFICE</a></li> --}}
                            @foreach ($others as $other)
                              <li><a href="{{ route('service', ['id' => $other->id]) }}">{{ $other->name }}</a></li>
                            @endforeach
@@ -83,7 +130,7 @@
              </div>
            </div>
          </div>
-    </section>
+    </section> --}}
 
     @yield('content')
 

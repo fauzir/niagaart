@@ -51,7 +51,7 @@ Projects
     <hr>
       <div class="row service-label">
       @foreach($projects as $project)
-      <div class="col-xs-4">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal" href="#myModal">
               <img src="{{ asset($project->image) }}">
               <div class="caption">

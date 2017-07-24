@@ -16,14 +16,14 @@ Contact
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.2035280902023!2d107.5357772!3d-6.8661972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e4662e1bf133%3A0xc7286f3552020388!2sNiaga+Art!5e0!3m2!1sen!2sid!4v1500448170435" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
               @foreach($contacts as $contact)
-              <div class="container col-md-5 address">
+              <div class="container col-lg-5 col-md-4 address">
                 <h3>OFFICE</h3>
                 <br>
                 <p>{{ $contact->address }}</p>
                 <br>
-                <p>Phone : {{ $contact->phone }}</p>
+                <p>Phone : <a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a></p>
                 <br>
-                <p>Message/Whatsapp : {{ $contact->other_phone }}</p>
+                <p>Message/Whatsapp : <a href="{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
                 <br>
                 <p>email : niagac7@gmail.com</p>
                 <br>
@@ -47,22 +47,22 @@ Contact
                     {!! Form::open(array('route' => 'send.message', 'class' => 'form message-form')) !!}
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control" name="name" id="nameField" placeholder="Your Name" required="required" />
+                         <input type="text" class="form-control form-line" name="name" id="nameField" placeholder="Your Name" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control" name="email" id="emailField" placeholder="Your Email" required="required" />
+                         <input type="email" class="form-control form-line" name="email" id="emailField" placeholder="Your Email" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="number" class="form-control" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
+                         <input type="text" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>
-                         <textarea class="form-control" name="user_message" id="descField" placeholder="Your Message" required="required"></textarea>
+                         <textarea class="form-control" name="user_message" id="descField" placeholder="Message Here" required="required"></textarea>
                       </div>
                           {{ csrf_field() }}
-                         <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                         <button type="submit" class="btn btn-block btn-send">Submit</button>
                     {!! Form::close() !!}
             </div>
           </div>

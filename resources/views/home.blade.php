@@ -49,10 +49,14 @@ Homepage
         <div class="carousel-caption">
           <div class="row">
           <div class="container col-md-6"></div>
-            <div class="container col-md-6 welcome-message">
+            <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message hidden-xs">
               <h1>Welcome to Niaga Art</h1>
               <hr>
               <p>{{ $home->welcome_text }}</p>
+            </div>
+            <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message visible-xs">
+              <h1>Welcome to Niaga Art</h1>
+              <hr>
             </div>
           </div>
         </div>
@@ -73,7 +77,7 @@ Homepage
         <hr>
           <div class="row service-label">
           @foreach($services as $service)
-          <div class="col-xs-4">
+          <div class="col-xs-12 col-sm-6 col-md-4">
               <a href="{{ route('service', ['id' => $service->id]) }}" class="thumbnail thumbnail-service">
                   <img src="{{ asset($service->image) }}">
                   <div class="caption">
@@ -140,15 +144,19 @@ Homepage
       <div class="container newsfeed">
         <div class="row">
           <div class="container col-md-6">
-          <h1>BLOG POSTS</h1>
+          <h2>BLOG POSTS</h2>
           @foreach ($blogs as $blog)
           <div class="media">
             <div class="media-left">
-              <div class="date"><h1>20</h1></div>
-              <div class="month"><p>Jul</p></div>
+              <div class="date">
+                 <h1>20</h1>
+              </div>
+              <div class="month">
+                 <p>Jul</p>
+              </div>
             </div>
-            <div class="media-body">
-              <h1><a href="{{ route('blog.content', ['id' => $blog->id]) }}"></a>{{ $blog->title }}</h1>
+            <div class="media-body article-showcase">
+              <h2><a href="{{ route('blog.content', ['id' => $blog->id]) }}">{{ $blog->title }}</a></h2>
               <p>{{ $blog->author }}</p>
             </div>
           </div>
@@ -165,7 +173,7 @@ Homepage
             </div> --}}
           </div>
           <div class="container col-md-6">
-          <h1>WHAT'S NEW</h1>
+          <h2>WHAT'S NEW</h2>
         <a class="twitter-timeline" data-height="600" data-theme="light" data-chrome="nofooter" data-link-color="#E81C4F" href="https://twitter.com/niaga_art">Tweets by niaga_art</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
         </div>

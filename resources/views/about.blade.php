@@ -32,6 +32,7 @@ About
     <section>
       <div class="container separator">
         <h2>WHAT WE'VE BROUGHT FOR YOU</h2>
+        <hr width="50%">
       </div>
       @foreach ($interiors as $interior)
       @if ($interior->id % 2 == 1)
