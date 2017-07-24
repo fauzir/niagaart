@@ -39,7 +39,9 @@ All Post
                   <br>
                   <p><b>by {{ $blog->author }} on {{ $blog->created_at }}</b>
                   <br>
-                  <b>On, Furniture, Livingroom, Family</b></p>
+                  <b>On,
+                    {{ $rel }}
+                    </b></p>
                   <hr>
                 </div>
                 @endforeach
