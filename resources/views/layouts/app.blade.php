@@ -88,49 +88,6 @@
           </div>
        </div>
     </section>
-    {{-- <section>
-      <div class="navbar navbar-default">
-           <div class="container">
-             <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar-content">
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="#"><img src="{{ asset('img/NiagaArt.png') }}" width="75px" height="75px"></a>
-             </div>
-             <div class="collapse navbar-collapse" id="mynavbar-content">
-                <ul class="nav navbar-nav">
-                   <li><a href="{{ route('home') }}">HOME</a></li>
-                   <li><a href="{{ route('about') }}">ABOUT</a></li>
-                   <li class="dropdown">
-                     <a href="service.html" class="dropdown-toggle" data-toggle="dropdown">SERVICE<b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                       <li class="dropdown">
-                         <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">INTERIOR DESIGN<b class="caret"></b></a>
-                         <ul class="dropdown-submenu">
-                           @foreach ($interiors as $interior)
-                             <li><a href="{{ route('service', ['id' => $interior->id]) }}">{{ $interior->name }}</a></li>
-                           @endforeach
-                         </ul>
-                       <li class="divider"></li>
-                         <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">OTHER INTERIOR DESIGN SERVICES<b class="caret"></b></a>
-                         <ul class="dropdown-submenu">
-                           @foreach ($others as $other)
-                             <li><a href="{{ route('service', ['id' => $other->id]) }}">{{ $other->name }}</a></li>
-                           @endforeach
-                         </ul>
-                       </li>
-                    </ul>
-                  </li>
-                  <li><a href="{{ route('projects') }}">PROJECTS</a></li>
-                  <li><a href="{{ route('contact') }}">CONTACT US</a></li>
-                  <li><a href="{{ route('blog') }}">NEWS</a></li>
-                </ul>
-             </div>
-           </div>
-         </div>
-    </section> --}}
 
     @yield('content')
 

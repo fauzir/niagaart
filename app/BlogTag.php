@@ -29,12 +29,12 @@ class BlogTag extends Model
 
     public function blog_tag()
     {
-       return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'blog_id');
+       return $this->belongsToMany('App\Blog', 'blog_tag', 'blog_id', 'tag_id');
     }
 
     public function tag_blog()
     {
-       return $this->belongsToMany('App\Blog', 'blog_tag', 'blog_id', 'tag_id');
+       return $this->belongsToMany('App\Blog', 'blog_tag', 'tag_id', 'blog_id');
     }
 
 

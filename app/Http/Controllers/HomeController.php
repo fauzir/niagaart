@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         $homes = Home::all();
         $services = Service::limit(3)->select('id', 'image', 'name', 'description')->where('type', 'interior')->get();
-        $blogs = Blog::limit(5)->select('id','title','category','image','content','author')->orderBy('created_at', 'desc')->get();
+        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->get();
         $testimonies = Testimony::all();

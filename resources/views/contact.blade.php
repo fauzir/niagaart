@@ -15,7 +15,6 @@ Contact
                 <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.2035280902023!2d107.5357772!3d-6.8661972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e4662e1bf133%3A0xc7286f3552020388!2sNiaga+Art!5e0!3m2!1sen!2sid!4v1500448170435" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
-              @foreach($contacts as $contact)
               <div class="container col-lg-5 col-md-4 address">
                 <h3>OFFICE</h3>
                 <br>
@@ -25,13 +24,13 @@ Contact
                 <br>
                 <p>Message/Whatsapp : <a href="{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
                 <br>
-                <p>email : niagac7@gmail.com</p>
+                <p>email : <a href="mailto:niagac7@gmail.com">niagac7@gmail.com</a></p>
                 <br>
-                <p>Mon - Fri : 08:00 - 16:00</p>
+              @foreach($workHours as $workHour)
+                <p>{{ $workHour }}</p>
                 <br>
-                <p>Sat - Sun : 09:00 - 15:00</p>
-              </div>
               @endforeach
+              </div>
             </div>
           </div>
         </div>
@@ -55,7 +54,7 @@ Contact
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="text" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
+                         <input type="number" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>

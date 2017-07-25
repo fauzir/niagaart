@@ -40,38 +40,6 @@ All Post
             <div class="container col-md-8 comment-section">
             <section>
               <div id="disqus_thread"></div>
-         {{-- <div class="panel panel-warning panel-default">
-       <div class="panel-heading">
-         ATTENTION
-       </div>
-       <div class="panel-body">
-         Comments are here . . .
-       </div>
-       <div class="panel-footer">
-         <a href="#" class="btn btn-success btn-sm">Agree</a>
-         <a href="#" class="btn btn-danger btn-sm">Decline</a>
-       </div>
-     </div>
-         <div class="media">
-           <a class="pull-left" href="#">
-              <img class="media-object" src="./image/Cat.jpg" alt="Cat-profile">
-           </a>
-           <div class="media-body">
-             <h4 class="media-heading">Awesome piece of work!</h4>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-             <hr>
-             <div class="media">
-           <a class="pull-left" href="#">
-              <img class="media-object" src="./image/Got-Ideas-Icon.png" alt="PeopleIcon">
-           </a>
-           <div class="media-body">
-             <h4 class="media-heading">Awesome piece of work!</h4>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-             <hr>
-           </div>
-         </div>
-           </div>
-         </div> --}}
    </section>
             </div>
             <div class="container col-md-4 categories">
@@ -79,15 +47,9 @@ All Post
               <div class="list-category">
                   <br>
                        <ul>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag Android">android (2)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag Angular">Angular (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag Angular4">Angular4 (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag API">API (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag Array">Array (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag back-end-web-development">back-end-web-development (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag bootstrap">boostrap (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="tag boostrap4">boostrap4 (1)</a> </li>
-                          <li id="tag"><a href="JavaScript:void(0)" alt="Boss">Boss (1)</a> </li>
+                         @foreach ($categories as $category)
+                          <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} ({{ $count }})</a> </li>
+                         @endforeach
                       </ul>
                   </div>
             </div>

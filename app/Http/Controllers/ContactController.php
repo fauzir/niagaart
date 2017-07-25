@@ -16,18 +16,13 @@ class ContactController extends Controller
     {
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->get();
-        $contacts = Contact::all();
-        return view('contact', compact('interiors', 'others', 'contacts'));
+        $contact = Contact::find(1);
+        $workHours = explode(',', $contact->work_hour);
+        return view('contact', compact('interiors', 'others', 'contact', 'workHours'));
     }
 
     public function sendMessage(Request $request)
     {
-        // $data = $request->all();
-        // View::make('mails.message')->with('data');
-        // Mail::to('fauziiirachman@gmail.com')->send(new Message);
-
-        // use Laravel Mail Driver to send email
-
         Mail::send('mails.message',
             array(
                 'name' => $request->input('name'),

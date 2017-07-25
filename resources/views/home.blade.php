@@ -149,10 +149,10 @@ Homepage
           <div class="media">
             <div class="media-left">
               <div class="date">
-                 <h1>20</h1>
+                 <h1>{{ date_format($blog->created_at, 'd') }}</h1>
               </div>
               <div class="month">
-                 <p>Jul</p>
+                 <p>{{ date_format($blog->created_at, 'M') }}</p>
               </div>
             </div>
             <div class="media-body article-showcase">

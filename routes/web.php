@@ -66,6 +66,11 @@ Route::get('/blog/{id}',[
    'as'    => 'blog.content'
 ]);
 
+Route::get('/blog/category/{id}',[
+   'uses' => 'BlogController@getCategory',
+   'as'    => 'blog.category'
+]);
+
 Route::post('postImage', [
   'uses' => 'AdminHome\\HomeController@postImage',
   'as' => 'postImage'

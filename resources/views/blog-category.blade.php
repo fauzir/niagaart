@@ -33,11 +33,11 @@ All Post
                 <div class="container col-md-10 article">
                   <h2><a href="{{ route('blog.content', ['id' => $blog->id]) }}">{{ $blog->title }}</a></h2>
                   <br>
-                  <img src="{{ $blog->image }}" alt="article-thumbnail">
+                  <img src="{{ asset($blog->image) }}" alt="article-thumbnail">
                   <br>
                   <p>{!! $blog->content !!} <a href="{{ route('blog.content', ['id' => $blog->id]) }}">Read More . . .</a></p>
                   <br>
-                  <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
+                  <p><b>by {{ $blog->author }} on {{ $blog->created_at }}</b>
                   <br>
                   <b>On,
                     {{ $rel }}
@@ -45,7 +45,6 @@ All Post
                   <hr>
                 </div>
                 @endforeach
-                {{ $blogs->links() }}
                 </div>
                 <div class="container col-md-4">
                   <h2>POPULAR ARTICLE</h2>

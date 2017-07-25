@@ -55,14 +55,16 @@
             <ul class="nav navbar-nav navbar-right navbar-blog">
                <li>
                    <ul>
-                     <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control blog-search" placeholder="Search" name="q">
-            <div class="input-group-btn">
-                <button class="btn btn-default search-btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
+                     {!! Form::open(['method' => 'GET', 'url' => '/blog', 'class' => 'navbar-form', 'role' => 'search'])  !!}
+                     <div class="input-group">
+                         <input type="text" class="form-control blog-search" name="search" placeholder="Search">
+                         <span class="input-group-btn">
+                             <button class="btn btn-default search-btn" type="submit">
+                                 <i class="glyphicon glyphicon-search"></i>
+                             </button>
+                         </span>
+                     </div>
+                     {!! Form::close() !!}
                    </ul>
                </li>
                <li><a href="{{ route('home') }}">To our site >></a></li>
@@ -98,7 +100,7 @@
      <div class="container">
           <div class="row">
                <div class="col-md-3 col-sm-3">
-                    <img src="./image/41logofooter.png" alt="41logofooter">
+                    <img src="{{ asset('img/NiagaArt.png') }}" width="100px" height="100px" alt="41logofooter">
                </div>
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
