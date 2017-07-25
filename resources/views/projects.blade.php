@@ -62,36 +62,6 @@ Projects
           </div>
       </div>
       @endforeach
-      {{-- <div class="col-xs-4">
-          <a href="#" class="thumbnail thumbnail-service">
-              <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
-              <div class="caption">
-                <h3>SERVICE TITLE</h3>
-                <hr>
-                <p>This is your service descrption here just put it good here</p>
-              </div>
-          </a>
-      </div>
-      <div class="col-xs-4">
-          <a href="#" class="thumbnail thumbnail-service">
-              <img src="{{ asset('niagaart/images/Service-label.jpg') }}">
-              <div class="caption">
-                <h3>SERVICE TITLE</h3>
-                <hr>
-                <p>This is your service descrption here just put it good here</p>
-              </div>
-          </a>
-      </div>
-      <div class="col-xs-4">
-          <a href="#" class="thumbnail thumbnail-service">
-              <img class="img-fluid" src="{{ asset('niagaart/images/Service-label.jpg') }}">
-              <div class="caption">
-                <h3>SERVICE TITLE</h3>
-                <hr>
-                <p>This is your service descrption here just put it good here</p>
-              </div>
-          </a>
-      </div> --}}
       </div>
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">

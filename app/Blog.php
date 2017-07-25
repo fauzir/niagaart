@@ -3,14 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Blog extends Model
 {
+    use Sluggable;
     /**
      * The database table used by the model.
      *
      * @var string
      */
+     public function sluggable()
+     {
+         return [
+             'slug' => [
+                 'source' => 'title'
+             ]
+         ];
+     }
+
     protected $table = 'blogs';
 
     /**

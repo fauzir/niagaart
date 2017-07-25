@@ -55,7 +55,7 @@ All Post
                       <br>
                       <img src="{{ asset($popular->image) }}" alt="article-thumbnail">
                       <br>
-                      <p>{!! $popular->content !!} <a href="blog-article.html">Read More . . .</a></p>
+                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['id' => $popular->id]) }}">Read More . . .</a></p>
                       <hr>
                   </div>
                   @endforeach
