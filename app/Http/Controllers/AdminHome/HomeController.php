@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminHome;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Cloudder;
 use DB;
 use App\Home;
 use App\About;
@@ -99,11 +100,22 @@ class HomeController extends Controller
 		]);
         $requestData = $request->all();
 
-        if(Input::hasFile('image')){
-          $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        if (Input::hasFile('image')){
+            $file = Input::file('image');
+            $pictureName = 'home-'.time();
+            Cloudder::upload($file->getPathName(), $pictureName,
+              array(
+                "width" => 1920, "height" => 752,
+              ));
+            $upload = Cloudder::getResult();
+            $requestData['image'] = $upload['url'];
         }
+
+        // if(Input::hasFile('image')){
+        //   $file = Input::file('image');
+        //   $file->move('uploads', $file->getClientOriginalName());
+        //   $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+        // }
 
         Home::create($requestData);
 
@@ -156,11 +168,14 @@ class HomeController extends Controller
 		]);
 
         if (Input::hasFile('image')) {
-          $requestData = $request->all();
-
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'home-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 1920, "height" => 752,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         } else {
           $requestData = $request->except('image');
         }

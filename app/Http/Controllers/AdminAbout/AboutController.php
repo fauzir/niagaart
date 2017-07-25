@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminAbout;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Clouder;
 use App\About;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -117,21 +118,27 @@ class AboutController extends Controller
 		]);
 
         if (Input::hasFile('image_header')) {
-          $requestData = $request->all();
-
           $file = Input::file('image_header');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image_header'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'about-header-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 1407, "height" => 616,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image_header'] = $upload['url'];
         } else {
           $requestData = $request->except('image_header');
         }
 
         if (Input::hasFile('opening_image')) {
-          $requestData = $request->all();
-
           $file = Input::file('opening_image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['opening_image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'about-image-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 600, "height" => 650,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['opening_image'] = $upload['url'];
         } else {
           $requestData = $request->except('opening_image');
         }

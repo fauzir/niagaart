@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminBlog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Clouder;
 use App\Blog;
 use App\BlogCategory;
 use App\BlogTag;
@@ -77,8 +78,13 @@ class BlogController extends Controller
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'home-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 539, "height" => 539,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         }
 
         $blog = new Blog();

@@ -189,6 +189,9 @@ return [
         // Slugable
         Cviebrock\EloquentSluggable\ServiceProvider::class,
 
+        // Cloudinary
+        JD\Cloudder\CloudderServiceProvider::class,
+
     ],
 
     /*
@@ -240,6 +243,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'HTML' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
 
     ],
 

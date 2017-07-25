@@ -65,8 +65,13 @@ class TestimonyController extends Controller
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'testimony-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 400, "height" => 400,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         }
 
         Testimony::create($requestData);
@@ -123,11 +128,14 @@ class TestimonyController extends Controller
         $requestData = $request->all();
 
         if (Input::hasFile('image')) {
-          $requestData = $request->all();
-
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'testimony-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 400, "height" => 400,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         } else {
           $requestData = $request->except('image');
         }

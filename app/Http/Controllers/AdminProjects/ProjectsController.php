@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminProjects;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Cloudder;
 use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -70,8 +71,13 @@ class ProjectsController extends Controller
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'project-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 600, "height" => 650,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         }
 
         Project::create($requestData);
@@ -127,11 +133,14 @@ class ProjectsController extends Controller
         $requestData = $request->all();
 
         if (Input::hasFile('image')) {
-          $requestData = $request->all();
-
           $file = Input::file('image');
-          $file->move('uploads', $file->getClientOriginalName());
-          $requestData['image'] = 'uploads/'.$file->getClientOriginalName();
+          $pictureName = 'project-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 600, "height" => 650,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
         } else {
           $requestData = $request->except('image');
         }
