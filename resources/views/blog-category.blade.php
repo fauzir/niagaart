@@ -35,7 +35,7 @@ All Post
                   <br>
                   <img src="{{ asset($blog->image) }}" alt="article-thumbnail">
                   <br>
-                  <p>{!! $blog->content !!} <a href="{{ route('blog.content', ['id' => $blog->id]) }}">Read More . . .</a></p>
+                  <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['id' => $blog->id]) }}">Read More . . .</a></p>
                   <br>
                   <p><b>by {{ $blog->author }} on {{ $blog->created_at }}</b>
                   <br>
