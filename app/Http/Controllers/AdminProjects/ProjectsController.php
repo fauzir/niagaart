@@ -5,7 +5,7 @@ namespace App\Http\Controllers\AdminProjects;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Cloudder;
+use Cloudder;
 use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
