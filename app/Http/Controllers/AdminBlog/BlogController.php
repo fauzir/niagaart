@@ -5,7 +5,7 @@ namespace App\Http\Controllers\AdminBlog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Clouder;
+use Cloudder;
 use App\Blog;
 use App\BlogCategory;
 use App\BlogTag;
