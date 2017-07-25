@@ -179,10 +179,53 @@ class BlogController extends Controller
 			'category' => 'required',
 			'image' => 'required'
 		]);
-        $requestData = $request->all();
+        $requestData = $request->except('tag');
+        $tagData = $request->input('tag');
 
-        $blog = Blog::findOrFail($id);
-        $blog->update($requestData);
+        if(Input::hasFile('image')){
+          $file = Input::file('image');
+          $pictureName = 'home-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 539, "height" => 539,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
+        } else {
+          $requestData = $request->except('image');
+        }
+
+        $blog = new Blog();
+        $blog->title = $requestData['title'];
+        $blog->category = $requestData['category'];
+        $blog->image = $requestData['image'];
+        $blog->content = $requestData['content'];
+        $blog->author = $requestData['author'];
+
+        $blog->save();
+
+        $tags = explode(',', $tagData);
+        foreach ($tags as $tag)
+        {
+          if (BlogTag::where('tag', $tag)->exists()) {
+            $inputtags = BlogTag::where('tag', $tag)->get();
+            $blogtagrel = new BlogTagRel();
+            $blogtagrel->blog_id = $blog->id;
+            foreach ($inputtags as $inputtag) {
+              $blogtagrel->tag_id = $inputtag->id;
+            }
+            $blogtagrel->save();
+          } else {
+            $blogtag = new BlogTag();
+            $blogtag->tag = $tag;
+            $blogtag->save();
+
+            $blogtagrel = new BlogTagRel();
+            $blogtagrel->blog_id = $blog->id;
+            $blogtagrel->tag_id = $blogtag->id;
+            $blogtagrel->save();
+          }
+        }
 
         Session::flash('flash_message', 'Blog updated!');
 

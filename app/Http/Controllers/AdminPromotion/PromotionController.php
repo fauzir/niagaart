@@ -5,7 +5,7 @@ namespace App\Http\Controllers\AdminPromotion;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Cloudder;
+use Cloudder;
 use App\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
@@ -127,6 +127,19 @@ class PromotionController extends Controller
 			'status' => 'required'
 		]);
         $requestData = $request->all();
+
+        if (Input::hasFile('image')) {
+          $file = Input::file('image');
+          $pictureName = 'promotion-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 1219, "height" => 282,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['image'] = $upload['url'];
+        } else {
+          $requestData = $request->except('image');
+        }
 
         $promotion = Promotion::findOrFail($id);
         $promotion->update($requestData);
