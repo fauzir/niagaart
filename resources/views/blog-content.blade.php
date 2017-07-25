@@ -16,8 +16,8 @@ All Post
             <div class="container col-md-8 catalogueheader-txt">
               <h1>{{ $content->title }}</h1>
               <br>
-              <p>by {{ $content->author }} on {{ $content->created_at }}</p>
-              <p>on : Marketing, Interior, Home and Living</p>
+              <p>by {{ $content->author }} on {{ date_format($content->created_at, 'd F Y') }}</p>
+              <p>on : {{ $rel }}</p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ All Post
                   <br>
                        <ul>
                          @foreach ($categories as $category)
-                          <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} ({{ $count }})</a> </li>
+                          <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
                          @endforeach
                       </ul>
                   </div>

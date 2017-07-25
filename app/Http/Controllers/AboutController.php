@@ -10,8 +10,8 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $abouts = About::all();
         return view('about', compact('interiors', 'others', 'abouts'));
     }

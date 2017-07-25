@@ -37,7 +37,7 @@ All Post
                   <br>
                   <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['id' => $blog->id]) }}">Read More . . .</a></p>
                   <br>
-                  <p><b>by {{ $blog->author }} on {{ $blog->created_at }}</b>
+                  <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
                   <br>
                   <b>On,
                     {{ $rel }}
@@ -63,7 +63,7 @@ All Post
                     <br>
                          <ul>
                            @foreach ($categories as $category)
-                            <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} ({{ $count }})</a> </li>
+                            <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
                            @endforeach
                         </ul>
                     </div>

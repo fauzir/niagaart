@@ -51,10 +51,19 @@ class BlogController extends Controller
     public function getContent(Request $request, $id)
     {
         Blog::find($id)->increment('visitor_count', 1);
+        $blogs = Blog::all();
         $categories = BlogTag::all();
         $count = BlogTag::find(1)->tag_blog->count();
         $content = Blog::find($id);
-        return view('blog-content', compact('content', 'categories', 'count'));
+        $array = array();
+        foreach ($blogs as $blog) {
+          $tags = Blog::find($blog->id)->tag_blog;
+          foreach ($tags as $tag) {
+            $array[] = $tag->tag;
+          }
+        }
+        $rel = implode (",", $array);
+        return view('blog-content', compact('content', 'categories', 'count', 'rel'));
     }
 
     public function getCategory(Request $request, $id)

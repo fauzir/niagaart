@@ -11,18 +11,18 @@ class ServiceController extends Controller
 {
     public function index(Request $request, $id)
     {
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $service = Service::find($id);
-        $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $id)->get();
+        $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $id)->orderBy('id', 'asc')->get();
         return view('service', compact('interiors', 'others', 'service', 'products'));
     }
 
     public function getAll()
     {
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
-        $services = Service::all();
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $services = Service::orderBy('id', 'asc');
         $servicecatalogues = ServiceCatalogue::find(1);
         return view('service-list', compact('interiors', 'others', 'services', 'servicecatalogues'));
     }
