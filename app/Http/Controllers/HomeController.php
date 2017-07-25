@@ -6,6 +6,7 @@ use App\Home;
 use App\Blog;
 use App\Service;
 use App\Testimony;
+use App\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -18,8 +19,10 @@ class HomeController extends Controller
         $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $testimonies = Testimony::all();
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'testimonies'));
+        $promotions = Promotion::where('status', 'yes')->get();
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promotions'));
     }
 
     public function uploadOriginal(Request $request)

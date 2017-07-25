@@ -46,19 +46,19 @@ Contact
                     {!! Form::open(array('route' => 'send.message', 'class' => 'form message-form')) !!}
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control form-line" name="name" id="nameField" placeholder="Your Name" required="required" />
+                         <input type="text" class="form-control form-line" name="name" id="nameField" placeholder="Your Name" required />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control form-line" name="email" id="emailField" placeholder="Your Email" required="required" />
+                         <input type="email" class="form-control form-line" name="email" id="emailField" placeholder="Your Email" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="number" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" required="required" />
+                         <input type="number" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>
-                         <textarea class="form-control" name="user_message" id="descField" placeholder="Message Here" required="required"></textarea>
+                         <textarea class="form-control" name="user_message" id="descField" placeholder="Message Here"></textarea>
                       </div>
                           {{ csrf_field() }}
                          <button type="submit" class="btn btn-block btn-send">Submit</button>

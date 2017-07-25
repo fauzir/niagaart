@@ -12,7 +12,8 @@ class AboutController extends Controller
     {
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $abouts = About::all();
-        return view('about', compact('interiors', 'others', 'abouts'));
+        return view('about', compact('interiors', 'others', 'servicefooters', 'abouts'));
     }
 }

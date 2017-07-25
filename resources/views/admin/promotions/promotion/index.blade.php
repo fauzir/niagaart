@@ -29,14 +29,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Name</th><th>Image</th><th>Status</th><th>Actions</th>
+                                        <th>ID</th><th>Name</th><th>Published</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($promotion as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->name }}</td><td>{{ $item->image }}</td><td>{{ $item->status }}</td>
+                                        <td>{{ $item->name }}</td><td>{{ $item->status }}</td>
                                         <td>
                                             <a href="{{ url('/admin/promotion/' . $item->id) }}" title="View Promotion"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/promotion/' . $item->id . '/edit') }}" title="Edit Promotion"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

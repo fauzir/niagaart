@@ -16,9 +16,10 @@ class ContactController extends Controller
     {
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->get();
+        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $contact = Contact::find(1);
         $workHours = explode(',', $contact->work_hour);
-        return view('contact', compact('interiors', 'others', 'contact', 'workHours'));
+        return view('contact', compact('interiors', 'others', 'servicefooters', 'contact', 'workHours'));
     }
 
     public function sendMessage(Request $request)

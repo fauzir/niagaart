@@ -32,7 +32,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $promotion->id }}</td>
                                     </tr>
-                                    <tr><th> Name </th><td> {{ $promotion->name }} </td></tr><tr><th> Image </th><td> {{ $promotion->image }} </td></tr><tr><th> Status </th><td> {{ $promotion->status }} </td></tr>
+                                    <tr><th> Name </th><td> {{ $promotion->name }} </td></tr><tr><th> Image </th><td> <img src="{{ asset($promotion->image) }}" width="50%" alt=""> </td></tr><tr><th> Published </th><td> {{ $promotion->status }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
