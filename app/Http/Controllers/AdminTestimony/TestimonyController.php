@@ -28,9 +28,10 @@ class TestimonyController extends Controller
 				->orWhere('testimony', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('occupation', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'asc')
 				->paginate($perPage);
         } else {
-            $testimony = Testimony::paginate($perPage);
+            $testimony = Testimony::orderBy('id', 'asc')->paginate($perPage);
         }
 
         return view('admin/testimony.testimony.index', compact('testimony'));

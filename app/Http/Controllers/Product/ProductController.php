@@ -34,9 +34,10 @@ class ProductController extends Controller
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('description', 'LIKE', "%$keyword%")
 				->orWhere('price', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'asc')
 				->paginate($perPage);
         } else {
-            $product = Product::paginate($perPage);
+            $product = Product::orderBy('id', 'asc')->paginate($perPage);
         }
 
         return view('admin/product.product.index', compact('product'));

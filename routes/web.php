@@ -26,7 +26,7 @@ Route::get('/services',[
    'as'    => 'service.all'
 ]);
 
-Route::get('/service/{id}',[
+Route::get('/service/{slug}',[
    'uses' => 'ServiceController@index',
    'as'    => 'service'
 ]);
@@ -61,12 +61,12 @@ Route::get('/blog',[
    'as'    => 'blog'
 ]);
 
-Route::get('/blog/{id}',[
+Route::get('/blog/{slug}',[
    'uses' => 'BlogController@getContent',
    'as'    => 'blog.content'
 ]);
 
-Route::get('/blog/category/{id}',[
+Route::get('/blog/category/{slug}',[
    'uses' => 'BlogController@getCategory',
    'as'    => 'blog.category'
 ]);

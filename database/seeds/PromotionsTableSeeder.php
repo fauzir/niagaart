@@ -11,11 +11,25 @@ class PromotionsTableSeeder extends Seeder
      */
     public function run()
     {
-        // $home = new \App\Home([
-        //   'image' => 'https://d28dwf34zswvrl.cloudfront.net/wp-content/uploads/2017/01/Furniture.jpg',
-        //   'welcome_text' => 'Welcome to Niaga Art',
-        //   'company_description' => 'This is the website description'
-        // ]);
-        // $home->save();
+        $promotion = new \App\Promotion([
+          'name' => 'Today',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041019/sale-banner_srz4xv.jpg',
+          'status' => 'yes'
+        ]);
+        $promotion->save();
+
+        $promotion = new \App\Promotion([
+          'name' => 'This Week',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/sale-banner1_d9wkpz.jpg',
+          'status' => 'yes'
+        ]);
+        $promotion->save();
+
+        $promotion = new \App\Promotion([
+          'name' => 'This Month',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041019/sale-banner2_wvn36b.jpg',
+          'status' => 'yes'
+        ]);
+        $promotion->save();
     }
 }

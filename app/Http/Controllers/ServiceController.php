@@ -10,15 +10,17 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function index(Request $request, $id)
+    public function index(Request $request, $slug)
     {
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $promotions = Promotion::where('status', 'yes')->get();
-        $service = Service::find($id);
-        $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $id)->orderBy('id', 'asc')->get();
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promotions', 'service', 'products'));
+        $services = Service::where('slug', $slug)->get();
+        foreach ($services as $service) {
+          $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $service->id)->orderBy('id', 'asc')->get();
+        }
+        return view('service', compact('interiors', 'others', 'servicefooters', 'promotions', 'services', 'products'));
     }
 
     public function getAll()

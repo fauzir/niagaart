@@ -72,7 +72,7 @@ Homepage
           <div class="row service-label">
           @foreach($services as $service)
           <div class="col-xs-12 col-sm-6 col-md-4">
-              <a href="{{ route('service', ['id' => $service->id]) }}" class="thumbnail thumbnail-service">
+              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="thumbnail thumbnail-service">
                   <img src="{{ asset($service->image) }}">
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
@@ -150,7 +150,7 @@ Homepage
               </div>
             </div>
             <div class="media-body article-showcase">
-              <h2><a href="{{ route('blog.content', ['id' => $blog->id]) }}">{{ $blog->title }}</a></h2>
+              <h2><a href="{{ route('blog.content', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
               <p>{{ $blog->author }}</p>
             </div>
           </div>

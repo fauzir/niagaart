@@ -12,11 +12,13 @@ Services
                   <div class="row">
                      <div class="container col-md-3 fill-in">
                      </div>
+                     @foreach ($services as $service)
                      <div class="container col-md-8 catalogueheader-txt">
                         <h1>{{ $service->name }}</h1>
                         <br>
                         <p>{{ $service->description }}</p>
                      </div>
+                     @endforeach
                   </div>
                </div>
                <section>

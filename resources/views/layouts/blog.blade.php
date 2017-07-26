@@ -104,12 +104,10 @@
                </div>
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
-                    <a href="https://www.41studio.com/services#web-development" target="_blank">Services title 1</a>
-                    <br>
-                    <a href="https://www.41studio.com/services#mobile-development" target="_blank">Services title 2</a>
-                    <br>
-                    <a href="https://www.41studio.com/services#ui-ux-design" target="_blank">Services title 3</a>
-
+                 @foreach ($servicefooters as $servicefooter)
+                   <a href="{{ route('service', ['id' => $servicefooter->id]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                   <br>
+                 @endforeach
                </div>
                <div class="office-add col-md-3 col-sm-3">
                <h3>OFFICE</h3>

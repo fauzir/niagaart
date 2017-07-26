@@ -12,9 +12,9 @@ class ServiceCataloguesTableSeeder extends Seeder
     public function run()
     {
         $servicecatalogue = new \App\ServiceCatalogue([
-          'image_header' => 'https://target.scene7.com/is/image/Target/061817_furniture_dsktp86001-170515_1494884115580?wid=1796&qlt=60&fmt=pjpeg',
-          'opening_title' => 'Services',
-          'opening_text' => 'This is what we do.'
+          'image_header' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041017/interior-designer_qpgqwu.jpg',
+          'opening_title' => 'Our Services',
+          'opening_text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         ]);
         $servicecatalogue->save();
     }

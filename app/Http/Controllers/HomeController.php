@@ -15,8 +15,8 @@ class HomeController extends Controller
     public function index()
     {
         $homes = Home::all();
-        $services = Service::limit(3)->select('id', 'image', 'name', 'description')->where('type', 'interior')->orderBy('id', 'asc')->get();
-        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at')->orderBy('created_at', 'desc')->get();
+        $services = Service::limit(3)->select('id', 'image', 'name', 'description', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
+        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();

@@ -33,9 +33,10 @@ class PromotionController extends Controller
             $promotion = Promotion::where('name', 'LIKE', "%$keyword%")
 				->orWhere('image', 'LIKE', "%$keyword%")
 				->orWhere('status', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'asc')
 				->paginate($perPage);
         } else {
-            $promotion = Promotion::paginate($perPage);
+            $promotion = Promotion::orderBy('id', 'asc')->paginate($perPage);
         }
 
         return view('admin/promotions.promotion.index', compact('promotion'));

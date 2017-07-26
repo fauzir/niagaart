@@ -35,9 +35,10 @@ class ProjectItemController extends Controller
 				->orWhere('image', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('price', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'asc')
 				->paginate($perPage);
         } else {
-            $projectitem = ProjectItem::paginate($perPage);
+            $projectitem = ProjectItem::orderBy('id', 'asc')->paginate($perPage);
         }
 
         $projects = Project::all();

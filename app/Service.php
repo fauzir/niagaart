@@ -3,14 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Service extends Model
 {
+    use Sluggable;
     /**
      * The database table used by the model.
      *
      * @var string
      */
+    public function sluggable()
+    {
+       return [
+           'slug' => [
+               'source' => 'name'
+           ]
+       ];
+    }
+
     protected $table = 'services';
 
     /**

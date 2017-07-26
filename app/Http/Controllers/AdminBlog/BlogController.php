@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminBlog;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use DB;
 use Cloudder;
 use App\Blog;
 use App\BlogCategory;
@@ -53,10 +54,13 @@ class BlogController extends Controller
     public function create()
     {
         $categories = BlogCategory::all();
+        $blog = new Blog();
+        $blog->content = "";
+
         $array = array();
         $array[] = "";
         $rel = implode (",", $array);
-        return view('admin/blog.blog.create', compact('categories', 'rel'));
+        return view('admin/blog.blog.create', compact('blog', 'categories', 'rel'));
     }
 
     /**
@@ -78,7 +82,7 @@ class BlogController extends Controller
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
-          $pictureName = 'home-'.time();
+          $pictureName = 'blog-'.time();
           Cloudder::upload($file->getPathName(), $pictureName,
             array(
               "width" => 539, "height" => 539,
@@ -93,6 +97,7 @@ class BlogController extends Controller
         $blog->image = $requestData['image'];
         $blog->content = $requestData['content'];
         $blog->author = $requestData['author'];
+        $blog->visitor_count = 0;
 
         $blog->save();
 
@@ -176,54 +181,73 @@ class BlogController extends Controller
     {
         $this->validate($request, [
 			'title' => 'required',
-			'category' => 'required',
-			'image' => 'required'
+			'category' => 'required'
 		]);
         $requestData = $request->except('tag');
         $tagData = $request->input('tag');
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
-          $pictureName = 'home-'.time();
+          $pictureName = 'blog-'.time();
           Cloudder::upload($file->getPathName(), $pictureName,
             array(
               "width" => 539, "height" => 539,
             ));
           $upload = Cloudder::getResult();
-          $requestData['image'] = $upload['url'];
+          $blog = new Blog();
+          $blog->title = $requestData['title'];
+          $blog->category = $requestData['category'];
+          $blog->image = $upload['url'];
+          $blog->content = $requestData['content'];
+          $blog->author = $requestData['author'];
         } else {
-          $requestData = $request->except('image');
+          $blog = new Blog();
+          $blog->title = $requestData['title'];
+          $blog->category = $requestData['category'];
+          $blog->content = $requestData['content'];
+          $blog->author = $requestData['author'];
         }
 
-        $blog = new Blog();
-        $blog->title = $requestData['title'];
-        $blog->category = $requestData['category'];
-        $blog->image = $requestData['image'];
-        $blog->content = $requestData['content'];
-        $blog->author = $requestData['author'];
-
-        $blog->save();
+        foreach ($blog as $object) {
+          $arrays[] = (array) $object;
+        }
+        $blogs = Blog::findOrFail($id);
+        $blogs->update($arrays);
 
         $tags = explode(',', $tagData);
         foreach ($tags as $tag)
         {
           if (BlogTag::where('tag', $tag)->exists()) {
             $inputtags = BlogTag::where('tag', $tag)->get();
-            $blogtagrel = new BlogTagRel();
-            $blogtagrel->blog_id = $blog->id;
-            foreach ($inputtags as $inputtag) {
-              $blogtagrel->tag_id = $inputtag->id;
+            if (DB::table('blog_tag')->where('blog_id', '1')->where('tag_id', '1')->exists()) {
+              $blogtagrel = new BlogTagRel();
+              $blogtagrel->blog_id = $id;
+              foreach ($inputtags as $inputtag) {
+                $blogtagrel->tag_id = $inputtag->id;
+              }
+              $blogtagrel->save();
+            } else {
+              $blogtagrel = new BlogTagRel();
+              $blogtagrel->blog_id = $id;
+              foreach ($inputtags as $inputtag) {
+                $blogtagrel->tag_id = $inputtag->id;
+              }
             }
-            $blogtagrel->save();
           } else {
             $blogtag = new BlogTag();
             $blogtag->tag = $tag;
             $blogtag->save();
 
-            $blogtagrel = new BlogTagRel();
-            $blogtagrel->blog_id = $blog->id;
-            $blogtagrel->tag_id = $blogtag->id;
-            $blogtagrel->save();
+            if (DB::table('blog_tag')->where('blog_id', '1')->where('tag_id', '1')->exists()) {
+              $blogtagrel = new BlogTagRel();
+              $blogtagrel->blog_id = $id;
+              $blogtagrel->tag_id = $blogtag->id;
+              $blogtagrel->save();
+            } else {
+              $blogtagrel = new BlogTagRel();
+              $blogtagrel->blog_id = $id;
+              $blogtagrel->tag_id = $blogtag->id;
+            }
           }
         }
 

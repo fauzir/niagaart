@@ -12,12 +12,12 @@ class ContactsTableSeeder extends Seeder
     public function run()
     {
         $contact = new \App\Contact([
-          'address' => 'Jl. Sangkuriang no. 43 Cimahi Utara, West Java, Indonesia',
-          'phone' => '(022) 878041654',
-          'other_phone' => '087854616546',
-          'email' => 'user@example.com',
-          'work_hour' => 'Mon - Fri 08:00 - 17:00',
-          'side_image' => 'https://d28dwf34zswvrl.cloudfront.net/wp-content/uploads/2017/01/Furniture.jpg'
+          'address' => 'Jl. Sangkuriang No. 43 Cimahi Utara, West Java, Indonesia',
+          'phone' => '+6222-727-1234',
+          'other_phone' => '+6287854616546',
+          'email' => 'niagac7@gmail.com',
+          'work_hour' => 'Mon - Fri 08:00 - 17:00, Sat - Sun 08:00 - 15:00',
+          'side_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/message-chair_pblik7.jpg'
         ]);
         $contact->save();
     }

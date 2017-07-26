@@ -5,6 +5,7 @@ All Post
 @endsection
 
 @section('content')
+  @foreach ($contents as $content)
   <section>
     <div class="container-fluid header-blog">
       <div class="container-fluid">
@@ -41,6 +42,7 @@ All Post
             <section>
               <div id="disqus_thread"></div>
    </section>
+   @endforeach
             </div>
             <div class="container col-md-4 categories">
             <h3>CATEGORIES</h3>
@@ -48,7 +50,7 @@ All Post
                   <br>
                        <ul>
                          @foreach ($categories as $category)
-                          <li id="tag"><a href="{{ route('blog.category', ['id' => $category->id]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
+                          <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
                          @endforeach
                       </ul>
                   </div>

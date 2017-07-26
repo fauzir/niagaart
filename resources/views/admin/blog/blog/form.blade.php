@@ -24,7 +24,7 @@
     {!! Form::label('content', 'Content', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
-        <textarea name="content" rows="8" cols="80"></textarea>
+        <textarea name="content" rows="8" cols="80">{{ $blog->content }}</textarea>
     </div>
 </div>
 <div class="form-group">

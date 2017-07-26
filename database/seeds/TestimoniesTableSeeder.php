@@ -12,7 +12,7 @@ class TestimoniesTableSeeder extends Seeder
     public function run()
     {
         $testimony = new \App\Testimony([
-          'image' => 'uploads/people-1.png',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501043439/people-1_hkqwxb.png',
           'subject' => 'Lorem ipsum dolor sit amet',
           'testimony' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           'name' => 'People 1',
@@ -21,7 +21,7 @@ class TestimoniesTableSeeder extends Seeder
         $testimony->save();
 
         $testimony = new \App\Testimony([
-          'image' => 'uploads/people-2.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501043439/people-2_cgcegk.jpg',
           'subject' => 'Lorem ipsum dolor sit amet',
           'testimony' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           'name' => 'People 2',
@@ -30,7 +30,7 @@ class TestimoniesTableSeeder extends Seeder
         $testimony->save();
 
         $testimony = new \App\Testimony([
-          'image' => 'uploads/people-3.jpeg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501043439/people-3_qx3f3g.jpg',
           'subject' => 'Lorem ipsum dolor sit amet',
           'testimony' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           'name' => 'People 3',

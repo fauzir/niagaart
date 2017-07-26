@@ -34,9 +34,10 @@ class ServiceController extends Controller
             $service = Service::where('id', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
         ->orWhere('description', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'asc')
 				->paginate($perPage);
         } else {
-            $service = Service::paginate($perPage);
+            $service = Service::orderBy('id', 'asc')->paginate($perPage);
         }
 
         return view('admin/services.service.index', compact('service'));
