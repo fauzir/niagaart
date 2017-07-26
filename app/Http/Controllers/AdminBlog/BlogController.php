@@ -95,7 +95,7 @@ class BlogController extends Controller
         $blog->title = $requestData['title'];
         $blog->category = $requestData['category'];
         $blog->image = $requestData['image'];
-        $blog->content = $requestData['content'];
+        $blog->content = $requestData['contenteditor'];
         $blog->author = $requestData['author'];
         $blog->visitor_count = 0;
 
@@ -198,13 +198,13 @@ class BlogController extends Controller
           $blog->title = $requestData['title'];
           $blog->category = $requestData['category'];
           $blog->image = $upload['url'];
-          $blog->content = $requestData['content'];
+          $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
         } else {
           $blog = new Blog();
           $blog->title = $requestData['title'];
           $blog->category = $requestData['category'];
-          $blog->content = $requestData['content'];
+          $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
         }
 

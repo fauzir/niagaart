@@ -95,32 +95,6 @@
             <!-- Page Content Holder -->
             <div id="content">
 
-                {{-- <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-
-                        <div class="navbar-header">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                                <i class="glyphicon glyphicon-th"></i>
-                            </button>
-                        </div>
-
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                              <li>
-                                  <a href="{{ url('/logout') }}"
-                                      onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                                      Logout
-                                  </a>
-
-                                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                      {{ csrf_field() }}
-                                  </form>
-                              </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav> --}}
                 @if (Session::has('flash_message'))
                     <div class="container">
                         <div class="alert alert-success">
