@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Blog;
 use App\Http\Controllers\Controller;
 use App\Permission;
 use App\Role;
@@ -22,7 +23,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        $blogs = Blog::limit(5)->orderBy('updated_at', 'desc')->get();
+        return view('admin.dashboard', compact('blogs'));
     }
 
     /**

@@ -33,11 +33,11 @@
                 </div>
 
                 <ul class="list-unstyled components">
-                    <li>
+                    {{-- <li>
                         <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn btn-danger">
                             <i class="glyphicon glyphicon-th"></i>
                         </button>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{ url('/admin') }}">
                             <i class="glyphicon glyphicon-stats"></i>
@@ -67,15 +67,10 @@
                             <li><a href="{{ route('blog-category.index') }}">Category</a></li>
                             <li><a href="{{ route('blog-tag.index') }}">Tag</a></li>
                         </ul>
-                        <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <a href="{{ route('users.index') }}">
                             <i class="glyphicon glyphicon-user"></i>
                             Users
                         </a>
-                        <ul class="collapse list-unstyled" id="usersSubmenu">
-                            <li><a href="{{ route('users.index') }}">Users</a></li>
-                            <li><a href="{{ route('roles.index') }}">Roles</a></li>
-                            <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="{{ url('/logout') }}"
