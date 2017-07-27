@@ -31,7 +31,7 @@ class PromotionController extends Controller
 
         if (!empty($keyword)) {
             $promotion = Promotion::where('name', 'LIKE', "%$keyword%")
-				->orWhere('image', 'LIKE', "%$keyword%")
+				->orWhere('sale', 'LIKE', "%$keyword%")
 				->orWhere('status', 'LIKE', "%$keyword%")
         ->orderBy('id', 'asc')
 				->paginate($perPage);
@@ -63,20 +63,10 @@ class PromotionController extends Controller
     {
         $this->validate($request, [
 			'name' => 'required',
+      'sale' => 'required',
 			'status' => 'required'
 		]);
         $requestData = $request->all();
-
-        if(Input::hasFile('image')){
-          $file = Input::file('image');
-          $pictureName = 'promotion-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 1219, "height" => 282,
-            ));
-          $upload = Cloudder::getResult();
-          $requestData['image'] = $upload['url'];
-        }
 
         Promotion::create($requestData);
 
@@ -125,22 +115,10 @@ class PromotionController extends Controller
     {
         $this->validate($request, [
 			'name' => 'required',
+      'sale' => 'required',
 			'status' => 'required'
 		]);
         $requestData = $request->all();
-
-        if (Input::hasFile('image')) {
-          $file = Input::file('image');
-          $pictureName = 'promotion-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 1219, "height" => 282,
-            ));
-          $upload = Cloudder::getResult();
-          $requestData['image'] = $upload['url'];
-        } else {
-          $requestData = $request->except('image');
-        }
 
         $promotion = Promotion::findOrFail($id);
         $promotion->update($requestData);

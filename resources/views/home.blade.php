@@ -19,7 +19,9 @@ Homepage
           <div class="carousel-inner">
             @foreach ($promotions as $index => $promotion)
               <div class="item @if($index == 0) {{ 'active' }} @endif">
-                <img src="{{ asset($promotion->image) }}" alt="{{ $promotion->name }}" style="width:100%;">
+                {{-- <img src="#" alt="#" style="width:100%;"> --}}
+                <h3 align="center">{{ $promotion->name }}</h3>
+                <h3 align="center">{{ $promotion->sale }}</h3>
               </div>
             @endforeach
           </div>

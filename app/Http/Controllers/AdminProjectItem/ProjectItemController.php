@@ -67,6 +67,7 @@ class ProjectItemController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+          'image' => 'required',
           'project_id' => 'required',
           'name' => 'required'
         ]);

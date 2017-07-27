@@ -1,3 +1,4 @@
+{{--
 <style>
   .uploadimg
   {
@@ -120,8 +121,8 @@ top:0;
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
-</style>
-<head>
+</style> --}}
+{{-- <head>
   <meta name="_token" content="{{ csrf_token() }}" />
 
 
@@ -140,7 +141,7 @@ top:0;
     #dl_links { margin-top: .5em; }
 
   </style>
-</head>
+</head> --}}
 <!-- Modal -->
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-header">
@@ -209,7 +210,7 @@ top:0;
 </div>
 </div> --}}
 
-<script type="text/javascript">
+{{-- <script type="text/javascript">
   $(function(){
 
 
@@ -270,21 +271,21 @@ top:0;
     });
 
 
-    // $("#imageUpload").on('change',function(){
-    //   $.ajax({
-    //      url: '/upload-original',
-    //      type: "post",
-    //      success: function(response){
-    //        $('.modal-body').html(response)
-    //        $('#myModal').modal('show');
-    //      },
-    //      error: function(response){
-    //        console.log('Error '+response);
-    //      }
-    //    });
-    // });
+    $("#imageUpload").on('change',function(){
+      $.ajax({
+         url: '/upload-original',
+         type: "post",
+         success: function(response){
+           $('.modal-body').html(response)
+           $('#myModal').modal('show');
+         },
+         error: function(response){
+           console.log('Error '+response);
+         }
+       });
+    });
   });
-</script>
+</script> --}}
 
 {{-- <script type="text/javascript">
 $uploadCrop = $('#upload-demo').croppie({

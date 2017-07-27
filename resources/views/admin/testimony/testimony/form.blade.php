@@ -2,7 +2,6 @@
     {!! Form::label('image', 'Image', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::file('image', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('subject') ? 'has-error' : ''}}">
     {!! Form::label('subject', 'Subject', ['class' => 'col-md-4 control-label']) !!}

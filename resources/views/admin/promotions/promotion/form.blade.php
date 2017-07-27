@@ -4,11 +4,11 @@
         {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('image') ? 'has-error' : ''}}">
-    {!! Form::label('image', 'Image', ['class' => 'col-md-4 control-label']) !!}
+</div><div class="form-group {{ $errors->has('sale') ? 'has-error' : ''}}">
+    {!! Form::label('sale', 'Sale', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::file('image', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('image', '<p class="help-block">:message</p>') !!}
+        {!! Form::text('sale', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! $errors->first('sale', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
     {!! Form::label('status', 'Published', ['class' => 'col-md-4 control-label']) !!}
