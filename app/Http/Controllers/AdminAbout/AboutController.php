@@ -114,6 +114,7 @@ class AboutController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'opening_image' => 'image',
 			'opening_text' => 'required'
 		]);
 

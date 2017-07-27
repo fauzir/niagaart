@@ -131,6 +131,7 @@ class ProjectItemController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+          'image' => 'image',
           'project_id' => 'required',
           'name' => 'required'
         ]);

@@ -63,7 +63,7 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
+			'image' => 'required|image',
 			'name' => 'required',
 			'description' => 'required'
 		]);
@@ -126,6 +126,7 @@ class ServiceController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'image' => 'image',
 			'name' => 'required',
 			'description' => 'required'
 		]);

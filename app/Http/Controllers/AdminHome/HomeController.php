@@ -163,6 +163,7 @@ class HomeController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'image' => 'image',
 			'welcome_text' => 'required',
 			'company_description' => 'required'
 		]);

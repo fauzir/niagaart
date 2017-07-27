@@ -108,6 +108,5 @@ Route::prefix('admin')->group(function () {
     Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
+    Route::resource('testimony', 'AdminTestimony\\TestimonyController');
 });
-
-Route::resource('admin/testimony', 'AdminTestimony\\TestimonyController');

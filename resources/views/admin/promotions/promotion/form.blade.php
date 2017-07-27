@@ -11,7 +11,7 @@
         {!! $errors->first('sale', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('status') ? 'has-error' : ''}}">
-    {!! Form::label('status', 'Published', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('status', 'Active', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         <select class="form-control" name="status">
             <option value="yes">Yes</option>

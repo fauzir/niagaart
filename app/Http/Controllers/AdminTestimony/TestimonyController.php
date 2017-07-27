@@ -57,7 +57,7 @@ class TestimonyController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
+			'image' => 'required|image',
 			'subject' => 'required',
 			'name' => 'required',
 			'occupation' => 'required'
@@ -121,7 +121,7 @@ class TestimonyController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
+			'image' => 'image',
 			'subject' => 'required',
 			'name' => 'required',
 			'occupation' => 'required'

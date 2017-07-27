@@ -63,7 +63,7 @@ class ProjectsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
+			'image' => 'required|image',
 			'name' => 'required',
 			'description' => 'required',
 			'status' => 'required'
@@ -127,6 +127,7 @@ class ProjectsController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'image' => 'image',
 			'name' => 'required',
 			'description' => 'required',
 			'status' => 'required'

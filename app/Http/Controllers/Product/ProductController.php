@@ -64,7 +64,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-			'image' => 'required',
+			'image' => 'required|image',
 			'name' => 'required',
 			'description' => 'required'
 		]);
@@ -127,6 +127,7 @@ class ProductController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'image' => 'image',
 			'name' => 'required',
 			'description' => 'required'
 		]);

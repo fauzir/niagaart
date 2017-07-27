@@ -75,7 +75,7 @@ class BlogController extends Controller
         $this->validate($request, [
 			'title' => 'required',
 			'category' => 'required',
-			'image' => 'required'
+			'image' => 'required|image'
 		]);
         $requestData = $request->except('tag');
         $tagData = $request->input('tag');
@@ -181,10 +181,13 @@ class BlogController extends Controller
     {
         $this->validate($request, [
 			'title' => 'required',
-			'category' => 'required'
+			'category' => 'required',
+      'image' => 'image'
 		]);
         $requestData = $request->except('tag');
         $tagData = $request->input('tag');
+
+        $blog = Blog::find($id);
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
@@ -194,43 +197,35 @@ class BlogController extends Controller
               "width" => 539, "height" => 539,
             ));
           $upload = Cloudder::getResult();
-          $blog = new Blog();
           $blog->title = $requestData['title'];
           $blog->category = $requestData['category'];
           $blog->image = $upload['url'];
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
+          $blog->save();
         } else {
-          $blog = new Blog();
           $blog->title = $requestData['title'];
           $blog->category = $requestData['category'];
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
+          $blog->save();
         }
-
-        foreach ($blog as $object) {
-          $arrays[] = (array) $object;
-        }
-        $blogs = Blog::findOrFail($id);
-        $blogs->update($arrays);
 
         $tags = explode(',', $tagData);
         foreach ($tags as $tag)
         {
           if (BlogTag::where('tag', $tag)->exists()) {
             $inputtags = BlogTag::where('tag', $tag)->get();
-            if (DB::table('blog_tag')->where('blog_id', '1')->where('tag_id', '1')->exists()) {
-              $blogtagrel = new BlogTagRel();
-              $blogtagrel->blog_id = $id;
-              foreach ($inputtags as $inputtag) {
+            foreach ($inputtags as $inputtag) {
+              if (DB::table('blog_tag')->where('blog_id', $id)->where('tag_id', $inputtag->id)->exists()) {
+                $blogtagrel = new BlogTagRel();
+                $blogtagrel->blog_id = $id;
                 $blogtagrel->tag_id = $inputtag->id;
-              }
-              $blogtagrel->save();
-            } else {
-              $blogtagrel = new BlogTagRel();
-              $blogtagrel->blog_id = $id;
-              foreach ($inputtags as $inputtag) {
+              } else {
+                $blogtagrel = new BlogTagRel();
+                $blogtagrel->blog_id = $id;
                 $blogtagrel->tag_id = $inputtag->id;
+                $blogtagrel->save();
               }
             }
           } else {
@@ -238,15 +233,18 @@ class BlogController extends Controller
             $blogtag->tag = $tag;
             $blogtag->save();
 
-            if (DB::table('blog_tag')->where('blog_id', '1')->where('tag_id', '1')->exists()) {
-              $blogtagrel = new BlogTagRel();
-              $blogtagrel->blog_id = $id;
-              $blogtagrel->tag_id = $blogtag->id;
-              $blogtagrel->save();
-            } else {
-              $blogtagrel = new BlogTagRel();
-              $blogtagrel->blog_id = $id;
-              $blogtagrel->tag_id = $blogtag->id;
+            $inputtags = BlogTag::where('tag', $tag)->get();
+            foreach ($inputtags as $inputtag) {
+              if (DB::table('blog_tag')->where('blog_id', $id)->where('tag_id', $inputtag->id)->exists()) {
+                $blogtagrel = new BlogTagRel();
+                $blogtagrel->blog_id = $id;
+                $blogtagrel->tag_id = $blogtag->id;
+              } else {
+                $blogtagrel = new BlogTagRel();
+                $blogtagrel->blog_id = $id;
+                $blogtagrel->tag_id = $blogtag->id;
+                $blogtagrel->save();
+              }
             }
           }
         }
