@@ -9,6 +9,7 @@
                 <div class="panel-heading">Dashboard <span class="glyphicons glyphicons-show-thumbnails"></span></div>
 
                 <div class="panel-body">
+                  
                   <div class="col-md-3">
                 	    <a class="info-tiles tiles-inverse has-footer" href="#">
                 		    <div class="tiles-heading">
@@ -18,11 +19,9 @@
             			        </div>
             			    </div>
             			    <div class="tiles-body">
-            			        <div class="text-center">67</div>
+            			        <div class="text-center">{{ Counter::allHits(1) }}</div>
             			    </div>
             			    <div class="tiles-footer">
-            			    	<div class="pull-left">manage orders</div>
-            			    	<div class="pull-right percent-change">+20.7%</div>
             			    </div>
             			    </a>
                 	</div>
@@ -30,17 +29,15 @@
                   <div class="col-md-3">
                   	<a class="info-tiles tiles-green has-footer" href="#">
           			    <div class="tiles-heading">
-          			        <div class="pull-left">Week</div>
+          			        <div class="pull-left">Last 7 days</div>
           			        <div class="pull-right">
           			        	<div id="tilerevenues" class="sparkline-block"><canvas width="40" height="13" style="display: inline-block; width: 40px; height: 13px; vertical-align: top;"></canvas></div>
           			        </div>
           			    </div>
           			    <div class="tiles-body">
-          			        <div class="text-center">545</div>
+          			        <div class="text-center">{{ Counter::allHits(7) }}</div>
           			    </div>
           			    <div class="tiles-footer">
-          			    	<div class="pull-left">go to accounts</div>
-          			    	<div class="pull-right percent-change">+17.2%</div>
           			    </div>
           			    </a>
               	   </div>
@@ -48,17 +45,15 @@
                   <div class="col-md-3">
                   	<a class="info-tiles tiles-blue has-footer" href="#">
           			    <div class="tiles-heading">
-          			        <div class="pull-left">Month</div>
+          			        <div class="pull-left">Last 30 days</div>
           			        <div class="pull-right">
           			        	<div id="tiletickets" class="sparkline-block"><canvas width="13" height="13" style="display: inline-block; width: 13px; height: 13px; vertical-align: top;"></canvas></div>
           			        </div>
           			    </div>
           			    <div class="tiles-body">
-          			        <div class="text-center">1.893</div>
+          			        <div class="text-center">{{ Counter::allHits(30) }}</div>
           			    </div>
           			    <div class="tiles-footer">
-          			    	<div class="pull-left">see all tickets</div>
-          			    	<div class="pull-right percent-change">+10.3%</div>
           			    </div>
             			  </a>
                 	</div>
@@ -66,22 +61,20 @@
                   <div class="col-md-3">
                   	<a class="info-tiles tiles-midnightblue has-footer" href="#">
           			    <div class="tiles-heading">
-          			        <div class="pull-left">Year</div>
+          			        <div class="pull-left">All Time</div>
           			        <div class="pull-right">
           			        	<div id="tilemembers" class="sparkline-block"><canvas width="39" height="13" style="display: inline-block; width: 39px; height: 13px; vertical-align: top;"></canvas></div>
           			        </div>
           			    </div>
           			    <div class="tiles-body">
-          			        <div class="text-center">19.567</div>
+          			        <div class="text-center">{{ Counter::allHits() }}</div>
           			    </div>
           			    <div class="tiles-footer">
-          			    	<div class="pull-left">manage members</div>
-          			    	<div class="pull-right percent-change">-11.1%</div>
           			    </div>
             			   </a>
                 	</div>
 
-                  <h3 align="center">SERVICES</h3>
+                  {{-- <h3 align="center">SERVICES</h3>
 
                   <div class="row placeholders">
                     <div class="col-xs-6 col-sm-3 placeholder">
@@ -112,7 +105,7 @@
                       <span class="text-muted">Interior Design for Shop / Office</span>
                       </a>
                     </div>
-                  </div>
+                  </div> --}}
                 </div>
             </div>
         </div>

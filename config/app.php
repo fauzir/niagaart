@@ -192,6 +192,9 @@ return [
         // Cloudinary
         JD\Cloudder\CloudderServiceProvider::class,
 
+        // Counter
+        Kryptonit3\Counter\CounterServiceProvider::class,
+
     ],
 
     /*
@@ -244,6 +247,7 @@ return [
         'HTML' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+        'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
 
     ],
 
