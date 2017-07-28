@@ -52,7 +52,7 @@ All Post
                   <br>
                        <ul>
                          @foreach ($categories as $category)
-                          <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
+                          <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
                          @endforeach
                       </ul>
                   </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Blog;
 use App\BlogTag;
 use App\Service;
@@ -37,7 +38,7 @@ class BlogController extends Controller
         } else {
             $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
             // Blog::orderBy('created_at', 'desc')->paginate($perPage);
-            $categories = BlogTag::all();
+            $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('slug, tag, count(tag_id) as total'))->groupBy('tag_id')->get();
             $count = 0;//BlogTag::find($request->id)->tag_blog->count();
             $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
             $socials = Social::where('active', 'yes')->get();
@@ -50,7 +51,7 @@ class BlogController extends Controller
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         Blog::where('slug', $slug)->increment('visitor_count', 1);
         $blogs = Blog::all();
-        $categories = BlogTag::all();
+        $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('slug, tag, count(tag_id) as total'))->groupBy('tag_id')->get();
         $count = 0;
         $contents = Blog::where('slug', $slug)->get();
         $array = array();
@@ -73,7 +74,7 @@ class BlogController extends Controller
             $blogs = BlogTag::find($find->id)->tag_blog;
         }
 
-        $categories = BlogTag::all();
+        $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('slug, tag, count(tag_id) as total'))->groupBy('tag_id')->get();
         $count = 0;
         $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
         $array = array();

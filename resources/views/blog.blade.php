@@ -40,8 +40,12 @@ All Post
                   <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
                   <br>
                   <b>On
-                    @foreach ($blog->tag_blog as $tag)
-                    , <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
+                    @foreach ($blog->tag_blog as $index => $tag)
+                    @if ($index == count($blog->tag_blog)-1)
+                      <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
+                    @else
+                      <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>,
+                    @endif
                     @endforeach
                     </b></p>
                   <hr>
@@ -66,7 +70,7 @@ All Post
                     <br>
                          <ul>
                            @foreach ($categories as $category)
-                            <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
+                            <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
                            @endforeach
                         </ul>
                     </div>

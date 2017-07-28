@@ -54,7 +54,7 @@ All Post
                       <br>
                       <img src="{{ asset($popular->image) }}" alt="article-thumbnail">
                       <br>
-                      <p>{!! $popular->content !!} <a href="{{ route('blog.content', ['slug' => $popular->slug]) }}">Read More . . .</a></p>
+                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['slug' => $popular->slug]) }}">Read More . . .</a></p>
                       <hr>
                   </div>
                   @endforeach
@@ -63,7 +63,7 @@ All Post
                     <br>
                          <ul>
                            @foreach ($categories as $category)
-                            <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} {{--({{ $count }})--}}</a> </li>
+                            <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
                            @endforeach
                         </ul>
                     </div>
