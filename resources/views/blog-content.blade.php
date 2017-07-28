@@ -18,7 +18,15 @@ All Post
               <h1>{{ $content->title }}</h1>
               <br>
               <p>by {{ $content->author }} on {{ date_format($content->created_at, 'd F Y') }}</p>
-              <p>on : {{ $rel }}</p>
+              <p>on :
+                @foreach ($content->tag_blog as $index => $tag)
+                @if ($index == count($content->tag_blog)-1)
+                  <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
+                @else
+                  <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>,
+                @endif
+                @endforeach
+              </p>
             </div>
           </div>
         </div>

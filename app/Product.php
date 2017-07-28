@@ -27,5 +27,10 @@ class Product extends Model
      */
     protected $fillable = ['service_id', 'image', 'name', 'description', 'price'];
 
-    
+    public function service()
+    {
+        return $this->belongsTo('App\Service');
+    }
+
+
 }

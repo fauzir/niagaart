@@ -31,17 +31,10 @@ Contact
                 <br>
               @endforeach
                 <div class="address-socicon">
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook wow fadeInRight"></i></a>&nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter wow fadeInRight"></i></a>&nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin wow fadeInRight"></i></a>
-                   &nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram wow fadeInRight"></i></a>
-                   &nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype wow fadeInRight"></i></a>
-                   &nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube wow fadeInRight"></i></a>
-                   &nbsp;&nbsp;
-                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official wow fadeInRight"></i></a>
+                  @foreach ($socials as $social)
+                    <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                    &nbsp;&nbsp;
+                  @endforeach
                 </div>
               </div>
             </div>
@@ -60,15 +53,15 @@ Contact
                     {!! Form::open(array('route' => 'send.message', 'class' => 'form message-form')) !!}
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control form-line" name="name" id="nameField" required />
+                         <input type="text" class="form-control form-line" name="name" placeholder="Your Name" id="nameField" required />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control form-line" name="email" id="emailField" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
+                         <input type="email" class="form-control form-line" name="email" placeholder="Your Email" id="emailField" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="number" class="form-control form-line" name="phone" id="phoneField" />
+                         <input type="number" class="form-control form-line" name="phone" placeholder="Your Phone Number" id="phoneField" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>

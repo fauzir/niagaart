@@ -34,7 +34,7 @@
     </div>
 </div>
 
-<input type="hidden" name="author" value="Author">
+<input type="hidden" name="author" value="{{ Auth::user()->name }}">
 
 
 <div class="form-group">

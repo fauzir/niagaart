@@ -35,7 +35,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-              <a href="catalogue.html" class="btn btn-lg btn-homeliving">LEARN MORE</a>
+              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homeliving">LEARN MORE</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
               <img src="{{ asset($service->image) }}" alt="Interior Design">
@@ -57,7 +57,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-             <a href="catalogue.html" class="btn btn-lg btn-homelivingblack">LEARN MORE</a>
+             <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homelivingblack">LEARN MORE</a>
             </div>
           </div>
         </div>

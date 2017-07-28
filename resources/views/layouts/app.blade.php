@@ -109,21 +109,20 @@
                     @endforeach
                </div>
                <div class="office-add col-md-3 col-sm-3">
-               <h3>OFFICE</h3>
-                    <p>5th Building
-                    <br>
-                    Setra Mas Residence
-                    <br>
-                    Cimahi 40525
-                    <br>
-                    West Java - Indonesia</p>
+                 <h3>OFFICE</h3>
+                 <p>JL. Sangkuriang No 43
+                 <br>
+                 Cimahi Utara
+                 <br>
+                 Jawa Barat Indonesia</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>OFFICE</h3>
-                    <p><a href="JavaScript:void(0)">hello@41studio.com</a></p>
-                    <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
-                     <br>
-                     (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982</p>
+                 <p><a href="JavaScript:void(0)">niagac7@gmail.com</a></p>
+                 <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
+                    <br>
+                    (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982
+                 </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">
                     <br>

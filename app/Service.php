@@ -38,5 +38,10 @@ class Service extends Model
      */
     protected $fillable = ['image', 'name', 'description', 'type', 'publish'];
 
+    public function product()
+    {
+        return $this->hasMany('App\Product');
+    }
+
 
 }
