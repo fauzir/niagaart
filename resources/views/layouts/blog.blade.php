@@ -106,7 +106,7 @@
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
                  @foreach ($servicefooters as $servicefooter)
-                   <a href="{{ route('service', ['id' => $servicefooter->id]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                   <a href="{{ route('service', ['slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
                    <br>
                  @endforeach
                </div>
@@ -129,25 +129,18 @@
                <div class="clearfix col-md-12 col-sm-12">
                               <br>
                </div>
-               <div class="col-md-6 col-sm-6">
+               <div class="col-md-8 col-sm-8">
                     <div class="footer-copyright">
                          <p>© 2017 NiagaArt | All Rights Reserved.</p>
                     </div>
                </div>
                <div class="col-md-4 col-sm-4">
-                    <div class="social-icon">
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official"></i></a>
-                    </div>
+                   <div class="social-icon">
+                     @foreach ($socials as $social)
+                       <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                       &nbsp;&nbsp;
+                     @endforeach
+                   </div>
                </div>
           </div>
      </div>

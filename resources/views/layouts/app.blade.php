@@ -59,7 +59,7 @@
                    <li><a href="{{ route('home') }}">HOME</a></li>
                    <li><a href="{{ route('about') }}">ABOUT</a></li>
                    <li class="dropdown">
-                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle disabled" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
+                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li class="dropdown-submenu">
                               <a href="{{ route('service.all') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
@@ -104,7 +104,7 @@
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
                     @foreach ($servicefooters as $servicefooter)
-                      <a href="{{ route('service', ['id' => $servicefooter->id]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                      <a href="{{ route('service', ['slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
                       <br>
                     @endforeach
                </div>
@@ -135,17 +135,10 @@
                </div>
                <div class="col-md-4 col-sm-4">
                   <div class="social-icon">
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin"></i></a>
-                     &nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram"></i></a>
-                     &nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype"></i></a>
-                     &nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube"></i></a>
-                     &nbsp;&nbsp;
-                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+                      @foreach ($socials as $social)
+                        <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                        &nbsp;&nbsp;
+                      @endforeach
                   </div>
                </div>
           </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Service;
+use App\Social;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -14,6 +15,7 @@ class AboutController extends Controller
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $abouts = About::all();
-        return view('about', compact('interiors', 'others', 'servicefooters', 'abouts'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('about', compact('interiors', 'others', 'servicefooters', 'abouts', 'socials'));
     }
 }

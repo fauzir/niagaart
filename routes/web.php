@@ -110,3 +110,5 @@ Route::prefix('admin')->group(function () {
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
     Route::resource('testimony', 'AdminTestimony\\TestimonyController');
 });
+
+Route::resource('admin/social', 'AdminSocial\\SocialController');

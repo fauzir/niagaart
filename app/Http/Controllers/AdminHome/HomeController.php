@@ -11,6 +11,7 @@ use App\Home;
 use App\About;
 use App\Contact;
 use App\ServiceCatalogue;
+use App\Social;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Input;
@@ -36,9 +37,10 @@ class HomeController extends Controller
         $about = About::findOrFail(1);
         $contact = Contact::findOrFail(1);
         $servicecatalogue = ServiceCatalogue::findOrFail(1);
+        $social = Social::findOrFail(1);
 
         // return view('admin/home.home.index', compact('home'));
-        return view('admin/page-content', compact('home', 'about', 'contact', 'servicecatalogue'));
+        return view('admin/page-content', compact('home', 'about', 'contact', 'servicecatalogue', 'social'));
     }
 
     public function crop(Request $request)

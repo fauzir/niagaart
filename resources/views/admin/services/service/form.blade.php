@@ -12,8 +12,9 @@
 </div><div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
     {!! Form::label('description', 'Description*', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::textarea('description', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! Form::textarea('description', null, ['class' => 'form-control', 'maxlength' => '124', 'required' => 'required']) !!}
         {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
+        <p align="right">max 124 characters</p>
     </div>
 </div><div class="form-group {{ $errors->has('type') ? 'has-error' : ''}}">
     {!! Form::label('type', 'Type*', ['class' => 'col-md-4 control-label']) !!}

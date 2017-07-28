@@ -56,6 +56,7 @@
                             <li><a href="{{ route('projects.index') }}">Projects</a></li>
                             <li><a href="{{ route('project-item.index') }}">Project Items</a></li>
                             <li><a href="{{ route('promotion.index') }}">Promotions</a></li>
+                            <li><a href="{{ route('social.index') }}">Social</a></li>
                             <li><a href="{{ route('testimony.index') }}">Testimony</a></li>
                         </ul>
                         <a href="#blogSubmenu" data-toggle="collapse" aria-expanded="false">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use App\BlogTag;
 use App\Service;
+use App\Social;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -39,7 +40,8 @@ class BlogController extends Controller
             $categories = BlogTag::all();
             $count = 0;//BlogTag::find($request->id)->tag_blog->count();
             $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
-            return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars'));
+            $socials = Social::where('active', 'yes')->get();
+            return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars', 'socials'));
         }
     }
 
@@ -59,7 +61,8 @@ class BlogController extends Controller
           }
         }
         $rel = implode (",", $array);
-        return view('blog-content', compact('servicefooters', 'contents', 'categories', 'count', 'rel'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('blog-content', compact('servicefooters', 'contents', 'categories', 'count', 'rel', 'socials'));
     }
 
     public function getCategory(Request $request, $slug)
@@ -81,6 +84,7 @@ class BlogController extends Controller
           }
         }
         $rel = implode (",", $array);
-        return view('blog-category', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('blog-category', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'socials'));
     }
 }

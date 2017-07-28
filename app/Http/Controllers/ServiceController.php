@@ -6,6 +6,7 @@ use App\Service;
 use App\ServiceCatalogue;
 use App\Product;
 use App\Promotion;
+use App\Social;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -23,7 +24,8 @@ class ServiceController extends Controller
         foreach ($services as $service) {
           $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $service->id)->orderBy('id', 'asc')->get();
         }
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products', 'socials'));
     }
 
     public function getAll()
@@ -33,7 +35,8 @@ class ServiceController extends Controller
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $services = Service::orderBy('id', 'asc');
         $servicecatalogues = ServiceCatalogue::find(1);
-        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
     }
 
     public function getProduct(Request $request)

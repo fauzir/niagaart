@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Contact;
 use App\Service;
+use App\Social;
 use App\Mail\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -19,7 +20,8 @@ class ContactController extends Controller
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $contact = Contact::find(1);
         $workHours = explode(',', $contact->work_hour);
-        return view('contact', compact('interiors', 'others', 'servicefooters', 'contact', 'workHours'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('contact', compact('interiors', 'others', 'servicefooters', 'contact', 'workHours', 'socials'));
     }
 
     public function sendMessage(Request $request)

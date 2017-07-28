@@ -7,6 +7,7 @@ use App\Blog;
 use App\Service;
 use App\Testimony;
 use App\Promotion;
+use App\Social;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -25,7 +26,8 @@ class HomeController extends Controller
         $promo2 = Promotion::find(2);
         $promo3 = Promotion::find(3);
         $promo4 = Promotion::find(4);
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promo1', 'promo2', 'promo3', 'promo4'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promo1', 'promo2', 'promo3', 'promo4', 'socials'));
     }
 
     public function uploadOriginal(Request $request)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use App\ProjectItem;
 use App\Service;
+use App\Social;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
@@ -17,7 +18,8 @@ class ProjectsController extends Controller
         $featureds = Project::where('status', 'yes')->orderBy('id', 'asc')->get();
         $projects = Project::where('status', 'no')->orderBy('id', 'asc')->get();
         $items = ProjectItem::orderBy('id', 'asc');
-        return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items'));
+        $socials = Social::where('active', 'yes')->get();
+        return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials'));
     }
 
     public function getItem(Request $request)
