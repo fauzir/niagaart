@@ -17,16 +17,19 @@
     <link href="/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
     <link href="/humans.txt" rel="author" />
     <!-- Bootstrap -->
-    <link href="{{ asset('niagaart/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('niagaart/css/bootstrap.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('niagaart/css/font-awesome.min.css') }}">
-    <link href="{{ asset('niagaart/css/styles.css') }}" rel="stylesheet" media="all">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
+    <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('frontend/css/swiper.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
+    <link href="{{ asset('frontend/css/styles.css') }}" rel="stylesheet" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/favicon.ico') }}"/>
     <!---Google Fonts-->
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
+    {{-- <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet"> --}}
     <!--Google analytic-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-97258xxx-1', 'auto'); ga('send', 'pageview');
@@ -49,33 +52,35 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/NiagaArt.png') }}" width="75px" height="75px"></a>
+                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
              </div>
              <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                    <li><a href="{{ route('home') }}">HOME</a></li>
                    <li><a href="{{ route('about') }}">ABOUT</a></li>
                    <li class="dropdown">
-                      <a href="{{ route('service.all') }}">SERVICES<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                         <li class="dropdown">
-                            <a href="{{ route('service.all') }}">INTERIOR DESIGN SERVICES</a>
-                            <li class="divider"></li>
-                               @foreach ($interiors as $interior)
-                                 <li><a href="{{ route('service', ['slug' => $interior->slug]) }}">{{ $interior->name }}</a></li>
-                                 <li class="divider"></li>
-                               @endforeach
-                         </li>
-                         <li class="divider"></li>
-                         <li class="dropdown">
-                            <a href="{{ route('service.all') }}" class="dropdown-toggle" data-toggle="dropdown">OTHER INTERIOR DESIGN SERVICES</a>
-                            <li class="divider"></li>
-                               @foreach ($others as $other)
-                                 <li><a href="{{ route('service', ['slug' => $other->slug]) }}">{{ $other->name }}</a></li>
-                                 <li class="divider"></li>
-                               @endforeach
-                         </li>
-                      </ul>
+                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle disabled" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                           <li class="dropdown-submenu">
+                              <a href="{{ route('service.all') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
+                              <ul class="dropdown-menu">
+                                 @foreach ($interiors as $interior)
+                                 <li><a href="{{ route('service', ['slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
+                                 @endforeach
+                              </ul>
+                           </li>
+                           <!--end submenu-->
+                           <li class="divider"></li>
+                           <li class="dropdown-submenu">
+                              <a href="{{ route('service.all') }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
+                              <ul class="dropdown-menu">
+                                 @foreach ($others as $other)
+                                 <li><a href="{{ route('service', ['slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
+                                 @endforeach
+                              </ul>
+                           </li>
+                           <!--end submenu-->
+                        </ul>
                    </li>
                    <li><a href="{{ route('projects') }}">PROJECTS</a></li>
                    <li><a href="{{ route('contact') }}">CONTACT US</a></li>
@@ -93,8 +98,8 @@
    <footer>
      <div class="container">
           <div class="row">
-               <div class="col-md-3 col-sm-3">
-                    <img src="{{ asset('img/NiagaArt.png') }}" width="100px" height="100px" alt="41logofooter">
+               <div class="logo-footer col-md-3 col-sm-3">
+                    <img src="{{ asset('frontend/images/niagaart-logowhite.png') }}" alt="NiagaArt logo footer">
                </div>
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
@@ -116,32 +121,32 @@
                <div class="contact-add col-md-3 col-sm-3">
                <h3>OFFICE</h3>
                     <p><a href="JavaScript:void(0)">hello@41studio.com</a></p>
-                    <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;8600&nbsp;&nbsp;1718
-                    <br>
-                    (+62)&nbsp;&nbsp;22&nbsp;&nbsp;2066&nbsp;&nbsp;0058</p>
+                    <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
+                     <br>
+                     (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982</p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">
-                    <hr>
+                    <br>
                </div>
-               <div class="col-md-6 col-sm-6">
+               <div class="col-md-8 col-sm-8">
                     <div class="footer-copyright">
                          <p>© 2017 NiagaArt | All Rights Reserved.</p>
                     </div>
                </div>
-               <div class="col-md-6 col-sm-6">
-                    <div class="social-icon">
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube"></i></a>
-                         &nbsp;&nbsp;
-                         <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official"></i></a>
-                    </div>
+               <div class="col-md-4 col-sm-4">
+                  <div class="social-icon">
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin"></i></a>
+                     &nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram"></i></a>
+                     &nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype"></i></a>
+                     &nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube"></i></a>
+                     &nbsp;&nbsp;
+                     <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+                  </div>
                </div>
           </div>
      </div>
@@ -149,7 +154,49 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ asset('niagaart/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/swiper.jquery.min.js') }}"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        speed: 400,
+      spaceBetween: 100,
+      initialSlide: 0,
+      //truewrapper adoptsheight of active slide
+      autoHeight: false,
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      // delay between transitions in ms
+      autoplay: 5000,
+      pagination: '.swiper-pagination',
+      paginationType: "bullets",
+
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+
+      // And if we need scrollbar
+      //scrollbar: '.swiper-scrollbar',
+      // "slide", "fade", "cube", "coverflow" or "flip"
+      effect: 'slide',
+      // Distance between slides in px.
+      spaceBetween: 60,
+      //
+      slidesPerView: 2,
+      //
+      centeredSlides: true,
+      //
+      slidesOffsetBefore: 0,
+      //
+      grabCursor: true,
+      });
+    </script>
+    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
+    <script>
+    new WOW().init();
+    </script>
+
 
     @yield('script')
   </body>

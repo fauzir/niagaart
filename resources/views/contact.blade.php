@@ -18,18 +18,31 @@ Contact
               <div class="container col-lg-5 col-md-4 address">
                 <h3>OFFICE</h3>
                 <br>
-                <p>{{ $contact->address }}</p>
+                <p class="wow fadeInUp">{{ $contact->address }}</p>
                 <br>
-                <p>Phone : <a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a></p>
+                <p class="wow fadeInUp">Phone : <a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a></p>
                 <br>
-                <p>Message/Whatsapp : <a href="{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
+                <p class="wow fadeInUp">Message/Whatsapp : <a href="{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
                 <br>
-                <p>email : <a href="mailto:niagac7@gmail.com">niagac7@gmail.com</a></p>
+                <p class="wow fadeInUp">email : <a href="mailto:niagac7@gmail.com">niagac7@gmail.com</a></p>
                 <br>
               @foreach($workHours as $workHour)
-                <p>{{ $workHour }}</p>
+                <p class="wow fadeInUp">{{ $workHour }}</p>
                 <br>
               @endforeach
+                <div class="address-socicon">
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook wow fadeInRight"></i></a>&nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter wow fadeInRight"></i></a>&nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-linkedin wow fadeInRight"></i></a>
+                   &nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-instagram wow fadeInRight"></i></a>
+                   &nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-skype wow fadeInRight"></i></a>
+                   &nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-youtube wow fadeInRight"></i></a>
+                   &nbsp;&nbsp;
+                   <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-google-plus-official wow fadeInRight"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -43,18 +56,19 @@ Contact
           <div class="row">
             <div class="container col-md-6 mail-panel">
               <h3>LEAVE US A MESSAGE</h3>
+              <br>
                     {!! Form::open(array('route' => 'send.message', 'class' => 'form message-form')) !!}
                       <div class="form-group">
                          <label for="nameField">Name</label>
-                         <input type="text" class="form-control form-line" name="name" id="nameField" placeholder="Your Name" required />
+                         <input type="text" class="form-control form-line" name="name" id="nameField" required />
                       </div>
                       <div class="form-group">
                          <label for="emailField">Email</label>
-                         <input type="email" class="form-control form-line" name="email" id="emailField" placeholder="Your Email" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
+                         <input type="email" class="form-control form-line" name="email" id="emailField" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">Phone Number</label>
-                         <input type="number" class="form-control form-line" name="phone" id="phoneField" placeholder="Your Phone Number" />
+                         <input type="number" class="form-control form-line" name="phone" id="phoneField" />
                       </div>
                       <div class="form-group">
                          <label for="descField">Message</label>

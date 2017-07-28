@@ -21,7 +21,7 @@ About
               <br>
               <p>{{ $about->opening_text }}</p>
             </div>
-            <div class="container col-md-6 opening-img">
+            <div class="container col-md-6 opening-img wow fadeInUp">
               <img src="{{ asset($about->opening_image) }}" alt="Interior Design">
             </div>
             @endforeach
@@ -30,7 +30,7 @@ About
       </div>
     </section>
     <section>
-      <div class="container separator">
+      <div class="container separator-text">
         <h2>WHAT WE'VE BROUGHT FOR YOU</h2>
         <hr width="50%">
       </div>
@@ -38,8 +38,8 @@ About
       @if ($interior->id % 2 == 1)
         <div class="container service-scope1">
           <div class="row">
-            <div class="container col-md-6 scope-img1">
-              <img src="{{ asset($interior->image) }}" height="300px" alt="Interior Design">
+            <div class="container col-md-6 scope-img1 wow fadeInLeft">
+              <img src="{{ asset($interior->image) }}" alt="Interior Design">
             </div>
             <div class="container col-md-6">
               <h3>{{ $interior->name }}</h3>
@@ -50,15 +50,15 @@ About
         </div>
         <hr width="50%">
       @else
-        <div class="container service-scope2">
+        <div class="container service-scope2 hidden-sm hidden-xs">
           <div class="row">
             <div class="container col-md-6">
               <h3>{{ $interior->name }}</h3>
               <br>
               <p>{{ $interior->description }}</p>
             </div>
-            <div class="container col-md-6 scope-img2">
-              <img src="{{ asset($interior->image) }}" height="300px" alt="Interior Design">
+            <div class="container col-md-6 scope-img2 wow fadeInRight">
+              <img src="{{ asset($interior->image) }}" alt="Interior Design">
             </div>
           </div>
         </div>

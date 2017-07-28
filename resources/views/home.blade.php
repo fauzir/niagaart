@@ -7,38 +7,41 @@ Homepage
 @section('content')
     {{ Counter::count('home') }}
     <section>
-      <div class="container sale-carousel">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            @foreach ($promotions as $index => $promotion)
-            <li data-target="#myCarousel" data-slide-to="{{ $promotion->id }}" class="@if($index == 0) {{ 'active' }} @endif"></li>
-            @endforeach
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            @foreach ($promotions as $index => $promotion)
-              <div class="item @if($index == 0) {{ 'active' }} @endif">
-                {{-- <img src="#" alt="#" style="width:100%;"> --}}
-                <h3 align="center">{{ $promotion->name }}</h3>
-                <h3 align="center">{{ $promotion->sale }}</h3>
+      <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide sale-carousel1">
+                     <div>
+                        <h1>{{ $promo1->sale }}</h1>
+                        <p>{{ $promo1->name }}</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide sale-carousel2">
+                     <div>
+                       <h1>{{ $promo2->sale }}</h1>
+                       <p>{{ $promo2->name }}</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide sale-carousel3">
+                     <div>
+                       <h1>{{ $promo3->sale }}</h1>
+                       <p>{{ $promo3->name }}</p>
+                     </div>
+                  </div>
+                  <div class="swiper-slide sale-carousel4">
+                     <div>
+                       <h1>{{ $promo4->sale }}</h1>
+                       <p>{{ $promo4->name }}</p>
+                     </div>
+                  </div>
               </div>
-            @endforeach
-          </div>
-
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
       </div>
     </section>
+
     <section>
       @foreach($homes as $home)
       <div class="container-fluid home-carousel">
@@ -47,9 +50,9 @@ Homepage
           <div class="row">
           <div class="container col-md-6"></div>
             <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message hidden-xs">
-              <h1>Welcome to Niaga Art</h1>
+              <h1 class="animated fadeInUp">Welcome to Niaga Art</h1>
               <hr>
-              <p>{{ $home->welcome_text }}</p>
+              <p class="animated fadeInUp">{{ $home->welcome_text }}</p>
             </div>
             <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message visible-xs">
               <h1>Welcome to Niaga Art</h1>
@@ -60,9 +63,15 @@ Homepage
 
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
-            <div class="item active">
-              <img src="{{ asset($home->image) }}" alt="Los Angeles" style="width:100%;">
-            </div>
+              <div class="item active">
+                 <img src="{{ asset('frontend/images/Home Carousel.jpg') }}" alt="Interior" style="width:100%;">
+              </div>
+              <div class="item">
+                 <img src="{{ asset('frontend/images/Home Carousel1.jpg') }}" alt="Interior" style="width:100%;">
+              </div>
+              <div class="item">
+                 <img src="{{ asset('frontend/images/Home Carousel.jpg') }}" alt="Interior" style="width:100%;">
+              </div>
           </div>
         @endforeach
         </div>
@@ -75,7 +84,7 @@ Homepage
           <div class="row service-label">
           @foreach($services as $service)
           <div class="col-xs-12 col-sm-6 col-md-4">
-              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="thumbnail thumbnail-service">
+              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="thumbnail thumbnail-service wow fadeInRight">
                   <img src="{{ asset($service->image) }}">
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
@@ -140,7 +149,7 @@ Homepage
     <section>
       <div class="container newsfeed">
         <div class="row">
-          <div class="container col-md-6">
+          <div class="container col-md-6 wow fadeInUp">
           <h2>BLOG POSTS</h2>
           @foreach ($blogs as $blog)
           <div class="media">
@@ -169,7 +178,7 @@ Homepage
               </div>
             </div> --}}
           </div>
-          <div class="container col-md-6">
+          <div class="container col-md-6 wow fadeInUp">
           <h2>WHAT'S NEW</h2>
         <a class="twitter-timeline" data-height="600" data-theme="light" data-chrome="nofooter" data-link-color="#E81C4F" href="https://twitter.com/niaga_art">Tweets by niaga_art</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>

@@ -33,10 +33,12 @@ All Post
             <div class="col-md-6 article-fullpict">
               <img src="{{ asset($content->image) }}" alt="article-fullpict">
             </div>
-            <div class="col-md-6">
-              <p>{!! $content->content !!}</p>
+            <div class="col-md-6"></div>
+              {!! $content->content !!}
             <hr>
-            </div>
+            <a href="{{ route('blog') }}"><b><< Back to blog</b></a>
+
+            <br>
             <br>
             <div class="container col-md-8 comment-section">
             <section>

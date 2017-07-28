@@ -6,8 +6,9 @@ Projects
 
 @section('content')
     <section>
-    <div class="container">
-      <h1>FEATURED PROJECTS</h1>
+    <div class="container featured-projectstitle">
+      <h2>FEATURED PROJECTS</h2>
+      <hr class="small">
     </div>
           <div id="text-carousel" class="carousel slide featured-projects" data-ride="carousel">
     <!-- Wrapper for slides -->
@@ -20,7 +21,7 @@ Projects
                         <div class="container featured-projects">
                             <div class="row">
                               <div class="container col-md-6">
-                                <h3>{{ $featured->name }}</h3>
+                                <h2>{{ $featured->name }}</h2>
                                 <br>
                                 <p>{{ $featured->description }}</p>
                               </div>
@@ -51,7 +52,7 @@ Projects
     <hr>
       <div class="row service-label">
       @foreach($projects as $project)
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal" href="#myModal">
               <img src="{{ asset($project->image) }}">
               <div class="caption">
@@ -63,6 +64,29 @@ Projects
       </div>
       @endforeach
       </div>
+      <div class="container">
+  <div class="row">
+  <nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">«</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">»</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">

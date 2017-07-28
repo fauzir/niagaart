@@ -17,10 +17,11 @@
       <link href="/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
       <link href="/humans.txt" rel="author" />
       <!-- Bootstrap -->
-      <link href="{{ asset('niagaart/css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('niagaart/css/bootstrap.css') }}" rel="stylesheet">
-      <link rel="stylesheet" href="{{ asset('niagaart/css/font-awesome.min.css') }}">
-      <link href="{{ asset('niagaart/css/styles.css') }}" rel="stylesheet" media="all">
+      <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
+      <link href="{{ asset('frontend/css/styles.css') }}" rel="stylesheet" media="all">
       <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico"/>
       <!---Google Fonts-->
       <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
@@ -49,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('blog') }}"><img src="{{ asset('img/NiagaArt.png') }}" width="75px" height="75px"></a>
+            <a class="navbar-brand" href="{{ route('blog') }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
          </div>
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-blog">
@@ -99,8 +100,8 @@
    <footer>
      <div class="container">
           <div class="row">
-               <div class="col-md-3 col-sm-3">
-                    <img src="{{ asset('img/NiagaArt.png') }}" width="100px" height="100px" alt="41logofooter">
+               <div class="logo-footer col-md-3 col-sm-3">
+                    <img src="{{ asset('frontend/images/niagaart-logowhite.png') }}" alt="NiagaArt logo footer">
                </div>
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
@@ -110,30 +111,30 @@
                  @endforeach
                </div>
                <div class="office-add col-md-3 col-sm-3">
-               <h3>OFFICE</h3>
-                    <p>5th Building
-                    <br>
-                    Setra Mas Residence
-                    <br>
-                    Cimahi 40525
-                    <br>
-                    West Java - Indonesia</p>
+                 <h3>OFFICE</h3>
+                 <p>JL. Sangkuriang No 43
+                 <br>
+                 Cimahi Utara
+                 <br>
+                 Jawa Barat Indonesia</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>OFFICE</h3>
-                    <p><a href="JavaScript:void(0)">hello@41studio.com</a></p>
-                    <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;8600&nbsp;&nbsp;1718
+                 <p><a href="JavaScript:void(0)">niagac7@gmail.com</a></p>
+                 <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
                     <br>
-                    (+62)&nbsp;&nbsp;22&nbsp;&nbsp;2066&nbsp;&nbsp;0058</p>
+                    (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982
+                 </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">
+                              <br>
                </div>
                <div class="col-md-6 col-sm-6">
                     <div class="footer-copyright">
                          <p>© 2017 NiagaArt | All Rights Reserved.</p>
                     </div>
                </div>
-               <div class="col-md-6 col-sm-6">
+               <div class="col-md-4 col-sm-4">
                     <div class="social-icon">
                          <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
                          <a href="JavaScript:void(0)" target="_blank"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
@@ -154,6 +155,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

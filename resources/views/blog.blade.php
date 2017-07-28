@@ -13,7 +13,7 @@ All Post
               <div class="container col-md-3 fill-in">
 
               </div>
-              <div class="container col-md-8 catalogueheader-txt">
+              <div class="container col-md-8 catalogueheader-txt wow fadeInUp">
                 <h1>NIAGA ART BLOG</h1>
                 <br>
                 <p>Subtitle message are here</p>
@@ -30,7 +30,7 @@ All Post
               <div class="row">
                 <div class="container col-md-8 article-main">
                 @foreach ($blogs as $blog)
-                <div class="container col-md-10 article">
+                <div class="container col-md-10 article wow fadeInUp">
                   <h2><a href="{{ route('blog.content', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
                   <br>
                   <img src="{{ $blog->image }}" alt="article-thumbnail">
