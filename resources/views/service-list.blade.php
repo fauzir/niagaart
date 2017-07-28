@@ -24,35 +24,38 @@ Services
       </div>
     </div>
     </section>
+    @foreach ($services as $service)
+    @if ($service->id % 2 == 1)
     <section>
     <div class="container-fluid homeliving-bg">
       <div class="container opening-section">
           <div class="row">
             <div class="container col-md-6 homeliving-txt">
-              <h1>HOME & LIVING</h1>
+              <h1>{{ $service->name }}</h1>
               <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>{{ $service->description }}</p>
               <br>
               <a href="catalogue.html" class="btn btn-lg btn-homeliving">LEARN MORE</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
-              <img src="{{ asset('niagaart/images/Opening.jpg') }}" alt="Interior Design">
+              <img src="{{ asset($service->image) }}" alt="Interior Design">
             </div>
           </div>
         </div>
       </div>
     </section>
+    @else
     <section>
     <div class="container-fluid apartment-bg">
       <div class="container opening-sectionright">
           <div class="row">
             <div class="container col-md-6 apartment-img wow slideInUp">
-              <img src="{{ asset('niagaart/images/apartment.jpg') }}" alt="Interior Design">
+              <img src="{{ asset($service->image) }}" alt="Interior Design">
             </div>
             <div class="container col-md-6 apartment-txt">
-              <h1>APARTMENT</h1>
+              <h1>{{ $service->name }}</h1>
               <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>{{ $service->description }}</p>
               <br>
              <a href="catalogue.html" class="btn btn-lg btn-homelivingblack">LEARN MORE</a>
             </div>
@@ -60,40 +63,6 @@ Services
         </div>
       </div>
     </section>
-    <section>
-    <div class="container-fluid cafe-bg">
-      <div class="container opening-section">
-          <div class="row">
-            <div class="container col-md-6 cafe-txt">
-              <h1>CAFE, FOODCOURT & BAR</h1>
-              <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              <br>
-              <a href="catalogue.html" class="btn btn-lg btn-cafe">LEARN MORE</a>
-            </div>
-            <div class="container col-md-6 cafe-img wow slideInUp">
-              <img src="{{ asset('niagaart/images/cafe.jpg') }}" alt="Interior Design">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-    <div class="container-fluid apartment-bg">
-      <div class="container opening-sectionright">
-          <div class="row">
-            <div class="container col-md-6 office-img wow slideInUp">
-              <img src="{{ asset('niagaart/images/office.jpg') }}" alt="Interior Design">
-            </div>
-            <div class="container col-md-6 apartment-txt">
-              <h1>SHOP & OFFICE</h1>
-              <br>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              <br>
-              <a href="catalogue.html" class="btn btn-lg btn-homelivingblack">LEARN MORE</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    @endif
+    @endforeach
 @endsection

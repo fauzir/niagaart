@@ -26,6 +26,16 @@ Route::get('/services',[
    'as'    => 'service.all'
 ]);
 
+Route::get('/services/interior',[
+   'uses' => 'ServiceController@getInterior',
+   'as'    => 'service.interior'
+]);
+
+Route::get('/services/other',[
+   'uses' => 'ServiceController@getOther',
+   'as'    => 'service.other'
+]);
+
 Route::get('/service/{slug}',[
    'uses' => 'ServiceController@index',
    'as'    => 'service'

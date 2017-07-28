@@ -39,6 +39,28 @@ class ServiceController extends Controller
         return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
     }
 
+    public function getInterior()
+    {
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
+        $services = Service::where('type', 'interior')->get();
+        $servicecatalogues = ServiceCatalogue::find(1);
+        $socials = Social::where('active', 'yes')->get();
+        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
+    }
+
+    public function getOther()
+    {
+        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
+        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
+        $services = Service::where('type', 'other')->get();
+        $servicecatalogues = ServiceCatalogue::find(1);
+        $socials = Social::where('active', 'yes')->get();
+        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
+    }
+
     public function getProduct(Request $request)
     {
         $id = $request->id;

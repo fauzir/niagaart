@@ -62,7 +62,7 @@
                         <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.all') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.interior') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($interiors as $interior)
                                  <li><a href="{{ route('service', ['slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
@@ -72,7 +72,7 @@
                            <!--end submenu-->
                            <li class="divider"></li>
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.all') }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.other') }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($others as $other)
                                  <li><a href="{{ route('service', ['slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
