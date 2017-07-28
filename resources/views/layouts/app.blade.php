@@ -59,7 +59,7 @@
                    <li><a href="{{ route('home') }}">HOME</a></li>
                    <li><a href="{{ route('about') }}">ABOUT</a></li>
                    <li class="dropdown">
-                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
+                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li class="dropdown-submenu">
                               <a href="{{ route('service.interior') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
@@ -151,6 +151,14 @@
     <script src="{{ asset('frontend/js/swiper.min.js') }}"></script>
     <script src="{{ asset('frontend/js/swiper.jquery.min.js') }}"></script>
     <script>
+        $(document).ready(function() {
+          $('.js-navmenu-service').click(function() {
+             const windowWidth = $(window).width();
+             if (windowWidth <= 767) { return; }
+             window.location = $(this).attr('href');
+          })
+       })
+
       var swiper = new Swiper('.swiper-container', {
         speed: 400,
       spaceBetween: 100,

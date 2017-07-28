@@ -22,7 +22,7 @@ class ServiceController extends Controller
         $promo4 = Promotion::find(4);
         $services = Service::where('slug', $slug)->get();
         foreach ($services as $service) {
-          $products = Product::limit(3)->select('id','image','name','description','price')->where('service_id', $service->id)->orderBy('id', 'asc')->get();
+          $products = Product::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
         }
         $socials = Social::where('active', 'yes')->get();
         return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products', 'socials'));
