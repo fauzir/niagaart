@@ -39,8 +39,10 @@ All Post
                   <br>
                   <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
                   <br>
-                  <b>On,
-                    {{ $rel }}
+                  <b>On
+                    @foreach ($blog->tag_blog as $tag)
+                    , <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
+                    @endforeach
                     </b></p>
                   <hr>
                 </div>

@@ -34,19 +34,12 @@ class BlogController extends Controller
             $rel = implode (",", $array);
             return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel'));
         } else {
-            $blogs = Blog::orderBy('created_at', 'desc')->paginate($perPage);
+            $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
+            // Blog::orderBy('created_at', 'desc')->paginate($perPage);
             $categories = BlogTag::all();
             $count = 0;//BlogTag::find($request->id)->tag_blog->count();
             $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
-            $array = array();
-            foreach ($blogs as $blog) {
-              $tags = Blog::find($blog->id)->tag_blog;
-              foreach ($tags as $tag) {
-                $array[] = $tag->tag;
-              }
-            }
-            $rel = implode (",", $array);
-            return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel'));
+            return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars'));
         }
     }
 

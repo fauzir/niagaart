@@ -1,5 +1,9 @@
 @extends('auth.layout')
 
+@section('title')
+Login
+@endsection
+
 @section('content')
       <div class="container">
           <div class="card card-container">
