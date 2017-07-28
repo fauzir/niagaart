@@ -5,6 +5,7 @@ Homepage
 @endsection
 
 @section('content')
+    {{ Counter::count('home') }}
     <section>
       <div class="container sale-carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
