@@ -43,13 +43,9 @@
                             <img src="{{ asset($item->image) }}" width="50%" class="img-responsive center-block" alt="">
                           </div>
                           <h2 class="post-title">{{ $item->name }}</h2>
-                          <h6 class="post-info">July-25 2017 : Posted by Author</h6>
                           <p>{{ $item->description }}</p>
+                          <p>${{ $item->price }}</p>
                           <a href="" title="" class="read-more">Read More</a>
-                          <div class="tag-comment">
-                            <span class="pull-left"><i class="fa fa-tags"></i> technology, web</span>
-                            <span class="pull-right"><i class="fa fa-comments"></i> no comments</span>
-                          </div>
                         </div>
                         @endforeach
                       </div>
