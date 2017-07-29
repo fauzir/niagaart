@@ -35,8 +35,9 @@ class BlogController extends Controller
               }
             }
             $rel = implode (",", $array);
+            $socials = Social::where('active', 'yes')->get();
             $contact = Contact::find(1);
-            return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'contact'));
+            return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'socials', 'contact'));
         } else {
             $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
             // Blog::orderBy('created_at', 'desc')->paginate($perPage);
