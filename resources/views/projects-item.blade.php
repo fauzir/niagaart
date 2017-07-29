@@ -45,7 +45,6 @@
                           <h2 class="post-title">{{ $item->name }}</h2>
                           <p>{{ $item->description }}</p>
                           <p>${{ $item->price }}</p>
-                          <a href="" title="" class="read-more">Read More</a>
                         </div>
                         @endforeach
                       </div>
