@@ -52,7 +52,7 @@ class ServiceController extends Controller
         $promo2 = Promotion::find(2);
         $promo3 = Promotion::find(3);
         $promo4 = Promotion::find(4);
-        $services = Service::where('type', 'interior')->get();
+        $services = Service::where('type', 'interior')->orderBy('id', 'asc')->get();
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
         $contact = Contact::find(1);
@@ -65,7 +65,7 @@ class ServiceController extends Controller
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $services = Service::where('type', 'other')->get();
+        $services = Service::where('type', 'other')->orderBy('id', 'asc')->get();
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
         $contact = Contact::find(1);
