@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use DB;
+use App\Contact;
 use App\Service;
 use App\ServiceCatalogue;
 use App\Product;
@@ -26,7 +27,8 @@ class ServiceController extends Controller
           $products = Product::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
         }
         $socials = Social::where('active', 'yes')->get();
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products', 'socials'));
+        $contact = Contact::find(1);
+        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products', 'socials', 'contact'));
     }
 
     public function getAll()
@@ -37,7 +39,8 @@ class ServiceController extends Controller
         $services = Service::orderBy('id', 'asc')->get();
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
-        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
+        $contact = Contact::find(1);
+        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials', 'contact'));
     }
 
     public function getInterior()
@@ -52,8 +55,9 @@ class ServiceController extends Controller
         $services = Service::where('type', 'interior')->get();
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
+        $contact = Contact::find(1);
         $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
-        return view('service-list', compact('interiors', 'others', 'servicefooters', 'servicecatalogues', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials', 'products'));
+        return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'servicecatalogues', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials', 'products'));
     }
 
     public function getOther()
@@ -64,7 +68,8 @@ class ServiceController extends Controller
         $services = Service::where('type', 'other')->get();
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
-        return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
+        $contact = Contact::find(1);
+        return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
     }
 
     public function getProduct(Request $request)

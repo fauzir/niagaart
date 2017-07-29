@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use App\Project;
 use App\ProjectItem;
 use App\Service;
@@ -19,7 +20,8 @@ class ProjectsController extends Controller
         $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(9);
         $items = ProjectItem::orderBy('id', 'asc');
         $socials = Social::where('active', 'yes')->get();
-        return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials'));
+        $contact = Contact::find(1);
+        return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials', 'contact'));
     }
 
     public function getItem(Request $request)

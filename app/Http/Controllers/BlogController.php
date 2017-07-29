@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\Blog;
 use App\BlogTag;
+use App\Contact;
 use App\Service;
 use App\Social;
 use Illuminate\Http\Request;
@@ -34,7 +35,8 @@ class BlogController extends Controller
               }
             }
             $rel = implode (",", $array);
-            return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel'));
+            $contact = Contact::find(1);
+            return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'contact'));
         } else {
             $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
             // Blog::orderBy('created_at', 'desc')->paginate($perPage);
@@ -42,7 +44,8 @@ class BlogController extends Controller
             $count = 0;//BlogTag::find($request->id)->tag_blog->count();
             $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
             $socials = Social::where('active', 'yes')->get();
-            return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars', 'socials'));
+            $contact = Contact::find(1);
+            return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars', 'socials', 'contact'));
         }
     }
 
@@ -63,7 +66,8 @@ class BlogController extends Controller
         }
         $rel = implode (",", $array);
         $socials = Social::where('active', 'yes')->get();
-        return view('blog-content', compact('servicefooters', 'contents', 'categories', 'count', 'rel', 'socials'));
+        $contact = Contact::find(1);
+        return view('blog-content', compact('servicefooters', 'contents', 'categories', 'count', 'rel', 'socials', 'contact'));
     }
 
     public function getCategory(Request $request, $slug)
@@ -86,6 +90,7 @@ class BlogController extends Controller
         }
         $rel = implode (",", $array);
         $socials = Social::where('active', 'yes')->get();
-        return view('blog-category', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'socials'));
+        $contact = Contact::find(1);
+        return view('blog-category', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'socials', 'contact'));
     }
 }

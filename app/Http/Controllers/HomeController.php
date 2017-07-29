@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Home;
+use App\Contact;
 use App\Blog;
 use App\Service;
 use App\Testimony;
@@ -27,7 +28,8 @@ class HomeController extends Controller
         $promo3 = Promotion::find(3);
         $promo4 = Promotion::find(4);
         $socials = Social::where('active', 'yes')->get();
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promo1', 'promo2', 'promo3', 'promo4', 'socials'));
+        $contact = Contact::find(1);
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promo1', 'promo2', 'promo3', 'promo4', 'socials', 'contact'));
     }
 
     public function uploadOriginal(Request $request)

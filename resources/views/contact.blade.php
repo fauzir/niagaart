@@ -22,7 +22,7 @@ Contact
                 <br>
                 <p class="wow fadeInUp">Phone : <a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a></p>
                 <br>
-                <p class="wow fadeInUp">Message/Whatsapp : <a href="{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
+                <p class="wow fadeInUp">Message/Whatsapp : <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
                 <br>
                 <p class="wow fadeInUp">email : <a href="mailto:niagac7@gmail.com">niagac7@gmail.com</a></p>
                 <br>

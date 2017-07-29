@@ -118,10 +118,10 @@
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>OFFICE</h3>
-                 <p><a href="JavaScript:void(0)">niagac7@gmail.com</a></p>
-                 <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
+                 <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
+                 <p><a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a>
                     <br>
-                    (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982
+                    <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a>
                  </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">

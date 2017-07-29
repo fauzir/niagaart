@@ -11,6 +11,8 @@ Author URI: www.41studio.com
 
 /***@import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');***/
+
+
 @font-face {
     font-family: Campton-Bold;
     src: url(../fonts/Campton-Bold.otf);
@@ -163,6 +165,28 @@ ul {
         -webkit-align-items: center;
         align-items: center;
     }
+
+    .swiper-slide h1{
+        background-image: url(../images/Sale-Banner.jpg);
+        text-align: center;
+        font-size: 55px;
+        width: 100%;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
     .swiper-slide-next{
         opacity: 60%;
     }
@@ -1020,6 +1044,7 @@ ul {
     border-left: 1px solid #cbcbcb;
     border-right: 1px solid #cbcbcb;
     margin-top: 30px;
+    margin-bottom: 30px;
     background-color: #f2f2f2;
 }
 .detail-popup p{
@@ -1141,8 +1166,8 @@ margin-bottom: 2.25rem !important;
     padding: 10px;
     border: 1px solid transparent;
     transition: all 0.4s ease-in-out; }
-    .masonry .masonry-item:hover {
-      border: 1px solid #f0f0f0; }
+    .masonry .masonry-item {
+      border: 1px solid #6b6b6b; }
     .masonry .masonry-item .post-title {
       font-size: 20px; }
     .masonry .masonry-item .post-info {
