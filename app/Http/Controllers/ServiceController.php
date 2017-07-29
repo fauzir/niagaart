@@ -18,17 +18,14 @@ class ServiceController extends Controller
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $promo1 = Promotion::find(1);
-        $promo2 = Promotion::find(2);
-        $promo3 = Promotion::find(3);
-        $promo4 = Promotion::find(4);
+        $promos = Promotion::where('status', 'yes')->get();
         $services = Service::where('slug', $slug)->get();
         foreach ($services as $service) {
           $products = Product::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
         }
         $socials = Social::where('active', 'yes')->get();
         $contact = Contact::find(1);
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'products', 'socials', 'contact'));
+        return view('service', compact('interiors', 'others', 'servicefooters', 'promos', 'services', 'products', 'socials', 'contact'));
     }
 
     public function getAll()

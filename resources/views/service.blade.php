@@ -26,42 +26,22 @@ Services
                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                           <li data-target="#myCarousel" data-slide-to="1"></li>
-                           <li data-target="#myCarousel" data-slide-to="2"></li>
-                           <li data-target="#myCarousel" data-slide-to="3"></li>
+                           @foreach ($promos as $index => $promo)
+                           <li data-target="#myCarousel" data-slide-to="{{ $index }}" class="@if($index == 0) {{ 'active' }} @endif"></li>
+                           @endforeach
                         </ol>
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                           <div class="item active">
+                           @foreach ($promos as $index => $promo)
+                           <div class="item @if($index == 0) {{ 'active' }} @endif">
                               <img src="{{ asset('frontend/images/Sale-Banner1.jpg') }}" alt="Los Angeles" style="width:100%;">
                               <div class="carousel-caption">
-                                <h1>{{ $promo1->sale }}</h1>
-                                <p>{{ $promo1->name }}</p>
+                                <h1>{{ $promo->sale }}</h1>
+                                <p>{{ $promo->name }}</p>
                               </div>
                            </div>
-                           <div class="item">
-                              <img src="{{ asset('frontend/images/Sale-Banner2.jpg') }}" alt="Chicago" style="width:100%;">
-                              <div class="carousel-caption">
-                                <h1>{{ $promo2->sale }}</h1>
-                                <p>{{ $promo2->name }}</p>
-                              </div>
-                           </div>
-                           <div class="item">
-                              <img src="{{ asset('frontend/images/Sale-Banner3.jpg') }}" alt="New york" style="width:100%;">
-                              <div class="carousel-caption">
-                                <h1>{{ $promo3->sale }}</h1>
-                                <p>{{ $promo3->name }}</p>
-                              </div>
-                           </div>
-                           <div class="item">
-                              <img src="{{ asset('frontend/images/Sale-Banner4.jpg') }}" alt="New york" style="width:100%;">
-                              <div class="carousel-caption">
-                                <h1>{{ $promo4->sale }}</h1>
-                                <p>{{ $promo4->name }}</p>
-                              </div>
-                           </div>
+                           @endforeach
                         </div>
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
