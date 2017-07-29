@@ -25,7 +25,7 @@ class Promotion extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'sale', 'status'];
+    protected $fillable = ['name', 'sale', 'class', 'status'];
 
 
 }

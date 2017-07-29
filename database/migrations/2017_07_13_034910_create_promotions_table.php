@@ -16,6 +16,7 @@ class CreatePromotionsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('sale');
+            $table->string('class');
             $table->string('status');
             $table->timestamps();
         });

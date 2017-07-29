@@ -9,30 +9,14 @@ Homepage
     <section>
       <div class="swiper-container">
               <div class="swiper-wrapper">
-                  <div class="swiper-slide sale-carousel1">
+                  @foreach ($promos as $promo)
+                  <div class="swiper-slide {{ $promo->class }}">
                      <div>
-                        <h1>{{ $promo1->sale }}</h1>
-                        <p>{{ $promo1->name }}</p>
+                        <h1>{{ $promo->sale }}</h1>
+                        <p>{{ $promo->name }}</p>
                      </div>
                   </div>
-                  <div class="swiper-slide sale-carousel2">
-                     <div>
-                       <h1>{{ $promo2->sale }}</h1>
-                       <p>{{ $promo2->name }}</p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sale-carousel3">
-                     <div>
-                       <h1>{{ $promo3->sale }}</h1>
-                       <p>{{ $promo3->name }}</p>
-                     </div>
-                  </div>
-                  <div class="swiper-slide sale-carousel4">
-                     <div>
-                       <h1>{{ $promo4->sale }}</h1>
-                       <p>{{ $promo4->name }}</p>
-                     </div>
-                  </div>
+                  @endforeach
               </div>
               <!-- Add Pagination -->
               <div class="swiper-pagination"></div>

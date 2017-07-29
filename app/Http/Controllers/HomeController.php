@@ -23,13 +23,10 @@ class HomeController extends Controller
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $testimonies = Testimony::all();
-        $promo1 = Promotion::find(1);
-        $promo2 = Promotion::find(2);
-        $promo3 = Promotion::find(3);
-        $promo4 = Promotion::find(4);
+        $promos = Promotion::where('status', 'yes')->get();
         $socials = Social::where('active', 'yes')->get();
         $contact = Contact::find(1);
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promo1', 'promo2', 'promo3', 'promo4', 'socials', 'contact'));
+        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }
 
     public function uploadOriginal(Request $request)
