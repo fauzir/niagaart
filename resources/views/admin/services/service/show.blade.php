@@ -30,6 +30,7 @@
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr><th> Image </th><td> <img src="{{ $service->image }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $service->name }} </td></tr><tr><th> Description </th><td> {{ $service->description }} </td></tr>
+                                    <tr><th> Type </th><td> {{ $service->type }} </td></tr><tr><th> Publish </th><td> {{ $service->publish }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
