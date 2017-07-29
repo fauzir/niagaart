@@ -24,7 +24,7 @@
       <div id="main" style="margin-left: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px;">
         <div class="wrapper">
             <!-- Sidebar Holder -->
-            <nav id="sidebar">
+            <nav id="sidebar" class="active">
                 <div class="sidebar-header">
                   <a href="{{ url('/admin') }}">
                     <h3>NiagaArt</h3>
@@ -122,12 +122,12 @@
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
          <script type="text/javascript">
-             $(document).ready(function () {
-                 $('#sidebar').toggleClass('active');
-                 $('#sidebarCollapse').on('click', function () {
-                     $('#sidebar').toggleClass('active');
-                 });
-             });
+            //  $(document).ready(function () {
+            //      $('#sidebar').toggleClass('active');
+            //      $('#sidebarCollapse').on('click', function () {
+            //          $('#sidebar').toggleClass('active');
+            //      });
+            //  });
          </script>
 
          <script type="text/javascript">

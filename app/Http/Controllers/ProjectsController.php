@@ -16,7 +16,7 @@ class ProjectsController extends Controller
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $featureds = Project::where('status', 'yes')->orderBy('id', 'asc')->get();
-        $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(1);
+        $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(9);
         $items = ProjectItem::orderBy('id', 'asc');
         $socials = Social::where('active', 'yes')->get();
         return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials'));
