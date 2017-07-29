@@ -38,9 +38,10 @@ class BlogController extends Controller
 				->orWhere('category', 'LIKE', "%$keyword%")
 				->orWhere('image', 'LIKE', "%$keyword%")
 				->orWhere('content', 'LIKE', "%$keyword%")
+        ->orderBy('id', 'desc')
 				->paginate($perPage);
         } else {
-            $blog = Blog::paginate($perPage);
+            $blog = Blog::orderBy('id', 'desc')->paginate($perPage);
         }
 
         return view('admin/blog.blog.index', compact('blog'));
