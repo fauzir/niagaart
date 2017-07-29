@@ -50,9 +50,10 @@ class ServiceController extends Controller
         $promo3 = Promotion::find(3);
         $promo4 = Promotion::find(4);
         $services = Service::where('type', 'interior')->get();
+        $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
         $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials', 'products'));
+        return view('service-list', compact('interiors', 'others', 'servicefooters', 'servicecatalogues', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials', 'products'));
     }
 
     public function getOther()
