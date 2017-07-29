@@ -16,7 +16,7 @@ class BlogCategoryController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -29,6 +29,7 @@ class BlogCategoryController extends Controller
 
         if (!empty($keyword)) {
             $blogcategory = BlogCategory::where('category', 'LIKE', "%$keyword%")
+				->orWhere('id', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
             $blogcategory = BlogCategory::paginate($perPage);

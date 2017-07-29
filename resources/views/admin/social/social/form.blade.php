@@ -10,13 +10,11 @@
         {!! Form::text('url', null, ['class' => 'form-control']) !!}
         {!! $errors->first('url', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('icon') ? 'has-error' : ''}}">
-    {!! Form::label('icon', 'Icon', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
-        {!! Form::text('icon', null, ['class' => 'form-control']) !!}
-        {!! $errors->first('icon', '<p class="help-block">:message</p>') !!}
-    </div>
-</div><div class="form-group {{ $errors->has('active') ? 'has-error' : ''}}">
+</div>
+
+<input type="hidden" name="icon" value="{{ $social->icon }}">
+
+<div class="form-group {{ $errors->has('active') ? 'has-error' : ''}}">
     {!! Form::label('active', 'Active', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         <select class="form-control" name="active">

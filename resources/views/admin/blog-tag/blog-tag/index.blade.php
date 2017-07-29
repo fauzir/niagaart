@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Blogtag</div>
+                    <div class="panel-heading">Tag</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/blog-tag/create') }}" class="btn btn-success btn-sm" title="Add New BlogTag">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

@@ -35,7 +35,8 @@ class BlogController extends Controller
 
         if (!empty($keyword)) {
             $blog = Blog::where('title', 'LIKE', "%$keyword%")
-				->orWhere('category', 'LIKE', "%$keyword%")
+				->orWhere('id', 'LIKE', "%$keyword%")
+        ->orWhere('category', 'LIKE', "%$keyword%")
 				->orWhere('image', 'LIKE', "%$keyword%")
 				->orWhere('content', 'LIKE', "%$keyword%")
         ->orderBy('id', 'desc')

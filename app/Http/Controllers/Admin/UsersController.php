@@ -15,7 +15,7 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -64,9 +64,9 @@ class UsersController extends Controller
         $data['password'] = bcrypt($request->password);
         $user = User::create($data);
 
-        foreach ($request->roles as $role) {
-            $user->assignRole($role);
-        }
+        // foreach ($request->roles as $role) {
+        //     $user->assignRole($role);
+        // }
 
         Session::flash('flash_message', 'User added!');
 
@@ -128,10 +128,10 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $user->update($data);
 
-        $user->roles()->detach();
-        foreach ($request->roles as $role) {
-            $user->assignRole($role);
-        }
+        // $user->roles()->detach();
+        // foreach ($request->roles as $role) {
+        //     $user->assignRole($role);
+        // }
 
         Session::flash('flash_message', 'User updated!');
 

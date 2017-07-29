@@ -6,7 +6,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Blogcategory</div>
+                    <div class="panel-heading">Blog Category</div>
                     <div class="panel-body">
                         <a href="{{ url('/admin/blog-category/create') }}" class="btn btn-success btn-sm" title="Add New BlogCategory">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New

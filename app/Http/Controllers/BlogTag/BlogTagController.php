@@ -23,6 +23,7 @@ class BlogTagController extends Controller
 
         if (!empty($keyword)) {
             $blogtag = BlogTag::where('tag', 'LIKE', "%$keyword%")
+				->orWhere('id', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
             $blogtag = BlogTag::paginate($perPage);
@@ -54,7 +55,7 @@ class BlogTagController extends Controller
 			'tag' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         BlogTag::create($requestData);
 
         Session::flash('flash_message', 'BlogTag added!');
@@ -104,7 +105,7 @@ class BlogTagController extends Controller
 			'tag' => 'required'
 		]);
         $requestData = $request->all();
-        
+
         $blogtag = BlogTag::findOrFail($id);
         $blogtag->update($requestData);
 
