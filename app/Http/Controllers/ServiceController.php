@@ -56,8 +56,8 @@ class ServiceController extends Controller
         $servicecatalogues = ServiceCatalogue::find(1);
         $socials = Social::where('active', 'yes')->get();
         $contact = Contact::find(1);
-        $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
-        return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'servicecatalogues', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials', 'products'));
+        // $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
+        return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'servicecatalogues', 'promo1', 'promo2', 'promo3', 'promo4', 'services', 'socials'));
     }
 
     public function getOther()
