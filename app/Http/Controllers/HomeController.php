@@ -29,6 +29,11 @@ class HomeController extends Controller
         return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }
 
+    public function error()
+    {
+       return view('admin.not-authorized');
+    }
+
     public function uploadOriginal(Request $request)
     {
         $file = Input::file('image');

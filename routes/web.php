@@ -16,6 +16,11 @@ Route::get('/',[
    'as'    => 'home'
 ]);
 
+Route::get('/error',[
+   'uses' => 'HomeController@error',
+   'as'    => 'error'
+]);
+
 Route::post('/send-message',[
    'uses' => 'ContactController@sendMessage',
    'as'    => 'send.message'
@@ -93,20 +98,17 @@ Route::post('upload-original', [
 
 Auth::routes();
 
-Route::get('admin', 'Admin\AdminController@index');
-Route::prefix('admin')->group(function () {
-    Route::get('give-role-permissions', 'Admin\AdminController@getGiveRolePermissions');
-    Route::post('give-role-permissions', 'Admin\AdminController@postGiveRolePermissions');
-    Route::resource('roles', 'Admin\RolesController');
-    Route::resource('permissions', 'Admin\PermissionsController');
-    Route::resource('users', 'Admin\UsersController');
-    Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
-    Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
+Route::get('/admin', 'Admin\AdminController@index');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function () {
+  Route::group(['roles'=>'admin'], function () {
+    Route::group(['namespace' => 'Admin'], function () {
+      Route::get('give-role-permissions', 'AdminController@getGiveRolePermissions');
+      Route::post('give-role-permissions', 'AdminController@postGiveRolePermissions');
+      Route::resource('roles', 'RolesController');
+      Route::resource('permissions', 'PermissionsController');
+      Route::resource('users', 'UsersController');
+    });
     Route::resource('home', 'AdminHome\\HomeController');
-    Route::post('crop',[
-       'uses' => 'HomeController@crop',
-       'as'    => 'crop'
-    ]);
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
     Route::resource('projects', 'AdminProjects\\ProjectsController');
@@ -119,6 +121,14 @@ Route::prefix('admin')->group(function () {
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
     Route::resource('testimony', 'AdminTestimony\\TestimonyController');
-});
+    Route::resource('social', 'AdminSocial\\SocialController');
+  });
 
-Route::resource('admin/social', 'AdminSocial\\SocialController');
+  Route::group(['roles'=>'blog-writer'], function () {
+    Route::resource('blog', 'AdminBlog\\BlogController');
+    Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
+    Route::resource('blog-tag', 'BlogTag\\BlogTagController');
+  });
+  Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
+  Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
+});

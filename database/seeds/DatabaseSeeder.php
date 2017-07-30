@@ -21,10 +21,13 @@ class DatabaseSeeder extends Seeder
         $this->call(BlogTagsTableSeeder::class);
         $this->call(BlogTagTableSeeder::class);
         $this->call(BlogsTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
         $this->call(ProjectsTableSeeder::class);
         $this->call(ProjectItemsTableSeeder::class);
         $this->call(PromotionsTableSeeder::class);
         $this->call(SocialsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(RoleUserTableSeeder::class);
         $this->call(TestimoniesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
     }

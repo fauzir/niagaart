@@ -17,5 +17,12 @@ class UsersTableSeeder extends Seeder
           'password' => bcrypt('123456')
         ]);
         $user->save();
+
+        $user = new \App\User([
+          'name' => 'Writer',
+          'email' => 'writer@writer.com',
+          'password' => bcrypt('123456')
+        ]);
+        $user->save();
     }
 }
