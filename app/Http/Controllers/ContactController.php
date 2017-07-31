@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Contact;
 use App\Service;
 use App\Social;
@@ -13,14 +14,20 @@ use View;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        App::setLocale($request->locale);
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $contact = Contact::find(1);
-        $workHours = explode(',', $contact->work_hour);
         $socials = Social::where('active', 'yes')->get();
+        if (App::isLocale('en')) {
+            $contact = Contact::find(1);
+            $workHours = explode(',', $contact->work_hour);
+        } elseif (App::isLocale('id')) {
+            $contact = Contact::find(2);
+            $workHours = explode(',', $contact->work_hour);
+        }
         return view('contact', compact('interiors', 'others', 'servicefooters', 'contact', 'workHours', 'socials'));
     }
 

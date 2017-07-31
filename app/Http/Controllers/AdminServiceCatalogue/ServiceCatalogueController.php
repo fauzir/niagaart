@@ -92,9 +92,10 @@ class ServiceCatalogueController extends Controller
      */
     public function edit($id)
     {
-        $servicecatalogue = ServiceCatalogue::findOrFail($id);
+        $service_catalogue_en = ServiceCatalogue::findOrFail(1);
+        $service_catalogue_id = ServiceCatalogue::findOrFail(2);
 
-        return view('admin/service-catalogue.service-catalogue.edit', compact('servicecatalogue'));
+        return view('admin/service-catalogue.service-catalogue.edit', compact('service_catalogue_en', 'service_catalogue_id'));
     }
 
     /**

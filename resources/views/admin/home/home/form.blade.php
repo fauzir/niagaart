@@ -27,6 +27,7 @@
 
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">
+        {{-- <input type="button" value="Update" onclick="submitForms()" /> --}}
         {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Create', ['class' => 'btn btn-primary']) !!}
     </div>
 </div>

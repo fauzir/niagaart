@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/',[
+Route::get('/', function () {
+   return redirect()->to('/en');
+});
+
+Route::get('/{locale}',[
    'uses' => 'HomeController@index',
    'as'    => 'home'
 ]);
@@ -26,27 +30,27 @@ Route::post('/send-message',[
    'as'    => 'send.message'
 ]);
 
-Route::get('/services',[
+Route::get('/{locale}/services',[
    'uses' => 'ServiceController@getAll',
    'as'    => 'service.all'
 ]);
 
-Route::get('/services/interior',[
+Route::get('/{locale}/services/interior',[
    'uses' => 'ServiceController@getInterior',
    'as'    => 'service.interior'
 ]);
 
-Route::get('/services/other',[
+Route::get('/{locale}/services/other',[
    'uses' => 'ServiceController@getOther',
    'as'    => 'service.other'
 ]);
 
-Route::get('/service/{slug}',[
+Route::get('/en/service/{slug}',[
    'uses' => 'ServiceController@index',
    'as'    => 'service'
 ]);
 
-Route::get('/projects',[
+Route::get('/{locale}/projects',[
    'uses' => 'ProjectsController@index',
    'as'    => 'projects'
 ]);
@@ -61,12 +65,12 @@ Route::get('/product/item/{id}',[
    'as'    => 'product.item'
 ]);
 
-Route::get('/about',[
+Route::get('/{locale}/about',[
    'uses' => 'AboutController@index',
    'as'    => 'about'
 ]);
 
-Route::get('/contact',[
+Route::get('/{locale}/contact',[
    'uses' => 'ContactController@index',
    'as'    => 'contact'
 ]);

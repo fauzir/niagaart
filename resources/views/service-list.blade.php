@@ -16,7 +16,7 @@ Services
             <div class="container col-md-8 header-txt">
               <h1>{{ $servicecatalogues->opening_title }}</h1>
               <br>
-              <h1>This is what we’ve done until now</h1>
+              <h1>@lang('content.this-is-what-done')</h1>
               <p>{{ $servicecatalogues->opening_text }}</p>
             </div>
           </div>
@@ -35,7 +35,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homeliving">LEARN MORE</a>
+              <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
               <img src="{{ asset($service->image) }}" alt="Interior Design">
@@ -57,7 +57,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-             <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homelivingblack">LEARN MORE</a>
+             <a href="{{ route('service', ['slug' => $service->slug]) }}" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
             </div>
           </div>
         </div>

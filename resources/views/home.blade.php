@@ -27,19 +27,18 @@ Homepage
     </section>
 
     <section>
-      @foreach($homes as $home)
       <div class="container-fluid home-carousel">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-caption">
           <div class="row">
           <div class="container col-md-6"></div>
             <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message hidden-xs">
-              <h1 class="animated fadeInUp">Welcome to Niaga Art</h1>
+              <h1 class="animated fadeInUp">@lang('content.welcome')</h1>
               <hr>
               <p class="animated fadeInUp">{{ $home->welcome_text }}</p>
             </div>
             <div class="container col-lg-6 col-md-12 col-sm-12 welcome-message visible-xs">
-              <h1>Welcome to Niaga Art</h1>
+              <h1>@lang('content.welcome')</h1>
               <hr>
             </div>
           </div>
@@ -57,13 +56,12 @@ Homepage
                  <img src="{{ asset('frontend/images/Home Carousel.jpg') }}" alt="Interior" style="width:100%;">
               </div>
           </div>
-        @endforeach
         </div>
       </div>
     </section>
     <section>
       <div class="container service-section">
-        <h2>OUR SERVICES</h2>
+        <h2>@lang('content.our-services')</h2>
         <hr>
           <div class="row service-label">
           @foreach($services as $service)

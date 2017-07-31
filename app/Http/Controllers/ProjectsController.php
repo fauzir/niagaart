@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Contact;
 use App\Project;
 use App\ProjectItem;
@@ -11,8 +12,9 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        App::setLocale($request->locale);
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
@@ -20,7 +22,11 @@ class ProjectsController extends Controller
         $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(9);
         $items = ProjectItem::orderBy('id', 'asc');
         $socials = Social::where('active', 'yes')->get();
-        $contact = Contact::find(1);
+        if (App::isLocale('en')) {
+            $contact = Contact::find(1);
+        } elseif (App::isLocale('id')) {
+            $contact = Contact::find(2);
+        }
         return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials', 'contact'));
     }
 

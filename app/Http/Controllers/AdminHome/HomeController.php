@@ -149,9 +149,10 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        $home = Home::findOrFail($id);
+        $home_en = Home::findOrFail(1);
+        $home_id = Home::findOrFail(2);
 
-        return view('admin/home.home.edit', compact('home'));
+        return view('admin/home.home.edit', compact('home_en', 'home_id'));
     }
 
     /**

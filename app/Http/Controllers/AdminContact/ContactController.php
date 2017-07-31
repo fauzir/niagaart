@@ -94,9 +94,10 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        $contact = Contact::findOrFail($id);
+        $contact_en = Contact::findOrFail(1);
+        $contact_id = Contact::findOrFail(2);
 
-        return view('admin/contact.contact.edit', compact('contact'));
+        return view('admin/contact.contact.edit', compact('contact_en', 'contact_id'));
     }
 
     /**

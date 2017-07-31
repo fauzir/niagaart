@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Home;
 use App\Contact;
 use App\Blog;
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $homes = Home::all();
+        App::setLocale($request->locale);
+        // $homes = Home::all();
         $services = Service::limit(3)->select('id', 'image', 'name', 'description', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
         $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
@@ -25,8 +27,14 @@ class HomeController extends Controller
         $testimonies = Testimony::all();
         $promos = Promotion::where('status', 'yes')->get();
         $socials = Social::where('active', 'yes')->get();
-        $contact = Contact::find(1);
-        return view('home', compact('homes', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
+        if (App::isLocale('en')) {
+            $home = Home::find(1);
+            $contact = Contact::find(1);
+        } elseif (App::isLocale('id')) {
+            $home = Home::find(2);
+            $contact = Contact::find(2);
+        }
+        return view('home', compact('home', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }
 
     public function error()

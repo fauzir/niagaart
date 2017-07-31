@@ -15,7 +15,6 @@ About
     <div class="container-fluid opening-bg">
       <div class="container opening-section">
           <div class="row">
-            @foreach($abouts as $about)
             <div class="container col-md-6">
               <h1>{{ $about->opening_title }}</h1>
               <br>
@@ -24,14 +23,13 @@ About
             <div class="container col-md-6 opening-img wow fadeInUp">
               <img src="{{ asset($about->opening_image) }}" alt="Interior Design">
             </div>
-            @endforeach
           </div>
         </div>
       </div>
     </section>
     <section>
       <div class="container separator-text">
-        <h2>WHAT WE'VE BROUGHT FOR YOU</h2>
+        <h2>@lang('content.what-we-brought')</h2>
         <hr width="50%">
       </div>
       @foreach ($interiors as $interior)

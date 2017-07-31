@@ -20,17 +20,43 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($contact, [
-                            'method' => 'PATCH',
-                            'url' => ['/admin/contact', $contact->id],
-                            'class' => 'form-horizontal',
-                            'files' => true
-                        ]) !!}
+                        <div class="col-md-12">
+                          <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">English</a></li>
+                            <li><a href="#tab2" data-toggle="tab">Indonesia</a></li>
+                          </ul>
 
-                        @include ('admin/contact.contact.form', ['submitButtonText' => 'Update'])
+                          <br>
+                        </div>
 
-                        {!! Form::close() !!}
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="tab1">
+                            {!! Form::model($contact_en, [
+                                'method' => 'PATCH',
+                                'url' => ['/admin/contact', $contact_en->id],
+                                'class' => 'form-horizontal',
+                                'id' => 'form_en',
+                                'files' => true
+                            ]) !!}
 
+                            @include ('admin/contact.contact.form', ['submitButtonText' => 'Update'])
+
+                            {!! Form::close() !!}
+                          </div>
+                          <div class="tab-pane" id="tab2">
+                            {!! Form::model($contact_id, [
+                                'method' => 'PATCH',
+                                'url' => ['/admin/contact', $contact_id->id],
+                                'class' => 'form-horizontal',
+                                'id' => 'form_id',
+                                'files' => true
+                            ]) !!}
+
+                          @include ('admin/contact.contact.form', ['submitButtonText' => 'Update'])
+
+                            {!! Form::close() !!}
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@ Projects
 @section('content')
     <section>
     <div class="container featured-projectstitle">
-      <h2>FEATURED PROJECTS</h2>
+      <h2>@lang('content.featured-project')</h2>
       <hr class="small">
     </div>
           <div id="text-carousel" class="carousel slide featured-projects" data-ride="carousel">
@@ -48,7 +48,7 @@ Projects
 <hr>
 <section>
   <div class="container service-section">
-    <h2>OUR PROJECTS</h2>
+    <h2>@lang('content.our-project')</h2>
     <hr>
       <div class="row service-label">
       @foreach($projects as $project)

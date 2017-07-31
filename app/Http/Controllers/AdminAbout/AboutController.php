@@ -98,9 +98,10 @@ class AboutController extends Controller
      */
     public function edit($id)
     {
-        $about = About::findOrFail($id);
+        $about_en = About::findOrFail(1);
+        $about_id = About::findOrFail(2);
 
-        return view('admin/about.about.edit', compact('about'));
+        return view('admin/about.about.edit', compact('about_en', 'about_id'));
     }
 
     /**

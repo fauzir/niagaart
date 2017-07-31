@@ -52,17 +52,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
+                <a class="navbar-brand" href="{{ route('home', ['locale' => request()->route()->locale]) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
              </div>
              <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                   <li><a href="{{ route('home') }}">HOME</a></li>
-                   <li><a href="{{ route('about') }}">ABOUT</a></li>
+                   <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">HOME</a></li>
+                   <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}">ABOUT</a></li>
                    <li class="dropdown">
-                        <a href="{{ route('service.all') }}" title="SERVICES" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
+                        <a href="{{ route('service.all', ['locale' => request()->route()->locale]) }}" title="SERVICES" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.interior') }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.interior', ['locale' => request()->route()->locale]) }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($interiors as $interior)
                                  <li><a href="{{ route('service', ['slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
@@ -72,7 +72,7 @@
                            <!--end submenu-->
                            <li class="divider"></li>
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.other') }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($others as $other)
                                  <li><a href="{{ route('service', ['slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
@@ -82,8 +82,8 @@
                            <!--end submenu-->
                         </ul>
                    </li>
-                   <li><a href="{{ route('projects') }}">PROJECTS</a></li>
-                   <li><a href="{{ route('contact') }}">CONTACT US</a></li>
+                   <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}">PROJECTS</a></li>
+                   <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
                    <li><a href="{{ route('blog') }}">BLOG</a></li>
                 </ul>
              </div>
@@ -102,14 +102,14 @@
                     <img src="{{ asset('frontend/images/niagaart-logowhite.png') }}" alt="NiagaArt logo footer">
                </div>
                <div class="service-ty col-md-3 col-sm-3">
-               <h3>SERVICES</h3>
+               <h3>@lang('content.services')</h3>
                     @foreach ($servicefooters as $servicefooter)
                       <a href="{{ route('service', ['slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
                       <br>
                     @endforeach
                </div>
                <div class="office-add col-md-3 col-sm-3">
-                 <h3>OFFICE</h3>
+                 <h3>@lang('content.office')</h3>
                  <p>JL. Sangkuriang No 43
                  <br>
                  Cimahi Utara
@@ -117,7 +117,7 @@
                  Jawa Barat Indonesia</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
-               <h3>OFFICE</h3>
+               <h3>@lang('content.contact')</h3>
                  <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
                  <p><a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a>
                     <br>
