@@ -24,7 +24,7 @@ Contact
                 <br>
                 <p class="wow fadeInUp">@lang('content.message') : <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.email') : <a href="mailto:niagac7@gmail.com">niagac7@gmail.com</a></p>
+                <p class="wow fadeInUp">@lang('content.email') : <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
                 <br>
               @foreach($workHours as $workHour)
                 <p class="wow fadeInUp">{{ $workHour }}</p>

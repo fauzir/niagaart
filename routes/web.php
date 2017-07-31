@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function(){
-    return redirect()->to('/en');
+    return redirect()->to('/id');
 });
 
 Route::get('/{locale}',[
