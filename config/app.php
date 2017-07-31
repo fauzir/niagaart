@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Laravel Feed
+        Spatie\Feed\FeedServiceProvider::class,
+
         // LaravelAdmin
         Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
         // For crud generator & html

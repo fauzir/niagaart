@@ -11,6 +11,8 @@
 |
 */
 
+Route::feeds();
+
 Route::get('/', function(){
     return redirect()->to('/id');
 });

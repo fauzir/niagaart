@@ -2,10 +2,11 @@
 
 namespace App;
 
+use Spatie\Feed\FeedItem;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Blog extends Model
+class Blog extends Model implements FeedItem
 {
     use Sluggable;
     /**
@@ -21,6 +22,36 @@ class Blog extends Model
              ]
          ];
      }
+
+     public function getFeedItemId()
+    {
+        return $this->id;
+    }
+
+    public function getFeedItemTitle() : string
+    {
+        return $this->title;
+    }
+
+    public function getFeedItemSummary() : string
+    {
+        return $this->content;
+    }
+
+    public function getFeedItemUpdated() : Carbon
+    {
+        return $this->updated_at;
+    }
+
+    public function getFeedItemLink() : string
+    {
+        return action('BlogController@detail', [$this->url]);
+    }
+
+    public function getFeedItemAuthor() : string
+    {
+        return $this->author;
+    }
 
     protected $table = 'blogs';
 
