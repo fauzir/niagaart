@@ -72,7 +72,7 @@ All Post
               <div class="form-group contact-part">
                 <p>GET IN TOUCH WITH US</p>
                 <br>
-                <a href="{{ route('contact') }}" class="btn btn-default btn-block btn-contact-us" alt="contact us">Contact Us</a>
+                <a href="{{ route('contact', ['locale' => 'en']) }}" class="btn btn-default btn-block btn-contact-us" alt="contact us">Contact Us</a>
                 <br>
                 <p>SUBSCRIBE OUR NEWSLETTER</p>
                 <br>

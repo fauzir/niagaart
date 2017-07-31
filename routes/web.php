@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-   return redirect()->to('/en');
+Route::get('/', function(){
+    return redirect()->to('/en');
 });
 
 Route::get('/{locale}',[
@@ -75,7 +75,7 @@ Route::get('/{locale}/contact',[
    'as'    => 'contact'
 ]);
 
-Route::get('/blog',[
+Route::get('/{locale}/blog',[
    'uses' => 'BlogController@index',
    'as'    => 'blog'
 ]);
@@ -100,9 +100,14 @@ Route::post('upload-original', [
   'as' => 'upload.original'
 ]);
 
-Auth::routes();
+Route::group(['prefix' => 'en'], function () {
+  Auth::routes();
+});
 
-Route::get('/admin', 'Admin\AdminController@index');
+Route::get('/en/admin',[
+   'uses' => 'Admin\AdminController@index',
+   'as'    => 'admin'
+]);
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function () {
   Route::group(['roles'=>'admin'], function () {
     Route::group(['namespace' => 'Admin'], function () {

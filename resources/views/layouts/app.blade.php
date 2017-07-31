@@ -84,7 +84,7 @@
                    </li>
                    <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}">PROJECTS</a></li>
                    <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
-                   <li><a href="{{ route('blog') }}">BLOG</a></li>
+                   <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}">BLOG</a></li>
                 </ul>
              </div>
              <!--/.nav-collapse -->

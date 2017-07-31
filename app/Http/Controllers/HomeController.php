@@ -33,6 +33,10 @@ class HomeController extends Controller
         } elseif (App::isLocale('id')) {
             $home = Home::find(2);
             $contact = Contact::find(2);
+        } elseif (App::isLocale('admin')) {
+            return redirect()->route('admin');
+        } elseif (App::isLocale('login')) {
+            return redirect()->route('login');
         }
         return view('home', compact('home', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }

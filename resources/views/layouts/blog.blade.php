@@ -50,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('blog') }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
+            <a class="navbar-brand" href="{{ route('blog', ['locale' => 'en']) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
          </div>
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-blog">
@@ -68,7 +68,7 @@
                      {!! Form::close() !!}
                    </ul>
                </li>
-               <li><a href="{{ route('home') }}">To our site >></a></li>
+               <li><a href="{{ route('home', ['locale' => 'en']) }}">To our site >></a></li>
             </ul>
          </div>
          <!--/.nav-collapse -->

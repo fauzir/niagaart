@@ -44,7 +44,7 @@ All Post
             <div class="col-md-6"></div>
               {!! $content->content !!}
             <hr>
-            <a href="{{ route('blog') }}"><b><< Back to blog</b></a>
+            <a href="{{ route('blog', ['locale' => 'en']) }}"><b><< Back to blog</b></a>
 
             <br>
             <br>
