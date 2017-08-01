@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Edit Project #{{ $project->name }}</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/projects') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/projects-content') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -22,7 +22,7 @@
 
                         {!! Form::model($project, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/projects', $project->id],
+                            'url' => ['/admin/projects-content', $project->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}

@@ -128,7 +128,7 @@ class BlogController extends Controller
 
         Session::flash('flash_message', 'Blog added!');
 
-        return redirect('admin/blog');
+        return redirect('admin/blog-post');
     }
 
     /**
@@ -253,7 +253,7 @@ class BlogController extends Controller
 
         Session::flash('flash_message', 'Blog updated!');
 
-        return redirect('admin/blog');
+        return redirect('admin/blog-post');
     }
 
     /**
@@ -269,6 +269,6 @@ class BlogController extends Controller
 
         Session::flash('flash_message', 'Blog deleted!');
 
-        return redirect('admin/blog');
+        return redirect('admin/blog-post');
     }
 }

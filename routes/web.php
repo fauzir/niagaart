@@ -124,12 +124,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
     Route::resource('home', 'AdminHome\\HomeController');
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
-    Route::resource('projects', 'AdminProjects\\ProjectsController');
+    Route::resource('projects-content', 'AdminProjects\\ProjectsController');
     Route::resource('project-item', 'AdminProjectItem\\ProjectItemController');
     Route::resource('about', 'AdminAbout\\AboutController');
     Route::resource('contact', 'AdminContact\\ContactController');
     Route::resource('product', 'Product\\ProductController');
-    Route::resource('blog', 'AdminBlog\\BlogController');
+    Route::resource('blog-post', 'AdminBlog\\BlogController');
     Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
@@ -138,7 +138,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
   });
 
   Route::group(['roles'=>'blog-writer'], function () {
-    Route::resource('blog', 'AdminBlog\\BlogController');
+    Route::resource('blog-post', 'AdminBlog\\BlogController');
     Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
   });

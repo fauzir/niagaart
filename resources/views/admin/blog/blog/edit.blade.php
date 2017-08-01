@@ -22,7 +22,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Edit Blog #{{ $blog->id }}</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/blog') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/blog-post') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -36,7 +36,7 @@
 
                         {!! Form::model($blog, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/blog', $blog->id],
+                            'url' => ['/admin/blog-post', $blog->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}

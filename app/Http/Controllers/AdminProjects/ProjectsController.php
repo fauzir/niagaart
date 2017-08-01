@@ -85,7 +85,7 @@ class ProjectsController extends Controller
 
         Session::flash('flash_message', 'Project added!');
 
-        return redirect('admin/projects');
+        return redirect('admin/projects-content');
     }
 
     /**
@@ -152,7 +152,7 @@ class ProjectsController extends Controller
 
         Session::flash('flash_message', 'Project updated!');
 
-        return redirect('admin/projects');
+        return redirect('admin/projects-content');
     }
 
     /**
@@ -168,6 +168,6 @@ class ProjectsController extends Controller
 
         Session::flash('flash_message', 'Project deleted!');
 
-        return redirect('admin/projects');
+        return redirect('admin/projects-content');
     }
 }

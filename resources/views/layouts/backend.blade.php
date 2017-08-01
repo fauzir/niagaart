@@ -53,7 +53,7 @@
                             <li><a href="{{ route('home.index') }}">Pages</a></li>
                             <li><a href="{{ route('service.index') }}">Services</a></li>
                             <li><a href="{{ route('product.index') }}">Product</a></li>
-                            <li><a href="{{ route('projects.index') }}">Projects</a></li>
+                            <li><a href="{{ route('projects-content.index') }}">Projects</a></li>
                             <li><a href="{{ route('project-item.index') }}">Project Items</a></li>
                             <li><a href="{{ route('promotion.index') }}">Promotions</a></li>
                             <li><a href="{{ route('social.index') }}">Social</a></li>
@@ -64,7 +64,7 @@
                             Blog
                         </a>
                         <ul class="collapse list-unstyled" id="blogSubmenu">
-                            <li><a href="{{ route('blog.index') }}">Post</a></li>
+                            <li><a href="{{ route('blog-post.index') }}">Post</a></li>
                             <li><a href="{{ route('blog-category.index') }}">Category</a></li>
                             <li><a href="{{ route('blog-tag.index') }}">Tag</a></li>
                         </ul>

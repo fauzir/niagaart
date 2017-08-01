@@ -105,14 +105,14 @@
                     <img src="{{ asset('frontend/images/niagaart-logowhite.png') }}" alt="NiagaArt logo footer">
                </div>
                <div class="service-ty col-md-3 col-sm-3">
-               <h3>SERVICES</h3>
-                 @foreach ($servicefooters as $servicefooter)
-                   <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
-                   <br>
-                 @endforeach
+               <h3>@lang('content.services')</h3>
+                    @foreach ($servicefooters as $servicefooter)
+                      <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                      <br>
+                    @endforeach
                </div>
                <div class="office-add col-md-3 col-sm-3">
-                 <h3>OFFICE</h3>
+                 <h3>@lang('content.office')</h3>
                  <p>JL. Sangkuriang No 43
                  <br>
                  Cimahi Utara
@@ -120,15 +120,15 @@
                  Jawa Barat Indonesia</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
-               <h3>OFFICE</h3>
-                 <p><a href="JavaScript:void(0)">niagac7@gmail.com</a></p>
-                 <p>(+62)&nbsp;&nbsp;22&nbsp;&nbsp;87800&nbsp;&nbsp;639
+               <h3>@lang('content.contact')</h3>
+                 <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
+                 <p><a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a>
                     <br>
-                    (+62)&nbsp;&nbsp;878&nbsp;&nbsp;2454&nbsp;&nbsp;2982
+                    <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a>
                  </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">
-                              <br>
+                    <br>
                </div>
                <div class="col-md-8 col-sm-8">
                     <div class="footer-copyright">
@@ -136,12 +136,12 @@
                     </div>
                </div>
                <div class="col-md-4 col-sm-4">
-                   <div class="social-icon">
-                     @foreach ($socials as $social)
-                       <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
-                       &nbsp;&nbsp;
-                     @endforeach
-                   </div>
+                  <div class="social-icon">
+                      @foreach ($socials as $social)
+                        <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                        &nbsp;&nbsp;
+                      @endforeach
+                  </div>
                </div>
           </div>
      </div>

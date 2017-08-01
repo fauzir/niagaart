@@ -26,7 +26,7 @@ class ProjectsController extends Controller
             $contact = Contact::find(1);
         } elseif (App::isLocale('id')) {
             $contact = Contact::find(2);
-        }
+        } 
         return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials', 'contact'));
     }
 

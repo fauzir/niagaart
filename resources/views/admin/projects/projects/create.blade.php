@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Create New Project</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/projects') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/projects-content') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -20,7 +20,7 @@
                             </ul>
                         @endif
 
-                        {!! Form::open(['url' => '/admin/projects', 'class' => 'form-horizontal', 'files' => true]) !!}
+                        {!! Form::open(['url' => '/admin/projects-content', 'class' => 'form-horizontal', 'files' => true]) !!}
 
                         @include ('admin/projects.projects.form')
 
