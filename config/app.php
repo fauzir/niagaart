@@ -177,8 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        //Laravel Feed
-        Spatie\Feed\FeedServiceProvider::class,
+        //Roumen Feed
+        Roumen\Feed\FeedServiceProvider::class,
 
         // LaravelAdmin
         Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
@@ -251,6 +251,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
+        'Feed' => Roumen\Feed\Feed::class,
 
     ],
 
