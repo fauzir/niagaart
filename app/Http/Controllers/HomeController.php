@@ -37,6 +37,8 @@ class HomeController extends Controller
             return redirect()->route('admin');
         } elseif (App::isLocale('login')) {
             return redirect()->route('login');
+        } elseif (App::isLocale('blog')) {
+            return redirect()->route('blog', ['locale' => 'en']);
         }
         return view('home', compact('home', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }

@@ -30,31 +30,6 @@ Route::post('/send-message',[
    'as'    => 'send.message'
 ]);
 
-// Route::get('/{locale}/services',[
-//    'uses' => 'ServiceController@getAll',
-//    'as'    => 'service.all'
-// ]);
-//
-// Route::get('/{locale}/services/interior',[
-//    'uses' => 'ServiceController@getInterior',
-//    'as'    => 'service.interior'
-// ]);
-//
-// Route::get('/{locale}/services/other',[
-//    'uses' => 'ServiceController@getOther',
-//    'as'    => 'service.other'
-// ]);
-//
-// Route::get('/{locale}/service/{slug}',[
-//    'uses' => 'ServiceController@index',
-//    'as'    => 'service'
-// ]);
-//
-// Route::get('/{locale}/projects',[
-//    'uses' => 'ProjectsController@index',
-//    'as'    => 'projects'
-// ]);
-
 Route::get('/projects/item/{id}',[
    'uses' => 'ProjectsController@getItem',
    'as'    => 'project.item'
@@ -64,33 +39,6 @@ Route::get('/product/item/{id}',[
    'uses' => 'ServiceController@getProduct',
    'as'    => 'product.item'
 ]);
-
-// Route::get('/{locale}/about',[
-//    'uses' => 'AboutController@index',
-//    'as'    => 'about'
-// ]);
-//
-// Route::get('/{locale}/contact',[
-//    'uses' => 'ContactController@index',
-//    'as'    => 'contact'
-// ]);
-//
-// Route::get('/{locale}/blog',[
-//    'uses' => 'BlogController@index',
-//    'as'    => 'blog'
-// ]);
-//
-// Route::get('{locale}/blog/feed', 'BlogController@getFeed');
-//
-// Route::get('/{locale}/blog/{slug}',[
-//    'uses' => 'BlogController@getContent',
-//    'as'    => 'blog.content'
-// ]);
-//
-// Route::get('/{locale}/blog/category/{slug}',[
-//    'uses' => 'BlogController@getCategory',
-//    'as'    => 'blog.category'
-// ]);
 
 Route::post('postImage', [
   'uses' => 'AdminHome\\HomeController@postImage',
