@@ -21,9 +21,9 @@ All Post
               <p>on :
                 @foreach ($content->tag_blog as $index => $tag)
                 @if ($index == count($content->tag_blog)-1)
-                  <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
+                  <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
                 @else
-                  <a href="{{ route('blog.category', ['slug' => $tag->slug]) }}">{{ $tag->tag }}</a>,
+                  <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}">{{ $tag->tag }}</a>,
                 @endif
                 @endforeach
               </p>
@@ -60,7 +60,7 @@ All Post
                   <br>
                        <ul>
                          @foreach ($categories as $category)
-                          <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
+                          <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
                          @endforeach
                       </ul>
                   </div>

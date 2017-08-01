@@ -20,6 +20,7 @@ class BlogController extends Controller
         $perPage = 3;
 
         if (!empty($keyword)) {
+            App::setLocale($request->locale);
             $blogs = Blog::where('title', 'LIKE', "%$keyword%")
         ->orWhere('category', 'LIKE', "%$keyword%")
         ->orWhere('author', 'LIKE', "%$keyword%")
@@ -37,28 +38,38 @@ class BlogController extends Controller
             }
             $rel = implode (",", $array);
             $socials = Social::where('active', 'yes')->get();
-            $contact = Contact::find(1);
+            if (App::isLocale('en')) {
+                $contact = Contact::find(1);
+            } elseif (App::isLocale('id')) {
+                $contact = Contact::find(2);
+            }
             return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'socials', 'contact'));
         } else {
+            App::setLocale($request->locale);
             $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
             // Blog::orderBy('created_at', 'desc')->paginate($perPage);
             $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('tag_id, slug, tag, count(tag_id) as total'))->groupBy('tag_id', 'slug', 'tag')->get();
             $count = 0;//BlogTag::find($request->id)->tag_blog->count();
             $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
             $socials = Social::where('active', 'yes')->get();
-            $contact = Contact::find(1);
+            if (App::isLocale('en')) {
+                $contact = Contact::find(1);
+            } elseif (App::isLocale('id')) {
+                $contact = Contact::find(2);
+            }
             return view('blog', compact('blogs', 'servicefooters', 'categories', 'count', 'populars', 'socials', 'contact'));
         }
     }
 
-    public function getContent(Request $request, $slug)
+    public function getContent(Request $request)
     {
+        App::setLocale($request->locale);
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        Blog::where('slug', $slug)->increment('visitor_count', 1);
+        Blog::where('slug', $request->slug)->increment('visitor_count', 1);
         $blogs = Blog::all();
         $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('tag_id, slug, tag, count(tag_id) as total'))->groupBy('tag_id', 'slug', 'tag')->get();
         $count = 0;
-        $contents = Blog::where('slug', $slug)->get();
+        $contents = Blog::where('slug', $request->slug)->get();
         $array = array();
         foreach ($blogs as $blog) {
           $tags = Blog::find($blog->id)->tag_blog;
@@ -68,14 +79,19 @@ class BlogController extends Controller
         }
         $rel = implode (",", $array);
         $socials = Social::where('active', 'yes')->get();
-        $contact = Contact::find(1);
+        if (App::isLocale('en')) {
+            $contact = Contact::find(1);
+        } elseif (App::isLocale('id')) {
+            $contact = Contact::find(2);
+        }
         return view('blog-content', compact('servicefooters', 'contents', 'categories', 'count', 'rel', 'socials', 'contact'));
     }
 
     public function getCategory(Request $request, $slug)
     {
+        App::setLocale($request->locale);
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $finds = BlogTag::where('slug', $slug)->get();
+        $finds = BlogTag::where('slug', $request->slug)->get();
         foreach ($finds as $find) {
             $blogs = BlogTag::find($find->id)->tag_blog;
         }
@@ -92,7 +108,11 @@ class BlogController extends Controller
         }
         $rel = implode (",", $array);
         $socials = Social::where('active', 'yes')->get();
-        $contact = Contact::find(1);
+        if (App::isLocale('en')) {
+            $contact = Contact::find(1);
+        } elseif (App::isLocale('id')) {
+            $contact = Contact::find(2);
+        }
         return view('blog-category', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'rel', 'socials', 'contact'));
     }
 

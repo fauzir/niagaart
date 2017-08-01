@@ -40,7 +40,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    {{-- @include('laravel-feed::feed-links') --}}
   </head>
   <body>
     <section>
@@ -66,7 +65,7 @@
                               <a href="{{ route('service.interior', ['locale' => request()->route()->locale]) }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($interiors as $interior)
-                                 <li><a href="{{ route('service', ['slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
+                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
                                  @endforeach
                               </ul>
                            </li>
@@ -76,7 +75,7 @@
                               <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($others as $other)
-                                 <li><a href="{{ route('service', ['slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
+                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
                                  @endforeach
                               </ul>
                            </li>
@@ -105,7 +104,7 @@
                <div class="service-ty col-md-3 col-sm-3">
                <h3>@lang('content.services')</h3>
                     @foreach ($servicefooters as $servicefooter)
-                      <a href="{{ route('service', ['slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                      <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
                       <br>
                     @endforeach
                </div>

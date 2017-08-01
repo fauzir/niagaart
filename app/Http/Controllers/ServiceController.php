@@ -16,7 +16,7 @@ class ServiceController extends Controller
 {
     public function index(Request $request)
     {
-        App::setLocale('en');
+        App::setLocale($request->locale);
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();

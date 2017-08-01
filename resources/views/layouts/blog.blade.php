@@ -51,13 +51,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('blog', ['locale' => 'en']) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
+            <a class="navbar-brand" href="{{ route('blog', ['locale' => request()->route()->locale]) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
          </div>
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-blog">
                <li>
                    <ul>
-                     {!! Form::open(['method' => 'GET', 'url' => '/blog', 'class' => 'navbar-form', 'role' => 'search'])  !!}
+                     {!! Form::open(['method' => 'GET', 'url' => '/'.request()->route()->locale.'/blog', 'class' => 'navbar-form', 'role' => 'search'])  !!}
                      <div class="input-group">
                          <input type="text" class="form-control blog-search" name="search" placeholder="Search">
                          <span class="input-group-btn">
@@ -69,7 +69,7 @@
                      {!! Form::close() !!}
                    </ul>
                </li>
-               <li><a href="{{ route('home', ['locale' => 'en']) }}">To our site >></a></li>
+               <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">To our site >></a></li>
             </ul>
          </div>
          <!--/.nav-collapse -->
@@ -107,7 +107,7 @@
                <div class="service-ty col-md-3 col-sm-3">
                <h3>SERVICES</h3>
                  @foreach ($servicefooters as $servicefooter)
-                   <a href="{{ route('service', ['slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                   <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
                    <br>
                  @endforeach
                </div>

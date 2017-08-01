@@ -31,11 +31,11 @@ All Post
                 <div class="container col-md-8 article-main">
                 @foreach ($blogs as $blog)
                 <div class="container col-md-10 article">
-                  <h2><a href="{{ route('blog.content', ['slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
+                  <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
                   <br>
                   <img src="{{ asset($blog->image) }}" alt="article-thumbnail">
                   <br>
-                  <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['slug' => $blog->slug]) }}">Read More . . .</a></p>
+                  <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">Read More . . .</a></p>
                   <br>
                   <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
                   <br>
@@ -50,11 +50,11 @@ All Post
                   <h2>POPULAR ARTICLE</h2>
                   @foreach ($populars as $popular)
                    <div class="container col-md-10 popular-article">
-                      <h2><a href="{{ route('blog.content', ['slug' => $popular->slug]) }}">{{ $popular->title }}</a></h2>
+                      <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">{{ $popular->title }}</a></h2>
                       <br>
                       <img src="{{ asset($popular->image) }}" alt="article-thumbnail">
                       <br>
-                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['slug' => $popular->slug]) }}">Read More . . .</a></p>
+                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">Read More . . .</a></p>
                       <hr>
                   </div>
                   @endforeach
@@ -63,7 +63,7 @@ All Post
                     <br>
                          <ul>
                            @foreach ($categories as $category)
-                            <li id="tag"><a href="{{ route('blog.category', ['slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
+                            <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
                            @endforeach
                         </ul>
                     </div>
