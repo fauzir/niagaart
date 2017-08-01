@@ -83,7 +83,7 @@ All Post
                 <br>
                 <p>SUBSCRIBE OUR NEWSLETTER</p>
                 <br>
-                <a href="JavaScript:void(0)" class="btn btn-warning btn-block btn-RSS-FEED" alt="RSS FEED">RSS FEED</a>
+                <a href="https://feeds.feedburner.com/NiagaArtBlog" class="btn btn-warning btn-block btn-RSS-FEED" alt="RSS FEED">RSS FEED</a>
               </div>
             </div>
                 </div>

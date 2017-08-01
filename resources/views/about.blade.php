@@ -63,4 +63,11 @@ About
       @endif
       @endforeach
     </section>
+    <section>
+      <div class="container separator-text">
+        <h2>INSTAGRAM</h2>
+        <hr width="50%">
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/e4a242cd151c5057b1fe36804c4813fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+    </section>
 @endsection
