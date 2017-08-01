@@ -10,6 +10,7 @@ use App\Contact;
 use App\Service;
 use App\Social;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class BlogController extends Controller
 {
@@ -117,7 +118,7 @@ class BlogController extends Controller
            $feed->title = 'Niaga Art Blog';
            $feed->description = 'Blog on interior design, other interior, and projects';
            $feed->logo = 'http://yoursite.tld/logo.jpg';
-           $feed->link = url('feed');
+           $feed->link = Route::getFacadeRoot()->current()->uri().('feed');
            $feed->setDateFormat('datetime'); // 'datetime', 'timestamp' or 'carbon'
            $feed->pubdate = $posts[0]->created_at;
            $feed->lang = 'en';
