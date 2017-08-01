@@ -17,8 +17,8 @@ All Post
             <div class="container col-md-8 catalogueheader-txt">
               <h1>{{ $content->title }}</h1>
               <br>
-              <p>by {{ $content->author }} on {{ date_format($content->created_at, 'd F Y') }}</p>
-              <p>on :
+              <p>@lang('content.by') {{ $content->author }} @lang('content.on') {{ date_format($content->created_at, 'd F Y') }}</p>
+              <p>@lang('content.on') :
                 @foreach ($content->tag_blog as $index => $tag)
                 @if ($index == count($content->tag_blog)-1)
                   <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
@@ -44,7 +44,7 @@ All Post
             <div class="col-md-6"></div>
               {!! $content->content !!}
             <hr>
-            <a href="{{ route('blog', ['locale' => 'en']) }}"><b><< Back to blog</b></a>
+            <a href="{{ route('blog', ['locale' => 'en']) }}"><b><< @lang('content.back-to-blog')</b></a>
 
             <br>
             <br>
@@ -55,7 +55,7 @@ All Post
    @endforeach
             </div>
             <div class="container col-md-4 categories">
-            <h3>CATEGORIES</h3>
+            <h3>@lang('content.categories')</h3>
               <div class="list-category">
                   <br>
                        <ul>

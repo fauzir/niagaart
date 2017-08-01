@@ -22,6 +22,18 @@ return [
     'name' => 'Name',
     'email' => 'Email',
     'phone-number' => 'Phone Number',
-    'message' => 'Message'
+    'message' => 'Message',
+    'to-our-site' => 'To our site',
+    'subtitle-here' => 'Subtitle message are here',
+    'popular-article' => 'POPULAR ARTICLE',
+    'read-more' => 'Read More . . .',
+    'by' => 'by',
+    'on' => 'on',
+    'on-2' => 'On',
+    'categories' => 'CATEGORIES',
+    'get-in-touch' => 'GET IN TOUCH WITH US',
+    'contact-us-2' => 'Contact Us',
+    'subscribe' => 'SUBSCRIBE OUR NEWSLETTER',
+    'back-to-blog' => 'Back to blog'
 
 ];

@@ -22,6 +22,18 @@ return [
     'name' => 'Nama',
     'email' => 'Email',
     'phone-number' => 'No. Telepon',
-    'message' => 'Pesan'
+    'message' => 'Pesan',
+    'to-our-site' => 'Ke website kami',
+    'subtitle-here' => 'Judul tambahan ada disini',
+    'popular-article' => 'ARTIKEL POPULER',
+    'read-more' => 'Baca . . .',
+    'by' => 'oleh',
+    'on' => 'pada',
+    'on-2' => 'Pada',
+    'categories' => 'KATEGORI',
+    'get-in-touch' => 'HUBUNGI KAMI',
+    'contact-us-2' => 'Kontak Kami',
+    'subscribe' => 'IKUTI BERITA KAMI',
+    'back-to-blog' => 'Kembali ke blog'
 
 ];

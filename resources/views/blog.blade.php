@@ -16,7 +16,7 @@ All Post
               <div class="container col-md-8 catalogueheader-txt wow fadeInUp">
                 <h1>NIAGA ART BLOG</h1>
                 <br>
-                <p>Subtitle message are here</p>
+                <p>@lang('content.subtitle-here')</p>
               </div>
             </div>
           </div>
@@ -35,11 +35,11 @@ All Post
                   <br>
                   <img src="{{ $blog->image }}" alt="article-thumbnail">
                   <br>
-                  <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">Read More . . .</a></p>
+                  <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">@lang('content.read-more')</a></p>
                   <br>
-                  <p><b>by {{ $blog->author }} on {{ date_format($blog->created_at, 'd F Y') }}</b>
+                  <p><b>@lang('content.by') {{ $blog->author }} @lang('content.on') {{ date_format($blog->created_at, 'd F Y') }}</b>
                   <br>
-                  <b>On
+                  <b>@lang('content.on-2')
                     @foreach ($blog->tag_blog as $index => $tag)
                     @if ($index == count($blog->tag_blog)-1)
                       <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}">{{ $tag->tag }}</a>
@@ -54,18 +54,18 @@ All Post
                 {{ $blogs->links() }}
                 </div>
                 <div class="container col-md-4">
-                  <h2>POPULAR ARTICLE</h2>
+                  <h2>@lang('content.popular-article')</h2>
                   @foreach ($populars as $popular)
                    <div class="container col-md-10 popular-article">
                       <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">{{ $popular->title }}</a></h2>
                       <br>
                       <img src="{{ asset($popular->image) }}" alt="article-thumbnail">
                       <br>
-                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">Read More . . .</a></p>
+                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">@lang('content.read-more')</a></p>
                       <hr>
                   </div>
                   @endforeach
-                  <h3>CATEGORIES</h3>
+                  <h3>@lang('content.categories')</h3>
                   <div class="list-category">
                     <br>
                          <ul>
@@ -77,11 +77,11 @@ All Post
                     <br>
             <div class="col-md-12">
               <div class="form-group contact-part">
-                <p>GET IN TOUCH WITH US</p>
+                <p>@lang('content.get-in-touch')</p>
                 <br>
-                <a href="{{ route('contact', ['locale' => 'en']) }}" class="btn btn-default btn-block btn-contact-us" alt="contact us">Contact Us</a>
+                <a href="{{ route('contact', ['locale' => 'en']) }}" class="btn btn-default btn-block btn-contact-us" alt="contact us">@lang('content.contact-us-2')</a>
                 <br>
-                <p>SUBSCRIBE OUR NEWSLETTER</p>
+                <p>@lang('content.subscribe')</p>
                 <br>
                 <a href="https://feeds.feedburner.com/NiagaArtBlog" class="btn btn-warning btn-block btn-RSS-FEED" alt="RSS FEED">RSS FEED</a>
               </div>

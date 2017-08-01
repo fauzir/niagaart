@@ -69,7 +69,7 @@
                      {!! Form::close() !!}
                    </ul>
                </li>
-               <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">To our site >></a></li>
+               <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">@lang('content.to-our-site') >></a></li>
             </ul>
          </div>
          <!--/.nav-collapse -->
