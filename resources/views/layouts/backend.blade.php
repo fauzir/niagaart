@@ -52,6 +52,7 @@
                         <ul class="collapse list-unstyled" id="contentsSubmenu">
                             <li><a href="{{ route('home.index') }}">Pages</a></li>
                             <li><a href="{{ route('service.index') }}">Services</a></li>
+                            <li><a href="{{ route('service-item.index') }}">Service Item</a></li>
                             <li><a href="{{ route('product.index') }}">Product</a></li>
                             <li><a href="{{ route('projects-content.index') }}">Projects</a></li>
                             <li><a href="{{ route('project-item.index') }}">Project Items</a></li>

@@ -38,9 +38,9 @@ class Service extends Model
      */
     protected $fillable = ['image', 'name', 'description', 'type', 'publish'];
 
-    public function product()
+    public function serviceitem()
     {
-        return $this->hasMany('App\Product');
+        return $this->hasMany('App\ServiceItem');
     }
 
 

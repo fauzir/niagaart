@@ -9,22 +9,28 @@
         {!! Form::text('name', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
     </div>
+</div><div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
+    {!! Form::label('description', 'Description*', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::textarea('description', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
+    </div>
 </div><div class="form-group {{ $errors->has('price') ? 'has-error' : ''}}">
     {!! Form::label('price', 'Price*', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::number('price', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('price', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('service_item_id') ? 'has-error' : ''}}">
-    {!! Form::label('service_item_id', 'Service Item', ['class' => 'col-md-4 control-label']) !!}
+</div><div class="form-group {{ $errors->has('service_id') ? 'has-error' : ''}}">
+    {!! Form::label('service_id', 'Service', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-      <select class="form-control" name="service_item_id">
-        @foreach ($serviceitems as $serviceitem)
-          <option value="{{ $serviceitem->id }}">{{ $serviceitem->name }}</option>
+      <select class="form-control" name="service_id">
+        @foreach ($services as $service)
+          <option value="{{ $service->id }}">{{ $service->name }}</option>
         @endforeach
       </select>
       <p>* cannot be blank</p>
-        {!! $errors->first('service_item_id', '<p class="help-block">:message</p>') !!}
+        {!! $errors->first('service_id', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 

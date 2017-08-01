@@ -35,9 +35,9 @@ Route::get('/projects/item/{id}',[
    'as'    => 'project.item'
 ]);
 
-Route::get('/product/item/{id}',[
-   'uses' => 'ServiceController@getProduct',
-   'as'    => 'product.item'
+Route::get('/service/item/{id}',[
+   'uses' => 'ServiceController@getServiceItem',
+   'as'    => 'service.item'
 ]);
 
 Route::post('postImage', [
@@ -124,6 +124,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
     Route::resource('home', 'AdminHome\\HomeController');
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
     Route::resource('service', 'AdminService\\ServiceController');
+    Route::resource('service-item', 'AdminServiceItem\\ServiceItemController');
     Route::resource('projects-content', 'AdminProjects\\ProjectsController');
     Route::resource('project-item', 'AdminProjectItem\\ProjectItemController');
     Route::resource('about', 'AdminAbout\\AboutController');
@@ -135,6 +136,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
     Route::resource('promotion', 'AdminPromotion\\PromotionController');
     Route::resource('testimony', 'AdminTestimony\\TestimonyController');
     Route::resource('social', 'AdminSocial\\SocialController');
+    Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
+    Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
   });
 
   Route::group(['roles'=>'blog-writer'], function () {
@@ -142,6 +145,4 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
     Route::resource('blog-category', 'AdminBlogCategory\\BlogCategoryController');
     Route::resource('blog-tag', 'BlogTag\\BlogTagController');
   });
-  Route::get('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@getGenerator']);
-  Route::post('generator', ['uses' => '\Appzcoder\LaravelAdmin\Controllers\ProcessController@postGenerator']);
 });

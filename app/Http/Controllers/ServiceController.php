@@ -10,6 +10,7 @@ use App\ServiceCatalogue;
 use App\Product;
 use App\Promotion;
 use App\Social;
+use App\ServiceItem;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -23,7 +24,7 @@ class ServiceController extends Controller
         $promos = Promotion::where('status', 'yes')->get();
         $services = Service::where('slug', $request->slug)->get();
         foreach ($services as $service) {
-          $products = Product::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
+          $serviceitems = ServiceItem::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
         }
         $socials = Social::where('active', 'yes')->get();
         if (App::isLocale('en')) {
@@ -31,7 +32,7 @@ class ServiceController extends Controller
         } elseif (App::isLocale('id')) {
             $contact = Contact::find(2);
         }
-        return view('service', compact('interiors', 'others', 'servicefooters', 'promos', 'services', 'products', 'socials', 'contact'));
+        return view('service', compact('interiors', 'others', 'servicefooters', 'promos', 'services', 'serviceitems', 'socials', 'contact'));
     }
 
     public function getAll(Request $request)
@@ -90,10 +91,11 @@ class ServiceController extends Controller
         return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
     }
 
-    public function getProduct(Request $request)
+    public function getServiceItem(Request $request)
     {
         $id = $request->id;
-        $product = Product::find($id);
-        return view('product', compact('product'));
+        $serviceitem = ServiceItem::find($id);
+        $products = Product::where('service_item_id', $id)->get();
+        return view('service-item', compact('serviceitem', 'products'));
     }
 }

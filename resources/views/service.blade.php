@@ -63,21 +63,21 @@ Services
          <h2>OUR CATALOGUE</h2>
          <hr>
          <div class="row service-label">
-           @foreach($products as $product)
+           @foreach($serviceitems as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
-               <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $product->id }}" data-target="#myModal">
-                  <img src="{{ asset($product->image) }}">
+               <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
+                  <img src="{{ asset($serviceitem->image) }}">
                   <div class="caption">
-                     <h3>{{ $product->name }}</h3>
+                     <h3>{{ $serviceitem->name }}</h3>
                      <hr>
-                     <p>{{ substr($product->description, 0, 150) }}</p>
+                     <p>{{ substr($serviceitem->description, 0, 150) }}</p>
                   </div>
                </a>
             </div>
             @endforeach
          </div>
          <br>
-         {{ $products->links() }}
+         {{ $serviceitems->links() }}
          <div class="modal fade" id="myModal">
          <div class="modal-dialog modal-lg">
          <div class="modal-content">
@@ -92,9 +92,9 @@ Services
 @section('script')
   <script type="text/javascript">
     $(document).on("click", ".product", function () {
-     var productId = $(this).data('id');
+     var serviceitemId = $(this).data('id');
            $.ajax({
-              url: '/product/item/' + productId + '',
+              url: '/service/item/' + serviceitemId + '',
               type: "get",
               success: function(response){
                 $('.modal-content').html(response)

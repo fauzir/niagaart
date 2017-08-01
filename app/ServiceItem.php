@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class ServiceItem extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'products';
+    protected $table = 'service_items';
 
     /**
     * The database primary key value.
@@ -25,11 +25,16 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['service_item_id', 'image', 'name', 'price'];
+    protected $fillable = ['service_id', 'image', 'name', 'description', 'price'];
 
-    public function serviceitem()
+    public function service()
     {
-        return $this->belongsTo('App\ServiceItem');
+        return $this->belongsTo('App\Service');
+    }
+
+    public function product()
+    {
+        return $this->hasMany('App\Product');
     }
 
 

@@ -6,20 +6,20 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Product - {{ $product->name }}</div>
+                    <div class="panel-heading">Service Item - {{ $serviceitem->name }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('/admin/product') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
-                        <a href="{{ url('/admin/product/' . $product->id . '/edit') }}" title="Edit Product"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                        <a href="{{ url('/admin/service-item') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/service-item/' . $serviceitem->id . '/edit') }}" title="Edit ServiceItem"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['admin/product', $product->id],
+                            'url' => ['admin/serviceitem', $serviceitem->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
                                     'type' => 'submit',
                                     'class' => 'btn btn-danger btn-xs',
-                                    'title' => 'Delete Product',
+                                    'title' => 'Delete ServiceItem',
                                     'onclick'=>'return confirm("Confirm delete?")'
                             ))!!}
                         {!! Form::close() !!}
@@ -28,10 +28,10 @@
 
                         <div class="table-responsive">
                             <table class="table table-borderless">
-                                <tbody>
-                                    <tr><th> Image </th><td> <img src="{{ $product->image }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $product->name }} </td></tr>
-                                    <tr><th> Price </th><td> {{ $product->price }} </td></tr>
-                                </tbody>
+                              <tbody>
+                                  <tr><th> Image </th><td> <img src="{{ $serviceitem->image }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $serviceitem->name }} </td></tr>
+                                  <tr><th> Description </th><td> {{ $serviceitem->description }} </td></tr><tr><th> Price </th><td> {{ $serviceitem->price }} </td></tr>
+                              </tbody>
                             </table>
                         </div>
 
