@@ -30,7 +30,7 @@
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr><th> Title </th><td> {{ $blog->title }} </td></tr><tr><th> Category </th><td> {{ $blog->category }} </td></tr><tr><th> Image </th><td> <img src="{{ asset($blog->image) }}" height="50%" alt=""> </td></tr>
-                                    <tr><th> Content </th><td> {!! $blog->content !!} </td></tr><tr><th> Tag </th><td> {{ $rel }} </td></tr>
+                                    <tr><th> Content </th><td> {!! $blog->content !!} </td></tr><tr><th> Tag </th><td> {{ $rel }} </td></tr><tr><th> Comment </th><td> {{ $blog->comment }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

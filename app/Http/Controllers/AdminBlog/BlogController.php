@@ -99,6 +99,7 @@ class BlogController extends Controller
         $blog->image = $requestData['image'];
         $blog->content = $requestData['contenteditor'];
         $blog->author = $requestData['author'];
+        $blog->comment = $requestData['comment'];
         $blog->visitor_count = 0;
 
         $blog->save();
@@ -204,12 +205,14 @@ class BlogController extends Controller
           $blog->image = $upload['url'];
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
+          $blog->comment = $requestData['comment'];
           $blog->save();
         } else {
           $blog->title = $requestData['title'];
           $blog->category = $requestData['category'];
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
+          $blog->comment = $requestData['comment'];
           $blog->save();
         }
 

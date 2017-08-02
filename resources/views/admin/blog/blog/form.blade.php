@@ -32,6 +32,15 @@
     <div class="col-md-6">
       <input type="text" name="tag" value="{{ $rel }}" id="taginput" class="form-control">
     </div>
+</div><div class="form-group {{ $errors->has('comment') ? 'has-error' : ''}}">
+    {!! Form::label('comment', 'Comment', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        <select class="form-control" name="comment">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        {!! $errors->first('comment', '<p class="help-block">:message</p>') !!}
+    </div>
 </div>
 
 <input type="hidden" name="author" value="{{ Auth::user()->name }}">

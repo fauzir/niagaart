@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('category');
             $table->string('image');
             $table->text('content');
+            $table->string('comment');
             $table->timestamps();
         });
     }

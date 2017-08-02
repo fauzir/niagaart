@@ -13,7 +13,7 @@ class PromotionsTableSeeder extends Seeder
     {
         $promotion = new \App\Promotion([
           'name' => 'Today',
-          'sale' => '50% Sale',
+          'sale' => '50% SALE',
           'class' => 'sale-carousel1',
           'status' => 'yes'
         ]);
@@ -21,7 +21,7 @@ class PromotionsTableSeeder extends Seeder
 
         $promotion = new \App\Promotion([
           'name' => 'This Week',
-          'sale' => '25% Sale',
+          'sale' => '25% SALE',
           'class' => 'sale-carousel2',
           'status' => 'yes'
         ]);
@@ -29,7 +29,7 @@ class PromotionsTableSeeder extends Seeder
 
         $promotion = new \App\Promotion([
           'name' => 'This Month',
-          'sale' => '15% Sale',
+          'sale' => '15% SALE',
           'class' => 'sale-carousel3',
           'status' => 'yes'
         ]);
@@ -37,7 +37,7 @@ class PromotionsTableSeeder extends Seeder
 
         $promotion = new \App\Promotion([
           'name' => 'This Year',
-          'sale' => '10% Sale',
+          'sale' => '10% SALE',
           'class' => 'sale-carousel4',
           'status' => 'yes'
         ]);

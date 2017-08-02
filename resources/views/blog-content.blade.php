@@ -50,7 +50,12 @@ All Post
             <br>
             <div class="container col-md-8 comment-section">
             <section>
-              <div id="disqus_thread"></div>
+              @if ($content->comment == "yes")
+                <div id="disqus_thread"></div>
+              @else
+                <br>
+                <h4 align="center">no comment section in this article.</h4>
+              @endif
    </section>
    @endforeach
             </div>
