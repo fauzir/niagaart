@@ -28,6 +28,22 @@ Author URI: www.41studio.com
     src: url(../fonts/RobotoCondensed-Regular.ttf);
 }
 
+.language a{
+    padding-right: 0px !important;
+    padding-left: 10px !important;
+}
+
+@media screen and (max-width: 980px) {
+    .language a{
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    }
+}
+
+.en {
+    border-left: 1px solid #ececec;
+}
+
 a:hover {
    color: inherit;
    text-decoration-style: none;
@@ -1229,8 +1245,8 @@ nav {
     background-color: #fff;
 }
 .navbar-nav li {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navbar-blog{

@@ -86,6 +86,8 @@
                    <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}">PROJECTS</a></li>
                    <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
                    <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}">BLOG</a></li>
+                   <li class="language"><a href="{{ route('home', ['locale' => 'en']) }}" class="en"><img src="{{ asset('frontend/images/EN.png') }}"></a></li>
+                   <li class="language"><a href="{{ route('home', ['locale' => 'id']) }}" class="id"><img src="{{ asset('frontend/images/ID.png') }}"></a></li>
                 </ul>
              </div>
              <!--/.nav-collapse -->
