@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Create New Service</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/service') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/service-niagaart') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -20,7 +20,7 @@
                             </ul>
                         @endif
 
-                        {!! Form::open(['url' => '/admin/service', 'class' => 'form-horizontal', 'files' => true]) !!}
+                        {!! Form::open(['url' => '/admin/service-niagaart', 'class' => 'form-horizontal', 'files' => true]) !!}
 
                         @include ('admin/services.service.form')
 

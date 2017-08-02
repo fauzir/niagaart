@@ -14,6 +14,7 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function(Blueprint $table) {
             $table->increments('id');
+            $table->string('banner_image');
             $table->string('image');
             $table->string('name');
             $table->text('description');

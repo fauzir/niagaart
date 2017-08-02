@@ -123,7 +123,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'roles']], function 
     });
     Route::resource('home', 'AdminHome\\HomeController');
     Route::resource('service-catalogue', 'AdminServiceCatalogue\\ServiceCatalogueController');
-    Route::resource('service', 'AdminService\\ServiceController');
+    Route::resource('service-niagaart', 'AdminService\\ServiceController');
     Route::resource('service-item', 'AdminServiceItem\\ServiceItemController');
     Route::resource('projects-content', 'AdminProjects\\ProjectsController');
     Route::resource('project-item', 'AdminProjectItem\\ProjectItemController');

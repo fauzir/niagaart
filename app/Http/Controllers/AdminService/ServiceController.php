@@ -63,11 +63,23 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+			'banner_image' => 'required|image',
 			'image' => 'required|image',
 			'name' => 'required',
 			'description' => 'required'
 		]);
         $requestData = $request->all();
+
+        if(Input::hasFile('banner_image')){
+          $file = Input::file('banner_image');
+          $pictureName = 'service-banner-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 3840, "height" => 2160,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['banner_image'] = $upload['url'];
+        }
 
         if(Input::hasFile('image')){
           $file = Input::file('image');
@@ -126,10 +138,24 @@ class ServiceController extends Controller
     public function update($id, Request $request)
     {
         $this->validate($request, [
+      'banner_image' => 'image',
       'image' => 'image',
 			'name' => 'required',
 			'description' => 'required'
 		]);
+
+        if (Input::hasFile('banner_image')) {
+          $file = Input::file('banner_image');
+          $pictureName = 'service-banner-'.time();
+          Cloudder::upload($file->getPathName(), $pictureName,
+            array(
+              "width" => 3840, "height" => 2160,
+            ));
+          $upload = Cloudder::getResult();
+          $requestData['banner_image'] = $upload['url'];
+        } else {
+          $requestData = $request->except('banner_image');
+        }
 
         if (Input::hasFile('image')) {
           $file = Input::file('image');

@@ -8,7 +8,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Edit Service #{{ $service->name }}</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/service') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/admin/service-niagaart') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -22,7 +22,7 @@
 
                         {!! Form::model($service, [
                             'method' => 'PATCH',
-                            'url' => ['/admin/service', $service->id],
+                            'url' => ['/admin/service-niagaart', $service->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}

@@ -58,7 +58,6 @@
              <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                    <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">HOME</a></li>
-                   <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}">ABOUT</a></li>
                    <li class="dropdown">
                         <a href="{{ route('service.all', ['locale' => request()->route()->locale]) }}" title="SERVICES" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -84,6 +83,7 @@
                         </ul>
                    </li>
                    <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}">PROJECTS</a></li>
+                   <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}">ABOUT</a></li>
                    <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
                    <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}">BLOG</a></li>
                    <li class="language"><a href="{{ route('home', ['locale' => 'en']) }}" class="en"><img src="{{ asset('frontend/images/EN.png') }}"></a></li>

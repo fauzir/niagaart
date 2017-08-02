@@ -8,11 +8,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Service</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/service/create') }}" class="btn btn-success btn-sm" title="Add New Service">
+                        <a href="{{ url('/admin/service-niagaart/create') }}" class="btn btn-success btn-sm" title="Add New Service">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        {!! Form::open(['method' => 'GET', 'url' => '/admin/service', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
+                        {!! Form::open(['method' => 'GET', 'url' => '/admin/service-niagaart', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search...">
                             <span class="input-group-btn">
@@ -39,11 +39,11 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->publish }}</td>
                                         <td>
-                                            <a href="{{ url('/admin/service/' . $item->id) }}" title="View Service"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/admin/service/' . $item->id . '/edit') }}" title="Edit Service"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/admin/service-niagaart/' . $item->id) }}" title="View Service"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ url('/admin/service-niagaart/' . $item->id . '/edit') }}" title="Edit Service"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
-                                                'url' => ['/admin/service', $item->id],
+                                                'url' => ['/admin/service-niagaart', $item->id],
                                                 'style' => 'display:inline'
                                             ]) !!}
                                                 {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(

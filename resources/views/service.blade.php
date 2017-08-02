@@ -8,7 +8,7 @@ Services
       <section>
          <div class="container-fluid header-catalogue">
          @foreach ($services as $service)
-            <div class="container-fluid catalogue-head" style="background-image: url({{ asset($service->image) }});">
+            <div class="container-fluid catalogue-head" style="background-image: url({{ asset($service->banner_image) }});">
                <div class="container catalogue-txt">
                   <div class="row">
                      <div class="container col-md-3 fill-in">

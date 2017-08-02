@@ -161,7 +161,6 @@ ul {
         height: 100%;
     }
     .swiper-slide {
-        background-image: url(../images/Sale-Banner.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
@@ -183,9 +182,8 @@ ul {
     }
 
     .swiper-slide h1{
-        background-image: url(../images/Sale-Banner.jpg);
         text-align: center;
-        font-size: 55px;
+        font-size: 70px;
         width: 100%;
 
         /* Center slide text vertically */
@@ -208,7 +206,7 @@ ul {
     }
 
 .sale-carousel1{
-    background-image: url(../images/Sale-Banner2.jpg);
+    background-image: url(../images/Sale-Banner2.jpg); 
         text-align: center;
         font-size: 18px;
         width: 100%;
@@ -991,7 +989,7 @@ ul {
 }
 .catalogueheader-txt p{
     font-size: 25px;
-    color: #6b6b6b;
+    color: black;
 }
 .blog-content {
     background-color: #ececec;
