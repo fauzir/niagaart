@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>NiagaArt | @yield('title')</title>
+    <meta name="description" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living"/>
+    <meta name="NiagaArt Website" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>NiagaArt | @yield('title')</title>
-    <meta name="description" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living"/>
-    <meta name="NiagaArt Website" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living" />
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="/assets/apple-touch-icon-52x52.png" rel="apple-touch-icon" sizes="52x52" />
-    <link href="/assets/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72" />
-    <link href="/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76" />
-    <link href="/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120" />
-    <link href="/assets/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144" />
-    <link href="/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
+    <link href="{{ asset('assets/apple-touch-icon-52x52.png') }}" rel="apple-touch-icon" sizes="52x52" />
+    <link href="{{ asset('assets/apple-touch-icon-72x72.png') }}" rel="apple-touch-icon" sizes="72x72" />
+    <link href="{{ asset('assets/apple-touch-icon-76x76.png') }}" rel="apple-touch-icon" sizes="76x76" />
+    <link href="{{ asset('assets/apple-touch-icon-120x120.png') }}" rel="apple-touch-icon" sizes="120x120" />
+    <link href="{{ asset('assets/apple-touch-icon-144x144.png') }}" rel="apple-touch-icon" sizes="144x144" />
+    <link href="{{ asset('assets/apple-touch-icon-152x152.png') }}" rel="apple-touch-icon" sizes="152x152" />
     <link href="/humans.txt" rel="author" />
     <!-- Bootstrap -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -24,7 +25,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
     <link href="{{ asset('frontend/css/styles.css') }}" rel="stylesheet" media="all">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/favicon.ico') }}"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}"/>
     <!---Google Fonts-->
     {{-- <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">

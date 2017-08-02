@@ -7,12 +7,12 @@ Services
 @section('content')
       <section>
          <div class="container-fluid header-catalogue">
-            <div class="container-fluid catalogue-head">
+         @foreach ($services as $service)
+            <div class="container-fluid catalogue-head" style="background-image: url({{ asset($service->image) }});">
                <div class="container catalogue-txt">
                   <div class="row">
                      <div class="container col-md-3 fill-in">
                      </div>
-                     @foreach ($services as $service)
                      <div class="container col-md-8 catalogueheader-txt">
                         <h1>{{ $service->name }}</h1>
                         <br>

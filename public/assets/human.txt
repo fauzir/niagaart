@@ -1,0 +1,16 @@
+/* TEAM */
+  Your title: Niaga Art
+  Site: http://www.niagaart.co.id
+  Twitter: @niaga_art
+  Location: Cimahi, Indonesia.
+
+/* SITE */
+  Last update: 2017/08/02
+  Standards: HTML5, CSS3
+  Components: Laravel, Bootstrap, jQuery, Disqus
+  Software: Software used for the development
+
+/* THANKS */
+  Name: Niaga Art
+
+  And, of course, all humanstxt.org team!
