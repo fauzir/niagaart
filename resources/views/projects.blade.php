@@ -71,7 +71,7 @@ Projects
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img id="loading-image" src="img/ajax-loader.gif" style="display:none;"/>
+        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" style="display:none;"/>
      </div>
      </div>
      </div>
@@ -80,24 +80,5 @@ Projects
 @endsection
 
 @section('script')
-  <script type="text/javascript">
-    $(document).on("click", ".project", function () {
-     var projectId = $(this).data('id');
-           $.ajax({
-              url: '/projects/item/' + projectId + '',
-              type: "get",
-              beforeSend: function() {
-                $("#loading-image").show();
-              },
-              success: function(response){
-                $('.modal-content').html(response)
-                $('#myModal').modal('show');
-                $("#loading-image").hide();
-              },
-              error: function(response){
-                console.log('Error '+response);
-              }
-            });
-      });
-  </script>
+  <script src="{{ asset('frontend/js/projects-call-item.js') }}"></script>
 @endsection

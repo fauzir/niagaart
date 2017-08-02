@@ -148,59 +148,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
     <script src="{{ asset('frontend/js/swiper.min.js') }}"></script>
     <script src="{{ asset('frontend/js/swiper.jquery.min.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-          $('.js-navmenu-service').click(function() {
-             const windowWidth = $(window).width();
-             if (windowWidth <= 767) { return; }
-             window.location = $(this).attr('href');
-          })
-       })
-
-      var swiper = new Swiper('.swiper-container', {
-        speed: 400,
-      spaceBetween: 100,
-      initialSlide: 0,
-      //truewrapper adoptsheight of active slide
-      autoHeight: false,
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      // delay between transitions in ms
-      autoplay: 5000,
-      pagination: '.swiper-pagination',
-      paginationType: "bullets",
-
-      // Navigation arrows
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
-
-      // And if we need scrollbar
-      //scrollbar: '.swiper-scrollbar',
-      // "slide", "fade", "cube", "coverflow" or "flip"
-      effect: 'slide',
-      // Distance between slides in px.
-      spaceBetween: 60,
-      //
-      slidesPerView: 2,
-      //
-      centeredSlides: true,
-      //
-      slidesOffsetBefore: 0,
-      //
-      grabCursor: true,
-      });
-    </script>
-    <script src="{{ asset('frontend/js/wow.min.js') }}"></script>
-    <script>
-    new WOW().init();
-
-    (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
-      t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
-    })(window, document, '_gscq','script','//widgets.getsitecontrol.com/95074/script.js');
-    </script>
+    <script src="{{ asset('frontend/js/swiper.jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/home-swiper.js') }}"></script>
+    <script src="{{ asset('frontend/js/home-wow.js') }}"></script>
 
 
     @yield('script')

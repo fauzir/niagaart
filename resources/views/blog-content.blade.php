@@ -51,7 +51,9 @@ All Post
             <div class="container col-md-8 comment-section">
             <section>
               @if ($content->comment == "yes")
-                <div id="disqus_thread"></div>
+                <br>
+                <div id="disqus_thread">
+                <script src="https://niagaart.disqus.com/embed.js" data-timestamp="new Date()"></script></div>
               @else
                 <br>
                 <h4 align="center">no comment section in this article.</h4>
