@@ -198,6 +198,9 @@ return [
         // Counter
         Kryptonit3\Counter\CounterServiceProvider::class,
 
+        // HTML Minify
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+
     ],
 
     /*
@@ -252,6 +255,7 @@ return [
         'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
         'Feed' => Roumen\Feed\Feed::class,
+        'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
 
     ],
 

@@ -12,6 +12,7 @@ use App\Promotion;
 use App\Social;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use HTMLMin;
 
 class HomeController extends Controller
 {
