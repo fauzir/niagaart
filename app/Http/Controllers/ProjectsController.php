@@ -15,18 +15,15 @@ class ProjectsController extends Controller
     public function index(Request $request)
     {
         App::setLocale($request->locale);
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
-        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
+        $contact = app('App\Http\Controllers\HomeController')->layoutapp()->get('contact');
+        $interiors = app('App\Http\Controllers\HomeController')->layoutapp()->get('interiors');
+        $others = app('App\Http\Controllers\HomeController')->layoutapp()->get('others');
+        $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
+        $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
+        
         $featureds = Project::where('status', 'yes')->orderBy('id', 'asc')->get();
         $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(9);
         $items = ProjectItem::orderBy('id', 'asc');
-        $socials = Social::where('active', 'yes')->get();
-        if (App::isLocale('en')) {
-            $contact = Contact::find(1);
-        } elseif (App::isLocale('id')) {
-            $contact = Contact::find(2);
-        } 
         return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials', 'contact'));
     }
 

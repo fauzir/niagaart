@@ -16,17 +16,11 @@ use HTMLMin;
 
 class HomeController extends Controller
 {
-    public function index(Request $request)
+    public function layoutapp()
     {
-        App::setLocale($request->locale);
-        // $homes = Home::all();
-        $services = Service::limit(3)->select('id', 'image', 'name', 'description', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
-        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
         $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $testimonies = Testimony::all();
-        $promos = Promotion::where('status', 'yes')->get();
         $socials = Social::where('active', 'yes')->get();
         if (App::isLocale('en')) {
             $home = Home::find(1);
@@ -34,44 +28,37 @@ class HomeController extends Controller
         } elseif (App::isLocale('id')) {
             $home = Home::find(2);
             $contact = Contact::find(2);
-        } elseif (App::isLocale('admin')) {
+        }
+
+        $items = collect(['home' => $home, 'contact' => $contact, 'interiors' => $interiors, 'others' => $others, 'servicefooters' => $servicefooters, 'socials' => $socials]);
+        return $items;
+    }
+
+    public function index(Request $request)
+    {
+        App::setLocale($request->locale);
+        if (App::isLocale('admin')) {
             return redirect()->route('admin');
         } elseif (App::isLocale('login')) {
             return redirect()->route('login');
         } elseif (App::isLocale('blog')) {
             return redirect()->route('blog', ['locale' => 'en']);
         }
+        $home = $this->layoutapp()->get('home');
+        $contact = $this->layoutapp()->get('contact');
+        $interiors = $this->layoutapp()->get('interiors');
+        $others = $this->layoutapp()->get('others');
+        $servicefooters = $this->layoutapp()->get('servicefooters');
+        $socials = $this->layoutapp()->get('socials');
+        $services = Service::limit(3)->select('id', 'image', 'name', 'description', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
+        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
+        $testimonies = Testimony::all();
+        $promos = Promotion::where('status', 'yes')->get();
         return view('home', compact('home', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
     }
 
     public function error()
     {
        return view('admin.not-authorized');
-    }
-
-    public function uploadOriginal(Request $request)
-    {
-        $file = Input::file('image');
-        $file->move('uploads', $file->getClientOriginalName());
-        $filename = 'uploads/'.$file->getClientOriginalName();
-
-        return view('img-result');
-    }
-
-    public function crop(Request $request)
-    {
-        $quality = 90;
-
-        $src  = $request->input('image');
-        $img  = imagecreatefromjpeg($src);
-        $dest = ImageCreateTrueColor($request->input('w'),
-            $request->input('h'));
-
-        imagecopyresampled($dest, $img, 0, 0, $request->input('x'),
-            $request->input('y'), $request->input('w'), $request->input('h'),
-            $request->input('w'), $request->input('h'));
-        imagejpeg($dest, $src, $quality);
-
-        return "<img src='" . $src . "'>";
     }
 }

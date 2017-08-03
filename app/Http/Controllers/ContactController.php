@@ -17,15 +17,15 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         App::setLocale($request->locale);
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->get();
-        $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
-        $socials = Social::where('active', 'yes')->get();
+        $contact = app('App\Http\Controllers\HomeController')->layoutapp()->get('contact');
+        $interiors = app('App\Http\Controllers\HomeController')->layoutapp()->get('interiors');
+        $others = app('App\Http\Controllers\HomeController')->layoutapp()->get('others');
+        $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
+        $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
+
         if (App::isLocale('en')) {
-            $contact = Contact::find(1);
             $workHours = explode(',', $contact->work_hour);
         } elseif (App::isLocale('id')) {
-            $contact = Contact::find(2);
             $workHours = explode(',', $contact->work_hour);
         }
         return view('contact', compact('interiors', 'others', 'servicefooters', 'contact', 'workHours', 'socials'));
