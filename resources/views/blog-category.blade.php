@@ -33,7 +33,7 @@ All Post
                 <div class="container col-md-10 article">
                   <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
                   <br>
-                  <img src="{{ asset($blog->image) }}" alt="article-thumbnail">
+                  <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }} | Niaga Art Blog">
                   <br>
                   <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">Read More . . .</a></p>
                   <br>
@@ -52,7 +52,7 @@ All Post
                    <div class="container col-md-10 popular-article">
                       <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">{{ $popular->title }}</a></h2>
                       <br>
-                      <img src="{{ asset($popular->image) }}" alt="article-thumbnail">
+                      <img src="{{ asset($popular->image) }}" alt="{{ $popular->title }} | Niaga Art Blog">
                       <br>
                       <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}">Read More . . .</a></p>
                       <hr>

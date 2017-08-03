@@ -28,7 +28,7 @@
                 <div class="sidebar-header">
                   <a href="{{ url('/admin') }}">
                     <h3>NiagaArt</h3>
-                    <strong><img src="{{ asset('img/logo-round.png') }}" height="38px" alt="41logofooter"></strong>
+                    <strong><img src="{{ asset('img/logo-round.png') }}" height="38px" alt="Logo Admin | Niaga Art"></strong>
                   </a>
                 </div>
 

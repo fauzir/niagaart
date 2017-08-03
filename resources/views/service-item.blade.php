@@ -7,7 +7,7 @@
 <!-- Modal Body -->
 <div class="modal-body">
   <div class="row">
-      <img src="{{ asset($serviceitem->image) }}">
+      <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" >
       <br>
       <div class="container col-md-8">
         <h2>DESCRIPTION</h2>
@@ -29,7 +29,7 @@
           @foreach ($products as $product)
           <div class="masonry-item">
             <div class="media">
-              <img src="{{ asset($product->image) }}" class="img-responsive center-block" alt="">
+              <img src="{{ asset($product->image) }}" class="img-responsive center-block" alt="{{ $product->name }} | Niaga Art">
             </div>
             <h2 class="post-title">{{ $product->name }}</h2>
             <p>{{ $product->price }}</p>

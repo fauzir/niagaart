@@ -38,7 +38,7 @@ Services
               <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
-              <img src="{{ asset($service->image) }}" alt="Interior Design">
+              <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ Services
       <div class="container opening-sectionright">
           <div class="row">
             <div class="container col-md-6 apartment-img wow slideInUp">
-              <img src="{{ asset($service->image) }}" alt="Interior Design">
+              <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
             </div>
             <div class="container col-md-6 apartment-txt">
               <h1>{{ $service->name }}</h1>

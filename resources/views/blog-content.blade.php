@@ -39,7 +39,7 @@ All Post
           <div class="container blog-article-area">
             <div class="row">
             <div class="col-md-6 article-fullpict">
-              <img src="{{ asset($content->image) }}" alt="article-fullpict">
+              <img src="{{ asset($content->image) }}" alt="{{ $content->title }} | Niaga Art Blog">
             </div>
             <div class="col-md-6"></div>
               {!! $content->content !!}

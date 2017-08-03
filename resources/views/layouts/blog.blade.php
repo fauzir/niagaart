@@ -51,7 +51,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('blog', ['locale' => request()->route()->locale]) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}"></a>
+            <a class="navbar-brand" href="{{ route('blog', ['locale' => request()->route()->locale]) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}" alt="Logo | Niaga Art" ></a>
          </div>
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-blog">

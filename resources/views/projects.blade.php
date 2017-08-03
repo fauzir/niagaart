@@ -26,7 +26,7 @@ Projects
                                 <p>{{ $featured->description }}</p>
                               </div>
                               <div class="container col-md-6 opening-img">
-                                <img src="{{ asset($featured->image) }}" alt="Interior Design">
+                                <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
                               </div>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ Projects
       @foreach($projects as $project)
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal" href="#myModal">
-              <img src="{{ asset($project->image) }}">
+              <img src="{{ asset($project->image) }}" alt="{{ $project->name }} | Niaga Art" >
               <div class="caption">
                 <h3>{{ $project->name }}</h3>
                 <hr>
@@ -71,7 +71,7 @@ Projects
       <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" style="display:none;"/>
+        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
      </div>
      </div>
      </div>

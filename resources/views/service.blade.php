@@ -35,7 +35,7 @@ Services
                         <div class="carousel-inner">
                            @foreach ($promos as $index => $promo)
                            <div class="item @if($index == 0) {{ 'active' }} @endif">
-                              <img src="{{ asset('frontend/images/Sale-Banner1.jpg') }}" alt="Los Angeles" style="width:100%;">
+                              <img src="{{ asset('frontend/images/Sale-Banner1.jpg') }}" alt="{{ $promo->name }} | Niaga Art" style="width:100%;">
                               <div class="carousel-caption">
                                 <h1>{{ $promo->sale }}</h1>
                                 <p>{{ $promo->name }}</p>
@@ -66,7 +66,7 @@ Services
            @foreach($serviceitems as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
-                  <img src="{{ asset($serviceitem->image) }}">
+                  <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
                      <h3>{{ $serviceitem->name }}</h3>
                      <hr>
