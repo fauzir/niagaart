@@ -53,7 +53,7 @@ Projects
       <div class="row service-label">
       @foreach($projects as $project)
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
-          <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal" href="#myModal">
+          <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal">
               <img src="{{ asset($project->image) }}" alt="{{ $project->name }} | Niaga Art" >
               <div class="caption">
                 <h3>{{ $project->name }}</h3>

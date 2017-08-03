@@ -70,7 +70,7 @@ All Post
                     <br>
                          <ul>
                            @foreach ($categories as $category)
-                            <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
+                            <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}">{{ $category->tag }} ({{ $category->total }})</a> </li>
                            @endforeach
                         </ul>
                     </div>
@@ -79,11 +79,11 @@ All Post
               <div class="form-group contact-part">
                 <p>@lang('content.get-in-touch')</p>
                 <br>
-                <a href="{{ route('contact', ['locale' => 'en']) }}" class="btn btn-default btn-block btn-contact-us" alt="contact us">@lang('content.contact-us-2')</a>
+                <a href="{{ route('contact', ['locale' => 'en']) }}" class="btn btn-default btn-block btn-contact-us">@lang('content.contact-us-2')</a>
                 <br>
                 <p>@lang('content.subscribe')</p>
                 <br>
-                <a href="https://feeds.feedburner.com/NiagaArtBlog" class="btn btn-warning btn-block btn-RSS-FEED" alt="RSS FEED">RSS FEED</a>
+                <a href="https://feeds.feedburner.com/NiagaArtBlog" class="btn btn-warning btn-block btn-RSS-FEED">RSS FEED</a>
               </div>
             </div>
                 </div>

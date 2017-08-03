@@ -30,7 +30,7 @@ About
     <section>
       <div class="container separator-text">
         <h2>@lang('content.what-we-brought')</h2>
-        <hr width="50%">
+        <hr>
       </div>
       @foreach ($interiors as $interior)
       @if ($interior->id % 2 == 1)
@@ -46,7 +46,7 @@ About
             </div>
           </div>
         </div>
-        <hr width="50%">
+        <hr>
       @else
         <div class="container service-scope2 hidden-sm hidden-xs">
           <div class="row">
@@ -56,7 +56,7 @@ About
               <p>{{ $interior->description }}</p>
             </div>
             <div class="container col-md-6 scope-img2 wow fadeInRight">
-              <img src="{{ asset($interior->image) }}" width="500px" alt="{{ $interior->name }} | Niaga Art">
+              <img src="{{ asset($interior->image) }}" width="100%" alt="{{ $interior->name }} | Niaga Art">
             </div>
           </div>
         </div>
@@ -66,8 +66,10 @@ About
     <section>
       <div class="container separator-text">
         <h2>INSTAGRAM</h2>
-        <hr width="50%">
-        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/e4a242cd151c5057b1fe36804c4813fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <hr>
+        <!-- LightWidget WIDGET -->
+        <script src="//lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="//lightwidget.com/widgets/e4a242cd151c5057b1fe36804c4813fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
       </div>
     </section>
 @endsection

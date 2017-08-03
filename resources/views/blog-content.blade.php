@@ -60,6 +60,7 @@ All Post
               @endif
    </section>
    @endforeach
+   <section>
             </div>
             <div class="container col-md-4 categories">
             <h3>@lang('content.categories')</h3>
@@ -67,7 +68,7 @@ All Post
                   <br>
                        <ul>
                          @foreach ($categories as $category)
-                          <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}" alt="tag Android">{{ $category->tag }} ({{ $category->total }})</a> </li>
+                          <li id="tag"><a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $category->slug]) }}">{{ $category->tag }} ({{ $category->total }})</a> </li>
                          @endforeach
                       </ul>
                   </div>
@@ -75,5 +76,6 @@ All Post
           </div>
         </div>
       </div>
+    </div>
     </section>
 @endsection

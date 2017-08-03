@@ -57,7 +57,7 @@ Contact
                       </div>
                       <div class="form-group">
                          <label for="emailField">@lang('content.email')</label>
-                         <input type="email" class="form-control form-line" name="email" placeholder="Your Email" id="emailField" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
+                         <input class="form-control form-line" name="email" placeholder="Your Email" id="emailField" required type="email" x-moz-errormessage="Please enter the valid email format (e.g. example@email.com)" />
                       </div>
                       <div class="form-group">
                          <label for="phoneField">@lang('content.phone-number')</label>

@@ -206,7 +206,7 @@ ul {
     }
 
 .sale-carousel1{
-    background-image: url(../images/Sale-Banner2.jpg); 
+    background-image: url(../images/Sale-Banner2.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
@@ -535,6 +535,10 @@ ul {
     padding-bottom: 50px;
     text-align: center;
     font-size: 30px;
+}
+
+.separator-text hr {
+    width: 50%;
 }
 .service-scope1,
 .service-scope2,
