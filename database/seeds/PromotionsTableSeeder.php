@@ -12,32 +12,32 @@ class PromotionsTableSeeder extends Seeder
     public function run()
     {
         $promotion = new \App\Promotion([
-          'name' => 'Today',
-          'sale' => '50% SALE',
+          'name' => 'Konsultasi & Desain Interior',
+          'sale' => '100% GRATIS',
           'class' => 'sale-carousel1',
           'status' => 'yes'
         ]);
         $promotion->save();
 
         $promotion = new \App\Promotion([
-          'name' => 'This Week',
-          'sale' => '25% SALE',
+          'name' => 'Harga Kitchen Set',
+          'sale' => 'Mulai Rp. 1,4jt/meter',
           'class' => 'sale-carousel2',
           'status' => 'yes'
         ]);
         $promotion->save();
 
         $promotion = new \App\Promotion([
-          'name' => 'This Month',
-          'sale' => '15% SALE',
+          'name' => 'Produk Kompor Modena',
+          'sale' => 'DISKON 10%',
           'class' => 'sale-carousel3',
           'status' => 'yes'
         ]);
         $promotion->save();
 
         $promotion = new \App\Promotion([
-          'name' => 'This Year',
-          'sale' => '10% SALE',
+          'name' => 'Parquet Vinyl',
+          'sale' => 'Mulai Rp. 129rb/m²',
           'class' => 'sale-carousel4',
           'status' => 'yes'
         ]);

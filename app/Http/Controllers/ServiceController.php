@@ -42,7 +42,11 @@ class ServiceController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         $services = Service::orderBy('id', 'asc')->get();
-        $servicecatalogues = ServiceCatalogue::find(1);
+        if (App::isLocale('en')) {
+            $servicecatalogues = ServiceCatalogue::find(1);
+        } elseif (App::isLocale('id')) {
+            $servicecatalogues = ServiceCatalogue::find(2);
+        }
         return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials', 'contact'));
     }
 
@@ -56,7 +60,11 @@ class ServiceController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         $services = Service::where('type', 'interior')->orderBy('id', 'asc')->get();
-        $servicecatalogues = ServiceCatalogue::find(1);
+        if (App::isLocale('en')) {
+            $servicecatalogues = ServiceCatalogue::find(1);
+        } elseif (App::isLocale('id')) {
+            $servicecatalogues = ServiceCatalogue::find(2);
+        }
         // $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
         return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'servicecatalogues', 'services', 'socials'));
     }
@@ -71,7 +79,11 @@ class ServiceController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         $services = Service::where('type', 'other')->orderBy('id', 'asc')->get();
-        $servicecatalogues = ServiceCatalogue::find(1);
+        if (App::isLocale('en')) {
+            $servicecatalogues = ServiceCatalogue::find(1);
+        } elseif (App::isLocale('id')) {
+            $servicecatalogues = ServiceCatalogue::find(2);
+        }
         return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));
     }
 
