@@ -37,7 +37,7 @@ About
         <div class="container service-scope1">
           <div class="row">
             <div class="container col-md-6 scope-img1 wow fadeInLeft">
-              <img src="{{ asset($interior->image) }}" width="500px" alt="Interior Design">
+              <img src="{{ asset($interior->image) }}" width="100%" alt="Interior Design">
             </div>
             <div class="container col-md-6">
               <h3>{{ $interior->name }}</h3>

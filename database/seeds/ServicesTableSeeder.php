@@ -12,8 +12,8 @@ class ServicesTableSeeder extends Seeder
     public function run()
     {
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659623/home-living_jmmml4.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/c_scale,h_550,w_650/v1501041018/opening_mqcfez.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726580/home-living_zdk45o.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/c_scale,h_550,w_650/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Home Living',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'interior',
@@ -22,8 +22,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659623/apartment_zml6sa.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041016/apartment_td9ffn.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726577/apartment_zml6sa_adsgkl.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726576/apartment_td9ffn_troc1h.jpg',
           'name' => 'Apartment',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'interior',
@@ -32,8 +32,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659628/cafe-foodcourt_fofjxe.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/c_scale,h_550,w_650/v1501041016/cafe_vethtu.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726580/cafe-foodcourt_fggtdn.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/c_scale,h_550,w_650/v1501041016/cafe_bncjtr.jpg',
           'name' => 'Cafe & FoodCourt',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'interior',
@@ -42,8 +42,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659627/shop-office_zjruhm.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/office_hi8i4b.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726584/shop-office_upejxz.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726580/office_x1stuu.jpg',
           'name' => 'Shop and Office',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'interior',
@@ -52,8 +52,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659622/flooring_fjmgyx.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/opening_mqcfez.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726579/flooring_xllqgs.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Flooring',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'other',
@@ -62,8 +62,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659624/blind_wd8stl.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041016/apartment_td9ffn.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726578/blind_pxby4c.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726576/apartment_td9ffn_troc1h.jpg',
           'name' => 'Blind',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'other',
@@ -72,8 +72,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659626/wall-paper_y4y5mr.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041016/cafe_vethtu.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726584/wall-paper_ebavzo.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/c_scale,h_550,w_650/v1501041016/cafe_bncjtr.jpg',
           'name' => 'Wall Paper',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'other',
@@ -82,8 +82,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659627/wall-clading_enybt9.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/office_hi8i4b.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726584/wall-clading_zuc3d4.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726580/office_x1stuu.jpg',
           'name' => 'Wall Clading',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'other',
@@ -92,8 +92,8 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501659628/chair_eplnoz.jpg',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/opening_mqcfez.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726578/chair_f0sws3.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Chair',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           'type' => 'other',
