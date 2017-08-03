@@ -47,13 +47,13 @@ Homepage
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
               <div class="item active">
-                 <img src="{{ asset('frontend/images/Home Carousel.jpg') }}" alt="Interior" style="width:100%;">
+                 <img src="{{ asset('frontend/images/Home-Carousel.jpg') }}" alt="Home Carousel 1 | Niaga Art" style="width:100%;">
               </div>
               <div class="item">
-                 <img src="{{ asset('frontend/images/Home Carousel1.jpg') }}" alt="Interior" style="width:100%;">
+                 <img src="{{ asset('frontend/images/Home-Carousel1.jpg') }}" alt="Home Carousel 2 | Niaga Art" style="width:100%;">
               </div>
               <div class="item">
-                 <img src="{{ asset('frontend/images/Home Carousel.jpg') }}" alt="Interior" style="width:100%;">
+                 <img src="{{ asset('frontend/images/Home-Carousel.jpg') }}" alt="Home Carousel 3 | Niaga Art" style="width:100%;">
               </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ Homepage
           @foreach($services as $service)
           <div class="col-xs-12 col-sm-6 col-md-4">
               <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="thumbnail thumbnail-service wow fadeInRight">
-                  <img src="{{ asset($service->image) }}">
+                  <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
                     <hr>
@@ -99,7 +99,7 @@ Homepage
                 <div class="col-xs-12">
                   <div class="thumbnail adjust1">
                     <div class="col-md-2 col-sm-2 col-xs-12">
-                      <img class="media-object img-rounded img-responsive" src="{{ asset($testimony->image) }}">
+                      <img class="media-object img-rounded img-responsive" src="{{ asset($testimony->image) }}" alt="Testimony {{ $testimony->name }} | Niaga Art" >
                     </div>
                     <div class="col-md-10 col-sm-10 col-xs-12">
                       <div class="caption">
@@ -166,6 +166,5 @@ Homepage
         </div>
         </div>
         </div>
-      </div>
     </section>
 @endsection
