@@ -17,7 +17,7 @@ class ContactsTableSeeder extends Seeder
           'other_phone' => '+62 878 5461 6546',
           'email' => 'cs@niagaart.com',
           'work_hour' => 'Mon - Fri 08:00 - 17:00, Sat - Sun 08:00 - 15:00',
-          'side_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726579/message-chair_lcxkcr.jpg'
+          'side_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726579/message-chair_lcxkcr.jpg'
         ]);
         $contact->save();
 
@@ -27,7 +27,7 @@ class ContactsTableSeeder extends Seeder
           'other_phone' => '+62 878 5461 6546',
           'email' => 'cs@niagaart.com',
           'work_hour' => 'Mon - Fri 08:00 - 17:00, Sat - Sun 08:00 - 15:00',
-          'side_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501726579/message-chair_lcxkcr.jpg'
+          'side_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726579/message-chair_lcxkcr.jpg'
         ]);
         $contact->save();
     }
