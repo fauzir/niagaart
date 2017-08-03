@@ -19,7 +19,7 @@
     <link href="/humans.txt" rel="author" />
     <!-- Bootstrap -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('frontend/css/swiper.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('frontend/css/swiper.min.css') }}">
