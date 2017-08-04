@@ -68,7 +68,7 @@ Services
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
                   <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
-                     <h3>{{ $serviceitem->name }}</h3>
+                     <h3>{{ substr($serviceitem->name, 0, 26) }}...</h3>
                      <hr>
                      <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
                   </div>

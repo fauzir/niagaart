@@ -10,14 +10,15 @@
       <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" >
       <br>
       <div class="container col-md-8">
-        <h2>DESCRIPTION</h2>
-        <br>
-        <p>{{ $serviceitem->description }}</p>
-      </div>
-      <div class="container col-md-4">
         <h2>DETAIL</h2>
         <br>
         {!! $serviceitem->detail !!}
+
+      </div>
+      <div class="container col-md-4">
+        <h2>DESCRIPTION</h2>
+        <br>
+        <p>{{ $serviceitem->description }}</p>
       </div>
       <br>
 
