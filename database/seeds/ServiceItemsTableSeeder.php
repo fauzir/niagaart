@@ -76,8 +76,8 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Interior Blind',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817513/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-roller_blind1.png',
+          'name' => 'Interior Blind: Roller Blinds',
           'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
           'detail' => ''
         ]);
@@ -85,8 +85,8 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Exterior Blind',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817516/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-shadow_blind1.png',
+          'name' => 'Interior Blind: Shadows Blind',
           'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
           'detail' => ''
         ]);
@@ -94,8 +94,8 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Insect Screens',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817516/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-roman_shades_blind1.png',
+          'name' => 'Interior Blind: Roman Shades Blinds',
           'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
           'detail' => ''
         ]);
@@ -103,8 +103,197 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Partition',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-Slimeline_Blinds1.png',
+          'name' => 'Interior Blind: Slimeline Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817512/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-panel_blinds.png',
+          'name' => 'Interior Blind: Panel Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-vertical_sheer_blind.png',
+          'name' => 'Interior Blind: Vertical Sheer Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-skylight_blind1.png',
+          'name' => 'Interior Blind: Skylight Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817512/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-rainbow_blind1.png',
+          'name' => 'Interior Blind: Rainbow Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817518/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-vitrom_blinds1.png',
+          'name' => 'Interior Blind: Vitrom Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817516/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-roman_bars_blinds1.png',
+          'name' => 'Interior Blind: Roman Bars Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-wooden_blinds1.png',
+          'name' => 'Interior Blind: Wooden Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-vertical_blinds1.png',
+          'name' => 'Interior Blind: Vertical Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817511/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-curtain_manual1.png',
+          'name' => 'Interior Blind: Curtain Manual',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817510/Content/IMAGE%20BLIND-MERK%20ONNA/Exterior_Blind_-_suntex_blind1.png',
+          'name' => 'Exterior Blind: Suntex Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817511/Content/IMAGE%20BLIND-MERK%20ONNA/Exterior_Blind_-_windhouse_outdoor_blinds1.png',
+          'name' => 'Exterior Blind: Windhouse Outdoor Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817512/Content/IMAGE%20BLIND-MERK%20ONNA/Exterior_Blind_-_uv_blinds1.png',
+          'name' => 'Exterior Blind: UV Blinds',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817514/Content/IMAGE%20BLIND-MERK%20ONNA/Insect_Screen-Lipat_Door1.png',
+          'name' => 'Insect Screens: Lipat Door',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817515/Content/IMAGE%20BLIND-MERK%20ONNA/Insect_Screen-Magnetic_Insect_Screen1.png',
+          'name' => 'Insect Screens: Magnetic Insect Screen',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817511/Content/IMAGE%20BLIND-MERK%20ONNA/Insect_Screen-windhouse_insect_screen1.png',
+          'name' => 'Insect Screens: Windhouse Insect Screen',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817513/Content/IMAGE%20BLIND-MERK%20ONNA/Insect_Screen-Lipat_windows1.png',
+          'name' => 'Insect Screens: Lipat Windows',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817511/Content/IMAGE%20BLIND-MERK%20ONNA/Insect_Screen-rubber_insect_screen.png',
+          'name' => 'Insect Screens: Rubber Insect Screen',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817518/Content/IMAGE%20BLIND-MERK%20ONNA/Partition-Pintu_Exona1.png',
+          'name' => 'Partition: Pintu exona',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817518/Content/IMAGE%20BLIND-MERK%20ONNA/Partition-shower_screen1.png',
+          'name' => 'Partition: Shower Screen',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817519/Content/IMAGE%20BLIND-MERK%20ONNA/Partition-tralis_exona1.png',
+          'name' => 'Partition: Tralis Exona',
+          'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '6',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817518/Content/IMAGE%20BLIND-MERK%20ONNA/Partition-folding_doors1.png',
+          'name' => 'Partition: Folding Door',
           'description' => 'Onna constantly updates and upgrades its product line and materials to adhere with current technology and international trends. ',
           'detail' => ''
         ]);
