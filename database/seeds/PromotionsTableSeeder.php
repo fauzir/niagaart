@@ -21,7 +21,7 @@ class PromotionsTableSeeder extends Seeder
 
         $promotion = new \App\Promotion([
           'name' => 'Harga Kitchen Set',
-          'sale' => 'Mulai Rp. 1,4jt/meter',
+          'sale' => 'Mulai Rp.1,4jt per meter',
           'class' => 'sale-carousel2',
           'status' => 'yes'
         ]);
@@ -37,7 +37,7 @@ class PromotionsTableSeeder extends Seeder
 
         $promotion = new \App\Promotion([
           'name' => 'Parquet Vinyl',
-          'sale' => 'Mulai Rp. 129rb/m²',
+          'sale' => 'Mulai Rp. 129rb/m',
           'class' => 'sale-carousel4',
           'status' => 'yes'
         ]);

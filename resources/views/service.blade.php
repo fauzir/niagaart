@@ -66,11 +66,11 @@ Services
            @foreach($serviceitems as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
-                  <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" >
+                  <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
                      <h3>{{ $serviceitem->name }}</h3>
                      <hr>
-                     <p>{{ substr($serviceitem->description, 0, 150) }}</p>
+                     <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
                   </div>
                </a>
             </div>

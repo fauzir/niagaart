@@ -25,7 +25,7 @@ class ServiceItem extends Model
      *
      * @var array
      */
-    protected $fillable = ['service_id', 'image', 'name', 'description', 'price'];
+    protected $fillable = ['service_id', 'image', 'name', 'description', 'detail'];
 
     public function service()
     {

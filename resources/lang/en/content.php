@@ -8,7 +8,7 @@ return [
     'office' => 'OFFICE',
     'contact' => 'CONTACT',
     'what-we-brought' => "WHAT WE'VE BROUGHT FOR YOU",
-    'this-is-what-done' => 'This is what we’ve done until now',
+    'this-is-what-done' => 'Fungsional & Artistic Design',
     'learn-more' => 'LEARN MORE',
     'our-catalogue' => 'OUR CATALOGUE',
     'featured-project' => 'FEATURED PROJECT',

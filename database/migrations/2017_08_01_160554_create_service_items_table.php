@@ -18,7 +18,7 @@ class CreateServiceItemsTable extends Migration
             $table->string('image');
             $table->string('name');
             $table->text('description');
-            $table->string('price');
+            $table->text('detail');
             $table->timestamps();
         });
     }

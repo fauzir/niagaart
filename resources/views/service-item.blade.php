@@ -17,7 +17,7 @@
       <div class="container col-md-4">
         <h2>DETAIL</h2>
         <br>
-        <p>Price <strong>${{ $serviceitem->price }}</strong></p>
+        {!! $serviceitem->detail !!}
       </div>
       <br>
 

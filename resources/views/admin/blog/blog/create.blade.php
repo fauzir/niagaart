@@ -1,16 +1,6 @@
 @extends('layouts.backend')
 
 @section('head-script')
-  {{-- <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7lscpg0p7m2fqvhf6i5hiua3ha4nd3d9xyd7hf2qffaazouh"></script>
-  <script>tinymce.init({ selector:'textarea' });</script>
-  <script>
-    tinymce.init({
-        selector: "textarea",  // change this value according to your HTML
-        plugins: "image",
-        menubar: "insert",
-        toolbar: "image"
-    });
-  </script> --}}
   <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 @endsection
 

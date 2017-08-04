@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('head-script')
+  <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">
@@ -26,34 +30,13 @@
 
                         {!! Form::close() !!}
 
-                        {{-- <img src="{{ $image }}" id="cropimage">
-
-                        {!! Form::open(['route' => 'crop','class' => 'form-horizontal','files'=>'true']) !!}
-                          {{ Form::hidden('image', $image) }}
-                          {{ Form::hidden('x', '', array('id' => 'x')) }}
-                          {{ Form::hidden('y', '', array('id' => 'y')) }}
-                          {{ Form::hidden('w', '', array('id' => 'w')) }}
-                          {{ Form::hidden('h', '', array('id' => 'h')) }}
-                          {{ Form::submit('Crop it!') }}
-                          {{ Form::close() }}
-
-                        <script type="text/javascript">
-                            $(function() {
-                                $('#cropimage').Jcrop({
-                                    onSelect: updateCoords
-                                });
-                            });
-                            function updateCoords(c) {
-                                $('#x').val(c.x);
-                                $('#y').val(c.y);
-                                $('#w').val(c.w);
-                                $('#h').val(c.h);
-                            };
-                        </script> --}}
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        CKEDITOR.replace( 'company_description' );
+    </script>
 @endsection

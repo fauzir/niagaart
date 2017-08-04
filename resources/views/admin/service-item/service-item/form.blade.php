@@ -15,11 +15,11 @@
         {!! Form::textarea('description', null, ['class' => 'form-control', 'required' => 'required']) !!}
         {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('price') ? 'has-error' : ''}}">
-    {!! Form::label('price', 'Price*', ['class' => 'col-md-4 control-label']) !!}
+</div><div class="form-group {{ $errors->has('detail') ? 'has-error' : ''}}">
+    {!! Form::label('detail', 'Detail*', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::number('price', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        {!! $errors->first('price', '<p class="help-block">:message</p>') !!}
+        {!! Form::textarea('detail', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! $errors->first('detail', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('service_id') ? 'has-error' : ''}}">
     {!! Form::label('service_id', 'Service', ['class' => 'col-md-4 control-label']) !!}
