@@ -15,7 +15,7 @@ class ServiceItemsTableSeeder extends Seeder
           'service_id' => '1',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/389_i1pswr.jpg',
           'name' => 'Backdrop, Partisi, Buffet',
-          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'description' => '',
           'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
@@ -24,7 +24,7 @@ class ServiceItemsTableSeeder extends Seeder
           'service_id' => '1',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/489.1_x2bchd.jpg',
           'name' => 'Bed Room Set',
-          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'description' => '',
           'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
@@ -33,7 +33,7 @@ class ServiceItemsTableSeeder extends Seeder
           'service_id' => '1',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/389.2_wv8xk4.jpg',
           'name' => 'Kitchen Set - Minibar',
-          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'description' => '',
           'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
@@ -312,7 +312,7 @@ class ServiceItemsTableSeeder extends Seeder
           'service_id' => '4',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/479_ahvw9o.jpg',
           'name' => 'Shop and Office',
-          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'description' => '',
           'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
@@ -719,6 +719,231 @@ class ServiceItemsTableSeeder extends Seeder
           'name' => 'DO-78',
           'description' => '',
           'detail' => '<p>Width <strong>35</strong></p><p>Depth <strong>35</strong></p><p>Height <strong>44-56</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '10',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/9-B30ED.jpg',
+          'name' => 'CIS',
+          'description' => '',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '10',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/basket_sink.png',
+          'name' => 'Basket Sink',
+          'description' => '',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '10',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817708/Content/IMAGE%20MODELLINE/rak_tempat_sampah.jpg',
+          'name' => 'Rak Tempat Sampah',
+          'description' => '',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '10',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817708/Content/IMAGE%20MODELLINE/rak_tempat_sampah.jpg',
+          'name' => 'Rak Tempat Sampah',
+          'description' => '',
+          'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/BOLSENA_-_KS_3101_Rp_1.825jt.png',
+          'name' => 'BOLSENA - KS 3101',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 1.825.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/BRACCIANO_-_KS_8200_Rp_7.75jt.png',
+          'name' => 'BRACCIANO - KS 8200',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 7.750.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/BRAVO_-_BO_3632_10.25jt.png',
+          'name' => 'BRAVO - BO 3632',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 10.250.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/BUONO_-_MG_3112_Rp_3.635jt.png',
+          'name' => 'BUONO - MG 3112',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 3.635.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/BUONO_-_MV_3002_Rp_4.4jt.png',
+          'name' => 'BUONO - MV 3002',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 4.400.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817617/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/CRISTA_-_BE_1325_Rp_2.5jt.png',
+          'name' => 'CRISTA - BE 1325',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 2.500.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817618/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/FERRARA_-_CX_6301_Rp_3.55jt.png',
+          'name' => 'FERRARA - CX 6301',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 3.550.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817618/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/FORLI_-_CX_9701_L_Rp_3.5jt.png',
+          'name' => 'FORLI - CX 9701 L',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 3.500.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817618/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/MAESTRO_-_BH_1725_MC_Rp_3.4jt.png',
+          'name' => 'MAESTRO - BH 1725 MC',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 3.400.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817618/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/MAGNE_-_BI_1321_Rp.7.35jt.png',
+          'name' => 'MAGNE - BI 1321',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 7.350.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817619/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/MAGNE_-_BI_1721_Rp.9jt.png',
+          'name' => 'MAGNE - BI 1721',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 9.000.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817619/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/ORTA_-_KS_2100_Rp_1.175jt.png',
+          'name' => 'ORTA - KS 2100',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 1.175.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817619/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/PIAZZA_-_CX_6150_Rp_3.55jt.png',
+          'name' => 'PIAZZA - CX 6150',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 3.550.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817619/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/PLANO_-_BH_3930_Rp_6.55jt.png',
+          'name' => 'PLANO - BH 3930',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 6.550.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817620/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/PRIMA_-_FC_7643_S_Rp_10jt.png',
+          'name' => 'PRIMA - FC 7643 S',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 10.000.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817620/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/PRIMA_-_FC_7943_S_Rp_12.5jt.png',
+          'name' => 'PRIMA - FC 7943 S',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 12.500.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817620/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/PRIMA_-_FC_7943_W_Rp_10.75jt.png',
+          'name' => 'PRIMA - FC 7943 W',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 10.750.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817621/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/SATINA_-_BE_1320_Rp_2.3jt.png',
+          'name' => 'SATINA - BE 1320',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 2.300.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817621/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/VICINO_-_BO_3435_Rp_9.7jt.png',
+          'name' => 'VICINO - BO 3435',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 9.700.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817621/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/VICINO_-_BT_3435_12.6jt.png',
+          'name' => 'VICINO - BT 3435',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 12.600.000</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '11',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817621/Content/IMAGE%20COOKING%20-%20MERK%20MODENA/VICINO_-_BV_3435_Rp.13jt.png',
+          'name' => 'VICINO - BV 3435',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 13.000.000</strong></p>'
         ]);
         $serviceitem->save();
     }

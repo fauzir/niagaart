@@ -1042,5 +1042,45 @@ class ProductsTableSeeder extends Seeder
           'price' => '0'
         ]);
         $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '80',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/9-B30ED.jpg',
+          'name' => 'CIS 1',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '80',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/17-B30MEG_CIS.jpg',
+          'name' => 'CIS 2',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '80',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/19-B30MED.jpg',
+          'name' => 'CIS 3',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '80',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/77-B40ED.jpg',
+          'name' => 'CIS 4',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '80',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817707/Content/IMAGE%20MODELLINE/CIS.jpg',
+          'name' => 'CIS 5',
+          'price' => '0'
+        ]);
+        $product->save();
     }
 }
