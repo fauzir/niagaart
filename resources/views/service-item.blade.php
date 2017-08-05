@@ -33,7 +33,7 @@
               <img src="{{ asset($product->image) }}" class="img-responsive center-block" alt="{{ $product->name }} | Niaga Art">
             </div>
             <h2 class="post-title">{{ $product->name }}</h2>
-            <p>{{ $product->price }}</p>
+            <p>Rp. {{ $product->price }}</p>
 
           </div>
           @endforeach

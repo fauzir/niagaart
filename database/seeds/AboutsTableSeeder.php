@@ -15,7 +15,7 @@ class AboutsTableSeeder extends Seeder
           'image_header' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726576/about-banner_quugy3.jpg',
           'opening_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726580/opening_pwrzjo.jpg',
           'opening_title' => 'About Niaga Art',
-          'opening_text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+          'opening_text' => 'Making a comfortable and clean home is what people dream of. Minimalist design interior is one of the solutions to create a more functional room, especially for those who have limited or small space. The minimalist concept for home design interior has an elegant and simple feature. There are a lot of advantages that you can get from the minimalist concept. For instance, the room will look bigger because a minimalist design interior  doesn’t usually have many objects on top of furniture, instead, all types of the furniture are designed to put the objects inside. However, some may argue that the minimalist design looks less various because there are no objects found on top of the furniture. Thus, you can avoid this issue by placing couples of decorations in the room such as several displays and picture frames on top of the furniture.'
         ]);
         $about->save();
 

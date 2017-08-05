@@ -13,28 +13,28 @@ class ServiceItemsTableSeeder extends Seeder
     {
         $serviceitem = new \App\ServiceItem([
           'service_id' => '1',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Modern Living Room',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/389_i1pswr.jpg',
+          'name' => 'Backdrop, Partisi, Buffet',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          'detail' => '<p>Price<strong>$480</strong></p>'
+          'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '1',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Old Style Dinning Room',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/489.1_x2bchd.jpg',
+          'name' => 'Bed Room Set',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          'detail' => '<p>Price<strong>$300</strong></p>'
+          'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '1',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Wood Style Interior',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/389.2_wv8xk4.jpg',
+          'name' => 'Kitchen Set - Minibar',
           'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-          'detail' => '<p>Price<strong>$500</strong></p>'
+          'detail' => '<p> <strong></strong></p>'
         ]);
         $serviceitem->save();
 
@@ -305,6 +305,420 @@ class ServiceItemsTableSeeder extends Seeder
           'name' => 'Decorative 3D Interior Panels',
           'description' => 'Pulp of sugarcane Bagassse or of other fibrous cellulostic Material;Moulded or pressed articles of sugarcane Bagasse pulp or of other fibrous cellulosic Material other pulp, cellulose wadding and webs of celulose fibres, cut to size or shape; other articles of sugarcane Bagasse ulp, cellulse fibres.',
           'detail' => '<p>Size <strong>500x500 mm or 625x800mm with ±0.5 mm. Tolerance sideways per 500 mm and ±0.7 mm diagonal</strong></p><p>Weight <strong>+275 grams</strong></p><p>Thickness <strong>approx 1.5mm (±tolerance of 0.05mm)</strong></p><p>Height <strong>thickness of panel +15mm (total approx15.5mm)</strong></p><p>Material <strong>white bagasse (natural bleanched sugarcene pulp)</strong></p><p>Packing <strong>12 panel covers 3m² (for 500x500 mm) and 6 panels covers 3m² (for 625x800mm)</strong></p><p>Fire Resistance <strong>Classic, but we advice to use class a fire proof coating/fire retardant paint like dc333 after installing for best an safest result!</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '4',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/479_ahvw9o.jpg',
+          'name' => 'Shop and Office',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+          'detail' => '<p> <strong></strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/Chitose-NC_i6ij3m.jpg',
+          'name' => 'Chitose: NC',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 1010</strong></p><p>Seat Height (mm) <strong>560 ~ 650</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/Chitose-NA_o0p42l.jpg',
+          'name' => 'Chitose: NA',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 860</strong></p><p>Seat Height (mm) <strong>400 ~ 490</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/Chitose-NBK_kqm4ui.jpg',
+          'name' => 'Chitose: NBK',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 860</strong></p><p>Seat Height (mm) <strong>400 ~ 490</strong></p><p>Weight Per Piece (Kg) <strong>9.1</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/jasmine-c1111_ehozq4.jpg',
+          'name' => 'Jasmine C-111',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>487 x478 x 747</strong></p><p>Seat Height (mm) <strong>445</strong></p><p>Weight Per Piece (Kg) <strong>4.2</strong></p><p>Upholstery Material <strong>Fabric,PVC Vinyl,Oscar</strong></p><p>Back Material <strong>Plastic ( White & Grey )</strong></p><p>Upholstery Color <strong>Orange, Yellow, Green, Blue, Red, Black, Light Green</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/flora-h1_xdi3xz.jpg',
+          'name' => 'Flora H',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>495 x 415 x 675</strong></p><p>Seat Height (mm) <strong>445</strong></p><p>Weight Per Piece (Kg) <strong>3.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Vinyl & Oscar</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Blue, Red, Green, Yellow, White, Cream , Light Blue, Light Green & Orange</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/flora-san1_j9wyij.jpg',
+          'name' => 'Flora SAN',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>515 x 515 x 445</strong></p><p>Weight Per Piece (Kg) <strong>2.5</strong></p><p>Contain per Carton <strong>6</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p<p>Upholstery Color <strong>Yellow, Red, Green, Blue, Cream</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Yellow, Red, Green, Chrome, Blue, Cream</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/jasmine-c2111_wgwczm.jpg',
+          'name' => 'Jasmine C-211',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>448 x 465 x 722</strong></p><p>Seat Height (mm) <strong>420</strong></p><p>Weight Per Piece (Kg) <strong>3.7</strong></p><p>Seat Material <strong>Fabric, PVC Vinyl, Oscar</strong></p><p>Back Material <strong>Plastic ( White & Grey )</strong></p><p>Seat & Back Colours <strong>Orange, Yellow, Green, Blue, Red, Black, Light  Green,Blue</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/hanako-s1_qnhiw6.jpg',
+          'name' => 'Hanako S',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 555x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/hanako-o1_bp70ad.jpg',
+          'name' => 'Hanako O',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 555x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/jiro-s1_bsxwhy.jpg',
+          'name' => 'Jiro S',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Gold</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/jiro-o1_mn8gsu.jpg',
+          'name' => 'Jiro O',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/taro-s1_sakv4p.jpg',
+          'name' => 'Taro S',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 563 x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Gold</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/taro-o1_dx1pa4.jpg',
+          'name' => 'Taro O',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/caesar-n-p1_esjzpn.jpg',
+          'name' => 'Caesar N / P',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>410 x 505 x 875</strong></p><p>Seat Height (mm) <strong>476</strong></p><p>Weight Per Piece (Kg) <strong>5.3</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric & PVC</strong></p><p>Upholstery Colours <strong>Red, Blue, Grey, Green, Black</strong></p><p>Frame Finisihing <strong>Chrome Plating (N), Powder Coating (P)</strong></p><p>Frame Color <strong>Black, Silver</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => '',
+          'name' => 'Prince',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>440 x 573 x 900</strong></p><p>Weight Per Piece (Kg) <strong>4.65</strong></p><p>Frame Finisihing <strong>Chrome Plating, Powder Coating</strong></p><p>Frame Color <strong>Chrome, Gold, Silver</strong></p><p>Colour Options & Upholstery Material <strong>Fabric</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/sakata-n1_hfbraj.jpg',
+          'name' => 'Sakata N',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>435 x 512 x 895</strong></p><p>Seat Height (mm) <strong>450</strong></p><p>Weight Per Piece (Kg) <strong>4.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric & PVC</strong></p><p>Upholstery Colours <strong>Red, Brown, Cream, Blue, Grey, L6Green, Lv6 Green , L1 Blue, Lv1 Blue, Black</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/lotus1_c3ydhw.jpg',
+          'name' => 'Lotus',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>500 x 510 x 760</strong></p><p>Seat Height (mm) <strong>451</strong></p><p>Weight Per Piece (Kg) <strong>3.5</strong></p><p>Upholstery Material <strong>Fabric (Seat), Plastic (Back)</strong></p><p>Upholstery Colours <strong>Blue, Grey, Green, Black, Red, Brown, Cream</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/olive-a1_zgsqrs.jpg',
+          'name' => 'Olive A',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>515 x 585 x 795</strong></p><p>Weight Per Piece (Kg) <strong>4.2</strong></p><p>Upholstery Material <strong>Plastic</strong></p><p>Upholstery Colours <strong>White, Beige,  Grey, Dark Grey, Red, Light Blue, Light Green</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/glory1_nbwnaw.jpg',
+          'name' => 'Glory',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>437 x 436 x 807</strong></p><p>Weight Per Piece (Kg) <strong>3</strong></p><p>Seat & Back material <strong>Plastic</strong></p><p>Seat & Back Colours <strong>Dark Grey, Blue, White, Orange</strong></p><p>Frame Finisihing <strong>Zinc Chrome Plating,& Powder Coating</strong></p><p>Frame Color <strong>Chrome, White & Light Silver</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/sam1_lk9xpq.jpg',
+          'name' => 'SAM',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>453 x 456 x 770</strong></p><p>Seat Height (mm) <strong>448</strong></p><p>Weight Per Piece (Kg) <strong>4.7</strong></p><p>Seat & Back material <strong>Plate</strong></p><p>Seat & Back Colours <strong>Grey, Silver, White, Orange</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Grey, Silver, White, Orange</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/ribbon-p-z1_mrbiza.jpg',
+          'name' => 'Ribbon P / Z',
+          'description' => '',
+          'detail' => '<p>Dimension W x D x H (mm) <strong>435 x 435 x 460</strong></p><p>Weight Per Piece (Kg) <strong>1.6</strong></p><p>Seat Colours <strong>Yellow, Grey, Black</strong></p><p>Frame Finisihing <strong>Powder Coating (Ribbon-P), Zinc Chrome Plating (Ribbon-Z)</strong></p><p>Frame Color <strong>Yellow, Chrome</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/BERRY_ygkegx.jpg',
+          'name' => 'BERRY',
+          'description' => '',
+          'detail' => '<p>Width <strong>31</strong></p><p>Depth <strong>31</strong></p><p>Height <strong>32-40</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/CAFTO_gkouwy.jpg',
+          'name' => 'CAFTO',
+          'description' => '',
+          'detail' => '<p>Width <strong>38</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>60-82</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/CANDY-1_iumi8h.jpg',
+          'name' => 'CANDY 1',
+          'description' => '',
+          'detail' => '<p>Width <strong>56</strong></p><p>Depth <strong>53</strong></p><p>Height <strong>87-97</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/CANDY-2_ph8xm2.jpg',
+          'name' => 'CANDY 2',
+          'description' => '',
+          'detail' => '<p>Width <strong>56</strong></p><p>Depth <strong>53</strong></p><p>Height <strong>96-108</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/CANDY-3_g6mljo.jpg',
+          'name' => 'CANDY 3',
+          'description' => '',
+          'detail' => '<p>Width <strong>67</strong></p><p>Depth <strong>65</strong></p><p>Height <strong>89-101</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/CERRY_p2onzp.jpg',
+          'name' => 'CERRY',
+          'description' => '',
+          'detail' => '<p>Width <strong>45</strong></p><p>Depth <strong>43</strong></p><p>Height <strong>67-90</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901062/DO-67-GR_hfamrx.jpg',
+          'name' => 'DO-67 GR',
+          'description' => '',
+          'detail' => '<p>Width <strong>61</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>61-71</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/DO-67-M_klnoes.jpg',
+          'name' => 'DO-67 M',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>51</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-68-PUM_v4geof.jpg',
+          'name' => 'DO-68 PUM',
+          'description' => '',
+          'detail' => '<p>Width <strong>37</strong></p><p>Depth <strong>36</strong></p><p>Height <strong>43</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/DO-68-PUGR_shdoo7.jpg',
+          'name' => 'DO-68 PUGR',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>36</strong></p><p>Height <strong>54</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901062/DO-68-PUGBP_cfpo5t.jpg',
+          'name' => 'DO-68 PUGBP',
+          'description' => '',
+          'detail' => '<p>Width <strong>36</strong></p><p>Depth <strong>61</strong></p><p>Height <strong>61-71</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901062/DO-71-GR_kmjhxt.jpg',
+          'name' => 'DO-71 GR',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>52</strong></p><p>Height <strong>89-98</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901062/DO-71-G_uemgvv.jpg',
+          'name' => 'DO-71 G',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>52</strong></p><p>Height <strong>74-84</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-74-GB_ip9nln.jpg',
+          'name' => 'DO-74 GB',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>51</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/DO-74-M_wwlmzd.jpg',
+          'name' => 'DO-74 M',
+          'description' => '',
+          'detail' => '<p>Width <strong>43</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>51</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/DO-74-GBR_vxe7j7.jpg',
+          'name' => 'DO-74 GBR',
+          'description' => '',
+          'detail' => '<p>Width <strong>61</strong></p><p>Depth <strong>38</strong></p><p>Height <strong>61-71</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-74-GRP_qel4xh.jpg',
+          'name' => 'DO-74 GRP',
+          'description' => '',
+          'detail' => '<p>Width <strong>61</strong></p><p>Depth <strong>36</strong></p><p>Height <strong>61-71</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-76-S_b9a5z5.jpg',
+          'name' => 'DO-76 S',
+          'description' => '',
+          'detail' => '<p>Width <strong>39</strong></p><p>Depth <strong>39</strong></p><p>Height <strong>89</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-76_zwmr77.jpg',
+          'name' => 'DO-76',
+          'description' => '',
+          'detail' => '<p>Width <strong>39</strong></p><p>Depth <strong>39</strong></p><p>Height <strong>73</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/DO-77-S-besar_xvd63g.jpg',
+          'name' => 'DO-77 S',
+          'description' => '',
+          'detail' => '<p>Width <strong>39</strong></p><p>Depth <strong>39</strong></p><p>Height <strong>64</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/DO-77_xhinbr.jpg',
+          'name' => 'DO-77',
+          'description' => '',
+          'detail' => '<p>Width <strong>39</strong></p><p>Depth <strong>39</strong></p><p>Height <strong>48</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901062/DO-78-R-besar_epspxb.jpg',
+          'name' => 'DO-78 R',
+          'description' => '',
+          'detail' => '<p>Width <strong>39</strong></p><p>Depth <strong>39</strong></p><p>Height <strong>62-74</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901063/DO-78-P_rmt0ut.jpg',
+          'name' => 'DO-78 P',
+          'description' => '',
+          'detail' => '<p>Width <strong>35</strong></p><p>Depth <strong>35</strong></p><p>Height <strong>44</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '9',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901064/DO-78_f4ohod.jpg',
+          'name' => 'DO-78',
+          'description' => '',
+          'detail' => '<p>Width <strong>35</strong></p><p>Depth <strong>35</strong></p><p>Height <strong>44-56</strong></p>'
         ]);
         $serviceitem->save();
     }

@@ -13,25 +13,377 @@ class ProductsTableSeeder extends Seeder
     {
         $product = new \App\Product([
           'service_item_id' => '1',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Table',
-          'price' => '200'
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/389_i1pswr.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 1',
+          'price' => '0'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '1',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Chair',
-          'price' => '100'
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901049/411.2_bwmcyq.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 2',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/439_hspuje.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 3',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901050/453_s9ar6n.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 4',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901049/454_uctutn.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 5',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/473.1_gjlfbb.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 6',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901049/519.2_jneggh.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 7',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901050/521.1_t3gnwz.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 8',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901048/521_f0wxnk.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 9',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901050/524.1_ewq5oc.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 10',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901050/526.2_p41nr1.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 11',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/643_fhrsq0.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 12',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '1',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/643_fhrsq0.jpg',
+          'name' => 'Backdrop, Partisi, Buffet 13',
+          'price' => '0'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '2',
-          'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
-          'name' => 'Bed',
-          'price' => '500'
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/489.1_x2bchd.jpg',
+          'name' => 'Bed Room Set 1',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/489.2_kiimuz.jpg',
+          'name' => 'Bed Room Set 2',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/489.3_fk9o09.jpg',
+          'name' => 'Bed Room Set 3',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/489.4_ftll8t.jpg',
+          'name' => 'Bed Room Set 4',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/489.5_h6xaf9.jpg',
+          'name' => 'Bed Room Set 5',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/489_hgodps.jpg',
+          'name' => 'Bed Room Set 6',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/498.1_wrzx9n.jpg',
+          'name' => 'Bed Room Set 7',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/498_q0jzz4.jpg',
+          'name' => 'Bed Room Set 8',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901056/513.1_ttmxqt.jpg',
+          'name' => 'Bed Room Set 9',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/513_uy6jj1.jpg',
+          'name' => 'Bed Room Set 10',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/516.3_ry900x.jpg',
+          'name' => 'Bed Room Set 11',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/518.1_l9rixy.jpg',
+          'name' => 'Bed Room Set 12',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/518_voehaz.jpg',
+          'name' => 'Bed Room Set 13',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/623_tgtdcv.jpg',
+          'name' => 'Bed Room Set 14',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/644_qzhanz.jpg',
+          'name' => 'Bed Room Set 15',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/X1.1_c5nlop.jpg',
+          'name' => 'Bed Room Set 16',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/X1.2_sigc0n.jpg',
+          'name' => 'Bed Room Set 17',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '2',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/X1_sfpltd.jpg',
+          'name' => 'Bed Room Set 18',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/389.2_wv8xk4.jpg',
+          'name' => 'Kitchen Set 1',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/411_pak7al.jpg',
+          'name' => 'Kitchen Set 2',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/439.1_frpt9q.jpg',
+          'name' => 'Kitchen Set 3',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/439.2_vhkb2l.jpg',
+          'name' => 'Kitchen Set 4',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/439.3_bug8jq.jpg',
+          'name' => 'Kitchen Set 5',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'https://cloudinary.com/console/lui/media_library#/dialog/image/upload/441_yp43xs',
+          'name' => 'Kitchen Set 6',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/458_pzdxzm.jpg',
+          'name' => 'Kitchen Set 7',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/460.1_uc2zdl.jpg',
+          'name' => 'Kitchen Set 8',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/472.1_rftble.jpg',
+          'name' => 'Kitchen Set 9',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/472_osqnu2.jpg',
+          'name' => 'Kitchen Set 10',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/504.1_dpgxnd.jpg',
+          'name' => 'Kitchen Set 11',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/504.2_hlzi4e.jpg',
+          'name' => 'Kitchen Set 12',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/504.3_zdz8dx.jpg',
+          'name' => 'Kitchen Set 13',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/510_z4uwyn.jpg',
+          'name' => 'Kitchen Set 14',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/523.1_o3umly.jpg',
+          'name' => 'Kitchen Set 15',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/526_l37nm6.jpg',
+          'name' => 'Kitchen Set 16',
+          'price' => '0'
         ]);
         $product->save();
 
@@ -663,6 +1015,30 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '32',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817518/Content/IMAGE%20BLIND-MERK%20ONNA/Partition-folding_doors1.png',
           'name' => 'Folding Doors 1',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '34',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/479_ahvw9o.jpg',
+          'name' => 'Shop and Office 1',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '34',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/645_bxkdzm.jpg',
+          'name' => 'Shop and Office 2',
+          'price' => '0'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '34',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/X2_qi5kdw.jpg',
+          'name' => 'Shop and Office 3',
           'price' => '0'
         ]);
         $product->save();

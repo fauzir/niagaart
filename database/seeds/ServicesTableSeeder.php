@@ -100,5 +100,35 @@ class ServicesTableSeeder extends Seeder
           'publish' => 'yes'
         ]);
         $service->save();
+
+        $service = new \App\Service([
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
+          'name' => 'Ral-Modelline',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'type' => 'other',
+          'publish' => 'yes'
+        ]);
+        $service->save();
+
+        $service = new \App\Service([
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
+          'name' => 'Cooking-Modena',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'type' => 'other',
+          'publish' => 'yes'
+        ]);
+        $service->save();
+
+        $service = new \App\Service([
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
+          'name' => 'Cooking-Domo',
+          'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'type' => 'other',
+          'publish' => 'yes'
+        ]);
+        $service->save();
     }
 }
