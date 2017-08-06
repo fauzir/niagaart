@@ -67,11 +67,11 @@ Homepage
           @foreach($services as $service)
           <div class="col-xs-12 col-sm-6 col-md-4">
               <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="thumbnail thumbnail-service wow fadeInRight">
-                  <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
+                  <img src="{{ asset($service->image) }}" style="height: 205px;" alt="{{ $service->name }} | Niaga Art">
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
                     <hr>
-                    <p>{{ substr($service->description, 0, 150) }}</p>
+                    <p style="min-height: 175px;">{{ substr($service->description, 0, 150) }}</p>
                   </div>
               </a>
           </div>
