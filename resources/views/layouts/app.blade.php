@@ -86,8 +86,8 @@
                    <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}">ABOUT</a></li>
                    <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
                    <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}">BLOG</a></li>
-                   <li class="language"><a href="{{ route('home', ['locale' => 'en']) }}" class="en"><img src="{{ asset('frontend/images/EN.png') }}" alt="England Flag | Niaga Art" ></a></li>
-                   <li class="language"><a href="{{ route('home', ['locale' => 'id']) }}" class="id"><img src="{{ asset('frontend/images/ID.png') }}" alt="Indonesia Flag | Niaga Art" ></a></li>
+                   <li class="language-en"><a href="{{ route('home', ['locale' => 'en']) }}" class="en"><img src="{{ asset('frontend/images/EN.png') }}" alt="England Flag | Niaga Art" ></a></li>
+                   <li class="language-ina"><a href="{{ route('home', ['locale' => 'id']) }}" class="id"><img src="{{ asset('frontend/images/ID.png') }}" alt="Indonesia Flag | Niaga Art" ></a></li>
                 </ul>
              </div>
              <!--/.nav-collapse -->
@@ -113,11 +113,7 @@
                </div>
                <div class="office-add col-md-3 col-sm-3">
                  <h3>@lang('content.office')</h3>
-                 <p>JL. Sangkuriang No 43
-                 <br>
-                 Cimahi Utara
-                 <br>
-                 Jawa Barat Indonesia</p>
+                 <p>{!! str_replace (",", "<br>", $contact->address) !!}</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>@lang('content.contact')</h3>

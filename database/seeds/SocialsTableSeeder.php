@@ -37,7 +37,7 @@ class SocialsTableSeeder extends Seeder
 
         $social = new \App\Social([
           'name' => 'Instagram',
-          'url' => 'https://www.istagram.com/na_furniturebdg/',
+          'url' => 'https://www.instagram.com/na_furniturebdg/',
           'icon' => 'fa fa-instagram',
           'active' => 'yes'
         ]);

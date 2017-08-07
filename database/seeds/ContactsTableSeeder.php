@@ -12,7 +12,7 @@ class ContactsTableSeeder extends Seeder
     public function run()
     {
         $contact = new \App\Contact([
-          'address' => 'Sangkuriang Street No. 43 North Cimahi, West Java, Indonesia',
+          'address' => 'Sangkuriang Street No. 43, North Cimahi, West Java, Indonesia',
           'phone' => '+62 22 727 1234',
           'other_phone' => '+62 878 5461 6546',
           'email' => 'cs@niagaart.com',
@@ -22,7 +22,7 @@ class ContactsTableSeeder extends Seeder
         $contact->save();
 
         $contact = new \App\Contact([
-          'address' => 'Jl. Sangkuriang No. 43 Cimahi Utara, Jawa Barat, Indonesia',
+          'address' => 'Jl. Sangkuriang No. 43, Cimahi Utara, Jawa Barat, Indonesia',
           'phone' => '+62 22 727 1234',
           'other_phone' => '+62 878 5461 6546',
           'email' => 'cs@niagaart.com',
