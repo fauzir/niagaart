@@ -15,7 +15,7 @@
                     <p>{{ $project->description }}</p>
                   </div>
                   <div class="container col-md-4 detail-popup">
-                    <h2>DETAIL ARE HERE</h2>
+                    <h2>DETAIL</h2>
                     <br>
                     <p>JL. Sangkuriang No 43
                     Cimahi Utara Jawa Barat
@@ -43,8 +43,12 @@
                             <img src="{{ asset($item->image) }}" width="50%" class="img-responsive center-block" alt="{{ $item->name }} | Niaga Art">
                           </div>
                           <h2 class="post-title">{{ $item->name }}</h2>
-                          <p>{{ $item->description }}</p>
-                          <p>${{ $item->price }}</p>
+                          @if ( strlen($serviceitem->description) > 0 )
+                            <p>{{ $item->description }}</p>
+                          @else
+                            <p>@lang('content.no-desc')</p>
+                          @endif
+                          <p>Rp. {{ $item->price }}</p>
                         </div>
                         @endforeach
                       </div>

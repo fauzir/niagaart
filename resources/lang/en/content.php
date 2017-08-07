@@ -34,6 +34,7 @@ return [
     'get-in-touch' => 'GET IN TOUCH WITH US',
     'contact-us-2' => 'Contact Us',
     'subscribe' => 'SUBSCRIBE OUR NEWSLETTER',
-    'back-to-blog' => 'Back to blog'
+    'back-to-blog' => 'Back to blog',
+    'no-desc' => 'There is no description for this item'
 
 ];

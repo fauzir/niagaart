@@ -18,7 +18,11 @@
       <div class="container col-md-4">
         <h2>DESCRIPTION</h2>
         <br>
-        <p>{{ $serviceitem->description }}</p>
+        @if ( strlen($serviceitem->description) > 0 )
+          <p>{{ $serviceitem->description }}</p>
+        @else
+          <p>@lang('content.no-desc')</p>
+        @endif
       </div>
       <br>
 

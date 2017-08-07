@@ -34,6 +34,7 @@ return [
     'get-in-touch' => 'HUBUNGI KAMI',
     'contact-us-2' => 'Kontak Kami',
     'subscribe' => 'IKUTI BERITA KAMI',
-    'back-to-blog' => 'Kembali ke blog'
+    'back-to-blog' => 'Kembali ke blog',
+    'no-desc' => 'Tidak ada deskripsi untuk barang ini'
 
 ];

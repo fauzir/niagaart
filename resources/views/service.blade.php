@@ -60,22 +60,28 @@ Services
       </section>
       <section>
          <div class="container service-sectioncatalogue">
-         <h2>OUR CATALOGUE</h2>
+         <h2>@lang('content.our-catalogue')</h2>
          <hr>
+         @foreach($serviceitems->chunk(3) as $servicechunk)
          <div class="row service-label">
-           @foreach($serviceitems as $serviceitem)
+           @foreach($servicechunk as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
                   <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
                      <h3>{{ substr($serviceitem->name, 0, 26) }}...</h3>
                      <hr>
-                     <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
+                     @if ( strlen($serviceitem->description) > 0 )
+                        <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
+                     @else
+                        <p style="min-height: 175px;">@lang('content.no-desc')</p>
+                     @endif
                   </div>
                </a>
             </div>
             @endforeach
          </div>
+         @endforeach
          <br>
          {{ $serviceitems->links() }}
          <div class="modal fade" id="myModal">

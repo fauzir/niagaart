@@ -23,7 +23,11 @@ Projects
                               <div class="container col-md-6">
                                 <h2>{{ $featured->name }}</h2>
                                 <br>
-                                <p>{{ $featured->description }}</p>
+                                @if ( strlen($featured->description) > 0 )
+                                  <p>{{ $featured->description }}</p>
+                                @else
+                                  <p>@lang('content.no-desc')</p>
+                                @endif
                               </div>
                               <div class="container col-md-6 opening-img">
                                 <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
@@ -50,20 +54,26 @@ Projects
   <div class="container service-section">
     <h2>@lang('content.our-project')</h2>
     <hr>
+      @foreach($projects->chunk(3) as $projectchunk)
       <div class="row service-label">
-      @foreach($projects as $project)
+      @foreach($projectchunk as $project)
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal">
-              <img src="{{ asset($project->image) }}" alt="{{ $project->name }} | Niaga Art" >
+              <img src="{{ asset($project->image) }}" style="height: 205px;" alt="{{ $project->name }} | Niaga Art" >
               <div class="caption">
                 <h3>{{ $project->name }}</h3>
                 <hr>
-                <p>{{ substr($project->description, 0, 150) }}</p>
+                @if ( strlen($project->description) > 0 )
+                  <p style="min-height: 175px;">{{ substr($project->description, 0, 150) }}</p>
+                @else
+                  <p style="min-height: 175px;">@lang('content.no-desc')</p>
+                @endif
               </div>
           </div>
       </div>
       @endforeach
       </div>
+      @endforeach
       <br>
       {{ $projects->links() }}
       <div class="container">
