@@ -91,7 +91,7 @@ Services
          <div class="modal fade" id="myModal">
          <div class="modal-dialog modal-lg">
          <div class="modal-content">
-
+           <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
         </div>
         </div>
         </div>

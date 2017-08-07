@@ -12,7 +12,11 @@
   <div class="container col-md-8 desc-popup">
                     <h2>{{ $project->name }}</h2>
                     <br>
-                    <p>{{ $project->description }}</p>
+                    @if ( strlen($project->description) > 0 )
+                      <p>{{ $project->description }}</p>
+                    @else
+                      <p>@lang('content.no-desc')</p>
+                    @endif
                   </div>
                   <div class="container col-md-4 detail-popup">
                     <h2>DETAIL</h2>
@@ -43,7 +47,7 @@
                             <img src="{{ asset($item->image) }}" width="50%" class="img-responsive center-block" alt="{{ $item->name }} | Niaga Art">
                           </div>
                           <h2 class="post-title">{{ $item->name }}</h2>
-                          @if ( strlen($serviceitem->description) > 0 )
+                          @if ( strlen($item->description) > 0 )
                             <p>{{ $item->description }}</p>
                           @else
                             <p>@lang('content.no-desc')</p>
