@@ -114,11 +114,7 @@
                </div>
                <div class="office-add col-md-3 col-sm-3">
                  <h3>@lang('content.office')</h3>
-                 <p>JL. Sangkuriang No 43
-                 <br>
-                 Cimahi Utara
-                 <br>
-                 Jawa Barat Indonesia</p>
+                 <p>{!! str_replace (",", "<br>", $contact->address) !!}</p>
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>@lang('content.contact')</h3>

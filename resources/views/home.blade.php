@@ -11,7 +11,7 @@ Homepage
               <div class="swiper-wrapper">
                   @foreach ($promos as $promo)
                   <div class="swiper-slide {{ $promo->class }}">
-                     <div>
+                     <div class="promo-text">
                         <h1>{{ $promo->sale }}</h1>
                         <p>{{ $promo->name }}</p>
                      </div>
