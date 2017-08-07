@@ -61,7 +61,11 @@ Projects
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal">
               <img src="{{ asset($project->image) }}" style="height: 205px;" alt="{{ $project->name }} | Niaga Art" >
               <div class="caption">
-                <h3>{{ $project->name }}</h3>
+                @if ( strlen($project->name) > 29 )
+                  <h3>{{ substr($project->name, 0, 26) }}...</h3>
+                @else
+                  <h3>{{ $project->name }}</h3>
+                @endif
                 <hr>
                 @if ( strlen($project->description) > 0 )
                   <p style="min-height: 175px;">{{ substr($project->description, 0, 150) }}</p>

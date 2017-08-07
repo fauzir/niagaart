@@ -69,7 +69,11 @@ Services
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
                   <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
-                     <h3>{{ substr($serviceitem->name, 0, 26) }}...</h3>
+                     @if ( strlen($serviceitem->name) > 29 )
+                       <h3>{{ substr($serviceitem->name, 0, 26) }}...</h3>
+                     @else
+                       <h3>{{ $serviceitem->name }}</h3>
+                     @endif
                      <hr>
                      @if ( strlen($serviceitem->description) > 0 )
                         <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
