@@ -78,7 +78,7 @@ Homepage
           @endforeach
           </div>
           <br>
-          <p>{!! $home->company_description !!}</p>
+          {!! $home->company_description !!}
       </div>
     </section>
     <section>

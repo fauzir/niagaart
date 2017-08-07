@@ -122,9 +122,9 @@
                <div class="contact-add col-md-3 col-sm-3">
                <h3>@lang('content.contact')</h3>
                  <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
-                 <p><a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a>
+                 <p><a href="tel:{{ str_replace (" ", "", $contact->phone) }}">{{ $contact->phone }}</a>
                     <br>
-                    <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a>
+                    <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}">{{ $contact->other_phone }}</a>
                  </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">

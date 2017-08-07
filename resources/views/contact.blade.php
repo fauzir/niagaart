@@ -20,9 +20,9 @@ Contact
                 <br>
                 <p class="wow fadeInUp">{{ $contact->address }}</p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.phone') : <a href="tel:{{ $contact->phone }}">{{ $contact->phone }}</a></p>
+                <p class="wow fadeInUp">@lang('content.phone') : <a href="tel:{{ str_replace (" ", "", $contact->phone) }}">{{ $contact->phone }}</a></p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.message') : <a href="tel:{{ $contact->other_phone }}">{{ $contact->other_phone }}</a></p>
+                <p class="wow fadeInUp">@lang('content.message') : <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}">{{ $contact->other_phone }}</a></p>
                 <br>
                 <p class="wow fadeInUp">@lang('content.email') : <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
                 <br>
