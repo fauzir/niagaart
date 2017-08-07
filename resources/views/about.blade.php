@@ -5,12 +5,10 @@ About
 @endsection
 
 @section('content')
-    <section>
       <div class="container">
         <div class="hero-image">
         </div>
       </div>
-    </section>
     <section>
     <div class="container-fluid opening-bg">
       <div class="container opening-section">
