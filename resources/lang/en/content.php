@@ -24,7 +24,7 @@ return [
     'phone-number' => 'Phone Number',
     'message' => 'Message',
     'to-our-site' => 'To our site',
-    'subtitle-here' => 'Subtitle message are here',
+    'subtitle-here' => 'Blog on Interior Design, Furniture, and Latest News',
     'popular-article' => 'POPULAR ARTICLE',
     'read-more' => 'Read More . . .',
     'by' => 'by',

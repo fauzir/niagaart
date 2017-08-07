@@ -24,7 +24,7 @@ return [
     'phone-number' => 'No. Telepon',
     'message' => 'Pesan',
     'to-our-site' => 'Ke website kami',
-    'subtitle-here' => 'Judul tambahan ada disini',
+    'subtitle-here' => 'Blog on Interior Design, Furniture, and Latest News',
     'popular-article' => 'ARTIKEL POPULER',
     'read-more' => 'Baca . . .',
     'by' => 'oleh',
