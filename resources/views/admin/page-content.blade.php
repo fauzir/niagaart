@@ -18,7 +18,7 @@
                       <div class="table-responsive">
                           <table class="table table-borderless">
                               <tbody>
-                                  <tr><th> Welcome Text </th><td> {{ $home->welcome_text }} </td></tr><tr><th> Company Description </th><td> {{ $home->company_description }} </td></tr>
+                                  <tr><th> Welcome Text </th><td> {{ $home->welcome_text }} </td></tr><tr><th> Company Description </th><td> {!! $home->company_description !!} </td></tr>
                               </tbody>
                           </table>
                       </div>
@@ -46,7 +46,7 @@
                       <div class="table-responsive">
                           <table class="table table-borderless">
                               <tbody>
-                                  <tr><th> Image </th><td> <img src="{{ asset($about->opening_image) }}" height="50%" alt=""> </td></tr><tr><th> Opening Text </th><td> {{ $about->opening_text }} </td></tr>
+                                  <tr><th> Image </th><td> <img src="{{ asset($about->opening_image) }}" height="50%" alt=""> </td></tr><tr><th> Opening Text </th><td><p> {{ $about->opening_text }} </p></td></tr>
                               </tbody>
                           </table>
                       </div>
@@ -102,7 +102,7 @@
                     <div class="table-responsive">
                         <table class="table table-borderless">
                             <tbody>
-                                <tr><th> Opening Title </th><td> {{ $servicecatalogue->opening_title }} </td></tr><tr><th> Opening Text </th><td> {{ $servicecatalogue->opening_text }} </td></tr>
+                                <tr><th> Opening Title </th><td> {{ $servicecatalogue->opening_title }} </td></tr><tr><th> Opening Text </th><td><p> {{ $servicecatalogue->opening_text }} </p></td></tr>
                             </tbody>
                         </table>
                     </div>

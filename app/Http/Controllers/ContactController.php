@@ -42,7 +42,7 @@ class ContactController extends Controller
             ), function($message)
         {
             $message->from('fauzi@41studio.com', 'Your Web Message');
-            $message->to('fauziiirachman@gmail.com', 'Admin')->subject('You have a new message!');
+            $message->to('cs@niagaart.com', 'Admin')->subject('You have a new message!');
         });
 
       return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');
