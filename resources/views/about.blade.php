@@ -16,7 +16,7 @@ About
             <div class="container col-md-6">
               <h1>{{ $about->opening_title }}</h1>
               <br>
-              <p>{{ $about->opening_text }}</p>
+              <p>{!! $about->opening_text !!}</p>
             </div>
             <div class="container col-md-6 opening-img wow fadeInUp">
               <img src="{{ asset($about->opening_image) }}" alt="About | Niaga Art">
@@ -40,7 +40,7 @@ About
             <div class="container col-md-6">
               <h3>{{ $interior->name }}</h3>
               <br>
-              <p>{{ $interior->description }}</p>
+              {!! $interior->description !!}
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ About
             <div class="container col-md-6">
               <h3>{{ $interior->name }}</h3>
               <br>
-              <p>{{ $interior->description }}</p>
+              {!! $interior->description !!}
             </div>
             <div class="container col-md-6 scope-img2 wow fadeInRight">
               <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">

@@ -66,6 +66,7 @@ class ServiceController extends Controller
 			'banner_image' => 'required|image',
 			'image' => 'required|image',
 			'name' => 'required',
+			'tagline' => 'required',
 			'description' => 'required'
 		]);
         $requestData = $request->all();
@@ -141,6 +142,7 @@ class ServiceController extends Controller
       'banner_image' => 'image',
       'image' => 'image',
 			'name' => 'required',
+			'tagline' => 'required',
 			'description' => 'required'
 		]);
 

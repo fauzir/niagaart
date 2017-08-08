@@ -17,6 +17,7 @@ class CreateServicesTable extends Migration
             $table->string('banner_image');
             $table->string('image');
             $table->string('name');
+            $table->text('tagline');
             $table->text('description');
             $table->timestamps();
         });

@@ -16,7 +16,7 @@ Services
                      <div class="container col-md-8 catalogueheader-txt">
                         <h1>{{ $service->name }}</h1>
                         <br>
-                        <p>{{ $service->description }}</p>
+                        <p>{{ $service->tagline }}</p>
                      </div>
                      @endforeach
                   </div>

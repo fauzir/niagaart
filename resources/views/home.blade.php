@@ -71,7 +71,7 @@ Homepage
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
                     <hr>
-                    <p style="min-height: 175px;">{{ substr($service->description, 0, 150) }}</p>
+                    <p style="min-height: 175px;">{{ substr($service->tagline, 0, 150) }}</p>
                   </div>
               </a>
           </div>

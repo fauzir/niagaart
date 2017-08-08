@@ -17,7 +17,7 @@ Services
               <h1>{{ $servicecatalogues->opening_title }}</h1>
               <br>
               <h1>@lang('content.this-is-what-done')</h1>
-              <p>{{ $servicecatalogues->opening_text }}</p>
+              <p>{!! $servicecatalogues->opening_text !!}</p>
             </div>
           </div>
         </div>
@@ -33,7 +33,7 @@ Services
             <div class="container col-md-6 homeliving-txt">
               <h1>{{ $service->name }}</h1>
               <br>
-              <p>{{ $service->description }}</p>
+              {!! $service->description !!}
               <br>
               <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
@@ -55,7 +55,7 @@ Services
             <div class="container col-md-6 apartment-txt">
               <h1>{{ $service->name }}</h1>
               <br>
-              <p>{{ $service->description }}</p>
+              {!! $service->description !!}
               <br>
              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
             </div>

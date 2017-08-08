@@ -547,6 +547,7 @@ ul {
 }
 
 .opening-img img{
+    image-orientation: from-image;
     padding-top: 80px;
     width: 100%;
     height: auto;
