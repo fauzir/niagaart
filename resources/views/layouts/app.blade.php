@@ -16,7 +16,7 @@
     <link href="{{ asset('assets/apple-touch-icon-120x120.png') }}" rel="apple-touch-icon" sizes="120x120" />
     <link href="{{ asset('assets/apple-touch-icon-144x144.png') }}" rel="apple-touch-icon" sizes="144x144" />
     <link href="{{ asset('assets/apple-touch-icon-152x152.png') }}" rel="apple-touch-icon" sizes="152x152" />
-    <link href="/humans.txt" rel="author" />
+    <link href="{{ asset('human.txt') }}" rel="author" />
     <!-- Bootstrap -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     {{-- <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet"> --}}
