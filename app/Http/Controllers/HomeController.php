@@ -50,7 +50,7 @@ class HomeController extends Controller
         $others = $this->layoutapp()->get('others');
         $servicefooters = $this->layoutapp()->get('servicefooters');
         $socials = $this->layoutapp()->get('socials');
-        $services = Service::limit(3)->select('id', 'image', 'name', 'description', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
+        $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
         $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
         $testimonies = Testimony::all();
         $promos = Promotion::where('status', 'yes')->get();
