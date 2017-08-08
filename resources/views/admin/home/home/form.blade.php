@@ -7,7 +7,7 @@
 </div><div class="form-group {{ $errors->has('company_description') ? 'has-error' : ''}}">
     {!! Form::label('company_description', 'Company Description', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::textarea('company_description', null, ['class' => 'form-control', 'required' => 'required']) !!}
+        {!! Form::textarea('company_description', null, ['class' => 'form-control ckeditor', 'required' => 'required']) !!}
         {!! $errors->first('company_description', '<p class="help-block">:message</p>') !!}
     </div>
 </div>

@@ -13,7 +13,7 @@ Projects
           <div id="text-carousel" class="carousel slide featured-projects" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="row">
-        <div class="col-xs-offset-2 col-xs-8">
+        <div class="container">
             <div class="carousel-inner">
               @foreach($featureds as $index => $featured)
                 <div class="item @if($index == 0) {{ 'active' }} @endif">
@@ -24,7 +24,7 @@ Projects
                                 <h2>{{ $featured->name }}</h2>
                                 <br>
                                 @if ( strlen($featured->description) > 0 )
-                                  <p>{{ $featured->description }}</p>
+                                  <p>{!! $featured->description !!}</p>
                                 @else
                                   <p>@lang('content.no-desc')</p>
                                 @endif

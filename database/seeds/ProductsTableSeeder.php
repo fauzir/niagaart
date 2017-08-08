@@ -196,10 +196,10 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '2',
+          'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/516.3_ry900x.jpg',
-          'name' => 'Bed Room Set 11',
-          'price' => '0'
+          'name' => 'Kitchen Set 17',
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -263,7 +263,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/389.2_wv8xk4.jpg',
           'name' => 'Kitchen Set 1',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -271,7 +271,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/411_pak7al.jpg',
           'name' => 'Kitchen Set 2',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -279,7 +279,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/439.1_frpt9q.jpg',
           'name' => 'Kitchen Set 3',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -287,7 +287,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/439.2_vhkb2l.jpg',
           'name' => 'Kitchen Set 4',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -295,7 +295,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/439.3_bug8jq.jpg',
           'name' => 'Kitchen Set 5',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -303,7 +303,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'https://cloudinary.com/console/lui/media_library#/dialog/image/upload/441_yp43xs',
           'name' => 'Kitchen Set 6',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -311,7 +311,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/458_pzdxzm.jpg',
           'name' => 'Kitchen Set 7',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -319,7 +319,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/460.1_uc2zdl.jpg',
           'name' => 'Kitchen Set 8',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -327,7 +327,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/472.1_rftble.jpg',
           'name' => 'Kitchen Set 9',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -335,7 +335,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/472_osqnu2.jpg',
           'name' => 'Kitchen Set 10',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -343,7 +343,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901053/504.1_dpgxnd.jpg',
           'name' => 'Kitchen Set 11',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -351,7 +351,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/504.2_hlzi4e.jpg',
           'name' => 'Kitchen Set 12',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -359,7 +359,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/504.3_zdz8dx.jpg',
           'name' => 'Kitchen Set 13',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -367,7 +367,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/510_z4uwyn.jpg',
           'name' => 'Kitchen Set 14',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -375,7 +375,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/523.1_o3umly.jpg',
           'name' => 'Kitchen Set 15',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 
@@ -383,7 +383,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/526_l37nm6.jpg',
           'name' => 'Kitchen Set 16',
-          'price' => '0'
+          'price' => '2,3 Jt/M'
         ]);
         $product->save();
 

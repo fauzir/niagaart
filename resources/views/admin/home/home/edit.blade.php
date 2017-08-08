@@ -77,7 +77,7 @@
     }
     </script>
 
-    <script>
+    {{-- <script>
         CKEDITOR.replace( 'company_description' );
-    </script>
+    </script> --}}
 @endsection

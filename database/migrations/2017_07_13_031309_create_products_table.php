@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->string('service_item_id');
             $table->string('image');
             $table->string('name');
-            $table->integer('price');
+            $table->string('price');
             $table->timestamps();
         });
     }

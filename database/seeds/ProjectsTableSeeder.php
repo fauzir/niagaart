@@ -12,6 +12,48 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
         $project = new \App\Project([
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-livingroom_mf9bv4.jpg',
+          'name' => 'Living Room',
+          'description' => '<p>Konsep desain <strong></strong></p>
+          <p>Warna <strong>Desain Akar Pohon</strong></p>
+          <p>Ukuran <strong>Natural - Hijau, Putih dan Serat Kayu</strong></p>
+          <p>Sofa Minimalis + Laci <strong>2.00 meter</strong></p>
+          <p>Sofa <strong>2.00 meter</strong></p>
+          <p>Back Drop <strong>1.80 meter</strong></p>
+          <p>Partisi Akar <strong>3.00 meter</strong></p>
+          <p>Rak Gantung TV <strong>2.40 meter</strong></p>
+          <p>Ambalan 3pcs <strong>0.20x0.20 meter</strong></p>
+          <p>Bahan Baku <strong>Multiplex</strong></p>
+          <p>Finishing Dalam <strong>supercone putih</strong></p>
+          <p>Finishing Luar <strong>HPL (kode warna: 001aa 008aa & 217aa)</strong></p>
+          <p>Aksesoris <strong>Kaca Cermin & Lampu LED</strong></p>',
+          'status' => 'yes'
+        ]);
+        $project->save();
+
+        $project = new \App\Project([
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-jakarta_ukgydz.jpg',
+          'name' => 'Kitchen Set Minimalis Jakarta',
+          'description' => '<p><strong>Ukuran</strong></p>
+          <p>Kabinet Atas <strong>1.20x0.40x1.00 meter</strong></p>
+          <p>Kabinet Kitchen Bawah <strong>(2.40+1.20)x0.60x0.80 meter</strong></p>
+          <p>Lemari Kulkas <strong>2.00x2.00x0.60 meter</strong></p>
+          <p>Mini Bar <strong>2.00 x 0.80 meter</strong></p>
+          <p><strong>Bahan Baku</strong></p>
+          <p>Multiplex</p>
+          <p>Finishing dalam supercone putih</p>
+          <p>Finishing luar HPL (kode warna: 001aa, 217aa)</p>
+          <p><strong>Aksesoris</strong></p>
+          <p>Kompor+oven</p>
+          <p>Filtrex</p>
+          <p>Sing/bak cuci piring</p>
+          <p>Rak piring</p>
+          <p>Lampu LED</p>',
+          'status' => 'yes'
+        ]);
+        $project->save();
+
+        $project = new \App\Project([
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072685/Bed_hcl14f.jpg',
           'name' => 'Kids Bed',
           'description' => '',
@@ -31,7 +73,7 @@ class ProjectsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072689/Desk_2_izpxzy.jpg',
           'name' => 'Kid Desk 2',
           'description' => '',
-          'status' => 'yes'
+          'status' => 'no'
         ]);
         $project->save();
 
@@ -103,7 +145,7 @@ class ProjectsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072680/TV_2_enz2yu.jpg',
           'name' => 'TV 2',
           'description' => '',
-          'status' => 'yes'
+          'status' => 'no'
         ]);
         $project->save();
 
@@ -159,7 +201,7 @@ class ProjectsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072696/Simple_Kitchen_Set_2_sbkz79.jpg',
           'name' => 'Simple Kitchen Set',
           'description' => '',
-          'status' => 'yes'
+          'status' => 'no'
         ]);
         $project->save();
 
@@ -183,7 +225,7 @@ class ProjectsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072709/Black_Style_Kitchen_Table_with_Chair_aj4lbv.jpg',
           'name' => 'Black Style Kitchen Table with Chair',
           'description' => '',
-          'status' => 'yes'
+          'status' => 'no'
         ]);
         $project->save();
 
@@ -287,7 +329,7 @@ class ProjectsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502072716/Decorative_Stair_emyp0t.jpg',
           'name' => 'Decorative Stair',
           'description' => '',
-          'status' => 'yes'
+          'status' => 'no'
         ]);
         $project->save();
 
