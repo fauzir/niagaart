@@ -38,8 +38,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-      <span>{{ Feed::link(url('/en/blog/feed'), 'text/xml') }}</span>
    </head>
+   <span>{{ Feed::link(url('/en/blog/feed'), 'text/xml') }}</span>
    <body>
 <section>
    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -56,7 +56,6 @@
          <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-blog">
                <li>
-                   <ul>
                      {!! Form::open(['method' => 'GET', 'url' => '/'.request()->route()->locale.'/blog', 'class' => 'navbar-form', 'role' => 'search'])  !!}
                      <div class="input-group">
                          <input type="text" class="form-control blog-search" name="search" placeholder="Search">
@@ -67,7 +66,6 @@
                          </span>
                      </div>
                      {!! Form::close() !!}
-                   </ul>
                </li>
                <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}" title="Homepage | Niaga Art">@lang('content.to-our-site') >></a></li>
             </ul>

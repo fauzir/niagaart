@@ -61,7 +61,7 @@ All Post
                       <br>
                       <img src="{{ asset($popular->image) }}" alt="{{ $popular->title }} | Niaga Art Blog">
                       <br>
-                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}" title="{{ $populer->title }} | Niaga Art">@lang('content.read-more')</a></p>
+                      <p>{!! substr($popular->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $popular->slug]) }}" title="{{ $popular->title }} | Niaga Art">@lang('content.read-more')</a></p>
                       <hr>
                   </div>
                   @endforeach
