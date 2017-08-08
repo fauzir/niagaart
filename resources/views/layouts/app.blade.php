@@ -52,19 +52,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('home', ['locale' => request()->route()->locale]) }}"><img src="{{ asset('frontend/images/niagaart-logo.png') }}" alt="Logo | Niaga Art" ></a>
+                <a class="navbar-brand" href="{{ route('home', ['locale' => request()->route()->locale]) }}" title="Homepage | Niaga Art"><img src="{{ asset('frontend/images/niagaart-logo.png') }}" alt="Logo | Niaga Art" ></a>
              </div>
              <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                   <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}">HOME</a></li>
+                   <li><a href="{{ route('home', ['locale' => request()->route()->locale]) }}" title="Homepage | Niaga Art">HOME</a></li>
                    <li class="dropdown">
-                        <a href="{{ route('service.all', ['locale' => request()->route()->locale]) }}" title="SERVICES" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
+                        <a href="{{ route('service.all', ['locale' => request()->route()->locale]) }}" title="Services | Niaga Art" class="dropdown-toggle js-navmenu-service" data-toggle="dropdown">SERVICES <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.interior', ['locale' => request()->route()->locale]) }}" tabindex="-1">INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.interior', ['locale' => request()->route()->locale]) }}" title="Interior Service | Niaga Art" tabindex="-1">INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($interiors as $interior)
-                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $interior->slug]) }}" title="{{ $interior->name }}">{{ $interior->name }}</a></li>
+                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $interior->slug]) }}" title="{{ $interior->name }} | Niaga Art">{{ $interior->name }}</a></li>
                                  @endforeach
                               </ul>
                            </li>
@@ -74,19 +74,19 @@
                               <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($others as $other)
-                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $other->slug]) }}" title="{{ $other->name }}">{{ $other->name }}</a></li>
+                                 <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $other->slug]) }}" title="{{ $other->name }} | Niaga Art">{{ $other->name }}</a></li>
                                  @endforeach
                               </ul>
                            </li>
                            <!--end submenu-->
                         </ul>
                    </li>
-                   <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}">PROJECTS</a></li>
-                   <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}">ABOUT</a></li>
-                   <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}">CONTACT US</a></li>
-                   <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}">BLOG</a></li>
-                   <li class="language-en"><a href="{{ route('home', ['locale' => 'en']) }}" class="en"><img src="{{ asset('frontend/images/EN.png') }}" alt="England Flag | Niaga Art" ></a></li>
-                   <li class="language-ina"><a href="{{ route('home', ['locale' => 'id']) }}" class="id"><img src="{{ asset('frontend/images/ID.png') }}" alt="Indonesia Flag | Niaga Art" ></a></li>
+                   <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}" title="Projects | Niaga Art">PROJECTS</a></li>
+                   <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}" title="About | Niaga Art">ABOUT</a></li>
+                   <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}" title="Contact | Niaga Art">CONTACT US</a></li>
+                   <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}" title="Blog | Niaga Art">BLOG</a></li>
+                   <li class="language-en"><a href="{{ route('home', ['locale' => 'en']) }}" title="Homepage | Niaga Art" class="en"><img src="{{ asset('frontend/images/EN.png') }}" alt="England Flag | Niaga Art" ></a></li>
+                   <li class="language-ina"><a href="{{ route('home', ['locale' => 'id']) }}" title="Homepage | Niaga Art" class="id"><img src="{{ asset('frontend/images/ID.png') }}" alt="Indonesia Flag | Niaga Art" ></a></li>
                 </ul>
              </div>
              <!--/.nav-collapse -->
@@ -105,7 +105,7 @@
                <div class="service-ty col-md-3 col-sm-3">
                <h3>@lang('content.services')</h3>
                     @foreach ($servicefooters as $servicefooter)
-                      <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" target="_blank">{{ $servicefooter->name }}</a>
+                      <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" title="{{ $servicefooter->name }} | Niaga Art" target="_blank">{{ $servicefooter->name }}</a>
                       <br>
                     @endforeach
                </div>
@@ -115,10 +115,10 @@
                </div>
                <div class="contact-add col-md-3 col-sm-3">
                <h3>@lang('content.contact')</h3>
-                 <p><a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
-                 <p><a href="tel:{{ str_replace (" ", "", $contact->phone) }}">{{ $contact->phone }}</a>
+                 <p><a href="mailto:{{ $contact->email }}" title="Contact Email | Niaga Art">{{ $contact->email }}</a></p>
+                 <p><a href="tel:{{ str_replace (" ", "", $contact->phone) }}" title="Contact Phone | Niaga Art">{{ $contact->phone }}</a>
                     <br>
-                    <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}">{{ $contact->other_phone }}</a>
+                    <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}" title="Contact Message | Niaga Art">{{ $contact->other_phone }}</a>
                  </p>
                </div>
                <div class="clearfix col-md-12 col-sm-12">
@@ -132,7 +132,7 @@
                <div class="col-md-4 col-sm-4">
                   <div class="social-icon">
                       @foreach ($socials as $social)
-                        <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                        <a href="{{ url($social->url) }}"  title="{{ $social->name }} | Niaga Art" target="_blank"><i class="{{ $social->icon }}"></i></a>
                         &nbsp;&nbsp;
                       @endforeach
                   </div>

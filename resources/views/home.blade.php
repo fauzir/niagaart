@@ -66,7 +66,7 @@ Homepage
           <div class="row service-label">
           @foreach($services as $service)
           <div class="col-xs-12 col-sm-6 col-md-4">
-              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="thumbnail thumbnail-service wow fadeInRight">
+              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="thumbnail thumbnail-service wow fadeInRight">
                   <img src="{{ asset($service->image) }}" style="height: 205px;" alt="{{ $service->name }} | Niaga Art">
                   <div class="caption">
                     <h3>{{ $service->name }}</h3>
@@ -144,7 +144,7 @@ Homepage
               </div>
             </div>
             <div class="media-body article-showcase">
-              <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}">{{ $blog->title }}</a></h2>
+              <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}"  title="{{ $blog->title }} | Niaga Art Blog">{{ $blog->title }}</a></h2>
               <p>{{ $blog->author }}</p>
             </div>
           </div>

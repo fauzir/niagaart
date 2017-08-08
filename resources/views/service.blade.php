@@ -66,7 +66,7 @@ Services
          <div class="row service-label">
            @foreach($servicechunk as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
-               <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" data-target="#myModal">
+               <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" title="{{ $serviceitem->name }} | Niaga Art" data-target="#myModal">
                   <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
                      @if ( strlen($serviceitem->name) > 29 )

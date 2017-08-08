@@ -35,7 +35,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
+              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
               <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
@@ -57,7 +57,7 @@ Services
               <br>
               <p>{{ $service->description }}</p>
               <br>
-             <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
+             <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
             </div>
           </div>
         </div>

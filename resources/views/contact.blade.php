@@ -20,11 +20,11 @@ Contact
                 <br>
                 <p class="wow fadeInUp">{{ $contact->address }}</p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.phone') : <a href="tel:{{ str_replace (" ", "", $contact->phone) }}">{{ $contact->phone }}</a></p>
+                <p class="wow fadeInUp">@lang('content.phone') : <a href="tel:{{ str_replace (" ", "", $contact->phone) }}" title="Contact Phone | Niaga Art">{{ $contact->phone }}</a></p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.message') : <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}">{{ $contact->other_phone }}</a></p>
+                <p class="wow fadeInUp">@lang('content.message') : <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}" title="Contact Message | Niaga Art">{{ $contact->other_phone }}</a></p>
                 <br>
-                <p class="wow fadeInUp">@lang('content.email') : <a href="mailto:{{ $contact->email }}">{{ $contact->email }}</a></p>
+                <p class="wow fadeInUp">@lang('content.email') : <a href="mailto:{{ $contact->email }}" title="Contact Email | Niaga Art">{{ $contact->email }}</a></p>
                 <br>
               @foreach($workHours as $workHour)
                 <p class="wow fadeInUp">{{ $workHour }}</p>
@@ -32,7 +32,7 @@ Contact
               @endforeach
                 <div class="address-socicon">
                   @foreach ($socials as $social)
-                    <a href="{{ url($social->url) }}" target="_blank"><i class="{{ $social->icon }}"></i></a>
+                    <a href="{{ url($social->url) }}" title="{{ $social->name }} | Niaga Art" target="_blank"><i class="{{ $social->icon }}"></i></a>
                     &nbsp;&nbsp;
                   @endforeach
                 </div>
