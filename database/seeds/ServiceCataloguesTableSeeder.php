@@ -21,7 +21,8 @@ class ServiceCataloguesTableSeeder extends Seeder
         $servicecatalogue = new \App\ServiceCatalogue([
           'image_header' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726579/interior-designer_zlmnye.jpg',
           'opening_title' => 'Layanan Kami',
-          'opening_text' => 'Konsep desain minimalis yang kami terapkan seperti interior pada apartemen, rumah/hunian, hotel, perkantoran, pertokoan yang mengutamakan kegunaan produk berdasarkan fungsinya yang di desain  artistik untuk memberikan kesan nyaman dan indah pada ruangan Anda.'
+          'opening_text' => 'Menjadikan suatu ruangan nyaman dan tertata sebagaimana fungsinya merupakan harapan banyak orang. Desain interior minimalis bisa dijadikan solusi untuk mewujudkan harapan tersebut, karena desain ini cenderung menekankan pada sisi fungsional terutama bagi mereka yang memiliki ruangan yang cenderung terbatas atau berukuran kecil.
+Konsep minimalis ini memberi kesan sederhana tapi elegan, hal ini tentunya bisa menutupi kekurangan dari hunian yang berdiri di lahan terbatas. Hal ini karena konsep minimalis ini memang memberikan kesan ‘luas’ bagi suatu ruangan. Kuncinya berada pada teknik penataan barang yang sebisa mungkin tidak ditata di atas furniture, alih-alih menata perabot di atas furniture, konsep ini lebih mengutamakan menata barang-barang di dalam furniture untuk menjaga kerapihan. Untuk menghindari penataan ruangan yang cenderung monoton, maka desain minimalis ini memerlukan peran hiasan seperti vas bunga, bingkai foto, dll yang tentunya berkarakter sejalan dengan konsep minimalis itu sendiri.'
         ]);
         $servicecatalogue->save();
     }

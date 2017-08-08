@@ -17,7 +17,7 @@ Services
               <h1>{{ $servicecatalogues->opening_title }}</h1>
               <br>
               <h1>@lang('content.this-is-what-done')</h1>
-              <p>{!! $servicecatalogues->opening_text !!}</p>
+              <p>{{ $servicecatalogues->opening_text }}</p>
             </div>
           </div>
         </div>
