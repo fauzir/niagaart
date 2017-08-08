@@ -36,7 +36,7 @@ Services
                            @foreach ($promos as $index => $promo)
                            <div class="item @if($index == 0) {{ 'active' }} @endif">
                               <img src="{{ asset('frontend/images/Sale-Banner1.jpg') }}" alt="{{ $promo->name }} | Niaga Art" style="width:100%;">
-                              <div class="carousel-caption">
+                              <div class="carousel-caption promo-text">
                                 <h1>{{ $promo->sale }}</h1>
                                 <p>{{ $promo->name }}</p>
                               </div>
