@@ -39,9 +39,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
    </head>
-   <span>{{ Feed::link(url('/en/blog/feed'), 'text/xml') }}</span>
    <body>
-<section>
+   <span>{{ Feed::link(url('/en/blog/feed'), 'text/xml') }}</span>
    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
          <div class="navbar-header">
@@ -73,7 +72,6 @@
          <!--/.nav-collapse -->
       </div>
    </div>
-</section>
   @yield('content')
   {{-- <script src="{{ asset('frontend/js/disqus.js') }}"></script> --}}
   {{-- <script>
@@ -95,7 +93,6 @@
   })();
   </script> --}}
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </body>
  <!-- Footer Section -->
    <footer>
      <div class="container">

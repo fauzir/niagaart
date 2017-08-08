@@ -37,7 +37,7 @@ Services
                            <div class="item @if($index == 0) {{ 'active' }} @endif">
                               <img src="{{ asset('frontend/images/Sale-Banner1.jpg') }}" alt="{{ $promo->name }} | Niaga Art" style="width:100%;">
                               <div class="carousel-caption promo-text">
-                                <h1>{{ $promo->sale }}</h1>
+                                <h2>{{ $promo->sale }}</h2>
                                 <p>{{ $promo->name }}</p>
                               </div>
                            </div>
