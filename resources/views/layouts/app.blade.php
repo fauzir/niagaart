@@ -84,7 +84,7 @@
                    <li><a href="{{ route('projects', ['locale' => request()->route()->locale]) }}" title="Projects | Niaga Art">PROJECTS</a></li>
                    <li><a href="{{ route('about', ['locale' => request()->route()->locale]) }}" title="About | Niaga Art">ABOUT</a></li>
                    <li><a href="{{ route('contact', ['locale' => request()->route()->locale]) }}" title="Contact | Niaga Art">CONTACT US</a></li>
-                   <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}" title="Blog | Niaga Art">BLOG</a></li>
+                   <li><a href="{{ route('blog', ['locale' => request()->route()->locale]) }}" title="Blog | Niaga Art" target="_blank">BLOG</a></li>
                    <li class="language-en"><a href="{{ route('home', ['locale' => 'en']) }}" title="Homepage | Niaga Art" class="en"><img src="{{ asset('frontend/images/EN.png') }}" alt="England Flag | Niaga Art" ></a></li>
                    <li class="language-ina"><a href="{{ route('home', ['locale' => 'id']) }}" title="Homepage | Niaga Art" class="id"><img src="{{ asset('frontend/images/ID.png') }}" alt="Indonesia Flag | Niaga Art" ></a></li>
                 </ul>
@@ -104,10 +104,10 @@
                </div>
                <div class="service-ty col-md-3 col-sm-3">
                <h3>@lang('content.services')</h3>
-                    @foreach ($servicefooters as $servicefooter)
-                      <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $servicefooter->slug]) }}" title="{{ $servicefooter->name }} | Niaga Art" target="_blank">{{ $servicefooter->name }}</a>
+                      <a href="{{ route('service.interior', ['locale' => request()->route()->locale]) }}" title="Interior Design | Niaga Art">Interior Design</a>
                       <br>
-                    @endforeach
+                      <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" title="Other Interior | Niaga Art">Other Interior</a>
+                      <br>
                </div>
                <div class="office-add col-md-3 col-sm-3">
                  <h3>@lang('content.office')</h3>

@@ -1,3 +1,4 @@
+<img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
 <!-- Modal Header -->
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -13,7 +14,7 @@
                     <h2>{{ $project->name }}</h2>
                     <br>
                     @if ( strlen($project->description) > 0 )
-                      <p>{{ $project->description }}</p>
+                      <p>{!! $project->description !!}</p>
                     @else
                       <p>@lang('content.no-desc')</p>
                     @endif
@@ -62,4 +63,41 @@
 </div>
 <!-- Modal Footer -->
 <div class="modal-footer">
-</div>
+  @if ($project->id == $itemcount)
+    <div class="col-md-6 previous-arrow">
+       <a href="#" class="project" data-id="{{ $project->id-1 }}" title="previous-item"><p><< Previous</p></a>
+    </div>
+  @elseif ($project->id == 1)
+    <div class="col-md-6 next-arrow">
+       <a href="#" class="project" data-id="{{ $project->id+1 }}" title="next-item"><p>Next >></p></a>
+    </div>
+  @else
+    <div class="col-md-6 previous-arrow">
+       <a href="#" class="project" data-id="{{ $project->id-1 }}" title="previous-item"><p><< Previous</p></a>
+    </div>
+    <div class="col-md-6 next-arrow">
+       <a href="#" class="project" data-id="{{ $project->id+1 }}" title="next-item"><p>Next >></p></a>
+    </div>
+  @endif
+
+           </div>
+
+<script>
+$(".project").on("click", function () {
+ var projectId = $(this).data('id');
+       $.ajax({
+          url: '/projects/item/' + projectId + '',
+          type: "get",
+          beforeSend: function() {
+            $("#loading-image").show();
+          },
+          success: function(response){
+            $('.modal-content').html(response)
+            $("#loading-image").hide();
+          },
+          error: function(response){
+            console.log('Error '+response);
+          }
+        });
+  });
+</script>

@@ -14,7 +14,7 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Konsultasi & Desain Interior',
           'sale' => 'GRATIS',
-          'class' => 'sale-carousel1',
+          'class' => 'sale-interior',
           'status' => 'yes'
         ]);
         $promotion->save();
@@ -22,7 +22,7 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Harga Kitchen Set',
           'sale' => 'Mulai Rp.1,4jt/meter',
-          'class' => 'sale-carousel2',
+          'class' => 'sale-kitchen-set',
           'status' => 'yes'
         ]);
         $promotion->save();
@@ -30,7 +30,7 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Produk Kompor Modena',
           'sale' => 'DISKON 10%',
-          'class' => 'sale-carousel3',
+          'class' => 'sale-modena-kompor',
           'status' => 'yes'
         ]);
         $promotion->save();
@@ -38,7 +38,7 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Parquet Vinyl',
           'sale' => 'Mulai Rp. 129rb/m²',
-          'class' => 'sale-carousel4',
+          'class' => 'sale-parquet-vinyl',
           'status' => 'yes'
         ]);
         $promotion->save();
@@ -46,7 +46,7 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Beli Kitchen Set',
           'sale' => 'GRATIS Rak Piring',
-          'class' => 'sale-carousel1',
+          'class' => 'sale-rak-piring',
           'status' => 'yes'
         ]);
         $promotion->save();
@@ -54,24 +54,8 @@ class PromotionsTableSeeder extends Seeder
         $promotion = new \App\Promotion([
           'name' => 'Onna Vertical Blind',
           'sale' => 'DISKON 10%',
-          'class' => 'sale-carousel2',
+          'class' => 'sale-onna-vertical-blind',
           'status' => 'yes'
-        ]);
-        $promotion->save();
-
-        $promotion = new \App\Promotion([
-          'name' => 'Your Promo Title',
-          'sale' => 'Your Sale Description',
-          'class' => 'sale-carousel3',
-          'status' => 'no'
-        ]);
-        $promotion->save();
-
-        $promotion = new \App\Promotion([
-          'name' => 'Your Promo Title',
-          'sale' => 'Your Sale Description',
-          'class' => 'sale-carousel4',
-          'status' => 'no'
         ]);
         $promotion->save();
 

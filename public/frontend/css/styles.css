@@ -234,32 +234,48 @@ ul {
         opacity: 60%;
     }
 
-.sale-carousel1{
-    background-image: url(../images/Sale-Banner2.jpg);
+.sale-interior{
+    background-image: url(../images/Sale-Interior.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
         height: 200px;
 }
 
-.sale-carousel2{
-    background-image: url(../images/Sale-Banner1.jpg);
+.sale-kitchen-set{
+    background-image: url(../images/Sale-Kitchen-Set.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
         height: 200px;
 }
 
-.sale-carousel3{
-    background-image: url(../images/Sale-Banner3.jpg);
+.sale-modena-kompor{
+    background-image: url(../images/Sale-Modena-Kompor.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
         height: 200px;
 }
 
-.sale-carousel4{
-    background-image: url(../images/Sale-Banner4.jpg);
+.sale-onna-vertical-blind{
+    background-image: url(../images/Sale-Onna-Vertical-Blind.jpg);
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+        height: 200px;
+}
+
+.sale-parquet-vinyl{
+    background-image: url(../images/Sale-Parquet-Vinyl.jpg);
+        text-align: center;
+        font-size: 18px;
+        width: 100%;
+        height: 200px;
+}
+
+.sale-rak-piring{
+    background-image: url(../images/Sale-Rak-Piring.jpg);
         text-align: center;
         font-size: 18px;
         width: 100%;
@@ -1548,4 +1564,53 @@ footer {
     cursor: pointer;
     font-size: 16px;
     text-decoration: none;
+}
+.social-icon a:hover{
+   color: rgb(241,78,78);
+   -webkit-transition: all 0.2s ease-in-out;
+ -moz-transition: all 0.2s ease-in-out;
+ -o-transition: all 0.2s ease-in-out;
+ transition: all 0.2s ease-in-out;
+}
+
+.carousel-control span{
+   color: #cf0810 ;
+}
+
+.previous-arrow,
+.previous-arrow p
+{
+   text-align: left;
+   font-size: 18px;
+}
+
+.next-arrow,
+.next-arrow p
+{
+   text-align: right;
+   font-size: 18px;
+}
+
+.previous-arrow:hover,
+.previous-arrow p:hover
+{
+   text-align: left;
+   font-size: 18px;
+   color: #cf0810 ;
+       -webkit-transition: all 1s ease-in-out;
+ -moz-transition: all 1s ease-in-out;
+ -o-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+}
+
+.next-arrow:hover,
+.next-arrow p:hover
+{
+   text-align: right;
+   font-size: 18px;
+   color: #cf0810 ;
+       -webkit-transition: all 1s ease-in-out;
+ -moz-transition: all 1s ease-in-out;
+ -o-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
 }

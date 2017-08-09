@@ -149,16 +149,6 @@ Homepage
             </div>
           </div>
           @endforeach
-          {{-- <div class="media">
-            <div class="media-left">
-              <div class="date"><h1>20</h1></div>
-              <div class="month"><p>Jul</p></div>
-            </div>
-            <div class="media-body">
-              <h1>Your Blog Title Here</h1>
-              <p>Here is your blog subtitle and short explanation here</p>
-              </div>
-            </div> --}}
           </div>
           <div class="container col-md-6 wow fadeInUp">
           <h2>WHAT'S NEW</h2>
@@ -167,4 +157,5 @@ Homepage
         </div>
         </div>
     </section>
+    <br>
 @endsection

@@ -1,3 +1,4 @@
+<img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
 <!-- Modal Header -->
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -45,4 +46,41 @@
       </div>
 <!-- Modal Footer -->
 <div class="modal-footer">
-</div>
+  @if ($serviceitem->id == $itemcount)
+    <div class="col-md-6 previous-arrow">
+       <a href="#" class="product" data-id="{{ $serviceitem->id-1 }}" title="previous-item"><p><< Previous</p></a>
+    </div>
+  @elseif ($serviceitem->id == 1)
+    <div class="col-md-6 next-arrow">
+       <a href="#" class="product" data-id="{{ $serviceitem->id+1 }}" title="next-item"><p>Next >></p></a>
+    </div>
+  @else
+    <div class="col-md-6 previous-arrow">
+       <a href="#" class="product" data-id="{{ $serviceitem->id-1 }}" title="previous-item"><p><< Previous</p></a>
+    </div>
+    <div class="col-md-6 next-arrow">
+       <a href="#" class="product" data-id="{{ $serviceitem->id+1 }}" title="next-item"><p>Next >></p></a>
+    </div>
+  @endif
+
+           </div>
+
+<script>
+$(".product").on("click", function () {
+ var serviceitemId = $(this).data('id');
+       $.ajax({
+          url: '/service/item/' + serviceitemId + '',
+          type: "get",
+          beforeSend: function() {
+            $("#loading-image").show();
+          },
+          success: function(response){
+            $('.modal-content').html(response)
+            $("#loading-image").hide();
+          },
+          error: function(response){
+            console.log('Error '+response);
+          }
+        });
+  });
+</script>

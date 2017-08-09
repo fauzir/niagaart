@@ -27,7 +27,7 @@ class ServiceController extends Controller
         $promos = Promotion::where('status', 'yes')->get();
         $services = Service::where('slug', $request->slug)->get();
         foreach ($services as $service) {
-          $serviceitems = ServiceItem::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(9);
+          $serviceitems = ServiceItem::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(15);
         }
         return view('service', compact('interiors', 'others', 'servicefooters', 'promos', 'services', 'serviceitems', 'socials', 'contact'));
     }
@@ -91,7 +91,8 @@ class ServiceController extends Controller
     {
         $id = $request->id;
         $serviceitem = ServiceItem::find($id);
-        $products = Product::where('service_item_id', $id)->get();
-        return view('service-item', compact('serviceitem', 'products'));
+        $itemcount = ServiceItem::where('service_id', 1)->count();
+        $products = Product::where('service_item_id', $serviceitem->id)->get();
+        return view('service-item', compact('serviceitem', 'itemcount', 'products'));
     }
 }
