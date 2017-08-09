@@ -14,19 +14,7 @@ class ProjectsTableSeeder extends Seeder
         $project = new \App\Project([
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-livingroom_mf9bv4.jpg',
           'name' => 'Living Room',
-          'description' => '<p>Konsep desain <strong></strong></p>
-          <p>Warna <strong>Desain Akar Pohon</strong></p>
-          <p>Ukuran <strong>Natural - Hijau, Putih dan Serat Kayu</strong></p>
-          <p>Sofa Minimalis + Laci <strong>2.00 meter</strong></p>
-          <p>Sofa <strong>2.00 meter</strong></p>
-          <p>Back Drop <strong>1.80 meter</strong></p>
-          <p>Partisi Akar <strong>3.00 meter</strong></p>
-          <p>Rak Gantung TV <strong>2.40 meter</strong></p>
-          <p>Ambalan 3pcs <strong>0.20x0.20 meter</strong></p>
-          <p>Bahan Baku <strong>Multiplex</strong></p>
-          <p>Finishing Dalam <strong>supercone putih</strong></p>
-          <p>Finishing Luar <strong>HPL (kode warna: 001aa 008aa & 217aa)</strong></p>
-          <p>Aksesoris <strong>Kaca Cermin & Lampu LED</strong></p>',
+          'description' => '<h3>Konsep desain</h3><table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Warna</p></td><td><p><strong>Desain Akar Pohon</strong></p></td></tr><tr><td><p>Ukuran</p></td><td><p><strong>Natural - Hijau, Putih dan Serat Kayu</strong></p></td></tr><tr><td><p>Sofa Minimalis + Laci</p></td><td><p><strong>2.00 meter</strong></p></td></tr><tr><td><p>Sofa</p></td><td><p><strong>2.00 meter</strong></p></td></tr><tr><td><p>Back Drop</p></td><td><p><strong>1.80 meter</strong></p></td></tr><tr><td><p>Partisi Akar</p></td><td><p><strong>3.00 meter</strong></p></td></tr><tr><td><p>Rak Gantung TV</p></td><td><p><strong>2.40 meter</strong></p></td></tr><tr><td><p>Ambalan 3pcs</p></td><td><p><strong>0.20x0.20 meter</strong></p></td></tr><tr><td><p>Bahan Baku</p></td><td><p><strong>Multiplex</strong></p></td></tr><tr><td><p>Finishing Dalam</p></td><td><p><strong>supercone putih</strong></p></td></tr><tr><td><p>Finishing Luar</p></td><td><p><strong>HPL (kode warna: 001aa 008aa &amp; 217aa)</strong></p></td></tr><tr><td><p>Aksesoris</p></td><td><p><strong>Kaca Cermin &amp; Lampu LED</strong></p></td></tr></tbody></table>',
           'status' => 'yes'
         ]);
         $project->save();
@@ -34,21 +22,7 @@ class ProjectsTableSeeder extends Seeder
         $project = new \App\Project([
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-jakarta_ukgydz.jpg',
           'name' => 'Kitchen Set Minimalis Jakarta',
-          'description' => '<p><strong>Ukuran</strong></p>
-          <p>Kabinet Atas <strong>1.20x0.40x1.00 meter</strong></p>
-          <p>Kabinet Kitchen Bawah <strong>(2.40+1.20)x0.60x0.80 meter</strong></p>
-          <p>Lemari Kulkas <strong>2.00x2.00x0.60 meter</strong></p>
-          <p>Mini Bar <strong>2.00 x 0.80 meter</strong></p>
-          <p><strong>Bahan Baku</strong></p>
-          <p>Multiplex</p>
-          <p>Finishing dalam supercone putih</p>
-          <p>Finishing luar HPL (kode warna: 001aa, 217aa)</p>
-          <p><strong>Aksesoris</strong></p>
-          <p>Kompor+oven</p>
-          <p>Filtrex</p>
-          <p>Sing/bak cuci piring</p>
-          <p>Rak piring</p>
-          <p>Lampu LED</p>',
+          'description' => '<p><strong>Ukuran</strong></p><table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Kabinet Atas</p></td><td><p><strong>1.20x0.40x1.00 meter</strong></p></td></tr><tr><td><p>Kabinet Kitchen Bawah</p></td><td><p><strong>(2.40+1.20)x0.60x0.80 meter</strong></p></td></tr><tr><td><p>Lemari Kulkas</p></td><td><p><strong>2.00x2.00x0.60 meter</strong></p></td></tr><tr><td><p>Mini Bar</p></td><td><p><strong>2.00 x 0.80 meter</strong></p></td></tr></tbody></table><p>&nbsp;</p><p><strong>Bahan Baku</strong></p><table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Multiplex</p></td></tr><tr><td><p>Finishing dalam supercone putih</p></td></tr><tr><td><p>Finishing luar HPL (kode warna: 001aa, 217aa)</p></td></tr></tbody></table><p>&nbsp;</p><p><strong>Aksesoris</strong></p><table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Kompor+oven</p></td></tr><tr><td><p>Filtrex</p></td></tr><tr><td><p>Sing/bak cuci piring</p></td></tr><tr><td><p>Rak piring</p></td></tr><tr><td><p>Lampu LED</p></td></tr></tbody></table>',
           'status' => 'yes'
         ]);
         $project->save();

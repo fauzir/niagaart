@@ -10,13 +10,13 @@
   <div class="row">
       <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" >
       <br>
-      <div class="container col-md-8">
+      <div class="container col-md-8 detail-item">
         <h2>DETAIL</h2>
         <br>
         {!! $serviceitem->detail !!}
 
       </div>
-      <div class="container col-md-4">
+      <div class="container col-md-4 desc-item">
         <h2>DESCRIPTION</h2>
         <br>
         @if ( strlen($serviceitem->description) > 0 )
@@ -43,7 +43,9 @@
           </div>
           @endforeach
         </div>
+
       </div>
+
 <!-- Modal Footer -->
 <div class="modal-footer">
   @if ($serviceitem->id == $itemcount)
@@ -64,6 +66,9 @@
   @endif
 
            </div>
+
+
+
 
 <script>
 $(".product").on("click", function () {

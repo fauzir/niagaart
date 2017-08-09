@@ -110,6 +110,10 @@ p {
     color: #666;
 }
 
+b{
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1200px) {
     p{
         font-size: 20px;
@@ -565,6 +569,7 @@ ul {
 .opening-img img{
     image-orientation: from-image;
     padding-top: 80px;
+    margin-bottom: 30px;
     width: 100%;
     height: auto;
 }
@@ -846,6 +851,7 @@ ul {
     width: 100%;
     height: auto;
     padding-top: 220px;
+    margin-bottom: 30px;
     animation: slideUp 0.85s .5s cubic-bezier(0.17,
     .88,
     .32,
@@ -900,12 +906,23 @@ ul {
     color: #fff;
     box-shadow: none;
     min-width: 300px;
+    margin-bottom: 30px;
 }
 
 .btn-homeliving a{
     background-color: transparent;
     color: #fff;
     box-shadow: none;
+}
+
+.btn-homeliving:hover {
+  border:2px solid #fff;
+  background-color: #fff;
+  color: red;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .btn-homelivingblack{
@@ -915,12 +932,23 @@ ul {
     color: #666;
     box-shadow: none;
     min-width: 300px;
+    margin-bottom: 30px;
 }
 
 .btn-homelivingblack a{
     background-color: transparent;
     color: #666;
     box-shadow: none;
+}
+
+.btn-homelivingblack:hover {
+  border:2px solid #e93d44;
+  background-color: #e93d44;
+  color: #fff;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 
@@ -1054,14 +1082,16 @@ ul {
     text-align: right;
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: black;
+    opacity: 0.8;
 }
 .catalogueheader-txt h1{
     font-size: 55px;
-    color: black;
+    color: #fff;
 }
 .catalogueheader-txt p{
     font-size: 25px;
-    color: black;
+    color: #fff;
 }
 .blog-content {
     background-color: #ececec;
@@ -1252,7 +1282,7 @@ margin-bottom: 2.25rem !important;
     border: 1px solid transparent;
     transition: all 0.4s ease-in-out; }
     .masonry .masonry-item {
-      border: 1px solid #6b6b6b; }
+      border: 1px solid #f0f0f0; }
     .masonry .masonry-item .post-title {
       font-size: 20px; }
     .masonry .masonry-item .post-info {
@@ -1613,4 +1643,26 @@ footer {
  -moz-transition: all 1s ease-in-out;
  -o-transition: all 1s ease-in-out;
  transition: all 1s ease-in-out;
+}
+
+.item-left span, .item-right span{
+   color: #fff;
+   position: relative;
+   position: fixed;
+}
+
+.slide-fixed{
+   color: #fff;
+   position: fixed;
+}
+
+.detail-item p, .detail-item td{
+  text-align: left;
+  font-weight: 300;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.desc-item p{
+  text-align: left;
 }
