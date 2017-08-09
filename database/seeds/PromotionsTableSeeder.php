@@ -13,7 +13,7 @@ class PromotionsTableSeeder extends Seeder
     {
         $promotion = new \App\Promotion([
           'name' => 'Konsultasi & Desain Interior',
-          'sale' => '100% GRATIS',
+          'sale' => 'GRATIS',
           'class' => 'sale-carousel1',
           'status' => 'yes'
         ]);

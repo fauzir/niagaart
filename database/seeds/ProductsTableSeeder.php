@@ -196,17 +196,9 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '3',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/516.3_ry900x.jpg',
-          'name' => 'Kitchen Set 17',
-          'price' => '2,3 Jt/M'
-        ]);
-        $product->save();
-
-        $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/518.1_l9rixy.jpg',
-          'name' => 'Bed Room Set 12',
+          'name' => 'Bed Room Set 11',
           'price' => '0'
         ]);
         $product->save();
@@ -214,7 +206,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/518_voehaz.jpg',
-          'name' => 'Bed Room Set 13',
+          'name' => 'Bed Room Set 12',
           'price' => '0'
         ]);
         $product->save();
@@ -222,7 +214,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/623_tgtdcv.jpg',
-          'name' => 'Bed Room Set 14',
+          'name' => 'Bed Room Set 13',
           'price' => '0'
         ]);
         $product->save();
@@ -230,7 +222,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901054/644_qzhanz.jpg',
-          'name' => 'Bed Room Set 15',
+          'name' => 'Bed Room Set 14',
           'price' => '0'
         ]);
         $product->save();
@@ -238,7 +230,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/X1.1_c5nlop.jpg',
-          'name' => 'Bed Room Set 16',
+          'name' => 'Bed Room Set 15',
           'price' => '0'
         ]);
         $product->save();
@@ -246,7 +238,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/X1.2_sigc0n.jpg',
-          'name' => 'Bed Room Set 17',
+          'name' => 'Bed Room Set 16',
           'price' => '0'
         ]);
         $product->save();
@@ -254,7 +246,7 @@ class ProductsTableSeeder extends Seeder
         $product = new \App\Product([
           'service_item_id' => '2',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/X1_sfpltd.jpg',
-          'name' => 'Bed Room Set 18',
+          'name' => 'Bed Room Set 17',
           'price' => '0'
         ]);
         $product->save();
@@ -301,7 +293,7 @@ class ProductsTableSeeder extends Seeder
 
         $product = new \App\Product([
           'service_item_id' => '3',
-          'image' => 'https://cloudinary.com/console/lui/media_library#/dialog/image/upload/441_yp43xs',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901052/441_yp43xs.jpg',
           'name' => 'Kitchen Set 6',
           'price' => '2,3 Jt/M'
         ]);
@@ -383,6 +375,14 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '3',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901051/526_l37nm6.jpg',
           'name' => 'Kitchen Set 16',
+          'price' => '2,3 Jt/M'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '3',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901055/516.3_ry900x.jpg',
+          'name' => 'Kitchen Set 17',
           'price' => '2,3 Jt/M'
         ]);
         $product->save();

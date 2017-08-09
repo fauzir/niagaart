@@ -1,5 +1,9 @@
 @extends('layouts.backend')
 
+@section('head-script')
+  <script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row">

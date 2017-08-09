@@ -946,5 +946,329 @@ class ServiceItemsTableSeeder extends Seeder
           'detail' => '<p>Price <strong>Rp. 13.000.000</strong></p>'
         ]);
         $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_1.jpg',
+          'name' => 'Wallpaper 1',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_2.jpg',
+          'name' => 'Wallpaper 2',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_3.jpg',
+          'name' => 'Wallpaper 3',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245305/Wall%20Paper/wallpaper_-_4.jpg',
+          'name' => 'Wallpaper 4',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_5.jpg',
+          'name' => 'Wallpaper 5',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_6.jpg',
+          'name' => 'Wallpaper 6',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_7.jpg',
+          'name' => 'Wallpaper 7',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_8.jpg',
+          'name' => 'Wallpaper 8',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_9.jpg',
+          'name' => 'Wallpaper 9',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_10.jpg',
+          'name' => 'Wallpaper 10',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_11.jpg',
+          'name' => 'Wallpaper 11',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_12.jpg',
+          'name' => 'Wallpaper 12',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_13.jpg',
+          'name' => 'Wallpaper 13',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245310/Wall%20Paper/wallpaper_-_14.jpg',
+          'name' => 'Wallpaper 14',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_15.jpg',
+          'name' => 'Wallpaper 15',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245310/Wall%20Paper/wallpaper_-_16.jpg',
+          'name' => 'Wallpaper 16',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245310/Wall%20Paper/wallpaper_-_17.jpg',
+          'name' => 'Wallpaper 17',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245311/Wall%20Paper/wallpaper_-_18.jpg',
+          'name' => 'Wallpaper 18',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245310/Wall%20Paper/wallpaper_-_19.jpg',
+          'name' => 'Wallpaper 19',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245311/Wall%20Paper/wallpaper_-_20.jpg',
+          'name' => 'Wallpaper 20',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245310/Wall%20Paper/wallpaper_-_21.jpg',
+          'name' => 'Wallpaper 21',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245311/Wall%20Paper/wallpaper_-_22.jpg',
+          'name' => 'Wallpaper 22',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245311/Wall%20Paper/wallpaper_-_23.jpg',
+          'name' => 'Wallpaper 23',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245311/Wall%20Paper/wallpaper_-_24.jpg',
+          'name' => 'Wallpaper 24',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_25.jpg',
+          'name' => 'Wallpaper 25',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_26.jpg',
+          'name' => 'Wallpaper 26',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245306/Wall%20Paper/wallpaper_-_27.jpg',
+          'name' => 'Wallpaper 27',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_28.jpg',
+          'name' => 'Wallpaper 28',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_29.jpg',
+          'name' => 'Wallpaper 29',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245307/Wall%20Paper/wallpaper_-_30.jpg',
+          'name' => 'Wallpaper 30',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_31.jpg',
+          'name' => 'Wallpaper 31',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_32.jpg',
+          'name' => 'Wallpaper 32',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245308/Wall%20Paper/wallpaper_-_33.jpg',
+          'name' => 'Wallpaper 33',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_34.jpg',
+          'name' => 'Wallpaper 34',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_35.jpg',
+          'name' => 'Wallpaper 35',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '7',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502245309/Wall%20Paper/wallpaper_-_36.jpg',
+          'name' => 'Wallpaper 36',
+          'description' => '',
+          'detail' => '<p>Price <strong>Rp. 275.000/m</strong></p>'
+        ]);
+        $serviceitem->save();
     }
 }
