@@ -304,7 +304,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCGYDHyQaM_KxFIbI42RcSV_p3q5EXxsg5ZAXoCKxOnrZU0UN',
           'name' => 'Decorative 3D Interior Panels',
           'description' => 'Pulp of sugarcane Bagassse or of other fibrous cellulostic Material;Moulded or pressed articles of sugarcane Bagasse pulp or of other fibrous cellulosic Material other pulp, cellulose wadding and webs of celulose fibres, cut to size or shape; other articles of sugarcane Bagasse ulp, cellulse fibres.',
-          'detail' => '<p>Size <strong>500x500 mm or 625x800mm with ±0.5 mm. Tolerance sideways per 500 mm and ±0.7 mm diagonal</strong></p><p>Weight <strong>+275 grams</strong></p><p>Thickness <strong>approx 1.5mm (±tolerance of 0.05mm)</strong></p><p>Height <strong>thickness of panel +15mm (total approx15.5mm)</strong></p><p>Material <strong>white bagasse (natural bleanched sugarcene pulp)</strong></p><p>Packing <strong>12 panel covers 3m² (for 500x500 mm) and 6 panels covers 3m² (for 625x800mm)</strong></p><p>Fire Resistance <strong>Classic, but we advice to use class a fire proof coating/fire retardant paint like dc333 after installing for best an safest result!</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Size</p></td><td><p><strong>500x500 mm or 625x800mm with &plusmn;0.5 mm. Tolerance sideways per 500 mm and &plusmn;0.7 mm diagonal</strong></p></td></tr><tr><td><p>Weight</p></td><td><p><strong>+275 grams</strong></p></td></tr><tr><td><p>Thickness</p></td><td><p><strong>approx 1.5mm (&plusmn;tolerance of 0.05mm)</strong></p></td></tr><tr><td><p>Height</p></td><td><p><strong>thickness of panel +15mm (total approx15.5mm)</strong></p></td></tr><tr><td><p>Material</p></td><td><p><strong>white bagasse (natural bleanched sugarcene pulp)</strong></p></td></tr><tr><td><p>Packing</p></td><td><p><strong>12 panel covers 3m&sup2; (for 500x500 mm) and 6 panels covers 3m&sup2; (for 625x800mm)</strong></p></td></tr><tr><td><p>Fire Resistance</p></td><td><p><strong>Classic, but we advice to use class a fire proof coating/fire retardant paint like dc333 after installing for best an safest result!</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -322,7 +322,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/Chitose-NC_i6ij3m.jpg',
           'name' => 'Chitose: NC',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 1010</strong></p><p>Seat Height (mm) <strong>560 ~ 650</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>395 x 510 x 1010</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>560 ~ 650</strong><br/></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>2</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>PVC Vinyl</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Hammertone,&nbsp;Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Black</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -331,7 +331,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/Chitose-NA_o0p42l.jpg',
           'name' => 'Chitose: NA',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 860</strong></p><p>Seat Height (mm) <strong>400 ~ 490</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>395 x 510 x 860</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>400 ~ 490</strong><br/></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>2</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>PVC Vinyl</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Hammertone,&nbsp;Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Black</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -340,7 +340,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/Chitose-NBK_kqm4ui.jpg',
           'name' => 'Chitose: NBK',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>395 x 510 x 860</strong></p><p>Seat Height (mm) <strong>400 ~ 490</strong></p><p>Weight Per Piece (Kg) <strong>9.1</strong></p><p>Contain per Carton <strong>2</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p><p>Frame Finisihing <strong>Hammertone, Powder Coating</strong></p><p>Frame Color <strong>Black</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>395 x 510 x 860</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>400 ~ 490</strong><br/></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>9.1</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>2</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>PVC Vinyl</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Hammertone,&nbsp;Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Black</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -349,7 +349,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/jasmine-c1111_ehozq4.jpg',
           'name' => 'Jasmine C-111',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>487 x478 x 747</strong></p><p>Seat Height (mm) <strong>445</strong></p><p>Weight Per Piece (Kg) <strong>4.2</strong></p><p>Upholstery Material <strong>Fabric,PVC Vinyl,Oscar</strong></p><p>Back Material <strong>Plastic ( White & Grey )</strong></p><p>Upholstery Color <strong>Orange, Yellow, Green, Blue, Red, Black, Light Green</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>487 x478 x 747</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>445</strong><br/></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>4.2</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric,PVC Vinyl,Oscar</strong></p></td></tr><tr><td><p>Back Material</p></td><td><p><strong>Plastic ( White & Grey )</strong></p></td></tr><tr><td><p>Upholstery Color</p></td><td><p><strong>Orange, Yellow, Green, Blue, Red, Black, Light Green</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Chrome Plating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Chrome</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -358,7 +358,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901061/flora-h1_xdi3xz.jpg',
           'name' => 'Flora H',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>495 x 415 x 675</strong></p><p>Seat Height (mm) <strong>445</strong></p><p>Weight Per Piece (Kg) <strong>3.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Vinyl & Oscar</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Blue, Red, Green, Yellow, White, Cream , Light Blue, Light Green & Orange</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>495 x 415 x 675</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>445</strong><br/></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>2</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>PVC Vinyl</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Hammertone, Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Black</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -367,7 +367,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/flora-san1_j9wyij.jpg',
           'name' => 'Flora SAN',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>515 x 515 x 445</strong></p><p>Weight Per Piece (Kg) <strong>2.5</strong></p><p>Contain per Carton <strong>6</strong></p><p>Upholstery Material <strong>PVC Vinyl</strong></p<p>Upholstery Color <strong>Yellow, Red, Green, Blue, Cream</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Yellow, Red, Green, Chrome, Blue, Cream</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>515 x 515 x 445</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>2.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>6</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>PVC Vinyl</strong></p></td></tr><tr><td><p>Upholstery Color</p></td><td><p><strong>Yellow, Red, Green, Blue, Cream</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Chrome Plating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Yellow, Red, Green, Chrome, Blue, Cream</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -376,7 +376,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901057/jasmine-c2111_wgwczm.jpg',
           'name' => 'Jasmine C-211',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>448 x 465 x 722</strong></p><p>Seat Height (mm) <strong>420</strong></p><p>Weight Per Piece (Kg) <strong>3.7</strong></p><p>Seat Material <strong>Fabric, PVC Vinyl, Oscar</strong></p><p>Back Material <strong>Plastic ( White & Grey )</strong></p><p>Seat & Back Colours <strong>Orange, Yellow, Green, Blue, Red, Black, Light  Green,Blue</strong></p><p>Frame Finisihing <strong>Chrome Plating</strong></p><p>Frame Color <strong>Chrome</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>448 x 465 x 722</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>420</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>3.7</strong></p></td></tr><tr><td><p>Seat Material</p></td><td><p><strong>Fabric, PVC Vinyl, Oscar</strong></p></td></tr><tr><td><p>Back Material</p></td><td><p><strong>Plastic ( White & Grey )</strong></p></td></tr><tr><td><p>Seat & Back Colours</p></td><td><p><strong>Orange, Yellow, Green, Blue, Red, Black, Light Green,Blue</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Chrome Plating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Chrome</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
