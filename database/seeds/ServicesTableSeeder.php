@@ -113,7 +113,7 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1502340355/Rak_Piring_Modelline_vxph3e.jpg',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Rak-Modelline',
           'tagline' => 'Transforming spaces. Transforming Lives.',
@@ -124,7 +124,7 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1502340356/Modena_Kitchen_ufkw0n.jpg',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Cooking-Modena',
           'tagline' => 'Transforming spaces. Transforming Lives.',
@@ -135,7 +135,7 @@ class ServicesTableSeeder extends Seeder
         $service->save();
 
         $service = new \App\Service([
-          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726578/chair_f0sws3.jpg',
+          'banner_image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1502340355/Cooking_Domo_llj9b5.jpg',
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501041018/opening_pwrzjo.jpg',
           'name' => 'Cooking-Domo',
           'tagline' => 'Transforming spaces. Transforming Lives.',
