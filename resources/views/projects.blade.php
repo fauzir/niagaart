@@ -83,11 +83,7 @@ Projects
       <div class="container">
 </div>
       <div class="modal fade" id="myModal">
-      <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
-     </div>
-     </div>
+        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>   
      </div>
   </div>
 </section>

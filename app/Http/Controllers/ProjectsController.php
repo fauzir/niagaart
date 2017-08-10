@@ -31,8 +31,9 @@ class ProjectsController extends Controller
     {
         $id = $request->id;
         $project = Project::find($id);
+        $itemfirst = Project::first();
         $itemcount = Project::count();
         $data = ProjectItem::where('project_id', $id)->get();
-        return view('projects-item', compact('project', 'itemcount', 'data'));
+        return view('projects-item', compact('project', 'itemfirst', 'itemcount', 'data'));
     }
 }

@@ -385,7 +385,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/hanako-s1_qnhiw6.jpg',
           'name' => 'Hanako S',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 555x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 555x 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>460</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.8</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Silver, Gold, Cream</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -394,7 +394,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/hanako-o1_bp70ad.jpg',
           'name' => 'Hanako O',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 555x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 555x 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>440</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.8</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Silver, Gold, Cream</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -403,7 +403,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/jiro-s1_bsxwhy.jpg',
           'name' => 'Jiro S',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Gold</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 555x 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>460</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Gold</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -412,7 +412,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901060/jiro-o1_mn8gsu.jpg',
           'name' => 'Jiro O',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.8</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 554 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>440</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.8</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Silver, Gold, Cream</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -421,7 +421,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/taro-s1_sakv4p.jpg',
           'name' => 'Taro S',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 563 x 890</strong></p><p>Seat Height (mm) <strong>460</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Gold</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 563 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>440</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Gold</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -430,7 +430,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901058/taro-o1_dx1pa4.jpg',
           'name' => 'Taro O',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>455 x 554 x 890</strong></p><p>Seat Height (mm) <strong>440</strong></p><p>Weight Per Piece (Kg) <strong>6.5</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric</strong></p><p>Upholstery Colours <strong>Blue, Red, Green, Black</strong></p><p>Frame Finisihing <strong>Powder Coating</strong></p><p>Frame Color <strong>Silver, Gold, Cream</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>455 x 554 890</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>440</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>6.5</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Blue, Red, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Gold</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -439,7 +439,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501901059/caesar-n-p1_esjzpn.jpg',
           'name' => 'Caesar N / P',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>410 x 505 x 875</strong></p><p>Seat Height (mm) <strong>476</strong></p><p>Weight Per Piece (Kg) <strong>5.3</strong></p><p>Contain per Carton <strong>4</strong></p><p>Upholstery Material <strong>Fabric & PVC</strong></p><p>Upholstery Colours <strong>Red, Blue, Grey, Green, Black</strong></p><p>Frame Finisihing <strong>Chrome Plating (N), Powder Coating (P)</strong></p><p>Frame Color <strong>Black, Silver</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>410 x 505 x 875</strong></p></td></tr><tr><td><p>Seat Height (mm)</p></td><td><p><strong>476</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>5.3</strong></p></td></tr><tr><td><p>Contain per Carton</p></td><td><p><strong>4</strong></p></td></tr><tr><td><p>Upholstery Material</p></td><td><p><strong>Fabric & PVC</strong></p></td></tr><tr><td><p>Upholstery Colours</p></td><td><p><strong>Red, Blue, Grey, Green, Black</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Chrome Plating (N), Powder Coating (P)</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Black, Silver</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 
@@ -448,7 +448,7 @@ class ServiceItemsTableSeeder extends Seeder
           'image' => '',
           'name' => 'Prince',
           'description' => '',
-          'detail' => '<p>Dimension W x D x H (mm) <strong>440 x 573 x 900</strong></p><p>Weight Per Piece (Kg) <strong>4.65</strong></p><p>Frame Finisihing <strong>Chrome Plating, Powder Coating</strong></p><p>Frame Color <strong>Chrome, Gold, Silver</strong></p><p>Colour Options & Upholstery Material <strong>Fabric</strong></p>'
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Dimension W x D x H (mm)</p></td><td><p><strong>440 x 573 x 900</strong></p></td></tr><tr><td><p>Weight Per Piece (Kg)</p></td><td><p><strong>4.65</strong></p></td></tr><tr><td><p>Frame Finisihing</p></td><td><p><strong>Chrome Plating, Powder Coating</strong></p></td></tr><tr><td><p>Frame Color</p></td><td><p><strong>Chrome, Gold, Silver</strong></p></td></tr><tr><td><p>Colour Options & Upholstery Material</p></td><td><p><strong>Fabric</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 

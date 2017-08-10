@@ -1,3 +1,5 @@
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
 <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
 <!-- Modal Header -->
 <div class="modal-header">
@@ -48,24 +50,28 @@
 
 <!-- Modal Footer -->
 <div class="modal-footer">
-  @if ($serviceitem->id == $itemcount)
-    <div class="col-md-6 previous-arrow">
-       <a href="#" class="product" data-id="{{ $serviceitem->id-1 }}" title="previous-item"><p><< Previous</p></a>
-    </div>
-  @elseif ($serviceitem->id == 1)
-    <div class="col-md-6 next-arrow">
-       <a href="#" class="product" data-id="{{ $serviceitem->id+1 }}" title="next-item"><p>Next >></p></a>
-    </div>
-  @else
-    <div class="col-md-6 previous-arrow">
-       <a href="#" class="product" data-id="{{ $serviceitem->id-1 }}" title="previous-item"><p><< Previous</p></a>
-    </div>
-    <div class="col-md-6 next-arrow">
-       <a href="#" class="product" data-id="{{ $serviceitem->id+1 }}" title="next-item"><p>Next >></p></a>
-    </div>
-  @endif
+
 
            </div>
+         </div>
+         </div>
+         @if ($serviceitem->id == $itemcount)
+           <a class="slide-fixed left carousel-control item-left product" href="#" data-id="{{ $serviceitem->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+           </a>
+         @elseif ($serviceitem->id == $itemfirst->id)
+           <a class="slide-fixed right carousel-control item-right product" href="#" data-id="{{ $serviceitem->id+1 }}" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @else
+           <a class="slide-fixed left carousel-control item-left product" href="#" data-id="{{ $serviceitem->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+           </a>
+           <a class="slide-fixed right carousel-control item-right product" href="#" data-id="{{ $serviceitem->id+1 }}" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @endif
+
 
 
 

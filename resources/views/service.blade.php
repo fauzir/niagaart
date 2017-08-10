@@ -89,17 +89,7 @@ Services
          <br>
          {{ $serviceitems->links() }}
          <div class="modal fade" id="myModal">
-         <div class="modal-dialog modal-lg">
-         <div class="modal-content">
            <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
-        </div>
-        </div>
-        <a class="slide-fixed left carousel-control item-left" href="#" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="slide-fixed right carousel-control item-right" href="#" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
         </div>
          </div>
       </section>

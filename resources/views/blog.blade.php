@@ -13,7 +13,7 @@ All Post
               <div class="container col-md-3 fill-in">
 
               </div>
-              <div class="container col-md-8 catalogueheader-txt wow fadeInUp">
+              <div class="container col-md-8 blogheader-txt wow fadeInUp">
                 <h1>NIAGA ART BLOG</h1>
                 <br>
                 <p>@lang('content.subtitle-here')</p>

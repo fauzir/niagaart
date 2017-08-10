@@ -1,3 +1,6 @@
+
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
 <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
 <!-- Modal Header -->
 <div class="modal-header">
@@ -81,6 +84,24 @@
   @endif
 
            </div>
+         </div>
+         </div>
+         @if ($project->id == $itemcount)
+           <a class="slide-fixed left carousel-control item-left project" href="#" data-id="{{ $project->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+           </a>
+         @elseif ($project->id == $itemfirst->id)
+           <a class="slide-fixed right carousel-control item-right project" href="#" data-id="{{ $project->id+1 }}" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @else
+           <a class="slide-fixed left carousel-control item-left project" href="#" data-id="{{ $project->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
+           </a>
+           <a class="slide-fixed right carousel-control item-right project" href="#" data-id="{{ $project->id+1 }}" data-slide="next">
+             <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @endif
 
 <script>
 $(".project").on("click", function () {

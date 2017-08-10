@@ -13,7 +13,7 @@ About
     <div class="container-fluid opening-bg">
       <div class="container opening-section">
           <div class="row">
-            <div class="container col-md-6">
+            <div class="container col-md-6 opening-title">
               <h1>{{ $about->opening_title }}</h1>
               <br>
               <p>{!! $about->opening_text !!}</p>
@@ -37,9 +37,12 @@ About
             <div class="container col-md-6 scope-img1 wow fadeInLeft">
               <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
             </div>
-            <div class="container col-md-6">
+            <div class="container col-md-6 title-about">
               <h3>{{ $interior->name }}</h3>
               <br>
+              {!! $interior->description !!}
+            </div>
+            <div class="container">
               {!! $interior->description !!}
             </div>
           </div>
@@ -48,7 +51,7 @@ About
       @else
         <div class="container service-scope2 hidden-sm hidden-xs">
           <div class="row">
-            <div class="container col-md-6">
+            <div class="container col-md-6 title-about">
               <h3>{{ $interior->name }}</h3>
               <br>
               {!! $interior->description !!}
@@ -56,6 +59,9 @@ About
             <div class="container col-md-6 scope-img2 wow fadeInRight">
               <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
             </div>
+          </div>
+          <div class="container">
+            {!! $interior->description !!}
           </div>
         </div>
       @endif

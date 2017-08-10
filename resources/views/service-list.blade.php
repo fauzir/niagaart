@@ -34,12 +34,15 @@ Services
               <h1>{{ $service->name }}</h1>
               <br>
               {!! $service->description !!}
-              <br>
-              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
             <div class="container col-md-6 opening-img wow slideInUp">
               <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
             </div>
+          </div>
+          <div class="container text-ext">
+              {!! $service->description !!}
+              <br>
+              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
           </div>
         </div>
       </div>
@@ -56,8 +59,11 @@ Services
               <h1>{{ $service->name }}</h1>
               <br>
               {!! $service->description !!}
+            </div>
+            <div class="container text-ext">
+              {!! $service->description !!}
               <br>
-             <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
+              <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
             </div>
           </div>
         </div>
