@@ -66,7 +66,7 @@ Route::group(['prefix' => '{locale}'], function () {
      'as'    => 'service.other'
   ]);
 
-  Route::get('/service/{slug}',[
+  Route::paginate('/service/{slug}',[
      'uses' => 'ServiceController@index',
      'as'    => 'service'
   ]);

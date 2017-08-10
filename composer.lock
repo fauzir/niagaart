@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c793aae2dd3be9087cac944b76d0b178",
+    "content-hash": "d618eb413f50b58ee22b69afea254fb9",
     "packages": [
         {
             "name": "appzcoder/crud-generator",
@@ -3071,6 +3071,64 @@
                 "spatie"
             ],
             "time": "2017-05-13T09:31:53+00:00"
+        },
+        {
+            "name": "spatie/laravel-paginateroute",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-paginateroute.git",
+                "reference": "209c4af792c9acce356530e8838defc7e463bb96"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-paginateroute/zipball/209c4af792c9acce356530e8838defc7e463bb96",
+                "reference": "209c4af792c9acce356530e8838defc7e463bb96",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/contracts": "~5.4.0",
+                "illuminate/routing": "~5.4.0",
+                "illuminate/translation": "~5.4.0",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\PaginateRoute\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel outer extension to easily use laravel's paginator without the query string",
+            "homepage": "https://github.com/spatie/laravel-paginateroute",
+            "keywords": [
+                "laravel",
+                "laravel-paginateroute",
+                "pagination",
+                "routing",
+                "spatie"
+            ],
+            "time": "2017-05-14T21:07:13+00:00"
         },
         {
             "name": "spatie/phpunit-snapshot-assertions",

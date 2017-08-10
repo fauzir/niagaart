@@ -87,7 +87,7 @@ Services
          </div>
          @endforeach
          <br>
-         {{ $serviceitems->links() }}
+         {{-- {{ $serviceitems->links() }} --}}
          <div class="modal fade" id="myModal">
            <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
         </div>

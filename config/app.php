@@ -201,6 +201,9 @@ return [
         // HTML Minify
         GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
 
+        // Pagination Spatie
+        Spatie\PaginateRoute\PaginateRouteServiceProvider::class,
+
     ],
 
     /*
@@ -256,6 +259,7 @@ return [
         'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
         'Feed' => Roumen\Feed\Feed::class,
         'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
+        'PaginateRoute' => Spatie\PaginateRoute\PaginateRouteFacade::class,
 
     ],
 
