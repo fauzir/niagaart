@@ -35,6 +35,7 @@ return [
     'contact-us-2' => 'Contact Us',
     'subscribe' => 'SUBSCRIBE OUR NEWSLETTER',
     'back-to-blog' => 'Back to blog',
-    'no-desc' => 'There is no description for this item'
+    'no-desc' => 'There is no description for this item',
+    'tweet' => 'Tweet tentang Niaga Art'
 
 ];

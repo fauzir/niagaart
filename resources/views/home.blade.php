@@ -152,7 +152,8 @@ Homepage
           </div>
           <div class="container col-md-6 wow fadeInUp">
           <h2>WHAT'S NEW</h2>
-        <a class="twitter-timeline" data-height="600" data-theme="light" data-chrome="nofooter" data-link-color="#E81C4F" href="https://twitter.com/niaga_art">Tweets by niaga_art</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <a class="twitter-timeline"  href="https://twitter.com/search?q=Niaga%20Art" data-widget-id="895501354730307585" data-chrome="nofooter">@lang('content.tweet')</a>
+          <script src="{{ asset('frontend/js/twitter.js') }}"></script>
         </div>
         </div>
         </div>

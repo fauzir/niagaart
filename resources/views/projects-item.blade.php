@@ -113,7 +113,7 @@ $(".project").on("click", function () {
             $("#loading-image").show();
           },
           success: function(response){
-            $('.modal-content').html(response)
+            $('.modal-content').html(response);
             $("#loading-image").hide();
           },
           error: function(response){

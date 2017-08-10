@@ -7,7 +7,7 @@ $(document).on("click", ".project", function () {
             $("#loading-image").show();
           },
           success: function(response){
-            $('.modal').html(response)
+            $('.modal').html(response);
             $('#myModal').modal('show');
             $("#loading-image").hide();
           },
