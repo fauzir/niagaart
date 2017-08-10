@@ -860,6 +860,11 @@ transition: all 0.2s ease-in-out;
     color: #fff;
 }
 
+.homeliving-txt {
+  padding-right: 50px;
+  text-align: right;
+}
+
 .homeliving-txt h1{
   text-align: right;
 }
