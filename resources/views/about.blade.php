@@ -37,32 +37,53 @@ About
             <div class="container col-md-6 scope-img1 wow fadeInLeft">
               <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
             </div>
-            <div class="container col-md-6 title-about">
-              <h3>{{ $interior->name }}</h3>
-              <br>
-              {!! $interior->description !!}
-            </div>
-            <div class="container">
-              {!! $interior->description !!}
-            </div>
+            @if ( strlen($interior->description) > 797 )
+              <div class="container col-md-6 title-about">
+                <h3>{{ $interior->name }}</h3>
+                <br>
+                {!! substr($interior->description, 0, 797) !!}</p>
+              </div>
+              <div class="container text-ext">
+                <p>{!! substr($interior->description, 797) !!}
+              </div>
+            @else
+              <div class="container col-md-6 title-about">
+                <h3>{{ $interior->name }}</h3>
+                <br>
+                {!! $interior->description !!}
+              </div>
+            @endif
           </div>
         </div>
         <hr>
       @else
         <div class="container service-scope2 hidden-sm hidden-xs">
-          <div class="row">
-            <div class="container col-md-6 title-about">
-              <h3>{{ $interior->name }}</h3>
-              <br>
-              {!! $interior->description !!}
+          @if ( strlen($interior->description) > 797 )
+            <div class="row">
+              <div class="container col-md-6 title-about">
+                <h3>{{ $interior->name }}</h3>
+                <br>
+                {!! substr($interior->description, 0, 797) !!}</p>
+              </div>
+              <div class="container col-md-6 scope-img2 wow fadeInRight">
+                <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
+              </div>
             </div>
-            <div class="container col-md-6 scope-img2 wow fadeInRight">
-              <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
+            <div class="container text-ext">
+              <p>{!! substr($interior->description, 797) !!}
             </div>
-          </div>
-          <div class="container">
-            {!! $interior->description !!}
-          </div>
+          @else
+            <div class="row">
+              <div class="container col-md-6 title-about">
+                <h3>{{ $interior->name }}</h3>
+                <br>
+                {!! $interior->description !!}
+              </div>
+              <div class="container col-md-6 scope-img2 wow fadeInRight">
+                <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
+              </div>
+            </div>
+          @endif
         </div>
       @endif
       @endforeach

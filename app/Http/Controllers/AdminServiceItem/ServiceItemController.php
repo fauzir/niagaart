@@ -33,7 +33,6 @@ class ServiceItemController extends Controller
 				->orWhere('image', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('description', 'LIKE', "%$keyword%")
-				->orWhere('price', 'LIKE', "%$keyword%")
 				->paginate($perPage);
         } else {
             $serviceitem = ServiceItem::orderBy('id', 'asc')->paginate($perPage);

@@ -12,6 +12,10 @@ Author URI: www.41studio.com
 /***@import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');***/
 
+.text-ext p{
+  text-align: justify;
+}
+
 .language-en a{
    padding-right: 0px !important;
    padding-left: 10px !important;
