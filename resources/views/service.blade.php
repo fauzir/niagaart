@@ -87,7 +87,13 @@ Services
          </div>
          @endforeach
          <br>
-         {{-- {{ $serviceitems->links() }} --}}
+         <div class="container">
+            <div class="row">
+               <nav aria-label="Page navigation">
+                  {!! PaginateRoute::renderPageList($serviceitems, $full = false, $class = 'pagination', $additionalLinks = true) !!}
+               </nav>
+            </div>
+         </div>
          <div class="modal fade" id="myModal">
            <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
         </div>

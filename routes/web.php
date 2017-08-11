@@ -71,7 +71,7 @@ Route::group(['prefix' => '{locale}'], function () {
      'as'    => 'service'
   ]);
 
-  Route::get('/projects',[
+  Route::paginate('/projects',[
      'uses' => 'ProjectsController@index',
      'as'    => 'projects'
   ]);

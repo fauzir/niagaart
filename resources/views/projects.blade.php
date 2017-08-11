@@ -79,11 +79,17 @@ Projects
       </div>
       @endforeach
       <br>
-      {{ $projects->links() }}
+      <div class="container">
+         <div class="row">
+            <nav aria-label="Page navigation">
+               {!! PaginateRoute::renderPageList($projects, $full = false, $class = 'pagination', $additionalLinks = true) !!}
+            </nav>
+         </div>
+      </div>
       <div class="container">
 </div>
       <div class="modal fade" id="myModal">
-        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>   
+        <img id="loading-image" src="{{ asset('img/ajax-loader.gif') }}" alt="Loading | Niaga Art" style="display:none;"/>
      </div>
   </div>
 </section>
