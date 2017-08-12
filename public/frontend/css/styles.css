@@ -313,6 +313,47 @@ ul {
     border-left: solid 5px #cf0810;
 }
 
+@media screen and (max-width: 940px) {
+  .promo-text {
+      vertical-align: middle;
+      padding-right: 15px;
+      padding-left: 15px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.80);
+      color: black;
+      border-left: solid 5px #cf0810;
+  }
+
+  .promo-text h2{
+    font-size: 18px;
+  }
+  .promo-text p{
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .promo-text {
+      vertical-align: middle;
+      padding-right: 10px;
+      padding-left: 10px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.80);
+      color: black;
+      border-left: solid 5px #cf0810;
+  }
+
+  .promo-text h2,
+  .carousel-caption h2{
+    font-size: 10px;
+  }
+  .promo-text p,
+  .carousel-caption p{
+    font-size: 5px;
+  }
+}
+
 .welcome-message {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -694,6 +735,12 @@ ul {
     margin-top: 100px;
 }
 
+.map-info h1{
+  font-size: 25px;
+  font-family: 'Abel', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 @media screen and (max-width: 1200px) {
     .address p{
         font-size: 18px;
@@ -813,7 +860,7 @@ transition: all 0.2s ease-in-out;
 .header-service {
     background-image: url(../img/interior-designer.jpg);
     width: 100%;
-    height: 616px;
+    height: auto;
     margin-top: 80px;
     background-position: center;
     background-repeat: no-repeat;
@@ -824,7 +871,8 @@ transition: all 0.2s ease-in-out;
     color: #fff;
     text-align: right;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
+    height: auto;
 }
 .header-txt h1 {
     font-size: 45px;
@@ -1015,6 +1063,12 @@ transition: all 0.2s ease-in-out;
     padding-bottom: 30px;
 }
 
+.featured-projectstitle h1{
+  font-size: 25px;
+  font-family: 'Abel', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*.featured-projects{
   max-height: 600px;
 }*/
@@ -1132,6 +1186,25 @@ transition: all 0.2s ease-in-out;
     font-size: 25px;
     color: #fff;
 }
+
+@media screen and (max-width:400px) {
+  .catalogueheader-txt {
+      text-align: right;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background-color: black;
+      opacity: 0.8;
+  }
+  .catalogueheader-txt h1{
+      font-size: 35px;
+      color: #fff;
+  }
+  .catalogueheader-txt p{
+      font-size: 18px;
+      color: #fff;
+  }
+}
+
 .blogheader-txt{
   text-align: right;
   padding-top: 100px;

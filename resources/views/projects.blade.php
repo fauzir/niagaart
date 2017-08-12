@@ -7,7 +7,7 @@ Projects
 @section('content')
     <section>
     <div class="container featured-projectstitle">
-      <h2>@lang('content.featured-project')</h2>
+      <h1>@lang('content.featured-project')</h1>
       <hr class="small">
     </div>
           <div id="text-carousel" class="carousel slide featured-projects" data-ride="carousel">

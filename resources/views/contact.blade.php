@@ -11,7 +11,7 @@ Contact
           <div class="container map-info">
             <div class="row">
               <div class="col-md-7 google-map">
-                <h3>@lang('content.contact-us')</h3>
+                <h1>@lang('content.contact-us')</h1>
                 <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3961.2035280902023!2d107.5357772!3d-6.8661972!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e4662e1bf133%3A0xc7286f3552020388!2sNiaga+Art!5e0!3m2!1sen!2sid!4v1500448170435" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
@@ -30,7 +30,7 @@ Contact
                 <p class="wow fadeInUp">{{ $workHour }}</p>
                 <br>
               @endforeach
-                <div class="address-socicon">
+                <div class="address-socicon wow fadeInRight">
                   @foreach ($socials as $social)
                     <a href="{{ url($social->url) }}" title="{{ $social->name }} | Niaga Art" target="_blank"><i class="{{ $social->icon }}"></i></a>
                     &nbsp;&nbsp;
