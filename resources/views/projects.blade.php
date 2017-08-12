@@ -94,7 +94,3 @@ Projects
   </div>
 </section>
 @endsection
-
-@section('script')
-  <script src="{{ asset('js/projects-call-item.js') }}"></script>
-@endsection

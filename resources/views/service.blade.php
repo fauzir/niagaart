@@ -100,7 +100,3 @@ Services
          </div>
       </section>
 @endsection
-
-@section('script')
-    <script src="{{ asset('js/service-call-item.js') }}"></script>
-@endsection
