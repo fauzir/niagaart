@@ -12,7 +12,7 @@ class TestimoniesTableSeeder extends Seeder
     public function run()
     {
         $testimony = new \App\Testimony([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726581/people-1_kqcxlw.png',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1502502425/people-1_tsab2o.png',
           'subject' => 'Lorem ipsum dolor sit amet',
           'testimony' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
           'name' => 'John Doe',
