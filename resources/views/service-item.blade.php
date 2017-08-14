@@ -55,7 +55,9 @@
            </div>
          </div>
          </div>
-         @if ($serviceitem->id == $itemfirst->id)
+       @if ($serviceitem->id == $itemfirst->id && $itemfirst->id == $itemcount->id)
+         <span></span>
+         @elseif ($serviceitem->id == $itemfirst->id)
            <a class="slide-fixed right carousel-control item-right product" href="#" data-id="{{ $serviceitem->id+1 }}" data-slide="next">
              <span class="glyphicon glyphicon-chevron-right"></span>
            </a>
