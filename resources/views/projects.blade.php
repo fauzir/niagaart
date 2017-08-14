@@ -68,7 +68,7 @@ Projects
                 @endif
                 <hr>
                 @if ( strlen($project->description) > 0 )
-                  <p style="min-height: 175px;">{{ substr($project->description, 0, 150) }}</p>
+                  <p style="min-height: 175px;">Click to see the details</p>
                 @else
                   <p style="min-height: 175px;">@lang('content.no-desc')</p>
                 @endif

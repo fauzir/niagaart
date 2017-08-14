@@ -383,7 +383,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-001-rustic-oak.jpg',
           'name' => 'TV-001 Rustic Oak',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -391,7 +391,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-002-munich-pine.jpg',
           'name' => 'TV-002 Munich Pine',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -399,7 +399,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-003-washed-oak.jpg',
           'name' => 'TV-003 Washed Oak',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -407,7 +407,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-004-parma-oak.jpg',
           'name' => 'TV-004 Parma Oak',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -415,7 +415,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-005-vintage-oak.jpg',
           'name' => 'TV-005 Vintage Oak',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -423,7 +423,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-006-real-cherry.jpg',
           'name' => 'TV-006 Real Cherry',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -431,7 +431,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-007-merbau-wood.jpg',
           'name' => 'TV-007 Merbau Wood',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -439,7 +439,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '4',
           'image' => 'img/service-item/flooring/taco-wood-pattern/wood-tv-008-sand-malmo.jpg',
           'name' => 'TV-008 Sand Malmo',
-          'price' => '0'
+          'price' => '158.000/m'
         ]);
         $product->save();
 
@@ -463,7 +463,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5251.jpg',
           'name' => 'Jb Vinyl - LUX 5251',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -471,7 +471,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5252.jpg',
           'name' => 'Jb Vinyl - LUX 5252',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -479,7 +479,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5253.jpg',
           'name' => 'Jb Vinyl - LUX 5253',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -487,7 +487,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5255.jpg',
           'name' => 'Jb Vinyl - LUX 5255',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -495,7 +495,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5257.jpg',
           'name' => 'Jb Vinyl - LUX 5257',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -503,7 +503,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '6',
           'image' => 'img/service-item/flooring/jib-vinyl/jib-vinyl-lux-5260.jpg',
           'name' => 'Jb Vinyl - LUX 5260',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -511,7 +511,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8801.jpg',
           'name' => 'Ozora 8801',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -519,7 +519,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8802.jpg',
           'name' => 'Ozora 8802',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -527,7 +527,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8803.jpg',
           'name' => 'Ozora 8803',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -535,7 +535,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8804.jpg',
           'name' => 'Ozora 8804',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -543,7 +543,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8805.jpg',
           'name' => 'Ozora 8805',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -551,7 +551,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8806.jpg',
           'name' => 'Ozora 8806',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -559,7 +559,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8807.jpg',
           'name' => 'Ozora 8807',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -567,7 +567,7 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '7',
           'image' => 'img/service-item/flooring/ozora/ozora-8808.jpg',
           'name' => 'Ozora 8808',
-          'price' => '0'
+          'price' => '129.000/m'
         ]);
         $product->save();
 
@@ -1039,39 +1039,55 @@ class ProductsTableSeeder extends Seeder
           'service_item_id' => '59',
           'image' => 'img/service-item/rak-modelline/cis-header.jpg',
           'name' => 'CIS 1',
-          'price' => '0'
+          'price' => '150.000'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '59',
-          'image' => 'img/service-item/rak-modelline/cis-header.jpg',
+          'image' => 'img/service-item/rak-modelline/cis-pic-1.jpg',
           'name' => 'CIS 2',
-          'price' => '0'
+          'price' => '150.000'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '59',
-          'image' => 'img/service-item/rak-modelline/cis-header.jpg',
+          'image' => 'img/service-item/rak-modelline/cis-pic-2.jpg',
           'name' => 'CIS 3',
-          'price' => '0'
+          'price' => '150.000'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '59',
-          'image' => 'img/service-item/rak-modelline/cis-header.jpg',
+          'image' => 'img/service-item/rak-modelline/cis-pic-3.jpg',
           'name' => 'CIS 4',
-          'price' => '0'
+          'price' => '150.000'
         ]);
         $product->save();
 
         $product = new \App\Product([
           'service_item_id' => '59',
-          'image' => 'img/service-item/rak-modelline/cis-header.jpg',
+          'image' => 'img/service-item/rak-modelline/cis-pic-4.jpg',
           'name' => 'CIS 5',
-          'price' => '0'
+          'price' => '150.000'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '60',
+          'image' => 'img/service-item/rak-modelline/basket-sink.png',
+          'name' => 'Basket Sink',
+          'price' => '55.000'
+        ]);
+        $product->save();
+
+        $product = new \App\Product([
+          'service_item_id' => '60',
+          'image' => 'img/service-item/rak-modelline/rak-tempat-sampah.jpg',
+          'name' => 'Rak Tempat Sampah',
+          'price' => '55.000'
         ]);
         $product->save();
     }
