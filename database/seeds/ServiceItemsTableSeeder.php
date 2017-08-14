@@ -111,15 +111,6 @@ class ServiceItemsTableSeeder extends Seeder
         $serviceitem->save();
 
         $serviceitem = new \App\ServiceItem([
-          'service_id' => '8',
-          'image' => 'img/service-item/wall-clading/brick.jpg',
-          'name' => 'Brick',
-          'description' => 'Pulp of sugarcane Bagassse or of other fibrous cellulostic Material;Moulded or pressed articles of sugarcane Bagasse pulp or of other fibrous cellulosic Material other pulp, cellulose wadding and webs of celulose fibres, cut to size or shape; other articles of sugarcane Bagasse ulp, cellulse fibres.',
-          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Size</p></td><td><p><strong>500x500 mm or 625x800mm with &plusmn;0.5 mm. Tolerance sideways per 500 mm and &plusmn;0.7 mm diagonal</strong></p></td></tr><tr><td><p>Weight</p></td><td><p><strong>+275 grams</strong></p></td></tr><tr><td><p>Thickness</p></td><td><p><strong>approx 1.5mm (&plusmn;tolerance of 0.05mm)</strong></p></td></tr><tr><td><p>Height</p></td><td><p><strong>thickness of panel +15mm (total approx15.5mm)</strong></p></td></tr><tr><td><p>Material</p></td><td><p><strong>white bagasse (natural bleanched sugarcene pulp)</strong></p></td></tr><tr><td><p>Packing</p></td><td><p><strong>12 panel covers 3m&sup2; (for 500x500 mm) and 6 panels covers 3m&sup2; (for 625x800mm)</strong></p></td></tr><tr><td><p>Fire Resistance</p></td><td><p><strong>Classic, but we advice to use class a fire proof coating/fire retardant paint like dc333 after installing for best an safest result!</strong></p></td></tr><tr><td><p>Price</p></td><td><p><strong>Rp. 560.000</strong></p></td></tr></tbody></table>'
-        ]);
-        $serviceitem->save();
-
-        $serviceitem = new \App\ServiceItem([
           'service_id' => '4',
           'image' => 'img/service-item/shop-office/header.jpg',
           'name' => 'Shop and Office',
@@ -1124,6 +1115,15 @@ class ServiceItemsTableSeeder extends Seeder
           'name' => 'tnDH 9301 L',
           'description' => '',
           'detail' => ''
+        ]);
+        $serviceitem->save();
+
+        $serviceitem = new \App\ServiceItem([
+          'service_id' => '8',
+          'image' => 'img/service-item/wall-clading/brick.jpg',
+          'name' => 'Brick',
+          'description' => 'Pulp of sugarcane Bagassse or of other fibrous cellulostic Material;Moulded or pressed articles of sugarcane Bagasse pulp or of other fibrous cellulosic Material other pulp, cellulose wadding and webs of celulose fibres, cut to size or shape; other articles of sugarcane Bagasse ulp, cellulse fibres.',
+          'detail' => '<table align="left" border="0" cellpadding="1" cellspacing="1" style="width:100%"><tbody><tr><td><p>Size</p></td><td><p><strong>500x500 mm or 625x800mm with &plusmn;0.5 mm. Tolerance sideways per 500 mm and &plusmn;0.7 mm diagonal</strong></p></td></tr><tr><td><p>Weight</p></td><td><p><strong>+275 grams</strong></p></td></tr><tr><td><p>Thickness</p></td><td><p><strong>approx 1.5mm (&plusmn;tolerance of 0.05mm)</strong></p></td></tr><tr><td><p>Height</p></td><td><p><strong>thickness of panel +15mm (total approx15.5mm)</strong></p></td></tr><tr><td><p>Material</p></td><td><p><strong>white bagasse (natural bleanched sugarcene pulp)</strong></p></td></tr><tr><td><p>Packing</p></td><td><p><strong>12 panel covers 3m&sup2; (for 500x500 mm) and 6 panels covers 3m&sup2; (for 625x800mm)</strong></p></td></tr><tr><td><p>Fire Resistance</p></td><td><p><strong>Classic, but we advice to use class a fire proof coating/fire retardant paint like dc333 after installing for best an safest result!</strong></p></td></tr><tr><td><p>Price</p></td><td><p><strong>Rp. 560.000</strong></p></td></tr></tbody></table>'
         ]);
         $serviceitem->save();
 

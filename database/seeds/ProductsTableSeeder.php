@@ -1012,7 +1012,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '13',
+          'service_item_id' => '12',
           'image' => 'img/service-item/shop-office/header.jpg',
           'name' => 'Shop and Office 1',
           'price' => '0'
@@ -1020,7 +1020,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '13',
+          'service_item_id' => '12',
           'image' => 'img/service-item/shop-office/pic-1.jpg',
           'name' => 'Shop and Office 2',
           'price' => '0'
@@ -1028,7 +1028,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '13',
+          'service_item_id' => '12',
           'image' => 'img/service-item/shop-office/pic-2.jpg',
           'name' => 'Shop and Office 3',
           'price' => '0'
@@ -1036,7 +1036,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '59',
+          'service_item_id' => '58',
           'image' => 'img/service-item/rak-modelline/cis-header.jpg',
           'name' => 'CIS 1',
           'price' => '150.000'
@@ -1044,7 +1044,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '59',
+          'service_item_id' => '58',
           'image' => 'img/service-item/rak-modelline/cis-pic-1.jpg',
           'name' => 'CIS 2',
           'price' => '150.000'
@@ -1052,7 +1052,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '59',
+          'service_item_id' => '58',
           'image' => 'img/service-item/rak-modelline/cis-pic-2.jpg',
           'name' => 'CIS 3',
           'price' => '150.000'
@@ -1060,7 +1060,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '59',
+          'service_item_id' => '58',
           'image' => 'img/service-item/rak-modelline/cis-pic-3.jpg',
           'name' => 'CIS 4',
           'price' => '150.000'
@@ -1068,7 +1068,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '59',
+          'service_item_id' => '58',
           'image' => 'img/service-item/rak-modelline/cis-pic-4.jpg',
           'name' => 'CIS 5',
           'price' => '150.000'
@@ -1076,7 +1076,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '60',
+          'service_item_id' => '59',
           'image' => 'img/service-item/rak-modelline/basket-sink.png',
           'name' => 'Basket Sink',
           'price' => '55.000'
@@ -1084,7 +1084,7 @@ class ProductsTableSeeder extends Seeder
         $product->save();
 
         $product = new \App\Product([
-          'service_item_id' => '60',
+          'service_item_id' => '59',
           'image' => 'img/service-item/rak-modelline/rak-tempat-sampah.jpg',
           'name' => 'Rak Tempat Sampah',
           'price' => '55.000'
