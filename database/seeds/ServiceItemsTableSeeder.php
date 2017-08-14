@@ -76,7 +76,7 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817513/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-roller_blind1.png',
+          'image' => 'img/service-item/blind/interior-roller-header.png',
           'name' => 'Interior Blinds',
           'description' => 'Type of windows covering with many different kinds of window blings which use a variety of control systems for indoor space.',
           'detail' => ''
@@ -85,7 +85,7 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817516/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-shadow_blind1.png',
+          'image' => 'img/service-item/blind/interior-shadow-header.png',
           'name' => 'Exterior Blinds',
           'description' => 'Ideal for reducing the temperature within your home. Made from unique woven all weather fabric.',
           'detail' => ''
@@ -94,7 +94,7 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817516/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-roman_shades_blind1.png',
+          'image' => 'img/service-item/blind/interior-roman-shades-header.png',
           'name' => 'Insect Screens',
           'description' => 'Performs well in the area of keeping out insects and maximizing private spacecs',
           'detail' => ''
@@ -103,7 +103,7 @@ class ServiceItemsTableSeeder extends Seeder
 
         $serviceitem = new \App\ServiceItem([
           'service_id' => '6',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1501817517/Content/IMAGE%20BLIND-MERK%20ONNA/Interior_Blind-Slimeline_Blinds1.png',
+          'image' => 'img/service-item/blind/interior-slimeline-header.png',
           'name' => 'Partitions',
           'description' => 'High class kind of various products like Lipat Door, Lipat Windows, Shower Screen, and Floding Door',
           'detail' => ''
