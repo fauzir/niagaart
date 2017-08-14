@@ -94,7 +94,7 @@ About
         <hr>
         <!-- LightWidget WIDGET -->
         <script src="//lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="//lightwidget.com/widgets/e4a242cd151c5057b1fe36804c4813fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+        <iframe src="//lightwidget.com/widgets/e4a242cd151c5057b1fe36804c4813fd.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 70%; border: 0; overflow: hidden;"></iframe>
       </div>
     </section>
 @endsection
