@@ -20,7 +20,7 @@ Route::get('/{locale}',[
    'as'    => 'home'
 ]);
 
-Route::get('/error',[
+Route::get('/en/error',[
    'uses' => 'HomeController@error',
    'as'    => 'error'
 ]);
