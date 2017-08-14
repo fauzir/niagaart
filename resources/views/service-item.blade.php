@@ -55,13 +55,13 @@
            </div>
          </div>
          </div>
-         @if ($serviceitem->id == $itemcount)
-           <a class="slide-fixed left carousel-control item-left product" href="#" data-id="{{ $serviceitem->id-1 }}" data-slide="prev">
-             <span class="glyphicon glyphicon-chevron-left"></span>
-           </a>
-         @elseif ($serviceitem->id == $itemfirst->id)
+         @if ($serviceitem->id == $itemfirst->id)
            <a class="slide-fixed right carousel-control item-right product" href="#" data-id="{{ $serviceitem->id+1 }}" data-slide="next">
              <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @elseif ($serviceitem->id == $itemcount->id)
+           <a class="slide-fixed left carousel-control item-left product" href="#" data-id="{{ $serviceitem->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
            </a>
          @else
            <a class="slide-fixed left carousel-control item-left product" href="#" data-id="{{ $serviceitem->id-1 }}" data-slide="prev">

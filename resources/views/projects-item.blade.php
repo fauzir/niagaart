@@ -66,33 +66,17 @@
 </div>
 <!-- Modal Footer -->
 <div class="modal-footer">
-  @if ($project->id == $itemcount)
-    <div class="col-md-6 previous-arrow">
-       <a href="#" class="project" data-id="{{ $project->id-1 }}" title="previous-item"><p><< Previous</p></a>
-    </div>
-  @elseif ($project->id == 1)
-    <div class="col-md-6 next-arrow">
-       <a href="#" class="project" data-id="{{ $project->id+1 }}" title="next-item"><p>Next >></p></a>
-    </div>
-  @else
-    <div class="col-md-6 previous-arrow">
-       <a href="#" class="project" data-id="{{ $project->id-1 }}" title="previous-item"><p><< Previous</p></a>
-    </div>
-    <div class="col-md-6 next-arrow">
-       <a href="#" class="project" data-id="{{ $project->id+1 }}" title="next-item"><p>Next >></p></a>
-    </div>
-  @endif
 
            </div>
          </div>
          </div>
-         @if ($project->id == $itemcount)
-           <a class="slide-fixed left carousel-control item-left project" href="#" data-id="{{ $project->id-1 }}" data-slide="prev">
-             <span class="glyphicon glyphicon-chevron-left"></span>
-           </a>
-         @elseif ($project->id == $itemfirst->id)
+         @if ($project->id == $itemfirst->id)
            <a class="slide-fixed right carousel-control item-right project" href="#" data-id="{{ $project->id+1 }}" data-slide="next">
              <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+         @elseif ($project->id == $itemcount)
+           <a class="slide-fixed left carousel-control item-left project" href="#" data-id="{{ $project->id-1 }}" data-slide="prev">
+             <span class="glyphicon glyphicon-chevron-left"></span>
            </a>
          @else
            <a class="slide-fixed left carousel-control item-left project" href="#" data-id="{{ $project->id-1 }}" data-slide="prev">

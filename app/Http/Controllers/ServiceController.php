@@ -92,7 +92,7 @@ class ServiceController extends Controller
         $id = $request->id;
         $serviceitem = ServiceItem::find($id);
         $itemfirst = ServiceItem::where('service_id', $serviceitem->service_id)->first();
-        $itemcount = ServiceItem::where('service_id', $serviceitem->service_id)->count();
+        $itemcount = ServiceItem::where('service_id', $serviceitem->service_id)->get()->last();
         $products = Product::where('service_item_id', $serviceitem->id)->get();
         return view('service-item', compact('serviceitem', 'itemfirst', 'itemcount', 'products'));
     }
