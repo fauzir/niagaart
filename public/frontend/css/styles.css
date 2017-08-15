@@ -933,7 +933,7 @@ transition: all 0.2s ease-in-out;
 .apartment-img img{
     width: 100%;
     height: auto;
-    padding-top: 220px;
+    padding-top: 20px;
     margin-bottom: 30px;
     animation: slideUp 0.85s .5s cubic-bezier(0.17,
     .88,

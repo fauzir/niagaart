@@ -14,7 +14,7 @@ All Post
             <div class="container col-md-3 fill-in">
 
             </div>
-            <div class="container col-md-8 catalogueheader-txt">
+            <div class="container col-md-8 blogheader-txt wow fadeInUp">
               <h1>{{ $content->title }}</h1>
               <br>
               <p>@lang('content.by') {{ $content->author }} @lang('content.on') {{ date_format($content->created_at, 'd F Y') }}</p>
