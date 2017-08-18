@@ -29,14 +29,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Name</th><th>Featured</th><th>Actions</th>
+                                        <th>Name</th><th>Language</th><th>Featured</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($projects as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
+                                        <td>{{ $item->lang }}</td>
                                         <td>{{ $item->status }}</td>
                                         <td>
                                             <a href="{{ url('/admin/projects-content/' . $item->id) }}" title="View Project"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

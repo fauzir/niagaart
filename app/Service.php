@@ -36,7 +36,7 @@ class Service extends Model
      *
      * @var array
      */
-    protected $fillable = ['banner_image', 'image', 'name', 'tagline', 'description', 'type', 'publish'];
+    protected $fillable = ['banner_image', 'image', 'name', 'tagline', 'description', 'type', 'publish', 'lang'];
 
     public function serviceitem()
     {

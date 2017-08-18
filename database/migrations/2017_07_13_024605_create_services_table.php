@@ -19,6 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('name');
             $table->text('tagline');
             $table->text('description');
+            $table->text('lang');
             $table->timestamps();
         });
     }

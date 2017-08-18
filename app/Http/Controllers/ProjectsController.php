@@ -21,19 +21,24 @@ class ProjectsController extends Controller
         $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
-        $featureds = Project::where('status', 'yes')->orderBy('id', 'asc')->get();
-        $projects = Project::where('status', 'no')->orderBy('id', 'asc')->paginate(15);
+        if (App::isLocale('en')) {
+            $featureds = Project::where('status', 'yes')->where('lang', 'en')->orderBy('id', 'asc')->get();
+            $projects = Project::where('status', 'no')->where('lang', 'en')->orderBy('id', 'asc')->paginate(15);
+        } elseif (App::isLocale('id')) {
+            $featureds = Project::where('status', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            $projects = Project::where('status', 'no')->where('lang', 'id')->orderBy('id', 'asc')->paginate(15);
+        }
         $items = ProjectItem::orderBy('id', 'asc');
         return view('projects', compact('interiors', 'others', 'servicefooters', 'featureds', 'projects', 'items', 'socials', 'contact'));
     }
 
     public function getItem(Request $request)
     {
-        $id = $request->id;
-        $project = Project::find($id);
+        $get_project = Project::find($request->id);
+        $project = Project::where('name', $get_project->name)->first();
         $itemfirst = Project::first();
         $itemcount = Project::count();
-        $data = ProjectItem::where('project_id', $id)->get();
+        $data = ProjectItem::where('project_id', $project->id)->get();
         return view('projects-item', compact('project', 'itemfirst', 'itemcount', 'data'));
     }
 }

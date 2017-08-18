@@ -29,14 +29,14 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Name</th><th>Publish</th><th>Actions</th>
+                                        <th>Name</th><th>Language</th><th>Publish</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($service as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->name }}</td>
+                                        <td>{{ $item->lang }}</td>
                                         <td>{{ $item->publish }}</td>
                                         <td>
                                             <a href="{{ url('/admin/service-niagaart/' . $item->id) }}" title="View Service"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

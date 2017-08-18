@@ -28,27 +28,27 @@ class Blog extends Model implements FeedItem
         return $this->id;
     }
 
-    public function getFeedItemTitle() : string
+    public function getFeedItemTitle()
     {
         return $this->title;
     }
 
-    public function getFeedItemSummary() : string
+    public function getFeedItemSummary()
     {
         return $this->content;
     }
 
-    public function getFeedItemUpdated() : Carbon
+    public function getFeedItemUpdated()
     {
         return $this->updated_at;
     }
 
-    public function getFeedItemLink() : string
+    public function getFeedItemLink()
     {
         return action('BlogController@detail', [$this->url]);
     }
 
-    public function getFeedItemAuthor() : string
+    public function getFeedItemAuthor() 
     {
         return $this->author;
     }

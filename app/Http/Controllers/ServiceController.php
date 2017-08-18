@@ -25,9 +25,16 @@ class ServiceController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         $promos = Promotion::where('status', 'yes')->get();
-        $services = Service::where('slug', $request->slug)->get();
+        if (App::isLocale('en')) {
+            $services = Service::where('slug', $request->slug)->where('lang', 'en')->get();
+        } elseif (App::isLocale('id')) {
+            $services = Service::where('slug', $request->slug)->where('lang', 'id')->get();
+        }
         foreach ($services as $service) {
-          $serviceitems = ServiceItem::where('service_id', $service->id)->orderBy('id', 'asc')->paginate(15);
+          $get_services = Service::where('slug', $service->slug)->where('lang', 'id')->get();
+          foreach ($get_services as $get_service) {
+            $serviceitems = ServiceItem::where('service_id', $get_service->id)->orderBy('id', 'asc')->paginate(15);
+          }
         }
         return view('service', compact('interiors', 'others', 'servicefooters', 'promos', 'services', 'serviceitems', 'socials', 'contact'));
     }
@@ -41,10 +48,11 @@ class ServiceController extends Controller
         $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
-        $services = Service::orderBy('id', 'asc')->get();
         if (App::isLocale('en')) {
+            $services = Service::where('lang', 'en')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(1);
         } elseif (App::isLocale('id')) {
+            $services = Service::where('lang', 'id')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(2);
         }
         return view('service-list', compact('interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials', 'contact'));
@@ -59,10 +67,11 @@ class ServiceController extends Controller
         $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
-        $services = Service::where('type', 'interior')->orderBy('id', 'asc')->get();
         if (App::isLocale('en')) {
+            $services = Service::where('type', 'interior')->where('lang', 'en')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(1);
         } elseif (App::isLocale('id')) {
+            $services = Service::where('type', 'interior')->where('lang', 'id')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(2);
         }
         // $products = DB::table('products')->join('services', 'products.service_id', '=', 'services.id')->select('products.id', 'products.name', 'products.image', 'products.description', 'products.price')->where('services.type', '=', 'interior')->paginate(9);
@@ -78,10 +87,11 @@ class ServiceController extends Controller
         $servicefooters = app('App\Http\Controllers\HomeController')->layoutapp()->get('servicefooters');
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
-        $services = Service::where('type', 'other')->orderBy('id', 'asc')->get();
         if (App::isLocale('en')) {
+            $services = Service::where('type', 'other')->where('lang', 'en')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(1);
         } elseif (App::isLocale('id')) {
+            $services = Service::where('type', 'other')->where('lang', 'id')->orderBy('id', 'asc')->get();
             $servicecatalogues = ServiceCatalogue::find(2);
         }
         return view('service-list', compact('contact', 'interiors', 'others', 'servicefooters', 'services', 'servicecatalogues', 'socials'));

@@ -43,6 +43,15 @@
           <option value="yes">Yes</option>
           <option value="no">No</option>
       </select>
+        {!! $errors->first('publish', '<p class="help-block">:message</p>') !!}
+    </div>
+</div><div class="form-group {{ $errors->has('lang') ? 'has-error' : ''}}">
+    {!! Form::label('lang', 'Language*', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+      <select class="form-control" name="lang">
+          <option value="en">English</option>
+          <option value="id">Indonesia</option>
+      </select>
         <p>* cannot be blank</p>
         {!! $errors->first('publish', '<p class="help-block">:message</p>') !!}
     </div>

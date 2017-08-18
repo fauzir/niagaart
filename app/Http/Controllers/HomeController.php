@@ -18,16 +18,18 @@ class HomeController extends Controller
 {
     public function layoutapp()
     {
-        $interiors = Service::where('type', 'interior')->where('publish', 'yes')->orderBy('id', 'asc')->get();
-        $others = Service::where('type', 'other')->where('publish', 'yes')->orderBy('id', 'asc')->get();
         $servicefooters = Service::limit(3)->orderBy('id', 'asc')->get();
         $socials = Social::where('active', 'yes')->get();
         if (App::isLocale('en')) {
             $home = Home::find(1);
             $contact = Contact::find(1);
+            $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'en')->orderBy('id', 'asc')->get();
+            $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'en')->orderBy('id', 'asc')->get();
         } elseif (App::isLocale('id')) {
             $home = Home::find(2);
             $contact = Contact::find(2);
+            $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
         }
 
         $items = collect(['home' => $home, 'contact' => $contact, 'interiors' => $interiors, 'others' => $others, 'servicefooters' => $servicefooters, 'socials' => $socials]);

@@ -34,14 +34,14 @@ Services
               <div class="container col-md-6 homeliving-txt">
                 <h1>{{ $service->name }}</h1>
                 <br>
-                {!! substr($service->description, 0, 970) !!}</p>
+                <p>{{ substr($service->description, 0, 970) }}</p>
               </div>
               <div class="container col-md-6 opening-img wow slideInUp">
                 <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
               </div>
             </div>
             <div class="container text-ext">
-                <p>{!! substr($service->description, 970) !!}
+                <p>{{ substr($service->description, 970) }}</p>
                 <br>
                 <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
@@ -50,7 +50,7 @@ Services
               <div class="container col-md-6 homeliving-txt">
                 <h1>{{ $service->name }}</h1>
                 <br>
-                {!! $service->description !!}<br>
+                <p>{{ $service->description }}</p><br>
                 <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
             </div>
               <div class="container col-md-6 opening-img wow slideInUp">
@@ -73,10 +73,10 @@ Services
               <div class="container col-md-6 apartment-txt">
                 <h1>{{ $service->name }}</h1>
                 <br>
-                {!! substr($service->description, 0, 970) !!}</p>
+                <p>{{ substr($service->description, 0, 970) }}</p>
               </div>
               <div class="container text-ext">
-                <p>{!! substr($service->description, 970) !!}
+                <p>{{ substr($service->description, 970) }}</p>
                 <br>
                 <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
               </div>
@@ -87,7 +87,7 @@ Services
               <div class="container col-md-6 apartment-txt">
                 <h1>{{ $service->name }}</h1>
                 <br>
-                {!! $service->description !!}</p>
+                <p>{{ $service->description }}</p>
                 <br>
                 <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
               </div>

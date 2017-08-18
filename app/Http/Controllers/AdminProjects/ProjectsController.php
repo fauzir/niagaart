@@ -34,10 +34,10 @@ class ProjectsController extends Controller
 				->orWhere('name', 'LIKE', "%$keyword%")
 				->orWhere('description', 'LIKE', "%$keyword%")
 				->orWhere('status', 'LIKE', "%$keyword%")
-        ->orderBy('id', 'asc')
+        ->orderBy('name', 'asc')
 				->paginate($perPage);
         } else {
-            $projects = Project::orderBy('id', 'asc')->paginate($perPage);
+            $projects = Project::orderBy('name', 'asc')->paginate($perPage);
         }
 
         return view('admin/projects.projects.index', compact('projects'));

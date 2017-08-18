@@ -34,10 +34,10 @@ class ServiceController extends Controller
             $service = Service::where('id', 'LIKE', "%$keyword%")
 				->orWhere('name', 'LIKE', "%$keyword%")
         ->orWhere('description', 'LIKE', "%$keyword%")
-        ->orderBy('id', 'asc')
+        ->orderBy('name', 'asc')
 				->paginate($perPage);
         } else {
-            $service = Service::orderBy('id', 'asc')->paginate($perPage);
+            $service = Service::orderBy('name', 'asc')->paginate($perPage);
         }
 
         return view('admin/services.service.index', compact('service'));
@@ -97,7 +97,7 @@ class ServiceController extends Controller
 
         Session::flash('flash_message', 'Service added!');
 
-        return redirect('admin/service');
+        return redirect('admin/service-niagaart');
     }
 
     /**
@@ -177,7 +177,7 @@ class ServiceController extends Controller
 
         Session::flash('flash_message', 'Service updated!');
 
-        return redirect('admin/service');
+        return redirect('admin/service-niagaart');
     }
 
     /**
