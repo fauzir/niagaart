@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use LERN;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -32,6 +33,21 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+        // parent::report($exception);
+        if ($this->shouldReport($exception)) {
+
+    	//Check to see if LERN is installed otherwise you will not get an exception.
+        if (app()->bound("lern")) {
+            app()->make("lern")->handle($exception); //Record and Notify the Exception
+
+                /*
+                OR...
+                app()->make("lern")->record($e); //Record the Exception to the database
+                app()->make("lern")->notify($e); //Notify the Exception
+                */
+            }
+        }
+
         parent::report($exception);
     }
 

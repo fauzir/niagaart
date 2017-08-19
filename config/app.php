@@ -204,6 +204,9 @@ return [
         // Pagination Spatie
         Spatie\PaginateRoute\PaginateRouteServiceProvider::class,
 
+        // LERN
+        Tylercd100\LERN\LERNServiceProvider::class,
+
     ],
 
     /*
@@ -260,6 +263,7 @@ return [
         'Feed' => Roumen\Feed\Feed::class,
         'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class,
         'PaginateRoute' => Spatie\PaginateRoute\PaginateRouteFacade::class,
+        "LERN" => Tylercd100\LERN\Facades\LERN::class,
 
     ],
 
