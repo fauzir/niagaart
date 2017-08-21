@@ -12,6 +12,11 @@ Author URI: www.41studio.com
 /***@import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');***/
 
+.text-ext{  
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .text-ext p{
   text-align: justify;
 }
@@ -614,7 +619,7 @@ ul {
 
 .opening-img img{
     image-orientation: from-image;
-    padding-top: 80px;
+    padding-top: 20px;
     margin-bottom: 30px;
     width: 100%;
     height: auto;
