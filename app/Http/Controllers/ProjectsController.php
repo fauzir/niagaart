@@ -34,11 +34,17 @@ class ProjectsController extends Controller
 
     public function getItem(Request $request)
     {
+        $contact = app('App\Http\Controllers\HomeController')->layoutapp()->get('contact');
         $get_project = Project::find($request->id);
         $project = Project::where('name', $get_project->name)->first();
         $itemfirst = Project::first();
         $itemcount = Project::count();
         $data = ProjectItem::where('project_id', $project->id)->get();
-        return view('projects-item', compact('project', 'itemfirst', 'itemcount', 'data'));
+        if (App::isLocale('en')) {
+            $workHours = explode(',', $contact->work_hour);
+        } elseif (App::isLocale('id')) {
+            $workHours = explode(',', $contact->work_hour);
+        }
+        return view('projects-item', compact('contact', 'workHours', 'project', 'itemfirst', 'itemcount', 'data'));
     }
 }

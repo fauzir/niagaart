@@ -12,7 +12,7 @@ Author URI: www.41studio.com
 /***@import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');***/
 
-.text-ext{  
+.text-ext{
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -1682,10 +1682,12 @@ footer {
 
 .service-ty{
     border-right: 1px solid #cbcbcb;
+    height: 150px;
 }
 
 .office-add{
     border-right: 1px solid #cbcbcb;
+    height: 150px;
 }
 
 .service-ty a,

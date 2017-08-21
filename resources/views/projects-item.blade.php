@@ -25,19 +25,18 @@
                   <div class="container col-md-4 detail-popup">
                     <h2>DETAIL</h2>
                     <br>
-                    <p>JL. Sangkuriang No 43
-                    Cimahi Utara Jawa Barat
-                    Indonesia</p>
+                    <p>{{ $contact->address }}</p>
                     <br>
-                    <p>Phone : (022) 87800639</p>
+                    <p>@lang('content.phone') : <a href="tel:{{ str_replace (" ", "", $contact->phone) }}" title="Contact Phone | Niaga Art">{{ $contact->phone }}</a></p>
                     <br>
-                    <p>Message/Whatsapp : 0878-2454-2982</p>
+                    <p>@lang('content.message') : <a href="tel:{{ str_replace (" ", "", $contact->other_phone) }}" title="Contact Message | Niaga Art">{{ $contact->other_phone }}</a></p>
                     <br>
-                    <p>email : niagac7@gmail.com</p>
+                    <p>@lang('content.email') : <a href="mailto:{{ $contact->email }}" title="Contact Email | Niaga Art">{{ $contact->email }}</a></p>
                     <br>
-                    <p>Mon - Fri : 08:00 - 16:00</p>
+                  @foreach($workHours as $workHour)
+                    <p>{{ $workHour }}</p>
                     <br>
-                    <p>Sat - Sun : 09:00 - 15:00</p>
+                  @endforeach
                   </div>
                   <br>
                   <h2>ITEM INCLUDED ON THIS PROJECT</h2>
