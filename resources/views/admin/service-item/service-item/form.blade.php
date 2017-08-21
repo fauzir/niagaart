@@ -21,11 +21,17 @@
 </div><div class="form-group {{ $errors->has('discount_price') ? 'has-error' : ''}}">
     {!! Form::label('discount_price', 'Discount*', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-      <div class="input-group">
-        <div class="input-group-addon">Rp.</div>
-        {!! Form::text('discount_price', null, ['class' => 'form-control', 'required' => 'required']) !!}
-        {!! $errors->first('discount_price', '<p class="help-block">:message</p>') !!}
+      <div class="col-md-4">
+      <select class="form-control" name="discount_val">
+          <option value="none">None</option>
+          <option value="percent">Percent</option>
+          <option value="price">Price</option>
+      </select>
       </div>
+        <div class="col-md-8">
+        {!! Form::text('discount_price', null, ['class' => 'form-control', 'placeholder' => 'Discount Value']) !!}
+        {!! $errors->first('discount_price', '<p class="help-block">:message</p>') !!}
+        </div>
     </div>
 </div><div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
     {!! Form::label('description', 'Description*', ['class' => 'col-md-4 control-label']) !!}

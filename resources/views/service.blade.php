@@ -80,7 +80,7 @@ Services
                         <p>Rp. {{ $serviceitem->price }}</p>
                      @else
                         <p style="font-size: 15px; margin-bottom: 0px;"><strike>Rp. {{ $serviceitem->price }}</strike></p>
-                        <p>Rp. {{ $serviceitem->price }}</p>
+                        <p>Rp. {{ $serviceitem->discount_price }}</p>
                      @endif
                      @if ( strlen($serviceitem->description) > 0 )
                         <p>{{ substr($serviceitem->description, 0, 150) }}</p>
