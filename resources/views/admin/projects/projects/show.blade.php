@@ -29,7 +29,7 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <tbody>
-                                    <tr><th> Image </th><td> <img src="{{ asset($project->image) }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $project->name }} </td></tr><tr><th> Description </th><td> {{ $project->description }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ asset($project->image) }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $project->name }} </td></tr><tr><th> Description </th><td> {!! $project->description !!} </td></tr>
                                     <tr><th> Featured </th><td> {{ $project->status }} </td></tr>
                                 </tbody>
                             </table>

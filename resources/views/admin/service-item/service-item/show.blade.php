@@ -29,8 +29,8 @@
                         <div class="table-responsive">
                             <table class="table table-borderless">
                               <tbody>
-                                  <tr><th> Image </th><td> <img src="{{ $serviceitem->image }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $serviceitem->name }} </td></tr>
-                                  <tr><th> Description </th><td> {{ $serviceitem->description }} </td></tr><tr><th> Price </th><td> {{ $serviceitem->price }} </td></tr>
+                                  <tr><th> Image </th><td> <img src="{{ asset($serviceitem->image) }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $serviceitem->name }} </td></tr>
+                                  <tr><th> Description </th><td> {{ $serviceitem->description }} </td></tr><tr><th> Detail </th><td> {!! $serviceitem->detail !!} </td></tr>
                               </tbody>
                             </table>
                         </div>

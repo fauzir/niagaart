@@ -32,7 +32,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $testimony->id }}</td>
                                     </tr>
-                                    <tr><th> Image </th><td> <img src="{{ asset($testimony->image) }}" height="50%" alt=""> </td></tr><tr><th> Subject </th><td> {{ $testimony->subject }} </td></tr><tr><th> Testimony </th><td> {{ $testimony->testimony }} </td></tr>
+                                    <tr><th> Image </th><td> <img src="{{ asset($testimony->image) }}" height="50%" alt=""> </td></tr><tr><th> Name </th><td> {{ $testimony->name }} </td></tr><tr><th> Occupation </th><td> {{ $testimony->occupation }} </td></tr><tr><th> Subject </th><td> {{ $testimony->subject }} </td></tr><tr><th> Testimony </th><td> {{ $testimony->testimony }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
