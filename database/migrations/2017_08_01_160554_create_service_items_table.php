@@ -19,6 +19,8 @@ class CreateServiceItemsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->text('detail');
+            $table->text('price');
+            $table->text('discount_price');
             $table->timestamps();
         });
     }

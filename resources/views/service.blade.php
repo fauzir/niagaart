@@ -75,6 +75,12 @@ Services
                        <h3>{{ $serviceitem->name }}</h3>
                      @endif
                      <hr>
+                     @if ( $serviceitem->discount_price == 'none' )
+                        <p>Rp. {{ $serviceitem->price }}</p>
+                     @else
+                        <p><strike>Rp. {{ $serviceitem->price }}</strike></p>
+                        <p>Rp. {{ $serviceitem->price }}</p>
+                     @endif
                      @if ( strlen($serviceitem->description) > 0 )
                         <p style="min-height: 175px;">{{ substr($serviceitem->description, 0, 150) }}</p>
                      @else
