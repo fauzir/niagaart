@@ -51,59 +51,59 @@ class BlogTagsTableSeeder extends Seeder
         ]);
         $blogtag->save();
 
-        $blogtag = new \App\BlogTag([
-          'tag' => 'sed',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'do',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'eiusmod',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'tempor',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'incididunt',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'ut',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'labore',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'et',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'dolore',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'magna',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'aliqua',
-        ]);
-        $blogtag->save();
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'sed',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'do',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'eiusmod',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'tempor',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'incididunt',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'ut',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'labore',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'et',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'dolore',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'magna',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'aliqua',
+        // ]);
+        // $blogtag->save();
     }
 }
