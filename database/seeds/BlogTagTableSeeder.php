@@ -19,6 +19,13 @@ class BlogTagTableSeeder extends Seeder
           'updated_at' => \Carbon\Carbon::now()
         ]);
 
+        DB::table('blog_tag')->insert([
+          'blog_id' => '2',
+          'tag_id' => '1',
+          'created_at' => \Carbon\Carbon::now(),
+          'updated_at' => \Carbon\Carbon::now()
+        ]);
+
         // DB::table('blog_tag')->insert([
         //   'blog_id' => '1',
         //   'tag_id' => '2',

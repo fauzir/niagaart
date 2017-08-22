@@ -24,7 +24,7 @@ class BlogController extends Controller
 
         if (!empty($keyword)) {
             App::setLocale($request->locale);
-            $blogs = Blog::where('title', 'LIKE', "%$keyword%")
+            $blogs = Blog::with('tag_blog')->where('title', 'LIKE', "%$keyword%")
         ->orWhere('category', 'LIKE', "%$keyword%")
         ->orWhere('author', 'LIKE', "%$keyword%")
         ->orderBy('created_at', 'desc')
@@ -43,9 +43,14 @@ class BlogController extends Controller
             return view('blog', compact('servicefooters', 'blogs', 'categories', 'count', 'populars', 'socials', 'contact'));
         } else {
             App::setLocale($request->locale);
-            $blogs = Blog::with('tag_blog')->orderBy('created_at', 'desc')->paginate($perPage);
+            if (App::isLocale('en')) {
+                $blogs = Blog::with('tag_blog')->where('lang', 'en')->orderBy('created_at', 'desc')->paginate($perPage);
+                $populars = Blog::limit(3)->where('lang', 'en')->orderBy('visitor_count', 'desc')->get();
+            } elseif (App::isLocale('id')) {
+                $blogs = Blog::with('tag_blog')->where('lang', 'id')->orderBy('created_at', 'desc')->paginate($perPage);
+                $populars = Blog::limit(3)->where('lang', 'id')->orderBy('visitor_count', 'desc')->get();
+            }
             $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('tag_id, slug, tag, count(tag_id) as total'))->groupBy('tag_id', 'slug', 'tag')->get();
-            $populars = Blog::limit(3)->orderBy('visitor_count', 'desc')->get();
             return view('blog', compact('blogs', 'servicefooters', 'categories', 'populars', 'socials', 'contact'));
         }
     }

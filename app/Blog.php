@@ -48,7 +48,7 @@ class Blog extends Model implements FeedItem
         return action('BlogController@detail', [$this->url]);
     }
 
-    public function getFeedItemAuthor() 
+    public function getFeedItemAuthor()
     {
         return $this->author;
     }
@@ -67,7 +67,7 @@ class Blog extends Model implements FeedItem
      *
      * @var array
      */
-    protected $fillable = ['title', 'category', 'image', 'content', 'author', 'comment'];
+    protected $fillable = ['title', 'category', 'image', 'content', 'author', 'comment', 'lang'];
 
     public function blog_tag()
     {
