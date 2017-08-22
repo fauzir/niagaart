@@ -12,44 +12,44 @@ class BlogTagsTableSeeder extends Seeder
     public function run()
     {
         $blogtag = new \App\BlogTag([
-          'tag' => 'lorem',
+          'tag' => 'interior',
         ]);
         $blogtag->save();
 
-        $blogtag = new \App\BlogTag([
-          'tag' => 'ipsum',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'dolor',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'sit',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'amet',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'consectetur',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'adipisicing',
-        ]);
-        $blogtag->save();
-
-        $blogtag = new \App\BlogTag([
-          'tag' => 'elit',
-        ]);
-        $blogtag->save();
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'ipsum',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'dolor',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'sit',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'amet',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'consectetur',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'adipisicing',
+        // ]);
+        // $blogtag->save();
+        //
+        // $blogtag = new \App\BlogTag([
+        //   'tag' => 'elit',
+        // ]);
+        // $blogtag->save();
 
         // $blogtag = new \App\BlogTag([
         //   'tag' => 'sed',

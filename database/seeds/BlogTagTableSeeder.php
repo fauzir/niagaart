@@ -19,54 +19,54 @@ class BlogTagTableSeeder extends Seeder
           'updated_at' => \Carbon\Carbon::now()
         ]);
 
-        DB::table('blog_tag')->insert([
-          'blog_id' => '1',
-          'tag_id' => '2',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '1',
-          'tag_id' => '3',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '1',
-          'tag_id' => '4',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '1',
-          'tag_id' => '5',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '2',
-          'tag_id' => '6',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '2',
-          'tag_id' => '7',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
-
-        DB::table('blog_tag')->insert([
-          'blog_id' => '2',
-          'tag_id' => '8',
-          'created_at' => \Carbon\Carbon::now(),
-          'updated_at' => \Carbon\Carbon::now()
-        ]);
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '1',
+        //   'tag_id' => '2',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '1',
+        //   'tag_id' => '3',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '1',
+        //   'tag_id' => '4',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '1',
+        //   'tag_id' => '5',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '2',
+        //   'tag_id' => '6',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '2',
+        //   'tag_id' => '7',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
+        //
+        // DB::table('blog_tag')->insert([
+        //   'blog_id' => '2',
+        //   'tag_id' => '8',
+        //   'created_at' => \Carbon\Carbon::now(),
+        //   'updated_at' => \Carbon\Carbon::now()
+        // ]);
 
         // DB::table('blog_tag')->insert([
         //   'blog_id' => '3',

@@ -22,16 +22,16 @@ class BlogsTableSeeder extends Seeder
         ]);
         $blog->save();
 
-        $blog = new \App\Blog([
-          'title' => 'Consectetur adipisicing elit',
-          'category' => 'Finance',
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726576/article-thumbnail_nbljyk.jpg',
-          'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
-          'author' => 'Author',
-          'comment' => 'yes',
-          'visitor_count' => '0'
-        ]);
-        $blog->save();
+        // $blog = new \App\Blog([
+        //   'title' => 'Consectetur adipisicing elit',
+        //   'category' => 'Finance',
+        //   'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/q_40/v1501726576/article-thumbnail_nbljyk.jpg',
+        //   'content' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>',
+        //   'author' => 'Author',
+        //   'comment' => 'yes',
+        //   'visitor_count' => '0'
+        // ]);
+        // $blog->save();
 
         // $blog = new \App\Blog([
         //   'title' => 'Sed do eiusmod tempor',
