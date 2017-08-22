@@ -5,6 +5,7 @@ namespace App\Http\Controllers\AdminTestimony;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Cloudder;
 use App\Testimony;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
