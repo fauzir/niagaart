@@ -29,14 +29,13 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Title</th><th>Category</th><th>Created</th><th>Actions</th>
+                                        <th>Title</th><th>Language</th><th>Category</th><th>Created</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($blog as $item)
                                     <tr>
-                                        <td>{{ $item->id }}</td>
-                                        <td>{{ $item->title }}</td><td>{{ $item->category }}</td><td>{{ $item->created_at }}</td>
+                                        <td>{{ $item->title }}</td><td>{{ $item->lang }}</td><td>{{ $item->category }}</td><td>{{ $item->created_at }}</td>
                                         <td>
                                             <a href="{{ url('/admin/blog-post/' . $item->id) }}" title="View Blog"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/admin/blog-post/' . $item->id . '/edit') }}" title="Edit Blog"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>

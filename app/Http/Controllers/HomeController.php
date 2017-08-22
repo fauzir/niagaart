@@ -45,6 +45,10 @@ class HomeController extends Controller
             return redirect()->route('login');
         } elseif (App::isLocale('blog')) {
             return redirect()->route('blog', ['locale' => 'en']);
+        } elseif (App::isLocale('id')) {
+            $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'id')->orderBy('created_at', 'desc')->get();
+        } elseif (App::isLocale('en')) {
+            $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'en')->orderBy('created_at', 'desc')->get();
         }
         $home = $this->layoutapp()->get('home');
         $contact = $this->layoutapp()->get('contact');
@@ -53,7 +57,6 @@ class HomeController extends Controller
         $servicefooters = $this->layoutapp()->get('servicefooters');
         $socials = $this->layoutapp()->get('socials');
         $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->orderBy('id', 'asc')->get();
-        $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->orderBy('created_at', 'desc')->get();
         $testimonies = Testimony::all();
         $promos = Promotion::where('status', 'yes')->get();
         return view('home', compact('home', 'services', 'blogs', 'interiors', 'others', 'servicefooters', 'testimonies', 'promos', 'socials', 'contact'));
