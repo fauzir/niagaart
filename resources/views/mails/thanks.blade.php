@@ -555,9 +555,9 @@ body{background-color:#fff}.logo a:hover,.logo a:focus{color:#859bb1 !important}
       <h1 class="size-64" style="Margin-top: 0;Margin-bottom: 20px;font-style: normal;font-weight: normal;color: #000;font-size: 44px;line-height: 50px;font-family: avenir,sans-serif;text-align: center;" lang="x-size-64"><span class="font-avenir"><strong><span style="color:#ffffff">
         We've Received Your Message
       </span></strong></span></h1>
-      <p>Hi {{ $name }}! Thanks for your message. We will give a feedback soon.</p>
+      <p style="color:#ffffff">Hi {{ $name }}! Thanks for your message. We will give a feedback soon.</p>
 
-      <p><b>Have a good day!</b></p>
+      <p style="color:#ffffff"><b>Have a good day!</b></p>
     </div>
 
               <div style="Margin-left: 20px;Margin-right: 20px;">
