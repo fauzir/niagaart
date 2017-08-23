@@ -10,6 +10,7 @@ use App\Mail\Message;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Input;
 use View;
 
 class ContactController extends Controller
@@ -41,9 +42,18 @@ class ContactController extends Controller
                 'user_message' => $request->input('user_message')
             ), function($message)
         {
-            $message->from('fauzi@41studio.com', 'Your Web Message');
+            $message->from(Input::get('email'), 'Your Web Message');
             $message->to('cs@niagaart.com', 'Admin')->subject('You have a new message!');
         });
+
+        // Mail::send('mails.thanks',
+        //     array(
+        //         'name' => $request->input('name')
+        //     ), function($message)
+        // {
+        //     $message->from('cs@niagaart.com', 'Your Web Message');
+        //     $message->to(Input::get('email'), Input::get('name'))->subject('Thanks For Your Message!');
+        // });
 
       return \Redirect::route('contact', ['locale' => 'id'])->with('message', 'Thanks for contacting us!');
     }
