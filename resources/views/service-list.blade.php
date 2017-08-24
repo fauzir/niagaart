@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Services
+<title>NiagaArt | Services</title>
 @endsection
 
 @section('content')
@@ -29,35 +29,18 @@ Services
     <section>
     <div class="container-fluid homeliving-bg">
       <div class="container opening-section">
-          @if ( strlen($service->description) > 968 )
             <div class="row">
-              <div class="container col-md-6 homeliving-txt">
+              <div class="container homeliving-txt">
+                <br>
+                <img class="wow slideInUp" src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
                 <h1>{{ $service->name }}</h1>
-                <br>
-                <p>{{ substr($service->description, 0, 968) }}</p>
-              </div>
-              <div class="container col-md-6 opening-img wow slideInUp">
-                <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
-              </div>
-            </div>
-            <div class="container text-ext">
-                <p>{{ substr($service->description, 968) }}</p>
-                <br>
-                <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
-            </div>
-          @else
-            <div class="row">
-              <div class="container col-md-6 homeliving-txt">
-                <h1>{{ $service->name }}</h1>
-                <br>
-                <p>{{ $service->description }}</p><br>
-                <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
-            </div>
-              <div class="container col-md-6 opening-img wow slideInUp">
-                <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
+                <p>{{ $service->description }}</p>
+                <div class="container">
+                    <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
+                </div>
               </div>
             </div>
-          @endif
+
         </div>
       </div>
     </section>
@@ -66,32 +49,15 @@ Services
     <div class="container-fluid apartment-bg">
       <div class="container opening-sectionright">
           <div class="row">
-            @if ( strlen($service->description) > 971 )
-              <div class="container col-md-6 apartment-img wow slideInUp">
-                <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
-              </div>
-              <div class="container col-md-6 apartment-txt">
+              <div class="container apartment-txt">
+              <br>
+                <img class="wow slideInUp" src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
                 <h1>{{ $service->name }}</h1>
-                <br>
-                <p>{{ substr($service->description, 0, 971) }}</p>
-              </div>
-              <div class="container text-ext">
-                <p>{{ substr($service->description, 971) }}</p>
-                <br>
-                <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
-              </div>
-            @else
-              <div class="container col-md-6 apartment-img wow slideInUp">
-                <img src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
-              </div>
-              <div class="container col-md-6 apartment-txt">
-                <h1>{{ $service->name }}</h1>
-                <br>
                 <p>{{ $service->description }}</p>
-                <br>
-                <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
+                <div class="container text-ext">
+                  <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
+                </div>
               </div>
-            @endif
           </div>
         </div>
       </div>

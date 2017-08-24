@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ App::getLocale() }}">
   <head>
-    <title>NiagaArt | @yield('title')</title>
+    @yield('title')
     <meta name="description" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living"/>
     <meta name="NiagaArt Website" content="NiagaArt, Home and Interior Design, Best Interior Design, Home and Living Design, Design, Room and Interior, Home and Living" />
     <meta charset="utf-8">
@@ -59,7 +59,7 @@
                            <!--end submenu-->
                            <li class="divider"></li>
                            <li class="dropdown-submenu">
-                              <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
+                              <a href="{{ route('service.other', ['locale' => request()->route()->locale]) }}" title="Other Interior | Niaga Art" tabindex="-1">OTHER INTERIOR DESIGN SERVICES</a>
                               <ul class="dropdown-menu">
                                  @foreach ($others as $other)
                                  <li><a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $other->slug]) }}" title="{{ $other->name }} | Niaga Art">{{ $other->name }}</a></li>

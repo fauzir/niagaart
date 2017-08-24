@@ -542,6 +542,8 @@ ul {
     border-radius: 0px;
     background-color: #ebebeb;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 215px;
+    min-height: 215px;
 }
 .adjust2 {
     margin: 0;
@@ -622,13 +624,13 @@ ul {
     font-size: 52px
 }
 
-.opening-img img{
-    image-orientation: from-image;
-    padding-top: 20px;
+.homeliving-txt img{
+    padding: 23px;
     margin-bottom: 30px;
-    width: 100%;
+    width: 50%;
     height: auto;
     overflow-y: hidden;
+    float: right!important;
 }
 
 .opening-title h1{
@@ -940,11 +942,13 @@ transition: all 0.2s ease-in-out;
     padding-right: 0px;
     text-align: left;
 }
-.apartment-img img{
-    width: 100%;
+.apartment-txt img{
+    width: 50%;
     height: auto;
-    padding-top: 20px;
+    padding: 23px;
+    padding-top: 25px;
     margin-bottom: 30px;
+    float: left!important;
     animation: slideUp 0.85s .5s cubic-bezier(0.17,
     .88,
     .32,

@@ -1,12 +1,20 @@
 @extends('layouts.app')
 
 @section('title')
-Contact
+<title>NiagaArt | Contact</title>
 @endsection
 
 @section('content')
     <section>
     <div class="container service-scope1">
+    @if (Session::has('flash_message'))
+          <div class="container" style="margin-top: 100px;">
+              <div class="alert alert-success fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  {{ Session::get('flash_message') }}
+              </div>
+          </div>
+      @endif
         <div class="row">
           <div class="container map-info">
             <div class="row">

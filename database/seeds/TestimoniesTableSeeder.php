@@ -55,5 +55,14 @@ class TestimoniesTableSeeder extends Seeder
           'occupation' => 'Customer'
         ]);
         $testimony->save();
+
+        $testimony = new \App\Testimony([
+          'image' => 'http://res.cloudinary.com/https-www-niagaart-com/image/upload/q_40/v1503549500/testimony-1503549499.jpg',
+          'subject' => "I'm very pleased with NiagaArt",
+          'testimony' => "love this site, love their service and their affordable prices. In short, I'm very pleased with NiagaArt",
+          'name' => 'Hendra Nicholas',
+          'occupation' => 'CEO at 41studio'
+        ]);
+        $testimony->save();
     }
 }

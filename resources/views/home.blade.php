@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Homepage
+<title>{{ $home->welcome_text }} | NiagaArt</title>
 @endsection
 
 @section('content')
@@ -84,13 +84,6 @@ Homepage
     <section>
       <div class="container content">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-            </li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          </ol>
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
             @foreach ($testimonies as $index => $testimony)

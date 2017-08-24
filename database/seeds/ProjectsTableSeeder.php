@@ -12,7 +12,7 @@ class ProjectsTableSeeder extends Seeder
     public function run()
     {
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503029885/Content/IMAGE%20BLIND-MERK%20ONNA/PROJEK_UNGGULAN-2.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/PROJEK_UNGGULAN-2_wntif0.jpg',
           'name' => 'Kitchen Set 1',
           'description' => '<p>Konsep Kitchen set disamping adalah dapur dengan warna natural, warna coklat tua serat kayu yang pada kabinet bawah kitchen set dan warna putih pada kitchen set kabinet atas, ditambah lemari oven, dan lemari kulkas disamping kitchen set.</p><p>Desain yang sangat memperhatikan fungsi dari produk yang dihasilkan ini memiliki beberapa lampu pada bagian kabinet atas kitchen set, dua buah bak sing yang cukup besar, kompor tanam dua tungku bewarna hitam dan filtrek dibagian atas kompor. <em>Top table</em> yang di terapkan adalah warna terang yaitu granit star white sehingga kitchen set kabinet bawah tampil kontras dengan <em>top table-</em>nya. Pada dinding kitchen set di terapkan kaca cermin yang menjadikan dapur tampak lebih luas.</p><p>Ketidaknyamanan ketika terlalu banyak barang di dapur akan terasa menyempitkan, oleh karena itu desain kitchen set ini di rancang minimalis sehingga semua perabotan memasak dapat disimpan di dalam lemari kitchen set yang terlah disediakan. Kelebihan lainnya piring yang masih basah tetap bisa dimasukan ke dalam lemari kitchen set tanpa harus membasahi lemari bagian dalam karena terdapat piring tatakan yang bisa menampung air bilasan pencucian alat makan dan perabotan masak.</p>',
           'status' => 'yes',
@@ -21,7 +21,7 @@ class ProjectsTableSeeder extends Seeder
         $project->save();
 
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503029885/Content/IMAGE%20BLIND-MERK%20ONNA/PROJEK_UNGGULAN-2.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/PROJEK_UNGGULAN-2_wntif0.jpg',
           'name' => 'Kitchen Set 1',
           'description' => '<p>Kitchen set concept is kitchen with natural color, dark brown wooden color which in cabinet under kitchen set and white color in kitchen set top cabinet, plus oven cupboard, and refrigerator cabinet set beside kitchen set.</p><p>The design is very paying attention to the function of the resulting product has several lights on the cabinet top of the kitchen set, two large sing tubs, stove planting two black colored stove and filtrek at the top of the stove. Top table is applied is a bright color of granite star white so that the kitchen set under the cabinet appear in contrast with its top table. On the wall of the kitchen set in the application of mirror glass that makes the kitchen look more spacious.</p><p>Inconvenience when too many items in the kitchen will feel narrow, therefore the design of this kitchen set in minimalist design so that all cooking utensils can be stored in the kitchen cabinets set terlah provided. Another advantage is still a wet plate that can be incorporated into the kitchen cabinet set without having to wet the inner cabinet because there are placemat plates that can accommodate rinse water washing equipment and cooking utensils.</p>',
           'status' => 'yes',
@@ -30,7 +30,7 @@ class ProjectsTableSeeder extends Seeder
         $project->save();
 
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-jakarta_ukgydz.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/project-jakarta_qzbumg.jpg',
           'name' => 'Kitchen Set 2',
           'description' => '<p>Ruangan memasak di rumah atau yang sering juga dikenal dengan kitchen set. Seperti hunian disamping merupakan contoh dari kitchen set dengan perpaduan warna putih yang cukup mendominasi, ditambah serat kayu dan sedikit terdapat warna merah pada kursi bar juga kelengkapan aksesoris yang di pajang bewarna merah memberikan kesan pada dapur tampak luas dan bersih namun tidak memiliki kesan monoton pada ruangan. Desain kitchen set dikonsep dengan sangat baik agar dapur terlihat lebih hidup sehingga tidak tampak dapur yang membosankan. Terdapat beberapa lampu LED sebagai aksesoris pada kitchen set kabiner atas dan kitchen set pada bagian bawah untuk memberikan penerangan ketika dapur sedang digunakan. Kelengkapan yang ada pada kitchen set tersebut adalah microwave, kompor tanam, filtrek dan sing.</p><p>Selain itu kitchen set ini dilengkapi dengan minibar yang unik berukuran 60 x 150 cm. Permukaan atas minibar terdapat kaca. Dinding bagian dalam minibar multifungsi ini sebenarnya memiliki ukuran lebar yang lebih besar ketika pada bagian belakang di tarik untuk memperluas minibar. Kelebihan lain, minibar tersebut memiliki kabinet penyimpanan barang yang cukup luas untuk menyimpan peralatan memasak.</p>',
           'status' => 'yes',
@@ -39,7 +39,7 @@ class ProjectsTableSeeder extends Seeder
         $project->save();
 
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1502180792/project-jakarta_ukgydz.jpg',
+          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/project-jakarta_qzbumg.jpg',
           'name' => 'Kitchen Set 2',
           'description' => '<p>Part of room for cooking at home which is often also known as the kitchen set. Occupancy is an example of a kitchen set with a blend of white color that dominates enough, plus wood fiber and a little red color on the bar stool also the accessories that are on display red colored give the impression on the kitchen looks spacious and clean but do not have the impression of monotonous in the room. The design of the kitchen set is very well concepted to make the kitchen look more alive so it does not look like a boring kitchen. There are several LED lights as accessories on the kitchen set top cabin and kitchen set on the bottom to provide lighting when the kitchen is being used. Completeness that is in the kitchen set is a microwave, stove planting, filtrek and sing.</p><p>In addition the kitchen set is equipped with a unique minibar measuring 60 x 150 cm. The upper surface of the minibar is glass. Actually the interior wall of this multifunctional minibar has a larger width when open the back of the drag to expand the minibar. In addition, the minibar has a storage cabinet of goods large enough to store cooking utensils.</p>',
           'status' => 'yes',

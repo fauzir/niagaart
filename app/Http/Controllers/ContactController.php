@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Input;
+use Session;
 use View;
 
 class ContactController extends Controller
@@ -43,7 +44,7 @@ class ContactController extends Controller
             ), function($message)
         {
             $message->from('noreply@niagaart.com', 'Your Web Message');
-            $message->to('cs@niagaart.com', 'Admin')->subject('You have a new message!');
+            $message->to('fauzi@41studio.com', 'Admin')->subject('You have a new message!');
         });
 
         Mail::send('mails.thanks',
@@ -55,6 +56,8 @@ class ContactController extends Controller
             $message->to(Input::get('email'), Input::get('name'))->subject('Thanks For Your Message!');
         });
 
-      return \Redirect::route('contact', ['locale' => 'id'])->with('message', 'Thanks for contacting us!');
+      Session::flash('flash_message', 'Your message has been sent, Thank you!');
+
+      return redirect()->route('contact', ['locale' => 'id']);
     }
 }
