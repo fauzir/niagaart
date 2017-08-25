@@ -852,6 +852,12 @@ transition: all 0.2s ease-in-out;
     font-size: 20px;
 }
 
+.btn.focus, .btn:focus, .btn:hover{
+    color: #fff;
+    text-decoration: none;
+    background-color: #fa7777;
+}
+
 .message-panel {
     background-image: url(../img/message-chair.jpg);
     width: 100%;

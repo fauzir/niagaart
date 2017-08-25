@@ -30,7 +30,7 @@ class ProjectsTableSeeder extends Seeder
         $project->save();
 
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/project-jakarta_qzbumg.jpg',
+          'image' => 'http://res.cloudinary.com/https-www-niagaart-com/image/upload/v1503625394/project-jakarta_unowqb.jpg',
           'name' => 'Kitchen Set 2',
           'description' => '<p>Ruangan memasak di rumah atau yang sering juga dikenal dengan kitchen set. Seperti hunian disamping merupakan contoh dari kitchen set dengan perpaduan warna putih yang cukup mendominasi, ditambah serat kayu dan sedikit terdapat warna merah pada kursi bar juga kelengkapan aksesoris yang di pajang bewarna merah memberikan kesan pada dapur tampak luas dan bersih namun tidak memiliki kesan monoton pada ruangan. Desain kitchen set dikonsep dengan sangat baik agar dapur terlihat lebih hidup sehingga tidak tampak dapur yang membosankan. Terdapat beberapa lampu LED sebagai aksesoris pada kitchen set kabiner atas dan kitchen set pada bagian bawah untuk memberikan penerangan ketika dapur sedang digunakan. Kelengkapan yang ada pada kitchen set tersebut adalah microwave, kompor tanam, filtrek dan sing.</p><p>Selain itu kitchen set ini dilengkapi dengan minibar yang unik berukuran 60 x 150 cm. Permukaan atas minibar terdapat kaca. Dinding bagian dalam minibar multifungsi ini sebenarnya memiliki ukuran lebar yang lebih besar ketika pada bagian belakang di tarik untuk memperluas minibar. Kelebihan lain, minibar tersebut memiliki kabinet penyimpanan barang yang cukup luas untuk menyimpan peralatan memasak.</p>',
           'status' => 'yes',
@@ -39,7 +39,7 @@ class ProjectsTableSeeder extends Seeder
         $project->save();
 
         $project = new \App\Project([
-          'image' => 'http://res.cloudinary.com/fauzi41studio/image/upload/v1503564242/project-jakarta_qzbumg.jpg',
+          'image' => 'http://res.cloudinary.com/https-www-niagaart-com/image/upload/v1503625394/project-jakarta_unowqb.jpg',
           'name' => 'Kitchen Set 2',
           'description' => '<p>Part of room for cooking at home which is often also known as the kitchen set. Occupancy is an example of a kitchen set with a blend of white color that dominates enough, plus wood fiber and a little red color on the bar stool also the accessories that are on display red colored give the impression on the kitchen looks spacious and clean but do not have the impression of monotonous in the room. The design of the kitchen set is very well concepted to make the kitchen look more alive so it does not look like a boring kitchen. There are several LED lights as accessories on the kitchen set top cabin and kitchen set on the bottom to provide lighting when the kitchen is being used. Completeness that is in the kitchen set is a microwave, stove planting, filtrek and sing.</p><p>In addition the kitchen set is equipped with a unique minibar measuring 60 x 150 cm. The upper surface of the minibar is glass. Actually the interior wall of this multifunctional minibar has a larger width when open the back of the drag to expand the minibar. In addition, the minibar has a storage cabinet of goods large enough to store cooking utensils.</p>',
           'status' => 'yes',

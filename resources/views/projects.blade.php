@@ -20,18 +20,20 @@
                     <div class="carousel-content">
                         <div class="container featured-projects">
                             <div class="row">
-                              <div class="container col-md-6">
+                              <div class="container col-md-12 homeliving-txt">
                                 <h2>{{ $featured->name }}</h2>
                                 <br>
                                 @if ( strlen($featured->description) > 0 )
+                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
                                   <p>{!! $featured->description !!}</p>
                                 @else
+                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
                                   <p>@lang('content.no-desc')</p>
                                 @endif
                               </div>
-                              <div class="container col-md-6 opening-img">
+                              {{-- <div class="container col-md-6 opening-img">
                                 <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
-                              </div>
+                              </div> --}}
                             </div>
                         </div>
                     </div>
