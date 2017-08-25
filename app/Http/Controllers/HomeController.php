@@ -30,6 +30,11 @@ class HomeController extends Controller
             $contact = Contact::find(2);
             $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
             $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+        } else {
+            $home = Home::find(2);
+            $contact = Contact::find(2);
+            $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
         }
 
         $items = collect(['home' => $home, 'contact' => $contact, 'interiors' => $interiors, 'others' => $others, 'servicefooters' => $servicefooters, 'socials' => $socials]);
@@ -49,6 +54,8 @@ class HomeController extends Controller
             $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'id')->orderBy('created_at', 'desc')->get();
         } elseif (App::isLocale('en')) {
             $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'en')->orderBy('created_at', 'desc')->get();
+        } else {
+            $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'id')->orderBy('created_at', 'desc')->get();
         }
         $home = $this->layoutapp()->get('home');
         $contact = $this->layoutapp()->get('contact');
