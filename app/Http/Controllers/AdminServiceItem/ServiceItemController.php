@@ -80,6 +80,10 @@ class ServiceItemController extends Controller
           $requestData['image'] = $upload['url'];
         }
 
+        if($requestData['discount_val'] == 'none'){
+          $requestData['discount_price'] = 'none';
+        };
+
         ServiceItem::create($requestData);
 
         Session::flash('flash_message', 'ServiceItem added!');

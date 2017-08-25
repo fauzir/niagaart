@@ -13,7 +13,7 @@
                         <a href="{{ url('/admin/service-item/' . $serviceitem->id . '/edit') }}" title="Edit ServiceItem"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['admin/serviceitem', $serviceitem->id],
+                            'url' => ['admin/service-item', $serviceitem->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
