@@ -29,7 +29,7 @@
       </select>
       </div>
         <div class="col-md-8">
-        {!! Form::text('discount_price', null, ['class' => 'form-control', 'placeholder' => 'Discount Value']) !!}
+        {!! Form::text('discount_price', null, ['class' => 'form-control', 'placeholder' => "Just number (Ex: 20, 10, 50000)"]) !!}
         {!! $errors->first('discount_price', '<p class="help-block">:message</p>') !!}
         </div>
     </div>
