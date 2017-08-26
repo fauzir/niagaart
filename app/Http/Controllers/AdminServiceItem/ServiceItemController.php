@@ -65,7 +65,8 @@ class ServiceItemController extends Controller
 			'service_id' => 'required',
 			'image' => 'required|image',
 			'name' => 'required',
-			'description' => 'required'
+			'description' => 'required',
+			'detail' => 'required'
 		]);
         $requestData = $request->all();
 
