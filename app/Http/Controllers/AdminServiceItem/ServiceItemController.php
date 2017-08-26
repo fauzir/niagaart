@@ -83,6 +83,10 @@ class ServiceItemController extends Controller
 
         if($requestData['discount_val'] == 'none'){
           $requestData['discount_price'] = 'none';
+        } elseif ($requestData['discount_val'] == 'percent') {
+          $requestData['discount_price'] = $requestData['price'] - ($requestData['price'] * $requestData['discount_price'] / 100);
+        } elseif ($requestData['discount_val'] == 'price') {
+          $requestData['discount_price'] = $requestData['discount_price'];
         } elseif($requestData['discount_price'] == null) {
           $requestData['discount_price'] = 'none';
         };
