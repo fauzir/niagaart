@@ -31,10 +31,7 @@ class HomeController extends Controller
             $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
             $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
         } else {
-            $home = Home::find(2);
-            $contact = Contact::find(2);
-            $interiors = Service::where('type', 'interior')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
-            $others = Service::where('type', 'other')->where('publish', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            return redirect()->route('home', ['locale' => 'id']);
         }
 
         $items = collect(['home' => $home, 'contact' => $contact, 'interiors' => $interiors, 'others' => $others, 'servicefooters' => $servicefooters, 'socials' => $socials]);
