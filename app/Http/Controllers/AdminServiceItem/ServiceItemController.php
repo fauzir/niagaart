@@ -83,6 +83,8 @@ class ServiceItemController extends Controller
 
         if($requestData['discount_val'] == 'none'){
           $requestData['discount_price'] = 'none';
+        } elseif($requestData['discount_price'] == null) {
+          $requestData['discount_price'] = 'none';
         };
 
         ServiceItem::create($requestData);
