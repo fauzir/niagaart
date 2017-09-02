@@ -24,13 +24,22 @@
     {!! Form::label('content', 'Content', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
-        <textarea name="contenteditor" rows="8" cols="80">{{ $blog->content }}</textarea>
+        <textarea name="contenteditor" rows="8" cols="80"  required="true">{{ $blog->content }}</textarea>
     </div>
 </div>
 <div class="form-group">
     {!! Form::label('tag', 'Tag', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
       <input type="text" name="tag" value="{{ $rel }}" id="taginput" class="form-control">
+    </div>
+</div><div class="form-group {{ $errors->has('lang') ? 'has-error' : ''}}">
+    {!! Form::label('lang', 'Language*', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+      <select class="form-control" name="lang">
+          <option value="en">English</option>
+          <option value="id">Indonesia</option>
+      </select>
+        {!! $errors->first('publish', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('comment') ? 'has-error' : ''}}">
     {!! Form::label('comment', 'Comment', ['class' => 'col-md-4 control-label']) !!}

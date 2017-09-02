@@ -77,7 +77,7 @@ class BlogController extends Controller
         $this->validate($request, [
 			'title' => 'required',
 			'category' => 'required',
-			'image' => 'required|image'
+      'image' => 'required|image'
 		]);
         $requestData = $request->except('tag');
         $tagData = $request->input('tag');
@@ -100,6 +100,7 @@ class BlogController extends Controller
         $blog->content = $requestData['contenteditor'];
         $blog->author = $requestData['author'];
         $blog->comment = $requestData['comment'];
+        $blog->lang = $requestData['lang'];
         $blog->visitor_count = 0;
 
         $blog->save();
@@ -206,6 +207,7 @@ class BlogController extends Controller
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
           $blog->comment = $requestData['comment'];
+          $blog->lang = $requestData['lang'];
           $blog->save();
         } else {
           $blog->title = $requestData['title'];
@@ -213,6 +215,7 @@ class BlogController extends Controller
           $blog->content = $requestData['contenteditor'];
           $blog->author = $requestData['author'];
           $blog->comment = $requestData['comment'];
+          $blog->lang = $requestData['lang'];
           $blog->save();
         }
 
