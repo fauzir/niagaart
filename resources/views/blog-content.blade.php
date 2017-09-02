@@ -38,10 +38,10 @@ All Post
         <div class="container">
           <div class="container blog-article-area">
             <div class="row">
-            <div class="col-md-6 article-fullpict">
+            <div class="col-md-12 article-fullpict">
               <img src="{{ asset($content->image) }}" alt="{{ $content->title }} | Niaga Art Blog">
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-12"></div>
               {!! $content->content !!}
             <hr>
             <a href="{{ route('blog', ['locale' => 'en']) }}" title="Blog | Niaga Art"><b><< @lang('content.back-to-blog')</b></a>
