@@ -1814,3 +1814,33 @@ footer {
 .desc-item p{
   text-align: left;
 }
+
+.loader-wrapper {
+position: relative;
+top: 50%;
+margin: 0 auto;
+transform: translateY(-50%);
+}
+.loader-wrapper.hide {
+display: none;
+}
+.loader-text {
+text-align: center;
+margin: 10px 0;
+font: normal 18px/1.2 'Open Sans';
+color: #5499C7;
+}
+.loader {
+margin: 0 auto;
+width: 25px;
+height: 25px;
+border: solid 2px transparent;
+border-top-color: #AED6F1;
+border-left-color: #AED6F1;
+border-radius: 50%;
+animation: spinner .7s linear infinite;
+}
+@keyframes spinner {
+0%   { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
