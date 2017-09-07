@@ -19,7 +19,8 @@ class BlogsTableSeeder extends Seeder
           'author' => 'Admin',
           'comment' => 'yes',
           'lang' => 'id',
-          'visitor_count' => '0'
+          'visitor_count' => '0',
+          'published' => true
         ]);
         $blog->save();
 
@@ -31,7 +32,8 @@ class BlogsTableSeeder extends Seeder
           'author' => 'Admin',
           'comment' => 'yes',
           'lang' => 'en',
-          'visitor_count' => '0'
+          'visitor_count' => '0',
+          'published' => true
         ]);
         $blog->save();
 

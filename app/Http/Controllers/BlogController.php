@@ -44,11 +44,11 @@ class BlogController extends Controller
         } else {
             App::setLocale($request->locale);
             if (App::isLocale('en')) {
-                $blogs = Blog::with('tag_blog')->where('lang', 'en')->orderBy('created_at', 'desc')->paginate($perPage);
-                $populars = Blog::limit(3)->where('lang', 'en')->orderBy('visitor_count', 'desc')->get();
+                $blogs = Blog::with('tag_blog')->where('lang', 'en')->where('published', true)->orderBy('created_at', 'desc')->paginate($perPage);
+                $populars = Blog::limit(3)->where('lang', 'en')->where('published', true)->orderBy('visitor_count', 'desc')->get();
             } elseif (App::isLocale('id')) {
-                $blogs = Blog::with('tag_blog')->where('lang', 'id')->orderBy('created_at', 'desc')->paginate($perPage);
-                $populars = Blog::limit(3)->where('lang', 'id')->orderBy('visitor_count', 'desc')->get();
+                $blogs = Blog::with('tag_blog')->where('lang', 'id')->where('published', true)->orderBy('created_at', 'desc')->paginate($perPage);
+                $populars = Blog::limit(3)->where('lang', 'id')->where('published', true)->orderBy('visitor_count', 'desc')->get();
             }
             $categories = DB::table('blog_tag')->join('blog_tags', 'blog_tag.tag_id', 'blog_tags.id')->select(DB::raw('tag_id, slug, tag, count(tag_id) as total'))->groupBy('tag_id', 'slug', 'tag')->get();
             return view('blog', compact('blogs', 'servicefooters', 'categories', 'populars', 'socials', 'contact'));

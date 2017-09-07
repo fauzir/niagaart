@@ -50,7 +50,27 @@
         </select>
         {!! $errors->first('comment', '<p class="help-block">:message</p>') !!}
     </div>
+</div><div class="form-group {{ $errors->has('published') ? 'has-error' : ''}}">
+    {!! Form::label('published', 'Published', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        <div class="checkbox">
+    <label>{!! Form::radio('published', '1') !!} Yes</label>
 </div>
+<div class="checkbox">
+    <label>{!! Form::radio('published', '0', true) !!} No</label>
+</div>
+        {!! $errors->first('published', '<p class="help-block">:message</p>') !!}
+    </div>
+</div><div class="form-group {{ $errors->has('published_at') ? 'has-error' : ''}}">
+    {!! Form::label('published_at', 'Published at (Scheduled Post)', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        <input type="date" name="published_at" class="form-control"><br>
+        Hour : <input type="number" name="hour" min="0" max="24" value="0">
+        Minute : <input type="number" name="minute" min="0" max="59" value="0">
+        {!! $errors->first('published_at', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+
 
 <input type="hidden" name="author" value="{{ Auth::user()->name }}">
 

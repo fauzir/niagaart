@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\AdminBlog;
 
+use App\Jobs\PublishArticle;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
 use DB;
 use Cloudder;
 use App\Blog;
@@ -19,7 +21,7 @@ class BlogController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
 
@@ -101,6 +103,8 @@ class BlogController extends Controller
         $blog->author = $requestData['author'];
         $blog->comment = $requestData['comment'];
         $blog->lang = $requestData['lang'];
+        $blog->published = $requestData['published'];
+        $blog->published_at = $requestData['published_at']." ".$requestData['hour'].":".$requestData['minute'].":00";
         $blog->visitor_count = 0;
 
         $blog->save();
@@ -208,6 +212,8 @@ class BlogController extends Controller
           $blog->author = $requestData['author'];
           $blog->comment = $requestData['comment'];
           $blog->lang = $requestData['lang'];
+          $blog->published = $requestData['published'];
+          $blog->published_at = $requestData['published_at']." ".$requestData['hour'].":".$requestData['minute'].":00";
           $blog->save();
         } else {
           $blog->title = $requestData['title'];
@@ -216,6 +222,8 @@ class BlogController extends Controller
           $blog->author = $requestData['author'];
           $blog->comment = $requestData['comment'];
           $blog->lang = $requestData['lang'];
+          $blog->published = $requestData['published'];
+          $blog->published_at = $requestData['published_at']." ".$requestData['hour'].":".$requestData['minute'].":00";
           $blog->save();
         }
 
@@ -276,5 +284,13 @@ class BlogController extends Controller
         Session::flash('flash_message', 'Blog deleted!');
 
         return redirect('admin/blog-post');
+    }
+
+    public function publishArticle(Request $request, $id)
+    {
+        $job = (new PublishArticle($id))
+              ->delay(Carbon::now()->addSeconds(5));
+
+        dispatch($job);
     }
 }

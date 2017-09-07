@@ -2,6 +2,8 @@
 
 namespace App\Console;
 
+use App\Blog;
+use App\Console\Commands\SchedulerDaemon;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        SchedulerDaemon::class,
     ];
 
     /**
@@ -26,6 +28,16 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        if (Blog::where('published', false)->orderBy('published_at', 'asc')->count() > 0) {
+            $article = Blog::where('published', false)->orderBy('published_at', 'asc')->first();
+            $date = date_create(Blog::find($article->id)->published_at);
+            $hour = date_format($date, 'G');
+            $min = date_format($date, 'i');
+            $day = date_format($date, 'j');
+            $month = date_format($date, 'n');
+            $schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
+            $schedule->command('queue:work --once')->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
+        }
     }
 
     /**

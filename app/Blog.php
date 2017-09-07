@@ -67,7 +67,7 @@ class Blog extends Model implements FeedItem
      *
      * @var array
      */
-    protected $fillable = ['title', 'category', 'image', 'content', 'author', 'comment', 'lang'];
+    protected $fillable = ['title', 'category', 'image', 'content', 'author', 'comment', 'lang', 'published', 'published_at'];
 
     public function blog_tag()
     {

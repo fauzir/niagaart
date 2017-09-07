@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/publish/{id}', 'AdminBlog\BlogController@publishArticle');
 
 Route::get('/', function(){
     return redirect()->to('/id');
