@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Blog;
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -34,6 +35,7 @@ class PublishArticle implements ShouldQueue
         $blog = Blog::find($this->id);
         $blog->published = true;
         $blog->published_at = '';
+        $blog->updated_at = Carbon::now();
         $blog->save();
     }
 }
