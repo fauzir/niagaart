@@ -35,7 +35,7 @@ class PublishArticle implements ShouldQueue
         $blog = Blog::find($this->id);
         $blog->published = true;
         $blog->published_at = '';
-        $blog->updated_at = date_format(Carbon::now(), "Y-m-d H:i:s.000");
+        // $blog->updated_at = date_format(Carbon::now(), "Y-m-d H:i:s.000");
         $blog->save();
     }
 }
