@@ -32,12 +32,15 @@ class PublishArticle implements ShouldQueue
      */
     public function handle()
     {
-        $blog = Blog::find($this->id);
+        // $blog = Blog::find($this->id);
         // $blog->timestamps = false;
-        $blog->published = true;
-        $blog->published_at = '';
-        $blog->updated_at = date_create(Carbon::now());
+        // $blog->published = true;
+        // $blog->published_at = '';
+        // $blog->updated_at = date_create(Carbon::now());
         // $blog->updated_at = date_format(Carbon::now(), "Y-m-d H:i:s.000");
-        $blog->save();
+        // $blog->save();
+
+        Blog::where('id', $this->id)
+            ->update(['published' => true])
     }
 }
