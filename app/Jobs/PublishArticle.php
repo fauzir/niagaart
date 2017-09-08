@@ -41,6 +41,6 @@ class PublishArticle implements ShouldQueue
         // $blog->save();
 
         Blog::where('id', $this->id)
-            ->update(['published' => true, 'published_at' => '']);
+            ->update(['published' => true]);
     }
 }
