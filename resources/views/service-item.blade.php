@@ -8,13 +8,14 @@ display: block;
 }
 .zoom-preview__image--large {
 display: none;
-width: 200px;
-height: 200px;
+width: 300px;
+height: 300px;
 position: absolute;
 border-radius: 100%;
 border: 1px solid #3498DB;
 box-shadow: 0px 0px 6px 1px rgba(93, 173, 226, 0.7);
 background: transparent url({{ asset($serviceitem->image) }}) 0 0 no-repeat;
+background-size: 350%;
 cursor: none;
 }
 .zoom-preview__image--large.show {
@@ -26,6 +27,13 @@ width: 100%;
 }
 .zoom-preview__image--original img.show {
 display: block;
+}
+.big{
+  opacity: 0.5;
+}
+
+.zooming:hover{
+  z-index: 9999;
 }
 </style>
 <div class="modal-dialog modal-lg">
@@ -40,7 +48,7 @@ display: block;
 <!-- Modal Body -->
 <div class="modal-body">
   <div class="row">
-      <div class="loader-wrapper">
+      {{-- <div class="loader-wrapper">
         <h4 class="loader-text">Loading the image</h4>
         <div class="loader"></div>
     </div>
@@ -50,8 +58,8 @@ display: block;
         <div class="zoom-preview__image zoom-preview__image--original">
             <img data-image="original" src="{{ asset($serviceitem->image) }}" alt="">
         </div>
-    </div>
-      {{-- <img src="{{ asset($serviceitem->image) }}" alt="{{ $serviceitem->name }} | Niaga Art" > --}}
+    </div> --}}
+      <img id="zoom_01" class="zooming" src="{{ asset($serviceitem->image) }}" data-zoom-image="{{ asset($serviceitem->image) }}"/>
       <br>
       <div class="container col-md-8 detail-item">
         <h2>DETAIL</h2>

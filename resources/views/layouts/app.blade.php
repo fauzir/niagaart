@@ -129,12 +129,13 @@
           </div>
      </div>
    </footer>
-   <script
+   {{-- <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous"></script> --}}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.elevateZoom-3.0.8.min.js') }}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
