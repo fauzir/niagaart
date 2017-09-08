@@ -9,7 +9,6 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Database\Eloquent\Model;
 
 class PublishArticle implements ShouldQueue
 {
@@ -36,7 +35,7 @@ class PublishArticle implements ShouldQueue
         $blog = Blog::find($this->id);
         $blog->published = true;
         $blog->published_at = '';
-        $blog->updated_at = "2017-09-08 08:00:00.000";
+        $blog->updated_at = date_parse_from_format("Y-m-d H:i:s.000",Carbon::now());
         $blog->save();
     }
 }
