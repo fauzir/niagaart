@@ -8,6 +8,10 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 class Blog extends Model implements FeedItem
 {
+    public function getDateFormat()
+    {
+        return 'Y-m-d H:i:s.u';
+    }
     use Sluggable;
     /**
      * The database table used by the model.
