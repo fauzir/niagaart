@@ -36,7 +36,7 @@ class PublishArticle implements ShouldQueue
         $blog = Blog::find($this->id);
         $blog->published = true;
         $blog->published_at = '';
-        $blog->updated_at = "2017-09-08 08:00:00";
+        $blog->updated_at = "2017-09-08 08:00:00.000";
         $blog->save();
     }
 }
