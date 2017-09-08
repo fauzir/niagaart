@@ -36,7 +36,7 @@ class Kernel extends ConsoleKernel
             $day = date_format($date, 'j');
             $month = date_format($date, 'n');
             // $schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
-            $schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->dailyAt($hour.':'.$min);
+            $schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->dailyAt('13:33');
             $schedule->command('queue:work --once')->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
         }
     }
