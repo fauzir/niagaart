@@ -25,7 +25,8 @@ mix.js('public/frontend/js/home-swiper.js', 'public/js')
      'public/frontend/js/home-wow.js',
      'public/frontend/js/projects-call-item.js',
      'public/frontend/js/service-call-item.js',
-     'public/frontend/js/twitter.js'
+     'public/frontend/js/twitter.js',
+     'public/js/jquery.elevateZoom-3.0.8.min.js',
    ], 'public/js/all.js')
    .styles([
      'public/frontend/css/bootstrap.min.css',
