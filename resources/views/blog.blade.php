@@ -34,6 +34,7 @@ All Post
                     <div class="panel panel-default">
                       <div class="panel-heading" role="tab" id="headingTwo">
                         <h4 class="panel-title">
+                          <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
                           <a style="font-size: xx-large;" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $blog->id }}" aria-expanded="false" aria-controls="collapseTwo">
                             {{ $blog->title }}
                           </a>
