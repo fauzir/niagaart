@@ -20,7 +20,7 @@ class BlogController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         $keyword = $request->get('search');
-        $perPage = 7;
+        $perPage = 3;
 
         if (!empty($keyword)) {
             App::setLocale($request->locale);

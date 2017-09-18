@@ -29,43 +29,7 @@ All Post
             <div class="container blog-article-area">
               <div class="row">
                 <div class="container col-md-8 article-main">
-                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    @foreach ($blogs as $blog)
-                    <div class="panel panel-default">
-                      <div class="panel-heading" role="tab" id="headingTwo">
-                        <h4 class="panel-title">
-                          <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> 
-                          <a style="font-size: xx-large;" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $blog->id }}" aria-expanded="false" aria-controls="collapseTwo">
-                            {{ $blog->title }}
-                          </a>
-                        </h4>
-                      </div>
-                      <div id="collapse{{ $blog->id }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="panel-body">
-                          <div class="container col-md-10 article">
-                            <img src="{{ $blog->image }}" alt="{{ $blog->title }} | Niaga Art Blog">
-                            <br>
-                            <p>{!! substr($blog->content, 0, 150) !!} <a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}" title="{{ $blog->title }} | Niaga Art">@lang('content.read-more')</a></p>
-                            <br>
-                            <p><b>@lang('content.by') {{ $blog->author }} @lang('content.on') {{ date_format($blog->created_at, 'd F Y') }}</b>
-                            <br>
-                            <b>@lang('content.on-2')
-                              @foreach ($blog->tag_blog as $index => $tag)
-                              @if ($index == count($blog->tag_blog)-1)
-                                <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}" title="{{ $tag->tag }} | Niaga Art">{{ $tag->tag }}</a>
-                              @else
-                                <a href="{{ route('blog.category', ['locale' => request()->route()->locale, 'slug' => $tag->slug]) }}" title="{{ $tag->tag }} | Niaga Art">{{ $tag->tag }}</a>,
-                              @endif
-                              @endforeach
-                              </b></p>
-                            <hr>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    @endforeach
-                  </div>
-                {{-- @foreach ($blogs as $blog)
+                @foreach ($blogs as $blog)
                 <div class="container col-md-10 article wow fadeInUp">
                   <h2><a href="{{ route('blog.content', ['locale' => request()->route()->locale, 'slug' => $blog->slug]) }}" title="{{ $blog->title }} | Niaga Art Blog">{{ $blog->title }}</a></h2>
                   <br>
@@ -86,7 +50,7 @@ All Post
                     </b></p>
                   <hr>
                 </div>
-                @endforeach --}}
+                @endforeach
                 {{ $blogs->links() }}
                 </div>
                 <div class="container col-md-4">
