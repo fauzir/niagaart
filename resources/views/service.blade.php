@@ -67,7 +67,7 @@
            @foreach($servicechunk as $serviceitem)
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
                <a href="#" class="thumbnail thumbnail-service product" data-toggle="modal" data-id="{{ $serviceitem->id }}" title="{{ $serviceitem->name }} | Niaga Art" data-target="#myModal">
-                  <img src="{{ asset($serviceitem->image) }}" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
+                  <img id="zoom_01" src="{{ asset($serviceitem->image) }}" class="imgZoom" style="height: 205px;" alt="{{ $serviceitem->name }} | Niaga Art" >
                   <div class="caption">
                      @if ( strlen($serviceitem->name) > 29 )
                        <h3>{{ substr($serviceitem->name, 0, 26) }}...</h3>
@@ -107,4 +107,18 @@
         </div>
          </div>
       </section>
+@endsection
+
+@section('script')
+    <script>
+      $( document ).ready(function() {
+          $( ".imgZoom" ).each(function(){
+            $(this).elevateZoom({
+              zoomWindowWidth: 300,
+              zoomWindowHeight: 300,
+              scrollZoom: true
+            });
+        });
+      });
+    </script>
 @endsection

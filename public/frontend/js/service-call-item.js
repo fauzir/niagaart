@@ -9,11 +9,6 @@ $(document).on("click", ".product", function () {
           success: function(response){
             $('.modal').html(response);
             $('#myModal').modal('show');
-            $("#zoom_01").elevateZoom({
-              zoomWindowWidth: 300,
-              zoomWindowHeight: 300,
-              scrollZoom: true
-            });
             // var zoomer = new ZoomPreviewer();
           },
           error: function(response){
