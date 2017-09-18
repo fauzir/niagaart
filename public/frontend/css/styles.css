@@ -25,7 +25,18 @@ strike {
 .text-ext p{
   text-align: justify;
 }
+@media screen and (max-width:420px){
+  .text-ext{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 
+  .text-ext p{
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .language-en a{
    padding-right: 0px !important;
    padding-left: 10px !important;
@@ -58,6 +69,26 @@ strike {
    }
 }
 
+@media screen and (max-width: 420px) {
+  a {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 25px !important;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px !important;
+  }
+}
 @font-face {
     font-family: Campton-Bold;
     src: url(../fonts/AvenirNextLTPro-Bold.otf);
@@ -92,6 +123,8 @@ a:focus {
 body {
     background-color: #fff;
     position: relative;
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
     font-family: 'Abel', sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -542,7 +575,7 @@ ul {
     border-radius: 0px;
     background-color: #ebebeb;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 215px;
+    height: 100%;
     min-height: 215px;
 }
 .adjust2 {
@@ -574,6 +607,9 @@ ul {
     .media-object {
         margin-top: 0;
     }
+    .carousel-inner img{
+      width: 150px!important;
+    }
 }
 
 .article-showcase{
@@ -594,6 +630,17 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+@media screen and (max-width:420px) {
+  .hero-image {
+      background: url(../img/About-Banner.jpg);
+      width: 100%;
+      height: 325px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+  }
 }
 .opening-bg {
     background: #da312d;
@@ -623,7 +670,9 @@ ul {
 .opening-section h1 {
     font-size: 52px
 }
-
+.opening-img img{
+  width:100%;
+}
 .homeliving-txt img{
     padding: 23px;
     margin-bottom: 30px;
@@ -631,6 +680,16 @@ ul {
     height: auto;
     overflow-y: hidden;
     float: right!important;
+}
+@media screen and (max-width: 420px){
+  .homeliving-txt img{
+      padding: 14px;
+      margin-bottom: 10px;
+      width: 100%!important;
+      height: auto;
+      overflow-y: hidden;
+      float: right!important;
+  }
 }
 
 .opening-title h1{
@@ -955,28 +1014,18 @@ transition: all 0.2s ease-in-out;
     padding-top: 25px;
     margin-bottom: 30px;
     float: left!important;
-    animation: slideUp 0.85s .5s cubic-bezier(0.17,
-    .88,
-    .32,
-    1.27) both,
-    fadeIn 0.85s .5s ease-in both;
-    @keyframes slideUp {
-        from {
-            transform: translateY(50%);
-        }
-        to {
-            transform: translateY(0%);
-        }
-    }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 }
+@media screen and (max-width:420px) {
+  .apartment-txt img{
+      width: 100%;
+      height: auto;
+      padding: 14px;
+      padding-top: 25px;
+      margin-bottom: 10px;
+      float: left!important;
+  }
+}
+
 .cafe-bg {
     background-color: #e93d44;
     color: #fff;
@@ -1011,6 +1060,17 @@ transition: all 0.2s ease-in-out;
     min-width: 300px;
     margin-bottom: 30px;
 }
+@media screen and (max-width:420px) {
+  .btn-homeliving{
+      border-radius: 0px;
+      border:2px solid #fff;
+      background-color: transparent;
+      color: #fff;
+      box-shadow: none;
+      min-width: 200px;
+      margin-bottom: 30px;
+  }
+}
 
 .btn-homeliving a{
     background-color: transparent;
@@ -1036,6 +1096,18 @@ transition: all 0.2s ease-in-out;
     box-shadow: none;
     min-width: 300px;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 420px) {
+  .btn-homelivingblack{
+      border-radius: 0px;
+      border:2px solid #666;
+      background-color: transparent;
+      color: #666;
+      box-shadow: none;
+      min-width: 200px;
+      margin-bottom: 30px;
+  }
 }
 
 .btn-homelivingblack a{
@@ -1753,6 +1825,11 @@ footer {
 
 .carousel-control span{
    color: #cf0810 ;
+}
+.item img{
+  display: block;
+  width: 100%!important;
+  height: auto;
 }
 
 .previous-arrow,
