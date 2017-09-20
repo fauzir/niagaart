@@ -114,8 +114,9 @@
       $( document ).ready(function() {
           $( ".imgZoom" ).each(function(){
             $(this).elevateZoom({
-              zoomWindowWidth: 300,
-              zoomWindowHeight: 300,
+              zoomWindowPosition: 15,
+              zoomWindowWidth: 275,
+              zoomWindowHeight: 275,
               scrollZoom: true
             });
         });

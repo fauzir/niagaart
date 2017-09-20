@@ -48,7 +48,7 @@
           @foreach ($products as $product)
           <div class="masonry-item">
             <div class="media">
-              <img src="{{ asset($product->image) }}" class="img-responsive center-block" alt="{{ $product->name }} | Niaga Art">
+              <img src="{{ asset($product->image) }}" class="img-responsive center-block imgZooming" alt="{{ $product->name }} | Niaga Art">
             </div>
             <h2 class="post-title">{{ $product->name }}</h2>
             <p>Rp. {{ $product->price }}</p>
