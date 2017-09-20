@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-<title>NiagaArt | Services</title>
+<title>NiagaArt | Service</title>
 @endsection
 
 @section('content')
