@@ -24,10 +24,10 @@
                                 <h2>{{ $featured->name }}</h2>
                                 <br>
                                 @if ( strlen($featured->description) > 0 )
-                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
+                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art" onContextMenu="return false;">
                                   <p>{!! $featured->description !!}</p>
                                 @else
-                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art">
+                                  <img src="{{ asset($featured->image) }}" alt="{{ $featured->name }} | Niaga Art" onContextMenu="return false;">
                                   <p>@lang('content.no-desc')</p>
                                 @endif
                               </div>
@@ -61,7 +61,7 @@
       @foreach($projectchunk as $project)
       <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp">
           <div class="thumbnail thumbnail-service project" data-toggle="modal" data-id="{{ $project->id }}" data-target="#myModal">
-              <img id="zoom_01" src="{{ asset($project->image) }}"  style="height: 205px;" alt="{{ $project->name }} | Niaga Art" >
+              <img id="zoom_01" src="{{ asset($project->image) }}"  style="height: 205px;" alt="{{ $project->name }} | Niaga Art" onContextMenu="return false;">
               <div class="caption">
                 @if ( strlen($project->name) > 29 )
                   <h3>{{ substr($project->name, 0, 26) }}...</h3>

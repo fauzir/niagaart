@@ -11,7 +11,7 @@
 <!-- Modal Body -->
 <div class="modal-body">
   <div class="row">
-  <img src="{{ $project->image }}" width="275" height="275" alt="{{ $project->name }} | Niaga Art">
+  <img src="{{ $project->image }}" width="275" height="275" alt="{{ $project->name }} | Niaga Art" onContextMenu="return false;">
   <br>
   <div class="container col-md-8 desc-popup">
                     <h2>{{ $project->name }}</h2>
@@ -47,7 +47,7 @@
                         @foreach ($data as $item)
                         <div class="masonry-item">
                           <div class="media">
-                            <img src="{{ asset($item->image) }}" width="50%" class="img-responsive center-block" alt="{{ $item->name }} | Niaga Art">
+                            <img src="{{ asset($item->image) }}" width="50%" class="img-responsive center-block" alt="{{ $item->name }} | Niaga Art" onContextMenu="return false;">
                           </div>
                           <h2 class="post-title">{{ $item->name }}</h2>
                           @if ( strlen($item->description) > 0 )
