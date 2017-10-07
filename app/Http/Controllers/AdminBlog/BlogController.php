@@ -104,7 +104,11 @@ class BlogController extends Controller
         $blog->comment = $requestData['comment'];
         $blog->lang = $requestData['lang'];
         $blog->published = $requestData['published'];
-        $blog->published_at = $requestData['published_at']." ".$requestData['hour'].":".$requestData['minute'].":00";
+        if ($requestData['published_at'] == 0) {
+          $blog->published_at = Carbon::now();
+        } else {
+          $blog->published_at = $requestData['published_at']." ".$requestData['hour'].":".$requestData['minute'].":00";
+        }
         $blog->visitor_count = 0;
 
         $blog->save();
