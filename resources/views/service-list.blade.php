@@ -34,7 +34,7 @@
                 <br>
                 <img class="wow slideInUp" src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
                 <h1>{{ $service->name }}</h1>
-                <p>{{ $service->description }}</p>
+                <p>{!! $service->description !!}</p>
                 <div class="container">
                     <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homeliving">@lang('content.learn-more')</a>
                 </div>
@@ -53,7 +53,7 @@
               <br>
                 <img class="wow slideInUp" src="{{ asset($service->image) }}" alt="{{ $service->name }} | Niaga Art">
                 <h1>{{ $service->name }}</h1>
-                <p>{{ $service->description }}</p>
+                <p>{!! $service->description !!}</p>
                 <div class="container text-ext">
                   <a href="{{ route('service', ['locale' => request()->route()->locale, 'slug' => $service->slug]) }}" title="{{ $service->name }} | Niaga Art" class="btn btn-lg btn-homelivingblack">@lang('content.learn-more')</a>
                 </div>

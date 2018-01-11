@@ -29,15 +29,15 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         // $schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
-        if (Blog::where('published', false)->orderBy('published_at', 'asc')->count() > 0) {
-            $article = Blog::where('published', false)->orderBy('published_at', 'asc')->first();
-            $date = date_create(Blog::find($article->id)->published_at);
-            $hour = date_format($date, 'G');
-            $min = date_format($date, 'i');
-            $day = date_format($date, 'j');
-            $month = date_format($date, 'n');$schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->dailyAt($hour.':'.$min);
-            $schedule->command('queue:work --once')->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
-        }
+        // if (Blog::where('published', false)->orderBy('published_at', 'asc')->count() > 0) {
+        //     $article = Blog::where('published', false)->orderBy('published_at', 'asc')->first();
+        //     $date = date_create(Blog::find($article->id)->published_at);
+        //     $hour = date_format($date, 'G');
+        //     $min = date_format($date, 'i');
+        //     $day = date_format($date, 'j');
+        //     $month = date_format($date, 'n');$schedule->call('App\Http\Controllers\AdminBlog\BlogController@publishArticle', ['id' => $article->id])->dailyAt($hour.':'.$min);
+        //     $schedule->command('queue:work --once')->cron($min.' '.$hour.' '.$day.' '.$month.' *')->timezone('Asia/Jakarta');
+        // }
     }
 
     /**
