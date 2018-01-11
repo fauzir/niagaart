@@ -41,16 +41,16 @@
               <div class="container col-md-6 title-about">
                 <h3>{{ $interior->name }}</h3>
                 <br>
-                <p>{{ substr($interior->description, 0, 797) }}</p>
+                <p>{!! substr($interior->description, 0, 797) !!}</p>
               </div>
               <div class="container text-ext">
-                <p>{{ substr($interior->description, 797) }}</p>
+                <p>{!! substr($interior->description, 797) !!}</p>
               </div>
             @else
               <div class="container col-md-6 title-about">
                 <h3>{{ $interior->name }}</h3>
                 <br>
-                <p>{{ $interior->description }}</p>
+                <p>{!! $interior->description !!}</p>
               </div>
             @endif
           </div>
@@ -63,21 +63,21 @@
               <div class="container col-md-6 title-about">
                 <h3>{{ $interior->name }}</h3>
                 <br>
-                <p>{{ substr($interior->description, 0, 797) }}</p>
+                <p>{!! substr($interior->description, 0, 797) !!}</p>
               </div>
               <div class="container col-md-6 scope-img2 wow fadeInRight">
                 <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
               </div>
             </div>
             <div class="container text-ext">
-              <p>{{ substr($interior->description, 797) }}
+              <p>{!! substr($interior->description, 797) !!}
             </div>
           @else
             <div class="row">
               <div class="container col-md-6 title-about">
                 <h3>{{ $interior->name }}</h3>
                 <br>
-                <p>{{ $interior->description }}</p>
+                <p>{!! $interior->description !!}</p>
               </div>
               <div class="container col-md-6 scope-img2 wow fadeInRight">
                 <img src="{{ asset($interior->image) }}" alt="{{ $interior->name }} | Niaga Art">
