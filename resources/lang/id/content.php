@@ -8,7 +8,7 @@ return [
     'office' => 'KANTOR',
     'contact' => 'KONTAK',
     'what-we-brought' => "YANG KAMI HADIRKAN UNTUK ANDA",
-    'this-is-what-done' => 'Fungsional & Artistic Design',
+    'this-is-what-done' => 'Functional & Artistic Design',
     'learn-more' => 'PELAJARI',
     'our-catalogue' => 'KATALOG KAMI',
     'featured-project' => 'PROYEK UNGGULAN',
