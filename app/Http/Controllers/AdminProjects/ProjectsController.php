@@ -134,10 +134,7 @@ class ProjectsController extends Controller
         if (Input::hasFile('image')) {
           $file = Input::file('image');
           $pictureName = 'project-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 600, "height" => 650,
-            ));
+          Cloudder::upload($file->getPathName(), $pictureName);
           $upload = Cloudder::getResult();
           $requestData['image'] = $upload['url'];
         } else {

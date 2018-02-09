@@ -74,10 +74,7 @@ class ServiceController extends Controller
         if(Input::hasFile('banner_image')){
           $file = Input::file('banner_image');
           $pictureName = 'service-banner-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 3840, "height" => 2160,
-            ));
+          Cloudder::upload($file->getPathName(), $pictureName);
           $upload = Cloudder::getResult();
           $requestData['banner_image'] = $upload['url'];
         }
@@ -85,10 +82,7 @@ class ServiceController extends Controller
         if(Input::hasFile('image')){
           $file = Input::file('image');
           $pictureName = 'service-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 300, "height" => 450,
-            ));
+          Cloudder::upload($file->getPathName(), $pictureName);
           $upload = Cloudder::getResult();
           $requestData['image'] = $upload['url'];
         }
@@ -149,10 +143,7 @@ class ServiceController extends Controller
         if (Input::hasFile('banner_image')) {
           $file = Input::file('banner_image');
           $pictureName = 'service-banner-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 3840, "height" => 2160,
-            ));
+          Cloudder::upload($file->getPathName(), $pictureName);
           $upload = Cloudder::getResult();
           $requestData['banner_image'] = $upload['url'];
         } else {
@@ -162,10 +153,7 @@ class ServiceController extends Controller
         if (Input::hasFile('image')) {
           $file = Input::file('image');
           $pictureName = 'service-'.time();
-          Cloudder::upload($file->getPathName(), $pictureName,
-            array(
-              "width" => 300, "height" => 450,
-            ));
+          Cloudder::upload($file->getPathName(), $pictureName);
           $upload = Cloudder::getResult();
           $requestData['image'] = $upload['url'];
         } else {
