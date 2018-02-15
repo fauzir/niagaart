@@ -52,10 +52,10 @@ class HomeController extends Controller
             return redirect()->route('blog', ['locale' => 'en']);
         } elseif (App::isLocale('id')) {
             $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'id')->orderBy('created_at', 'desc')->get();
-            $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->where('lang', 'id')->orderBy('name', 'asc')->get();
         } elseif (App::isLocale('en')) {
             $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'en')->orderBy('created_at', 'desc')->get();
-            $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->where('lang', 'en')->orderBy('id', 'asc')->get();
+            $services = Service::limit(3)->select('id', 'image', 'name', 'tagline', 'slug')->where('type', 'interior')->where('lang', 'en')->orderBy('name', 'asc')->get();
         } else {
             $blogs = Blog::limit(5)->select('id','title','category','image','content','author', 'created_at', 'slug')->where('lang', 'id')->orderBy('created_at', 'desc')->get();
         }
