@@ -21,6 +21,8 @@
                         <div class="container featured-projects">
                             <div class="row">
                               <div class="container col-md-6 homeliving-txt">
+                                <h2 style="visibility: hidden;">{{ $featured->name }}</h2>
+                                <br>
                                 @if ( strlen($featured->description) > 0 )
                                 <p>{!! $featured->description !!}</p>
                                 @else
