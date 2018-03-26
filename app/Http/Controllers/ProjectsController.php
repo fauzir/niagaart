@@ -22,10 +22,10 @@ class ProjectsController extends Controller
         $socials = app('App\Http\Controllers\HomeController')->layoutapp()->get('socials');
 
         if (App::isLocale('en')) {
-            $featureds = Project::where('status', 'yes')->where('lang', 'en')->orderBy('id', 'asc')->get();
+            $featureds = Project::where('status', 'yes')->where('lang', 'en')->orderBy('updated_at', 'desc')->get();
             $projects = Project::where('status', 'no')->where('lang', 'en')->orderBy('updated_at', 'desc')->paginate(15);
         } elseif (App::isLocale('id')) {
-            $featureds = Project::where('status', 'yes')->where('lang', 'id')->orderBy('id', 'asc')->get();
+            $featureds = Project::where('status', 'yes')->where('lang', 'id')->orderBy('updated_at', 'desc')->get();
             $projects = Project::where('status', 'no')->where('lang', 'id')->orderBy('updated_at', 'desc')->paginate(15);
         }
         $items = ProjectItem::orderBy('id', 'asc');
